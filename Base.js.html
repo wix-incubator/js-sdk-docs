@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Wix SDK Source: Base.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html">Wix SDK</a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="Error.html">Error</a>
+						</li>
+						
+						<li>
+							<a href="PubSub.html">PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Settings.html">Settings</a>
+						</li>
+						
+						<li>
+							<a href="Utils.html">Utils</a>
+						</li>
+						
+						<li>
+							<a href="Utils.html#Media">Utils.Media</a>
+						</li>
+						
+						<li>
+							<a href="Wix.html">Wix</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Activities.html">Wix.Activities</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Contacts.html">Wix.Contacts</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Events.html">Wix.Events</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowOrigin.html">Wix.WindowOrigin</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowPlacement.html">Wix.WindowPlacement</a>
+						</li>
+						
+						<li>
+							<a href="Worker.html">Worker</a>
+						</li>
+						
+						<li>
+							<a href="Worker.PubSub.html">Worker.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Worker.Utils.html">Worker.Utils</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
+				<li class="dropdown">
+					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="WixDataCursor.html">WixDataCursor</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+
+		
+			<div class="span12">
+				
+				<div id="main">
+					
+
+
+		<h1 class="page-title">Source: Base.js</h1>
+    
+<section>
+	<article>
+		<pre
+			class="sunlight-highlight-javascript linenums">/**
+ * This is the description for the Wix namespace.
+ * @namespace Wix
+ */
+define(['core', 'Utils', 'Styles', 'utils', 'Theme', 'WindowOrigin', 'WindowPlacement'], function (core, Utils, Styles, utils, Theme, WindowOrigin, WindowPlacement) {
+
+    var openModal = function (url, width, height, onClose) {
+        if (Utils.getViewMode() === "editor") {
+            core.reportSdkError('Invalid View Mode, editor, only preview and site are supported');
+            return;
+        }
+
+        var args = {
+            url   : url,
+            width : width,
+            height: height
+        };
+        core.sendMessage(core.MessageTypes.OPEN_MODAL, args, onClose);
+    };
+
+    /**
+     * Function setHeight
+     *
+     * @since SDK 1.8.0
+     * @param height (Number) new component height
+     */
+    var setHeight = function (height) {
+        if (!utils.isNumber(height)) {
+            core.reportSdkError('Mandatory argument - height - should be of type Number');
+            return;
+        } else if (height &lt; 0) {
+            core.reportSdkError('height should be a positive integer');
+            return;
+        }
+        core.sendMessage(core.MessageTypes.HEIGHT_CHANGED, { 'height':height });
+    };
+
+    /*
+     * Function closeWindow
+     *
+     * Closes the app's modal/popup window.
+     * This function can be used from a popup scope only!!
+     *
+     * @since SDK 1.13.0
+     * @param (Object)
+     */
+    var closeWindow = function (message) {
+        var args = {
+            message : message
+        };
+        core.sendMessage(core.MessageTypes.CLOSE_WINDOW, args);
+    };
+
+    var scrollTo = function (x, y) {
+        var args = {
+            x : x,
+            y: y
+        };
+        core.sendMessage(core.MessageTypes.SCROLL_TO, args);
+    };
+
+    var getSiteInfo = function (onSuccess) {
+        core.sendMessage(core.MessageTypes.SITE_INFO, null, onSuccess);
+    };
+
+    var getSitePages = function (callback) {
+        core.sendMessage(core.MessageTypes.GET_SITE_PAGES, null, callback);
+    };
+
+    /**
+     * Function getStyleParams
+     *
+     * Returns the application style parameters which are saved in the site
+     *
+     * @deprecated
+     * @since 1.22.0
+     * @param callback (Function) callback function: function(style)
+     * @return (Object) a map describing style parameters by their type.
+     */
+    var getStyleParams = function (callback) {
+        core.reportSdkMsg('Wix.getStyleParams is DEPRECATED use Wix.Styles.getStyleParams');
+        return Styles.getStyleParams(callback);
+    };
+
+    /**
+     * Function reportHeightChange
+     *
+     * @deprecated use setHeight
+     */
+    var reportHeightChange = function (height) {
+        core.reportSdkError('Deprecated, use Wix.setHeight instead');
+    };
+
+    /**
+     * Function pushState
+     *
+     * @since SDK 1.8.0
+     * @param state (String) new app's state to push into the editor history stack
+     */
+    var pushState = function (state) {
+        if (!utils.isString(state)) {
+            core.reportSdkError('Missing mandatory argument - state - should be of type String');
+            return;
+        }
+        core.sendMessage(core.MessageTypes.APP_STATE_CHANGED, { 'state': state });
+    };
+
+    /**
+     * Function getHostPageId
+     * Returns the page id of the app hosting page
+     *
+     * @since SDK 1.31.0
+     * @return callback (Function) this will be called with the widget hosting page id
+     */
+    var getCurrentPageId = function (callback) {
+        core.sendMessage(core.MessageTypes.GET_CURRENT_PAGE_ID, null, callback);
+    };
+
+    /**
+     * Function navigateToPage
+     *
+     * Navigates to the given pageId
+     *
+     * @since 1.17.0
+     * @param pageId (String) the page name as received by getSitePages
+     *
+     */
+    var navigateToPage = function(pageId) {
+        if (!pageId) {
+            core.reportSdkError('Missing mandatory argument - pageId');
+            return;
+        }
+
+        core.sendMessage(core.MessageTypes.NAVIGATE_TO_PAGE, { pageId: pageId });
+    };
+
+    /**
+     * Function currentMember
+     *
+     * @since 1.6.0
+     * @param onSuccess (Function) a call back function to receive the function completion
+     * status. The function signature should be :
+     *  function onSuccess(param)
+     */
+    var currentMember = function (onSuccess) {
+        if (Utils.getViewMode() !== "site") {
+            core.reportSdkError('Invalid View Mode, this method works only for site view mode');
+            return;
+        }
+        core.sendMessage(core.MessageTypes.SM_CURRENT_MEMBER, null, onSuccess);
+    };
+
+    /**
+     * Function requestLogin
+     *
+     * @since 1.3.0
+     * @param onSuccess (Function) a callback function to receive the operation completion
+     * status. The function signature should be :
+     *  function onSuccess(param)
+     */
+    var requestLogin = function (onSuccess) {
+        core.sendMessage(core.MessageTypes.SM_REQUEST_LOGIN, null, onSuccess);
+    };
+
+    var openPopup = function (url, width, height, position, onClose, theme) {
+        if (Utils.getViewMode() === "editor") {
+            core.reportSdkError('Invalid View Mode, editor, only preview and site are supported');
+            return;
+        }
+
+        // in case position was omitted and the last argument is the onClose callback
+        if (arguments.length === 4 && utils.isFunction(arguments[3])) {
+            position = {};
+        }
+
+        position = position || {};
+        position.origin = position.origin || WindowOrigin.DEFAULT;
+        position.placement = position.placement || WindowPlacement.CENTER;
+
+        var args = {
+            url   : url,
+            width : width,
+            height: height,
+            position: position,
+            theme: theme || Theme.DEFAULT
+        };
+        core.sendMessage(core.MessageTypes.OPEN_POPUP, args, onClose);
+    };
+
+    /*
+     * Function resizeWindow
+     *
+     * Resizes the widget modal/popup/glued widget window.
+     *
+     * @since SDK 1.18.0
+     * @param width (Number) popup width in pixels
+     * @param height (Number) popup height in pixels
+     * @param onComplete (Function) on complete callback function
+     */
+    var resizeWindow = function (width, height, onComplete) {
+        var args = {
+            width : width,
+            height: height
+        };
+        core.sendMessage(core.MessageTypes.RESIZE_WINDOW, args, onComplete);
+    };
+
+    /**
+     * Function addEventListener
+     *
+     * @since 1.11.0
+     * @param eventName (String) the event name, reserved values, see Wix.Events
+     * @param callBack (Function) a callback function which gets invoked when a new
+     * event is sent from the wix site, The function signature should be :
+     *  function callBack(param)
+     * @retrun (Number) an id that can be used to remove the event listener using removeEventListener(eventName, id)
+     */
+    var addEventListener = function (eventName, callBack) {
+        return core.addEventListenerInternal(eventName, callBack, false);
+    };
+
+    var removeEventListener = function (eventName, callBackOrId) {
+        core.removeEventListenerInternal(eventName, callBackOrId, false);
+    };
+
+    /*
+     * Function scrollBy
+     *
+     * Scroll (in the Wix site) to a relative offset - vertical & horizontal
+     *
+     * @since SDK 1.18.0
+     * @param x (Number) horizontal offset in pixels
+     * @param y (Number) vertical offset in pixels
+     */
+    var scrollBy = function (x, y) {
+        var args = {
+            x : x,
+            y: y
+        };
+        core.sendMessage(core.MessageTypes.SCROLL_BY, args);
+    };
+
+    var getBoundingRectAndOffsets =  function (callback) {
+        core.sendMessage(core.MessageTypes.BOUNDING_RECT_AND_OFFSETS, null, callback);
+    };
+
+    return {
+        /**
+         * The openModal method allows an app to open a modal window within the site or preview.
+         *
+         * A modal is a runtime Widget that is not part of the site structure.
+         *
+         * The modal window is a singleton (every new modal closes the previous one) and contains a lightbox.
+         *
+         * A modal can be dismissed by the user if it touches the lightbox, presses the closing button or by the app itself
+         * if it calls the Wix.closeWindow from within the modal iframe.
+         *
+         * The onClose argument can be used to detect modal close.
+         * @function
+         * @memberof Wix
+         * @since 1.16.0
+         * @param {String} url Model iframe url.
+         * @param {Number} width The modal window width.
+         * @param {Number} height The modal window height.
+         * @param {Function} [onClose] Onclose callback function.
+         * @example
+         *
+         * var onClose = function(message) { console.log("modal closed", message); }
+         * Wix.openModal("http://sslstatic.wix.com/services/js-sdk/1.16.0/html/modal.html", 400, 400, onClose);
+         *
+         */
+        openModal: openModal,
+
+
+        /**
+         *
+         * @function
+         * @memberof Wix
+         *
+         * @description
+         *
+         * The openPopup method allows an app to open a popup window within the site or preview.
+         *
+         * A popup is a runtime Widget that is not part of the site structure.
+         *
+         * Unlike the modal, a popup is not a singleton and doesn't present a lightbox.
+         *
+         * A popup can also be positioned by the caller. We currently support a predefined set of
+         * positions that can be used when opening a popup.
+         *
+         * A popup is dismissed by the user if he presses the close button or by the app itself if it calls the Wix.closeWindow from within
+         * the popup iframe.
+         *
+         * The onClose argument can be used to detect modal close.
+         *
+         * Popup positioning
+         * A popup position is determined by two properties, it's position origin and it's position placement.
+         * A position origin determines the origin point (x,y) which will be used to apply the position placement.
+         * The position origin is defined under [Wix.WindowOrigin](Wix.WindowOrigin) and can have the following values:
+         *
+         * [Wix.WindowOrigin.DEFAULT](Wix.WindowOrigin.html#DEFAULT)
+         *
+         * [Wix.WindowOrigin.FIXED](Wix.WindowOrigin.html#FIXED)
+         *
+         * [Wix.WindowOrigin.RELATIVE]((Wix.WindowOrigin.html#RELATIVE)
+         *
+         * [Wix.WindowOrigin.ABSOLUTE]((Wix.WindowOrigin.html#ABSOLUTE)
+         *
+         * A position placement is a predefined set of locations when a popup will be placed.
+         * The placement values are valid for Wix.WindowOrigin.FIXED, Wix.WindowOrigin.ABSOLUTE and Wix.WindowOrigin.RELATIVE origins but mapped to a different positions on the screen.
+         * The position placement is defined under Wix.WindowPlacement and can have the following values:
+         *
+         * [Wix.WindowPlacement.TOP_LEFT](Wix.WindowPlacement.html#TOP_LEFT)
+         *
+         * [Wix.WindowPlacement.TOP_CENTER](Wix.WindowPlacement.html#TOP_CENTER)
+         *
+         * [Wix.WindowPlacement.TOP_RIGHT](Wix.WindowPlacement.html#TOP_RIGHT)
+         *
+         * [Wix.WindowPlacement.CENTER_LEFT](Wix.WindowPlacement.html#CENTER_LEFT)
+         *
+         * [Wix.WindowPlacement.CENTER](Wix.WindowPlacement.html#CENTER)
+         *
+         * [Wix.WindowPlacement.CENTER_RIGHT](Wix.WindowPlacement.html#CENTER_RIGHT)
+         *
+         * [Wix.WindowPlacement.BOTTOM_LEFT](Wix.WindowPlacement.html#BOTTOM_LEFT)
+         *
+         * [Wix.WindowPlacement.BOTTOM_CENTER](Wix.WindowPlacement.html#BOTTOM_CENTER)
+         *
+         * [Wix.WindowPlacement.BOTTOM_RIGHT](Wix.WindowPlacement.html#BOTTOM_RIGHT)
+         *
+         * @since 1.17.0
+         * @param {String} url Popup iframe's url.
+         * @param {Number} width Popup width in pixels.
+         * @param {Number} height Popup height in pixels.
+         * @param {Object} position
+         * @param {Function} [onClose] Callback function.
+         * @param {Wix.Theme} theme The popup window theme, one of Wix.Theme values. Wix.Theme.DEFAULT is used for regular popup look & feel - border, shadow, close button. Wix.Theme.BARE is used for no decorations at all.
+         *
+         * Note:
+         * In a RELATIVE or ABSOLUTE origin, there is a chance that the requested popup can not fit in the
+         * desired position since it's size exceeds the margin between the opening Widget and the screen size.
+         * A Widget position is determined by site owners when they build their sites while the Widget
+         * is not aware to it's position in the site. When the Wix Platform render popups,
+         * it calculates if a popup in the requested size can fit the requested position.
+         * If not, the Wix Platform will default the position to {origin: Wix.WindowOrigin.FIXED, placement: Wix.WindowPlacement.CENTER},
+         * i.e., the center of the screen.
+         *
+         *
+         * @example
+         * // The following call will open a popup window positioned in the center of the screen
+         * var position =  {origin: Wix.WindowOrigin.FIXED, placement: Wix.WindowPlacement.CENTER};
+         * var onClose = function(message) { console.log("popup closed", message) };
+         * Wix.openPopup("http://sslstatic.wix.com/services/js-sdk/1.16.0/html/modal.html", 400, 400, position, onClose);
+         * @example
+         * // The following call will open a popup window positioned bottom-right to the point (x, y), originated in the top-left corner of the widget
+         * var position =  {origin: Wix.WindowOrigin.ABSOLUTE, placement: Wix.WindowPlacement.BOTTOM_RIGHT, x: 20, y: 100};
+         * var onClose = function(message) { console.log("popup closed", message) };
+         * Wix.openPopup("http://sslstatic.wix.com/services/js-sdk/1.16.0/html/modal.html", 400, 400, position, onClose);
+         *
+         */
+        openPopup: openPopup,
+
+        /**
+         * This method requests the hosting Wix platform to change the iframe height inside the site/editor.
+         * @function
+         * @memberof Wix
+         * @since 1.22.0
+         * @param {Number} height An integer that represents the desired height in pixels.
+         * @example
+         *
+         * Wix.setHeight(height);
+         *
+         */
+        setHeight: setHeight,
+
+        /**
+         * The closeWindow method is available only under a modal endpoint (will not have any effect for other endpoints). It allows the modal to close itself programmatically.
+         * @function
+         * @memberof Wix
+         * @since 1.16.0
+         * @param {Object} [message] A custom message object to pass to the opener's onClose callback function.
+         * @example
+         *
+         * // The following call will close the modal/popup window and send a the object message to the opener onClose callback
+         * var message = {"reason": "button-clicked"};
+         * Wix.closeWindow(message);
+         *
+         */
+        closeWindow: closeWindow,
+
+        /**
+         * The scrollTo method will perform a scroll to a fixed position in the app's hosting site window exactly as the standard method do.
+         * @function
+         * @memberof Wix
+         * @since 1.19.0
+         * @param {Number} x The coordinate to scroll to, along the x-axis.
+         * @param {Number} y The coordinate to scroll to, along the y-axis.
+         * @example
+         *
+         * Wix.scrollTo(0, 0);
+         *
+         */
+        scrollTo: scrollTo,
+
+        /**
+         * The scrollBy method will perform a scroll by the specified number of pixels in the app's hosting site window exactly as the standard method - http://www.w3schools.com/jsref/met_win_scrollto.asp do.
+         * @function
+         * @memberof Wix
+         * @since 1.19.0
+         * @param {Number} x How many pixels to scroll by, along the x-axis (horizontal)
+         * @param {Number} y How many pixels to scroll by, along the y-axis (vertical)
+         * @example
+         *
+         * // The following call will scroll to the top of the page
+         * Wix.scrollBy(0, 0);
+         *
+         */
+        scrollBy: scrollBy,
+
+        /**
+         * The getsiteInfo method is used to retrieve information about the host site in which the app is shown.
+         * @function
+         * @memberof Wix
+         * @since 1.3.0
+         * @param callback (Function) a callback function to receive the site pages.
+         * @return {Object} data JSON containing the site info. It's properties are:
+         *
+         *  Name           | Type      | Description
+         * ----------------|-----------|------------
+         * siteTitle       | `String`  | The title of the site that is used for SEO.
+         * pageTitle       | `String`  | The site current page title that is used for SEO.
+         * siteDescription | `String`  | The description of the site that is used for SEO
+         * siteKeywords    | `String`  | The keywords which were related to the site and are used for SEO.
+         * referrer        | `String`  | The referrer header of the http request.
+         * url             | `String`  | The full url taken from the location.href, include internal site state, for example: http://user.wix.com/site-name#!pageTitle/pageId, http://www.domain.com#!pageTitle/pageId
+         * baseUrl         | `String`  | Base url of the current site, for example: http://user.wix.com/site-name, http://www.domain.com
+         *
+         * @example
+         * Wix.getSiteInfo( function(siteInfo) {
+         *      // do something with the siteInfo
+         * });
+         */
+        getSiteInfo: getSiteInfo,
+
+        /**
+         * The getSitePages method is used to retrieve the site structure from the hosting Wix Platform. The site structure includes visible and hidden pages as well as sub pages.
+         * @function
+         * @memberof Wix
+         * @since 1.17.0
+         * @param {Function} callback A callback function to receive the site pages.
+         * @return {Array} Array containing an ordered set of the site pages. A single page description contains the following properties:
+         *
+         *  Name             | Type      | Description
+         * ------------------|-----------|------------
+         * id                | `String`  | The page id.
+         * title             | `String`  | The page title.
+         * hide              | `Boolean` | A flag indicating if the page is hidden.
+         * subPages(optional)| `Array`   | An ordered set of sub pages.
+         * @example
+         *
+         * Wix.getSitePages(function(sitePages) {
+         *    // do something with the site pages
+         * });
+         */
+        getSitePages: getSitePages,
+
+        /**
+         * The getBoundingRectAndOffsets method returns the app's component bounding rect and site's offset.
+         * @function
+         * @memberof Wix
+         * @since 1.26.0
+         * @param {Function} callback A callback function which passes back the bounding rect and offsets.
+         *
+         * @example
+         * Wix.getBoundingRectAndOffsets(function(data){
+         *    // use the offsets and rect details
+         * });
+         */
+        getBoundingRectAndOffsets: getBoundingRectAndOffsets,
+
+
+        /**
+         * The removeEventListener method allows to remove previously assigned event listeners that were specified using Wix.addEventListener.
+         * @function
+         * @memberof Wix
+         * @since 1.25.0
+         * @param {Wix.Events} eventName Unique event identifier.
+         * @param {Function} callBackOrId A callback function that was used with addEventListener or an id returned by addEventListener.
+         *
+         * @example
+         * var callback = function(){};
+         * var id = Wix.addEventListener(Wix.Events.EDIT_MODE_CHANGE, function(data) {
+         *     //do something
+         * });
+         * Wix.addEventListener(Wix.Events.PAGE_NAVIGATION, callback);
+         * // remove listener as a callback function
+         * Wix.removeEventListener(Wix.Events.PAGE_NAVIGATION, callback);
+         * // remove listener as an id
+         * Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);
+         */
+        removeEventListener: removeEventListener,
+
+
+        /**
+         * The addEventListener method lets the App listen to events that happens inside the editor/site.
+         * @function
+         * @memberof Wix
+         * @since 1.11.0
+         * The events that you can currently listen to are:
+         * @see Wix.Events.EDIT_MODE_CHANGE
+         * @see Wix.Events.PAGE_NAVIGATION_CHANGE
+         * @see Wix.Events.PAGE_NAVIGATION
+         * @see Wix.Events.PAGE_NAVIGATION_IN
+         * @see Wix.Events.PAGE_NAVIGATION_OUT
+         * @see Wix.Events.SCROLL
+         * @see Wix.Events.COMPONENT_DELETED
+         * @see Wix.Events.SITE_PUBLISHED
+         * @see Wix.Events.SETTINGS_UPDATED
+         * @see Wix.Events.STATE_CHANGED
+         *
+         */
+        addEventListener: addEventListener,
+        resizeWindow: resizeWindow,
+        requestLogin: requestLogin,
+        currentMember: currentMember,
+        navigateToPage: navigateToPage,
+        getCurrentPageId: getCurrentPageId,
+        pushState: pushState,
+        reportHeightChange: reportHeightChange,
+        getStyleParams: getStyleParams
+    }
+});</pre>
+	</article>
+</section>
+
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					
+		<span class="copyright">
+		Wix.com Copyright © 2014.
+		</span>
+					<br />
+					
+		<span class="jsdoc-message">
+		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
+		on Thu Sep 25th 2014 using the <a
+			href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		</span>
+				</footer>
+			</div>
+
+			
+			<br clear="both">
+		</div>
+
+	</div>
+	<!--<script src="scripts/sunlight.js"></script>-->
+	<script src="scripts/docstrap.lib.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
+
+	<script>
+		$( function () {
+			$( "[id*='$']" ).each( function () {
+				var $this = $( this );
+
+				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+			} );
+
+			$( "#toc" ).toc( {
+				anchorName  : function ( i, heading, prefix ) {
+					return $( heading ).attr( "id" ) || ( prefix + i );
+				},
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : "100px"
+			} );
+
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+			$( '.dropdown-toggle' ).dropdown();
+//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
+
+			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+				var $this = $( this );
+
+				var example = $this.find( "code" );
+				exampleText = example.html();
+				var lang = /{@lang (.*?)}/.exec( exampleText );
+				if ( lang && lang[1] ) {
+					exampleText = exampleText.replace( lang[0], "" );
+					example.html( exampleText );
+					lang = lang[1];
+				} else {
+					lang = "javascript";
+				}
+
+				if ( lang ) {
+
+					$this
+						.addClass( "sunlight-highlight-" + lang )
+						.addClass( "linenums" )
+						.html( example.html() );
+
+				}
+			} );
+
+			Sunlight.highlightAll( {
+				lineNumbers : true,
+				showMenu : true,
+				enableDoclinks : true
+			} );
+		} );
+	 </script>
+
+
+
+	<!--Navigation and Symbol Display-->
+	
+
+
+	<!--Google Analytics-->
+	
+
+</body>
+</html>
