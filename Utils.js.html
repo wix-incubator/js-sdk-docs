@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Wix SDK Source: Utils.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html">Wix SDK</a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="Error.html">Error</a>
+						</li>
+						
+						<li>
+							<a href="PubSub.html">PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Settings.html">Settings</a>
+						</li>
+						
+						<li>
+							<a href="Utils.html">Utils</a>
+						</li>
+						
+						<li>
+							<a href="Utils.html#Media">Utils.Media</a>
+						</li>
+						
+						<li>
+							<a href="Wix.html">Wix</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Activities.html">Wix.Activities</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Contacts.html">Wix.Contacts</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Events.html">Wix.Events</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowOrigin.html">Wix.WindowOrigin</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowPlacement.html">Wix.WindowPlacement</a>
+						</li>
+						
+						<li>
+							<a href="Worker.html">Worker</a>
+						</li>
+						
+						<li>
+							<a href="Worker.PubSub.html">Worker.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Worker.Utils.html">Worker.Utils</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
+				<li class="dropdown">
+					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="WixDataCursor.html">WixDataCursor</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+
+		
+			<div class="span12">
+				
+				<div id="main">
+					
+
+
+		<h1 class="page-title">Source: Utils.js</h1>
+    
+<section>
+	<article>
+		<pre
+			class="sunlight-highlight-javascript linenums">/**
+ * This is the description for the Utils namespace.
+ * @namespace Utils
+ */
+define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media, utils) {
+
+    var getViewMode =  function () {
+        gaTracker.trackSDKCall("Utils.getViewMode");
+        return (window.top === window) ? 'standalone' :  core.currentEditMode;
+    };
+
+    var toWixDate = function (date) {
+        gaTracker.trackSDKCall("Utils.toWixDate");
+        return date.toISOString();
+    };
+
+    var getCompId = function () {
+        gaTracker.trackSDKCall("Utils.getCompId");
+        return core.compId;
+    };
+
+    var getOrigCompId =  function () {
+        gaTracker.trackSDKCall("Utils.getOrigCompId");
+        return core.getQueryParameter("origCompId");
+    };
+
+    var getWidth = function () {
+        gaTracker.trackSDKCall("Utils.getWidth");
+        return core.getQueryParameter("width");
+    };
+
+    var getLocale = function () {
+        gaTracker.trackSDKCall("Utils.getLocale");
+        return core.getQueryParameter("locale");
+    };
+
+    var getCacheKiller = function () {
+        gaTracker.trackSDKCall("Utils.getCacheKiller");
+        return core.getQueryParameter("cacheKiller");
+    };
+
+    var getTarget = function () {
+        gaTracker.trackSDKCall("Utils.getTarget");
+        return core.getQueryParameter("target");
+    };
+
+    var getSectionUrl = function () {
+        gaTracker.trackSDKCall("Utils.getSectionUrl");
+        var sectionUrl = core.getQueryParameter("section-url");
+        return (sectionUrl && sectionUrl.replace(/\?$/, ""));
+    };
+
+    var getInstanceId = function () {
+        gaTracker.trackSDKCall("Utils.getInstanceId");
+        return core.getInstanceValue("instanceId");
+    };
+
+    var getSignDate = function () {
+        gaTracker.trackSDKCall("Utils.getSignDate");
+        return core.getInstanceValue("signDate");
+    };
+
+    var getUid = function () {
+        gaTracker.trackSDKCall("Utils.getUid");
+        return core.getInstanceValue("uid");
+    };
+
+    var getPermissions = function (){
+        gaTracker.trackSDKCall("Utils.getPermissions");
+        return core.getInstanceValue("permissions");
+    };
+
+    var getIpAndPort = function () {
+        gaTracker.trackSDKCall("Utils.getIpAndPort");
+        return core.getInstanceValue("ipAndPort");
+    };
+
+    var getDemoMode = function () {
+        gaTracker.trackSDKCall("Utils.getDemoMode");
+        var mode = core.getInstanceValue("demoMode");
+        mode = (mode == null) ? false : mode;
+
+        return mode;
+    };
+
+    var getDeviceType = function () {
+        gaTracker.trackSDKCall("Utils.getDeviceType");
+        return core.getQueryParameter("deviceType") || "desktop";
+    };
+
+
+    var navigateToSection = function(sectionIdentifier, state, onFailure) {
+        gaTracker.trackSDKCall("Utils.navigateToSectionPage");
+        var args;
+        if(utils.isFunction(sectionIdentifier)) {
+            onFailure = sectionIdentifier;
+        }
+        else if(utils.isString(sectionIdentifier)) {
+            args = {
+                state: sectionIdentifier
+            };
+            onFailure = state;
+        } else if(utils.isObject(sectionIdentifier) && utils.isFunction(state)) {
+            args = {
+                sectionIdentifier: sectionIdentifier
+            };
+            onFailure = state;
+        } else {
+            args = {
+                sectionIdentifier: sectionIdentifier,
+                state: state
+            };
+        }
+        core.sendMessage(core.MessageTypes.NAVIGATE_TO_SECTION_PAGE, args, onFailure);
+    };
+
+    return {
+        /**
+         * This method returns a String which represents the current view mode.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {String} The current view mode (editor/preview/site/standalone).
+         * @example
+         *
+         * //viewMode will get a value like 'editor/preview/site'
+         * var viewMode = Wix.Utils.getViewMode();
+         */
+        getViewMode: getViewMode,
+
+        /**
+         * Converts a JavaScript Date object into the correct format, ISO 8601, used by Wix APIs when dealing with dates.
+         * It follows the same example provided by Mozilla as a polyfill for non-ECMA 262, 5th edition browsers.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.28.0
+         * @param {Date}
+         * @return {String} Represents the given date formatted in ISO 8601.
+         */
+        toWixDate: toWixDate,
+
+        /**
+         * This method returns a String which represents the Widget/Page/Settings iframe's component id.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {String} The Widget/Page/Settings iframe's component id.
+         * @example
+         *
+         * //compId will get a value like 'TPWdgt-d88e26c-217b-505f-196d-2f6d87f1c2db'
+         * var compId = Wix.Utils.getCompId();
+         */
+        getCompId:getCompId,
+
+        /**
+         * This method returns for valid endpoints a String which represents the Widget/Page iframe's component id which opened the App Settings panel.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {String} The Widget/Page iframe's component id which opened the App Settings panel, popup or modal. If not exist returns null.
+         * @example
+         *
+         * //origCompId will get a value like 'TPWdgt-d88e26c-217b-505f-196d-2f6d87f1c2db'
+         * var origCompId = Wix.Utils.getOrigCompId();
+         */
+        getOrigCompId:getOrigCompId,
+
+        /**
+         * This method returns a Number which represents the Widget/Page/Settings iframe's width.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {Number} The Widget/Page/Settings iframe's width.
+         * @example
+         *
+         * // width will get a value like 300
+         * var width = Wix.Utils.getWidth();
+         */
+        getWidth:getWidth,
+
+        /**
+         * This method for valid endpoints (Widget/Page/Settings) returns a String which represents the current locale of the site/editor. A locale is an abbreviated language tag that defines the user's language, country and any special variant preference of the user interface (e.g. Number format, Date format, etc.).
+         * @function
+         * @memberof Utils
+         * @since SDK 1.14.0
+         * @return {String} A standard IETF language tag - en (English), es (Spanish), fr (Franch), it (Italian), etc.
+         * @example
+         *
+         * //locale will get a value like 'en', 'es', etc.
+         * var locale = Wix.Utils.getLocale()
+         */
+        getLocale:getLocale,
+
+        /**
+         * This method for valid endpoints (Widget/Page) returns a String which is the cacheKiller query parameter.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {String} The cacheKiller query parameter, if not exist returns null.
+         * @example
+         *
+         * //cacheKiller will get a value of a random string - 1359996970511
+         *var cacheKiller = Wix.Utils.getCacheKiller();
+         */
+        getCacheKiller:getCacheKiller,
+
+        /**
+         * This method for valid endpoints (Widget/Page) returns a String which is the target query parameter (for the section-url).
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {String} The target query parameter, if not exist returns null.
+         * @example
+         *
+         * //target will get a value like '_top' or '_self'
+         * var target = Wix.Utils.getTarget();
+         */
+        getTarget:getTarget,
+
+        /**
+         * This method is valid for Page endpoint only. It returns a String which is the section-url query parameter.
+         *
+         * Please note: The parameter "section-url" here refers to the Page app URL.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {String} The section-url query parameter, if not exist returns null.
+         * @example
+         *
+         * //url will get a value of a valid url like 'http://user.wix.com/site#!page/ch6q'
+         * var url = Wix.Utils.getSectionUrl()
+         */
+        getSectionUrl:getSectionUrl,
+
+        /**
+         * This method returns a String which represents the app instance Id.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {String} An app instance id - a GUID like value (decoded property of the instance query parameter)
+         * @example
+         *
+         * //instanceId will get a GUID like value - e.g. '12de5bae-01e7-eaab-325f-436462858228'
+         * var instanceId = Wix.Utils.getInstanceId();
+         */
+        getInstanceId:getInstanceId,
+
+        /**
+         * This method returns a String which represents the app instance signDate.
+         * @function
+         * @memberof Utils
+         * @deprecated As of SDK 1.13.0
+         * @returns {String} An app instance signDate (property of the decoded instance query parameter).
+         * @example
+         *
+         * //date will get a value like '2013-01-04T02:45:35.302-06:00'
+         * var date = Wix.Utils.getSignDate();
+         */
+        getSignDate:getSignDate,
+
+        /**
+         * This method returns a String which represents the user identifier.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {String} A user identifier (decoded property of the instance query parameter).
+         * @example
+         *
+         * var uid = Wix.Utils.getUid();
+         */
+        getUid:getUid,
+
+        /**
+         * This method returns a String which represents the user's permissions (decoded property of the instance query parameter).
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {String} User's permissions (decoded property of the instance query parameter) - permissions can get the value of 'OWNER' for the site owner otherwise it will be null.
+         * @example
+         *
+         * var permissions = Wix.Utils.getPermissions();
+         */
+        getPermissions:getPermissions,
+
+        /**
+         * This method returns a String which represents the app IP and port.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.13.0
+         * @returns {String} An app IP and port (decoded property of the instance query parameter).
+         * @example
+         *
+         * //ipAndPort will get a value like '91.199.119.254/61308'
+         * var ipAndPort = Wix.Utils.getIpAndPort();
+         */
+        getIpAndPort:getIpAndPort,
+
+        /**
+         * This method returns a Boolean which represents the app instance demo mode state.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.12.0
+         * @returns {Boolean} An app instance demo mode state (decoded property of the instance query parameter).
+         * @example
+         *
+         * // demoMode will get a value like true/false
+         * var demoMode = Wix.Utils.getDemoMode();
+         */
+        getDemoMode:getDemoMode,
+
+        /**
+         * This method returns a String which represents the current device type.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.20.0
+         * @returns {String} The current device type. One of the following: * desktop *mobile
+         * @example
+         *
+         * // deviceType will get a value of 'desktop' or 'mobile'
+         * var deviceType = Wix.Worker.Utils.getDeviceType();
+         */
+        getDeviceType:getDeviceType,
+
+        /**
+         * Navigates to the callers section page in the hosted site.
+         * @function
+         * @memberof Utils
+         * @since SDK 1.33.0
+         * @param {Object} [sectionIdenfitier] App page id defined in dev.wix.com {sectionId : 'sectionId'}.
+         * @param {String} [state] New app's state to push into the editor history stack.
+         * @param {Function} onFailure This will be called if the hosting site does not include the section app, or if the caller's application does not include a section.
+         * @example
+         *
+         *
+         * Wix.Utils.navigateToSection({ sectionId : 'sectionId' }, 'myState', function(error){
+         *    //Handle error use-case
+         * });
+         */
+        navigateToSection:navigateToSection,
+
+        /**
+         * @memberof Utils
+         */
+        Media: Media
+    }
+
+});</pre>
+	</article>
+</section>
+
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					
+		<span class="copyright">
+		Wix.com Copyright © 2014.
+		</span>
+					<br />
+					
+		<span class="jsdoc-message">
+		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
+		on Thu Sep 25th 2014 using the <a
+			href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		</span>
+				</footer>
+			</div>
+
+			
+			<br clear="both">
+		</div>
+
+	</div>
+	<!--<script src="scripts/sunlight.js"></script>-->
+	<script src="scripts/docstrap.lib.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
+
+	<script>
+		$( function () {
+			$( "[id*='$']" ).each( function () {
+				var $this = $( this );
+
+				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+			} );
+
+			$( "#toc" ).toc( {
+				anchorName  : function ( i, heading, prefix ) {
+					return $( heading ).attr( "id" ) || ( prefix + i );
+				},
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : "100px"
+			} );
+
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+			$( '.dropdown-toggle' ).dropdown();
+//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
+
+			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+				var $this = $( this );
+
+				var example = $this.find( "code" );
+				exampleText = example.html();
+				var lang = /{@lang (.*?)}/.exec( exampleText );
+				if ( lang && lang[1] ) {
+					exampleText = exampleText.replace( lang[0], "" );
+					example.html( exampleText );
+					lang = lang[1];
+				} else {
+					lang = "javascript";
+				}
+
+				if ( lang ) {
+
+					$this
+						.addClass( "sunlight-highlight-" + lang )
+						.addClass( "linenums" )
+						.html( example.html() );
+
+				}
+			} );
+
+			Sunlight.highlightAll( {
+				lineNumbers : true,
+				showMenu : true,
+				enableDoclinks : true
+			} );
+		} );
+	 </script>
+
+
+
+	<!--Navigation and Symbol Display-->
+	
+
+
+	<!--Google Analytics-->
+	
+
+</body>
+</html>

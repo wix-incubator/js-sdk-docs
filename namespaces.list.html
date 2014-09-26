@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix SDK Index</title>
+	<title>Wix SDK Namespaces</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -122,48 +122,138 @@
 					
 
 
+	<h1 class="page-title">Namespaces</h1>
+<section>
+
+<header>
+    <h2>
+    
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+        
+<dl class="details">
 	
-	<span class="page-title">Index</span>
-	
-	
-
-
-
-
-
-
-
-
-
-
-
 
 	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
 	
 
 
 
+	
+
+	
+
+	
+
+	
+</dl>
 
 
-    <section class="readme-section">
-        <article><h1>Overview</h1>
-<p>The Javascript SDK exposes a set of functions that enables the app to communicate with the Wix platform - site or editor.</p>
-<h3>Including The Library</h3>
-<p>In order to use the SDK you must include the following script tag in your HTML document head:</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;//sslstatic.wix.com/services/js-sdk/1.35.0/js/Wix.js&quot;&gt;&lt;/script&gt;</code></pre>
-<p>Once included, your window object will contain a new global Object named Wix from which you could call functions that are used to notify the host site of events in the app.</p>
-<h3>Version</h3>
-<p>The Javascript SDK is always version-ed. To load a specific version of the SDK you have to change the path appropriately by replacing the version part to the version number you need.</p>
-<h3>Structure/Scope</h3>
-<p>The Wix Object can be used in all the app's endpoints - widget, page, modal and settings. However, some of it's functions make sense only in certain endpoints. The most obvious distinction is the Settings endpoint.</p>
-<p>The Settings endpoint is different since it is the only endpoint that resides in the Wix Editor while the others reside in Wix site. For that reason we created a sub-object Wix.Settings that holds all the function that are valid in the Settings endpoint.</p>
-<p>Another special sub-object is the Wix.Util. It provides utility functions that can be called by all endpoints.</p>
-<p>The table below summaries the scope of the Wix functions and it's sub-objects in different endpoints:</p>
-<div style="background-color:blue;border-radius: 5px;border-style: solid;border-width: 1px;padding:10px;background-color: #E0EFFF;border-color: #9EB6D4;">Although Wix.Utils.* is valid for all endpoints, if the called function doesn't have a meaningful value to return it will return null. E.g Wix.Utils.getOrigCompId() will return null in widget/page/modal and return the original component id in the settings endpoint.</div></article>
-    </section>
+        
+    
+    </div>
 
+    
 
+    
 
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="WixDataCursor.html">WixDataCursor</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Namespaces</h3>
+
+        <dl>
+            <dt><a href="namespaces.html#Error"><a href="Error.html">Error</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#PubSub"><a href="PubSub.html">PubSub</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Settings"><a href="Settings.html">Settings</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Utils"><a href="Utils.html">Utils</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Utils.Media"><a href="Utils.html#Media">Media</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix"><a href="Wix.html">Wix</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Activities"><a href="Wix.Activities.html">Activities</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Contacts"><a href="Wix.Contacts.html">Contacts</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Dashboard"><a href="Wix.Dashboard.html">Dashboard</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Events"><a href="Wix.Events.html">Events</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Theme"><a href="Wix.Theme.html">Theme</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.WindowOrigin"><a href="Wix.WindowOrigin.html">WindowOrigin</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.WindowPlacement"><a href="Wix.WindowPlacement.html">WindowPlacement</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Worker"><a href="Worker.html">Worker</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Worker.PubSub"><a href="Worker.PubSub.html">PubSub</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Worker.Utils"><a href="Worker.Utils.html">Utils</a></a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix SDK Index</title>
+	<title>Wix SDK Source: WindowPlacement.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -116,53 +116,92 @@
 	<div class="row-fluid">
 
 		
-		<div class="span8">
-			
+			<div class="span12">
+				
 				<div id="main">
 					
 
 
-	
-	<span class="page-title">Index</span>
-	
-	
+		<h1 class="page-title">Source: WindowPlacement.js</h1>
+    
+<section>
+	<article>
+		<pre
+			class="sunlight-highlight-javascript linenums">/**
+ * Represents a predefined values to position a Wix popup windows without the hassle of figuring out the position yourself.
+ * Can be used to position the window relatively (to the calling widget) or absolutely (to the view port).
+ *
+ * @memberof Wix
+ * @namespace WindowPlacement
+ */
+define(function () {
+    return {
+        /**
+         * Top left placement.
+         * @memberof Wix.WindowPlacement
+         * @since 1.17.0
+         */
+        TOP_LEFT: 'TOP_LEFT',
 
+        /**
+         * Top right placement.
+         * @memberof Wix.WindowPlacement
+         * @since 1.17.0
+         */
+        TOP_RIGHT: 'TOP_RIGHT',
 
+        /**
+         * Bottom right placement.
+         * @memberof Wix.WindowPlacement
+         * @since 1.17.0
+         */
+        BOTTOM_RIGHT: 'BOTTOM_RIGHT',
 
+        /**
+         * Bottom left placement.
+         * @memberof Wix.WindowPlacement
+         * @since 1.17.0
+         */
+        BOTTOM_LEFT: 'BOTTOM_LEFT',
 
+        /**
+         * Top center placement.
+         * @memberof Wix.WindowPlacement
+         * @since 1.17.0
+         */
+        TOP_CENTER: 'TOP_CENTER',
 
+        /**
+         * Center right placement.
+         * @memberof Wix.WindowPlacement
+         * @since 1.17.0
+         */
+        CENTER_RIGHT: 'CENTER_RIGHT',
 
+        /**
+         * Bottom center placement.
+         * @memberof Wix.WindowPlacement
+         * @since 1.17.0
+         */
+        BOTTOM_CENTER: 'BOTTOM_CENTER',
 
+        /**
+         * Center left placement.
+         * @memberof Wix.WindowPlacement
+         * @since 1.17.0
+         */
+        CENTER_LEFT: 'CENTER_LEFT',
 
-
-
-
-
-	
-	
-
-
-
-
-
-    <section class="readme-section">
-        <article><h1>Overview</h1>
-<p>The Javascript SDK exposes a set of functions that enables the app to communicate with the Wix platform - site or editor.</p>
-<h3>Including The Library</h3>
-<p>In order to use the SDK you must include the following script tag in your HTML document head:</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;//sslstatic.wix.com/services/js-sdk/1.35.0/js/Wix.js&quot;&gt;&lt;/script&gt;</code></pre>
-<p>Once included, your window object will contain a new global Object named Wix from which you could call functions that are used to notify the host site of events in the app.</p>
-<h3>Version</h3>
-<p>The Javascript SDK is always version-ed. To load a specific version of the SDK you have to change the path appropriately by replacing the version part to the version number you need.</p>
-<h3>Structure/Scope</h3>
-<p>The Wix Object can be used in all the app's endpoints - widget, page, modal and settings. However, some of it's functions make sense only in certain endpoints. The most obvious distinction is the Settings endpoint.</p>
-<p>The Settings endpoint is different since it is the only endpoint that resides in the Wix Editor while the others reside in Wix site. For that reason we created a sub-object Wix.Settings that holds all the function that are valid in the Settings endpoint.</p>
-<p>Another special sub-object is the Wix.Util. It provides utility functions that can be called by all endpoints.</p>
-<p>The table below summaries the scope of the Wix functions and it's sub-objects in different endpoints:</p>
-<div style="background-color:blue;border-radius: 5px;border-style: solid;border-width: 1px;padding:10px;background-color: #E0EFFF;border-color: #9EB6D4;">Although Wix.Utils.* is valid for all endpoints, if the called function doesn't have a meaningful value to return it will return null. E.g Wix.Utils.getOrigCompId() will return null in widget/page/modal and return the original component id in the settings endpoint.</div></article>
-    </section>
-
-
+        /**
+         * (FIXED origin only) center of the screen.
+         * @memberof Wix.WindowPlacement
+         * @since 1.17.0
+         */
+        CENTER: 'CENTER'
+    }
+});</pre>
+	</article>
+</section>
 
 
 
@@ -187,10 +226,6 @@
 				</footer>
 			</div>
 
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
 			
 			<br clear="both">
 		</div>

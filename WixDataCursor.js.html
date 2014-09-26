@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix SDK Index</title>
+	<title>Wix SDK Source: WixDataCursor.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -116,53 +116,170 @@
 	<div class="row-fluid">
 
 		
-		<div class="span8">
-			
+			<div class="span12">
+				
 				<div id="main">
 					
 
 
-	
-	<span class="page-title">Index</span>
-	
-	
+		<h1 class="page-title">Source: WixDataCursor.js</h1>
+    
+<section>
+	<article>
+		<pre
+			class="sunlight-highlight-javascript linenums">/**
+ * @class WixDataCursor
+ */
+define([], function () {
+
+    var _callService = function (onSuccess, onFailure, cursorId) {
+        var that = this;
+        var onComplete = function onComplete(response) {
+            if (response.error) {
+                onFailure(response);
+            } else {
+                that._nextCursor = response.data.nextCursor;
+                that._previousCursor = response.data.previousCursor;
+                that._data = response.data.results;
+                onSuccess(response.data.results);
+            }
+        };
+
+        var args = {
+            cursorId: cursorId,
+            options: this._options
+        };
+
+        this.core.sendMessage(this._serviceMessageType, args, onComplete);
+    };
+
+    function WixDataCursor(core, serviceMessageType, data, total, pageSize) {
+        if (typeof serviceMessageType !== 'string' || typeof core === 'undefined') {
+            throw new Error('Mandatory parameters are missing.');
+        }
+
+        this._serviceMessageType = serviceMessageType;
+        this._data = data || [];
+        this._nextCursor = null;
+        this._previousCursor = null;
+        this._total = total;
+        this._pageSize = pageSize;
+        this._options = {};
+        this.core = core;
+    }
+
+    /**
+     * @memberof WixDataCursor
+     * @returns {boolean} If WixDataCursor has more data.
+     */
+    WixDataCursor.prototype.hasNext = function hasNext() {
+        return !!this._nextCursor;
+    };
+
+    /**
+     * @memberof WixDataCursor
+     * @returns {boolean} If WixDataCursor has previous data.
+     */
+    WixDataCursor.prototype.hasPrevious = function hasPrevious() {
+        return !!this._previousCursor;
+    };
 
 
+    /**
+     * @memberof WixDataCursor
+     * @param onSuccess
+     * @param onFailure
+     * @returns {boolean} The next WixDataCursor object.
+     */
+    WixDataCursor.prototype.next = function next(onSuccess, onFailure) {
+        if(this.hasNext()){
+            _callService.call(this, onSuccess, onFailure, this._nextCursor);
+        } else {
+            onSuccess([]);
+        }
+    };
+
+    /**
+     * @memberof WixDataCursor
+     * @param onSuccess
+     * @param onFailure
+     * @returns {boolean} The previous WixDataCursor object.
+     */
+    WixDataCursor.prototype.previous = function previous(onSuccess, onFailure) {
+        if(this.hasPrevious()){
+            _callService.call(this, onSuccess, onFailure, this._previousCursor);
+        } else {
+            onSuccess([]);
+        }
+    };
+
+    /**
+     * @memberof WixDataCursor
+     * @private
+     * @param {Object} data
+     */
+    WixDataCursor.prototype.setData = function setData(data) {
+        this._data = data;
+    };
+
+    /**
+     * @memberof WixDataCursor
+     * @private
+     * @returns {WixDataCursor[]}
+     */
+    WixDataCursor.prototype.getData = function getData() {
+        return this._data;
+    };
+
+    /**
+     * @memberof WixDataCursor
+     * @private
+     * @param {WixDataCursor} cursor
+     */
+    WixDataCursor.prototype.setNextCursor = function setNextCursor(cursor) {
+        this._nextCursor = cursor;
+    };
+
+    /**
+     * @memberof WixDataCursor
+     * @private
+     * @param {WixDataCursor} cursor
+     */
+    WixDataCursor.prototype.setPreviousCursor = function setPreviousCursor(cursor) {
+        this._previousCursor = cursor;
+    };
 
 
+    /**
+     * @memberof WixDataCursor
+     * @returns {Number} The total number of Object in the cursor.
+     */
+    WixDataCursor.prototype.getTotal = function getTotal() {
+        return this._total;
+    };
 
+    /**
+     * @memberof WixDataCursor
+     * @returns {Number} The number of the cursor page size.
+     */
+    WixDataCursor.prototype.getPageSize = function getPageSize() {
+        return this._pageSize;
+    };
 
+    /**
+     * @memberof WixDataCursor
+     * @param {Object} options
+     * @private
+     * @returns Sets the cursor options object.
+     */
+    WixDataCursor.prototype.setOptions = function setOptions(options) {
+        this._options = options;
+    };
 
-
-
-
-
-
-	
-	
-
-
-
-
-
-    <section class="readme-section">
-        <article><h1>Overview</h1>
-<p>The Javascript SDK exposes a set of functions that enables the app to communicate with the Wix platform - site or editor.</p>
-<h3>Including The Library</h3>
-<p>In order to use the SDK you must include the following script tag in your HTML document head:</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;//sslstatic.wix.com/services/js-sdk/1.35.0/js/Wix.js&quot;&gt;&lt;/script&gt;</code></pre>
-<p>Once included, your window object will contain a new global Object named Wix from which you could call functions that are used to notify the host site of events in the app.</p>
-<h3>Version</h3>
-<p>The Javascript SDK is always version-ed. To load a specific version of the SDK you have to change the path appropriately by replacing the version part to the version number you need.</p>
-<h3>Structure/Scope</h3>
-<p>The Wix Object can be used in all the app's endpoints - widget, page, modal and settings. However, some of it's functions make sense only in certain endpoints. The most obvious distinction is the Settings endpoint.</p>
-<p>The Settings endpoint is different since it is the only endpoint that resides in the Wix Editor while the others reside in Wix site. For that reason we created a sub-object Wix.Settings that holds all the function that are valid in the Settings endpoint.</p>
-<p>Another special sub-object is the Wix.Util. It provides utility functions that can be called by all endpoints.</p>
-<p>The table below summaries the scope of the Wix functions and it's sub-objects in different endpoints:</p>
-<div style="background-color:blue;border-radius: 5px;border-style: solid;border-width: 1px;padding:10px;background-color: #E0EFFF;border-color: #9EB6D4;">Although Wix.Utils.* is valid for all endpoints, if the called function doesn't have a meaningful value to return it will return null. E.g Wix.Utils.getOrigCompId() will return null in widget/page/modal and return the original component id in the settings endpoint.</div></article>
-    </section>
-
-
+    return WixDataCursor;
+});</pre>
+	</article>
+</section>
 
 
 
@@ -187,10 +304,6 @@
 				</footer>
 			</div>
 
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
 			
 			<br clear="both">
 		</div>
