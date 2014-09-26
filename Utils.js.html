@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix SDK Source: Utils.js</title>
+	<title>Wix JS SDK Source: Utils.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,7 +18,7 @@
 <div class="container-fluid">
 	<div class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
-			<a class="brand" href="index.html">Wix SDK</a>
+			<a class="brand" href="index.html">Wix JS SDK</a>
 			<ul class="nav">
 				
 				<li class="dropdown">
@@ -26,26 +26,6 @@
 						class="caret"></b></a>
 
 					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="Error.html">Error</a>
-						</li>
-						
-						<li>
-							<a href="PubSub.html">PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Settings.html">Settings</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html">Utils</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html#Media">Utils.Media</a>
-						</li>
 						
 						<li>
 							<a href="Wix.html">Wix</a>
@@ -64,11 +44,31 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Error.html">Wix.Error</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Events.html">Wix.Events</a>
 						</li>
 						
 						<li>
+							<a href="Wix.PubSub.html">Wix.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Settings.html">Wix.Settings</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.html">Wix.Utils</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
 						</li>
 						
 						<li>
@@ -80,15 +80,15 @@
 						</li>
 						
 						<li>
-							<a href="Worker.html">Worker</a>
+							<a href="Wix.Worker.html">Wix.Worker</a>
 						</li>
 						
 						<li>
-							<a href="Worker.PubSub.html">Worker.PubSub</a>
+							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
 						</li>
 						
 						<li>
-							<a href="Worker.Utils.html">Worker.Utils</a>
+							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
 						</li>
 						
 
@@ -129,7 +129,8 @@
 		<pre
 			class="sunlight-highlight-javascript linenums">/**
  * This is the description for the Utils namespace.
- * @namespace Utils
+ * @memberof Wix
+ * @namespace Wix.Utils
  */
 define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media, utils) {
 
@@ -247,8 +248,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a String which represents the current view mode.
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {String} The current view mode (editor/preview/site/standalone).
          * @example
          *
@@ -261,8 +262,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
          * Converts a JavaScript Date object into the correct format, ISO 8601, used by Wix APIs when dealing with dates.
          * It follows the same example provided by Mozilla as a polyfill for non-ECMA 262, 5th edition browsers.
          * @function
-         * @memberof Utils
-         * @since SDK 1.28.0
+         * @memberof Wix.Utils
+         * @since 1.28.0
          * @param {Date}
          * @return {String} Represents the given date formatted in ISO 8601.
          */
@@ -271,8 +272,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a String which represents the Widget/Page/Settings iframe's component id.
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {String} The Widget/Page/Settings iframe's component id.
          * @example
          *
@@ -284,8 +285,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns for valid endpoints a String which represents the Widget/Page iframe's component id which opened the App Settings panel.
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {String} The Widget/Page iframe's component id which opened the App Settings panel, popup or modal. If not exist returns null.
          * @example
          *
@@ -297,8 +298,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a Number which represents the Widget/Page/Settings iframe's width.
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {Number} The Widget/Page/Settings iframe's width.
          * @example
          *
@@ -310,8 +311,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method for valid endpoints (Widget/Page/Settings) returns a String which represents the current locale of the site/editor. A locale is an abbreviated language tag that defines the user's language, country and any special variant preference of the user interface (e.g. Number format, Date format, etc.).
          * @function
-         * @memberof Utils
-         * @since SDK 1.14.0
+         * @memberof Wix.Utils
+         * @since 1.14.0
          * @return {String} A standard IETF language tag - en (English), es (Spanish), fr (Franch), it (Italian), etc.
          * @example
          *
@@ -323,8 +324,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method for valid endpoints (Widget/Page) returns a String which is the cacheKiller query parameter.
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {String} The cacheKiller query parameter, if not exist returns null.
          * @example
          *
@@ -336,8 +337,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method for valid endpoints (Widget/Page) returns a String which is the target query parameter (for the section-url).
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {String} The target query parameter, if not exist returns null.
          * @example
          *
@@ -351,8 +352,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
          *
          * Please note: The parameter "section-url" here refers to the Page app URL.
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {String} The section-url query parameter, if not exist returns null.
          * @example
          *
@@ -364,8 +365,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a String which represents the app instance Id.
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {String} An app instance id - a GUID like value (decoded property of the instance query parameter)
          * @example
          *
@@ -377,8 +378,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a String which represents the app instance signDate.
          * @function
-         * @memberof Utils
-         * @deprecated As of SDK 1.13.0
+         * @memberof Wix.Utils
+         * @deprecated 1.13.0
          * @returns {String} An app instance signDate (property of the decoded instance query parameter).
          * @example
          *
@@ -390,8 +391,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a String which represents the user identifier.
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {String} A user identifier (decoded property of the instance query parameter).
          * @example
          *
@@ -402,8 +403,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a String which represents the user's permissions (decoded property of the instance query parameter).
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {String} User's permissions (decoded property of the instance query parameter) - permissions can get the value of 'OWNER' for the site owner otherwise it will be null.
          * @example
          *
@@ -414,8 +415,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a String which represents the app IP and port.
          * @function
-         * @memberof Utils
-         * @since SDK 1.13.0
+         * @memberof Wix.Utils
+         * @since 1.13.0
          * @returns {String} An app IP and port (decoded property of the instance query parameter).
          * @example
          *
@@ -427,8 +428,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a Boolean which represents the app instance demo mode state.
          * @function
-         * @memberof Utils
-         * @since SDK 1.12.0
+         * @memberof Wix.Utils
+         * @since 1.12.0
          * @returns {Boolean} An app instance demo mode state (decoded property of the instance query parameter).
          * @example
          *
@@ -440,8 +441,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * This method returns a String which represents the current device type.
          * @function
-         * @memberof Utils
-         * @since SDK 1.20.0
+         * @memberof Wix.Utils
+         * @since 1.20.0
          * @returns {String} The current device type. One of the following: * desktop *mobile
          * @example
          *
@@ -453,8 +454,8 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
         /**
          * Navigates to the callers section page in the hosted site.
          * @function
-         * @memberof Utils
-         * @since SDK 1.33.0
+         * @memberof Wix.Utils
+         * @since 1.33.0
          * @param {Object} [sectionIdenfitier] App page id defined in dev.wix.com {sectionId : 'sectionId'}.
          * @param {String} [state] New app's state to push into the editor history stack.
          * @param {Function} onFailure This will be called if the hosting site does not include the section app, or if the caller's application does not include a section.
@@ -467,9 +468,6 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
          */
         navigateToSection:navigateToSection,
 
-        /**
-         * @memberof Utils
-         */
         Media: Media
     }
 
@@ -492,11 +490,6 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
 		</span>
 					<br />
 					
-		<span class="jsdoc-message">
-		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Thu Sep 25th 2014 using the <a
-			href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
-		</span>
 				</footer>
 			</div>
 
@@ -558,7 +551,7 @@ define(['core', 'gaTracker', 'Media', 'utils'], function (core, gaTracker, Media
 
 			Sunlight.highlightAll( {
 				lineNumbers : true,
-				showMenu : true,
+				showMenu : false,
 				enableDoclinks : true
 			} );
 		} );

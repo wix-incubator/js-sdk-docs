@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix JS SDK Namespace: Contacts</title>
+	<title>Wix JS SDK Namespace: PubSub</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -122,14 +122,14 @@
 					
 
 
-	<h1 class="page-title">Namespace: Contacts</h1>
+	<h1 class="page-title">Namespace: PubSub</h1>
 <section>
 
 <header>
     <h2>
         <span class="ancestors"><a href="Wix.html">Wix</a>.</span>
     
-    Contacts
+    PubSub
     </h2>
     
 </header>
@@ -139,6 +139,8 @@
     
 
     
+        
+            <div class="description"><p>This is the description for the PubSub namespace.</p></div>
         
 
         
@@ -168,8 +170,8 @@
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="Contacts.js.html">Contacts.js</a>,
-				 <a href="Contacts.js.html#sunlight-1-line-1">line 1</a>
+				<a href="PubSub.js.html">PubSub.js</a>,
+				 <a href="PubSub.js.html#sunlight-1-line-1">line 1</a>
 			</li>
 		</ul>
 	</dd>
@@ -205,7 +207,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="getContactById"><span class="type-signature">&lt;static> </span>getContactById<span class="signature">(id, onSuccess, onFailure)</span><span class="type-signature"> &rarr; {Contact}</span></h4>
+    <h4 class="name" id="publish"><span class="type-signature">&lt;static> </span>publish<span class="signature">(eventName, data, isPersistent)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -213,7 +215,8 @@
     
     
     <div class="description">
-        <p>Gets a specific Contact that has interacted with the current site by its id.</p>
+        <p>Broadcasts an event to other extensions of a multi-widget TPA.
+If the app extensions (Widget, Fixed Positioned Widget, Page) span multiple pages, they will be notified when they are rendered.</p>
     </div>
     
 
@@ -247,7 +250,7 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>eventName</code></td>
             
 
             <td class="type">
@@ -263,380 +266,14 @@
 
             
 
-            <td class="description last"><p>The id of the Contact to look up.</p></td>
+            <td class="description last"><p>The name of the event to publish.</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>onSuccess</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>A function that receives data about the Contact.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onFailure</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>A function called when an error occurs that receives a Wix.Error.</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.27.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>lior.shefer@wix.com</li>
-			</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="Contacts.js.html">Contacts.js</a>,
-				 <a href="Contacts.js.html#sunlight-1-line-107">line 107</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type">Contact</span>
-
-
-	</dd>
-</dl>
-
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="getContactLabels"><span class="type-signature">&lt;static> </span>getContactLabels<span class="signature">(onSuccess, onFailure)</span><span class="type-signature"> &rarr; {String[]}</span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Returns all the Contact labels for the given site that have opted in to receiving communications from applications</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>onSuccess</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>A function that receives an array of labels.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onFailure</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>A function called when an error occurs that receives a Wix.Error.</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.32.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>lior.shefer@wix.com</li>
-			</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="Contacts.js.html">Contacts.js</a>,
-				 <a href="Contacts.js.html#sunlight-1-line-119">line 119</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>An array of labels</p>
-</div>
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type">String[]</span>
-
-
-	</dd>
-</dl>
-
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="getContacts"><span class="type-signature">&lt;static> </span>getContacts<span class="signature">(options, onSuccess, onFailure)</span><span class="type-signature"> &rarr; {<a href="WixDataCursor.html">WixDataCursor</a>}</span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Gets a list of all contacts that have interacted with a given site.</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
@@ -652,22 +289,20 @@
 
             
 
-            <td class="description last"><p>object that supports two parameters: 'label' and 'pageSize'.
-'label' can either be a list of strings or a string. if a list, the strings are joined together with a comma
-to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and defaults to 25.</p></td>
+            <td class="description last"><p>Data the object to send to subscribers for this event type.</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>onSuccess</code></td>
+                <td class="name"><code>isPersistent</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type">Boolean</span>
 
 
             
@@ -677,30 +312,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
             
 
-            <td class="description last"><p>An on success callback which gets WixDataCursor as parameter.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onFailure</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>An on failure callback.</p></td>
+            <td class="description last"><p>Indicates whether this event is persisted for event subscribers who have not yet subscribed.</p></td>
         </tr>
 
 	
@@ -719,7 +331,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.31.0</li>
+			<li>1.25.0</li>
 		</ul>
 	</dd>
 	
@@ -728,13 +340,6 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
 	
 
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>lior.shefer@wix.com</li>
-			</ul>
-	</dd>
 	
 
 	
@@ -750,8 +355,8 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="Contacts.js.html">Contacts.js</a>,
-				 <a href="Contacts.js.html#sunlight-1-line-94">line 94</a>
+				<a href="PubSub.js.html">PubSub.js</a>,
+				 <a href="PubSub.js.html#sunlight-1-line-91">line 91</a>
 			</li>
 		</ul>
 	</dd>
@@ -774,34 +379,399 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
     
     
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>cursor.</p>
-</div>
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type"><a href="WixDataCursor.html">WixDataCursor</a></span>
-
-
-	</dd>
-</dl>
-
-
-        
     
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">Wix.Contacts.getContacts(function(WixDataCursor), function(errorType));</pre>
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F; The following call will publish an app event that can be consumed by all the app parts and persist =&gt; even of those parts are not rendered yet.
+Wix.PubSub.publish(&quot;my_event_name&quot;, {value:&quot;this is my message&quot;}, true);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="subscribe"><span class="type-signature">&lt;static> </span>subscribe<span class="signature">(eventName, callBack, <span class="optional">receivePastEvents</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Subscribes to events from other app parts of a multi-widget TPA.  If the components span multiple pages, they will be notified once they are rendered.
+It is also possible to receive all notifications prior to rendering by specifying a flag when subscribing to events.
+If the flag is set, the widget will be notified immediately of any prior events of the type it is registered to receive.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>eventName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The name of the event to subscribe to.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>callBack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>function that will respond to events sent from other components of the broadcasting app. it will be given the event object itself and the source of the event.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>receivePastEvents</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a flag to indicate that all past instances of the registered event should be sent to registered listener. This will happen immediately upon registration.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.25.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="PubSub.js.html">PubSub.js</a>,
+				 <a href="PubSub.js.html#sunlight-1-line-76">line 76</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F;subscribe and then unsubscribe to &quot;my_event_name&quot; event
+Wix.PubSub.subscribe(&quot;my_event_name&quot;, function(event) {
+ &#x2F;&#x2F;process the event which has the following format :
+ &#x2F;&#x2F; {
+ &#x2F;&#x2F;    name:eventName,
+ &#x2F;&#x2F;    data: eventData,
+ &#x2F;&#x2F;    origin: compId
+ &#x2F;&#x2F; }
+});
+&#x2F;&#x2F; subscribe to &quot;my_event_name&quot; event, events which also happened before this component was rendered will send
+Wix.PubSub.subscribe(&quot;my_event_name&quot;, function(event) { }, true);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="unsubscribe"><span class="type-signature">&lt;static> </span>unsubscribe<span class="signature">(eventName, function)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Unsubscribes from receiving further events. The id from the initial subscribe call is used to unsubscribe from furthers notifications.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>eventName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the event to unsubscribe from.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>function</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>that will respond to events sent from other extensions of the broadcasting app. it will be given the event object itself and the source of the event.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.25.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="PubSub.js.html">PubSub.js</a>,
+				 <a href="PubSub.js.html#sunlight-1-line-51">line 51</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F;subscribe and then unsubscribe to &quot;my_event_name&quot; event
+var id = Wix.PubSub.subscribe(&quot;my_event_name&quot;, function(event) { });
+Wix.PubSub.unsubscribe(&quot;my_event_name&quot;, id);</pre>
 
 
     

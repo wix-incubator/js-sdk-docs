@@ -5727,7 +5727,7 @@ div.subnav-fixed {
   text-align: center;
   color: #6c737e;
   width: 100%;
-  display: block;
+  display: none;
 }
 .page-title {
   font-size: 220%;
@@ -5793,4 +5793,11 @@ code {
   font-size: 12px;
   line-height: 15px;
   padding: 12px 4px !important;
+}
+
+h4.name {
+    padding-top: 45px;
+}
+h3.subsection-title {
+    padding-top: 45px;
 }

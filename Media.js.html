@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix SDK Source: Media.js</title>
+	<title>Wix JS SDK Source: Media.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,7 +18,7 @@
 <div class="container-fluid">
 	<div class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
-			<a class="brand" href="index.html">Wix SDK</a>
+			<a class="brand" href="index.html">Wix JS SDK</a>
 			<ul class="nav">
 				
 				<li class="dropdown">
@@ -26,26 +26,6 @@
 						class="caret"></b></a>
 
 					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="Error.html">Error</a>
-						</li>
-						
-						<li>
-							<a href="PubSub.html">PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Settings.html">Settings</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html">Utils</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html#Media">Utils.Media</a>
-						</li>
 						
 						<li>
 							<a href="Wix.html">Wix</a>
@@ -64,11 +44,31 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Error.html">Wix.Error</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Events.html">Wix.Events</a>
 						</li>
 						
 						<li>
+							<a href="Wix.PubSub.html">Wix.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Settings.html">Wix.Settings</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.html">Wix.Utils</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
 						</li>
 						
 						<li>
@@ -80,15 +80,15 @@
 						</li>
 						
 						<li>
-							<a href="Worker.html">Worker</a>
+							<a href="Wix.Worker.html">Wix.Worker</a>
 						</li>
 						
 						<li>
-							<a href="Worker.PubSub.html">Worker.PubSub</a>
+							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
 						</li>
 						
 						<li>
-							<a href="Worker.Utils.html">Worker.Utils</a>
+							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
 						</li>
 						
 
@@ -129,7 +129,8 @@
 		<pre
 			class="sunlight-highlight-javascript linenums">/**
  * This is the description for the Media namespace.
- * @namespace Utils.Media
+ * @memberof Wix.Utils
+ * @namespace Wix.Utils.Media
  */
 define(['core', 'gaTracker'], function (core, gaTracker) {
 
@@ -197,8 +198,8 @@ define(['core', 'gaTracker'], function (core, gaTracker) {
         /**
          * This method constructs a URL for a media item of type image.
          * @function
-         * @memberof Utils.Media
-         * @since SDK 1.17.0
+         * @memberof Wix.Utils.Media
+         * @since 1.17.0
          * @param {String} Image item uri (relative to Wix media gallery).
          * @returns {String} A full URL pointing to the Wix static servers of an image with the default dimensions - width and height.
          * @example
@@ -211,8 +212,8 @@ define(['core', 'gaTracker'], function (core, gaTracker) {
          * This method constructs a URL for a media item of type image and let the developer change the image dimensions as well as it's sharpening properties (optional),
          * see sharpening explained here - http://en.wikipedia.org/wiki/Unsharp_masking.
          * @function
-         * @memberof Utils.Media
-         * @since SDK 1.17.0
+         * @memberof Wix.Utils.Media
+         * @since 1.17.0
          * @param {String} relativeUrl Static image url provided by the media dialog.
          * @param {Number} width Desired image width.
          * @param {Number} height Desired image height.
@@ -232,8 +233,8 @@ define(['core', 'gaTracker'], function (core, gaTracker) {
         /**
          * This method constructs a URL for a media item of type audio.
          * @function
-         * @memberof Utils.Media
-         * @since SDK 1.17.0
+         * @memberof Wix.Utils.Media
+         * @since 1.17.0
          * @param {String} relativeUri audio item uri (relative to Wix media gallery)
          * @returns {String} A full URL pointing to the Wix static servers of an audio file with the default dimensions.
          * @example
@@ -245,8 +246,8 @@ define(['core', 'gaTracker'], function (core, gaTracker) {
         /**
          * This method constructs a URL for a media item of type document.
          * @function
-         * @memberof Utils.Media
-         * @since SDK 1.17.0
+         * @memberof Wix.Utils.Media
+         * @since 1.17.0
          * @param {String} relativeUri Document item uri (relative to Wix media gallery).
          * @returns {String} A full URL pointing to the Wix static servers of a document media file with the default dimensions.
          * @example
@@ -258,8 +259,8 @@ define(['core', 'gaTracker'], function (core, gaTracker) {
         /**
          * This method constructs a URL for a media item of type swf.
          * @function
-         * @memberof Utils.Media
-         * @since SDK 1.17.0
+         * @memberof Wix.Utils.Media
+         * @since 1.17.0
          * @param {String} relativeUri Swf item uri (relative to Wix media gallery).
          * @returns {String} A full URL pointing to the Wix static servers of a swf media file  with the default dimensions.
          * @example
@@ -287,11 +288,6 @@ define(['core', 'gaTracker'], function (core, gaTracker) {
 		</span>
 					<br />
 					
-		<span class="jsdoc-message">
-		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Thu Sep 25th 2014 using the <a
-			href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
-		</span>
 				</footer>
 			</div>
 
@@ -353,7 +349,7 @@ define(['core', 'gaTracker'], function (core, gaTracker) {
 
 			Sunlight.highlightAll( {
 				lineNumbers : true,
-				showMenu : true,
+				showMenu : false,
 				enableDoclinks : true
 			} );
 		} );

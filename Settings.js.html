@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix SDK Source: Settings.js</title>
+	<title>Wix JS SDK Source: Settings.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,7 +18,7 @@
 <div class="container-fluid">
 	<div class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
-			<a class="brand" href="index.html">Wix SDK</a>
+			<a class="brand" href="index.html">Wix JS SDK</a>
 			<ul class="nav">
 				
 				<li class="dropdown">
@@ -26,26 +26,6 @@
 						class="caret"></b></a>
 
 					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="Error.html">Error</a>
-						</li>
-						
-						<li>
-							<a href="PubSub.html">PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Settings.html">Settings</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html">Utils</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html#Media">Utils.Media</a>
-						</li>
 						
 						<li>
 							<a href="Wix.html">Wix</a>
@@ -64,11 +44,31 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Error.html">Wix.Error</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Events.html">Wix.Events</a>
 						</li>
 						
 						<li>
+							<a href="Wix.PubSub.html">Wix.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Settings.html">Wix.Settings</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.html">Wix.Utils</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
 						</li>
 						
 						<li>
@@ -80,15 +80,15 @@
 						</li>
 						
 						<li>
-							<a href="Worker.html">Worker</a>
+							<a href="Wix.Worker.html">Wix.Worker</a>
 						</li>
 						
 						<li>
-							<a href="Worker.PubSub.html">Worker.PubSub</a>
+							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
 						</li>
 						
 						<li>
-							<a href="Worker.Utils.html">Worker.Utils</a>
+							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
 						</li>
 						
 
@@ -129,7 +129,8 @@
 		<pre
 			class="sunlight-highlight-javascript linenums">/**
  * This is the description for the Settings namespace.
- * @namespace Settings
+ * @memberof Wix
+ * @namespace Wix.Settings
  */
 define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Styles, Base) {
 
@@ -318,8 +319,8 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
     return {
         /**
          * @enum
-         * @memberof Settings
-         * @since SDK 1.35.0
+         * @memberof Wix.Settings
+         * @since 1.35.0
          */
         MediaType: {
             IMAGE: 'photos',
@@ -341,9 +342,9 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
          * This method returns the URL leading to your BackOffice (AKA Business) application, in the Wix Dashboard.
          * The URL is fully qualified and starts with "//" for using HTTPS if supported. If the site is not saved, save dialog will be prompted.
          * @function
-         * @memberof Settings
+         * @memberof Wix.Settings
          * @author tomergab@wix.com
-         * @since SDK 1.32.0
+         * @since 1.32.0
          * @param {Function} callback A callback function to receive the URL of the app in the dashboard (AKA BackOffice/Business).
          * @example
          *
@@ -356,8 +357,8 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
         /**
          * The getsiteInfo method is used to retrieve information about the host site in which the app is shown.
          * @function
-         * @memberof Settings
-         * @since SDK 1.12.0
+         * @memberof Wix.Settings
+         * @since 1.12.0
          * @see Wix.getSiteInfo
          *
          * @example
@@ -372,8 +373,8 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
         /**
          * The getSitePages method is used to retrieve the site structure from the hosting Wix Platform. The site structure includes visible and hidden pages as well as sub pages.
          * @function
-         * @memberof Settings
-         * @since SDK 1.17.0
+         * @memberof Wix.Settings
+         * @since 1.17.0
          * @see Wix.getSitePages
          *
          * @example
@@ -387,9 +388,9 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
         /**
          * The getStyleParams method is used to retrieve the style parameters from the hosting Wix Platform. The parameters includes colors numbers, booleans.
          * @function
-         * @memberof Settings
+         * @memberof Wix.Settings
          * @deprecated Use Wix.Styles.getStyleParams
-         * @since SDK 1.22.0
+         * @since 1.22.0
          * @param {Function} callback A callback function to receive the style parameters.
          * @example
          *
@@ -403,8 +404,8 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
          * The Setting.openBillingPage method allows the app to offer a premium package from within the app settings.
          * When called it will open the Wix billing system page in a new browser window.
          * @function
-         * @memberof Settings
-         * @since SDK 1.16.0
+         * @memberof Wix.Settings
+         * @since 1.16.0
          * @example
          *
          * Wix.Settings.openBillingPage();
@@ -418,8 +419,8 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
          * full URL using that descriptor. Since the media items URLs format is set by Wix and might changed in the future,
          * we are requiring that the URL construction will be done using the SDK. Use one of the Wix.Utils.Media.get* methods to get the desired media item URL.
          * @function
-         * @memberof Settings
-         * @since SDK 1.17.0
+         * @memberof Wix.Settings
+         * @since 1.17.0
          * @param {Settings.MediaType} mediaType Media gallery to choose from - image, background, audio and swf.
          * @param {Boolean} multiSelect selection mode, single (false) or multiple (true) item to choose from.
          * @param {Function} onSuccess callback function, passing the media item/s meta data.
@@ -440,8 +441,8 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
          * The refreshApp method is normally used when a user changes the app settings in the settings iframe, and as a result requires that the Widget or Page iframes should be reloaded such that the new settings will take affect.
          * The refreshApp method accepts a single optional argument, an object. Where each of the object's properties will translate into a query parameter in the iframe URL.
          * @function
-         * @memberof Settings
-         * @since SDK 1.12.0
+         * @memberof Wix.Settings
+         * @since 1.12.0
          * @param {Object} [queryParams] A map of custom query parameters that should be added to the iframe URL.
          * @example
          *
@@ -456,8 +457,8 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
         /**
          * Notifying the host site that some specific components of the app requires reloading. It does the same as Settings.refreshApp but for specific components.
          * @function
-         * @memberof Settings
-         * @since SDK 1.12.0
+         * @memberof Wix.Settings
+         * @since 1.12.0
          * @param {Array} compIds An array of the app component ids that should be refreshed.
          * @param {Object} [queryParams] A map of custom query parameters that should be added to the iframe URL.
          * @example
@@ -474,8 +475,8 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
         /**
          * The setWindowPlacement method sets the placement for fixed position widgets in an editing session.
          * @function
-         * @memberof Settings
-         * @since SDK 1.19.0
+         * @memberof Wix.Settings
+         * @since 1.19.0
          * @param {String} compId Component id to change window placement to.
          * @param {WindowPlacement} placement New placement for the widget window
          * @param {Number} [verticalMargin] Vertical offset from the window placement
@@ -491,8 +492,8 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
          * The triggerSettingsUpdatedEvent method is used from the Settings iframe to trigger a Wix.Events.SETTINGS_UPDATED event in a WIdget/Page iframe.
          * It should be used in an editing session when a developer wants to reflect editing changes but avoid refresh/reload on the Widget/Page iframe.
          * @function
-         * @memberof Settings
-         * @since SDK 1.17.0
+         * @memberof Wix.Settings
+         * @since 1.17.0
          * @param {Object} message A custom JSON which will be passed to the Widget/Page as the event data.
          * @param {String} compId A component id we want to trigger the event on, or '*' to trigger the event on all the app components. The most obvious compId is Utils.getOrigCompId().
          * @example
@@ -520,11 +521,6 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
 		</span>
 					<br />
 					
-		<span class="jsdoc-message">
-		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Thu Sep 25th 2014 using the <a
-			href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
-		</span>
 				</footer>
 			</div>
 
@@ -586,7 +582,7 @@ define(['core', 'gaTracker', 'Styles', 'Base'], function (core, gaTracker, Style
 
 			Sunlight.highlightAll( {
 				lineNumbers : true,
-				showMenu : true,
+				showMenu : false,
 				enableDoclinks : true
 			} );
 		} );

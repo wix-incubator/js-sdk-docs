@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix SDK Source: Worker.js</title>
+	<title>Wix JS SDK Source: Worker.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,7 +18,7 @@
 <div class="container-fluid">
 	<div class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
-			<a class="brand" href="index.html">Wix SDK</a>
+			<a class="brand" href="index.html">Wix JS SDK</a>
 			<ul class="nav">
 				
 				<li class="dropdown">
@@ -26,26 +26,6 @@
 						class="caret"></b></a>
 
 					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="Error.html">Error</a>
-						</li>
-						
-						<li>
-							<a href="PubSub.html">PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Settings.html">Settings</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html">Utils</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html#Media">Utils.Media</a>
-						</li>
 						
 						<li>
 							<a href="Wix.html">Wix</a>
@@ -64,11 +44,31 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Error.html">Wix.Error</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Events.html">Wix.Events</a>
 						</li>
 						
 						<li>
+							<a href="Wix.PubSub.html">Wix.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Settings.html">Wix.Settings</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.html">Wix.Utils</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
 						</li>
 						
 						<li>
@@ -80,15 +80,15 @@
 						</li>
 						
 						<li>
-							<a href="Worker.html">Worker</a>
+							<a href="Wix.Worker.html">Wix.Worker</a>
 						</li>
 						
 						<li>
-							<a href="Worker.PubSub.html">Worker.PubSub</a>
+							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
 						</li>
 						
 						<li>
-							<a href="Worker.Utils.html">Worker.Utils</a>
+							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
 						</li>
 						
 
@@ -129,7 +129,8 @@
 		<pre
 			class="sunlight-highlight-javascript linenums">/**
  * This is the description for the Worker namespace.
- * @namespace Worker
+ * @memberof Wix
+ * @namespace Wix.Worker
  */
 define(['Base', 'PubSub', 'Utils'], function (Base, PubSub, Utils) {
 
@@ -187,45 +188,35 @@ define(['Base', 'PubSub', 'Utils'], function (Base, PubSub, Utils) {
 
     return {
         /**
-         * @see getSiteInfo
-         * @memberof Worker
+         * @memberof Wix.Worker
          * @since 1.30.0
-         * @param onSuccess (Function) a callback function that returns the site info
-         *   The function signature should be :
-         *   function onSuccess(param)
+         * @see Wix.getSiteInfo
          */
         getSiteInfo: getSiteInfo,
 
         /**
-         * Returns the pages which are used in hosting site by name
-         * @memberof Worker
-         * @since SDK 1.30.0
-         * @param callback (Function) a callback function that returns the site pages
-         *   callback signature: function(data) {}
+         * @memberof Wix.Worker
+         * @since 1.30.0
+         * @see Wix.getSitePages
          */
         getSitePages: getSitePages,
 
         /**
          * @memberof Worker
          * @since 1.30.0
-         * @param eventName (String) the event name, reserved values, see Wix.Events
-         * @param callBack (Function) a callback function which gets invoked when a new
-         * event is sent from the wix site, The function signature should be :
-         *  function callBack(param)
-         * @retrun {Number} an id that can be used to remove the event listener using removeEventListener(eventName, id)
+         * @see Wix.addEventListener
          */
         addEventListener: addEventListener,
 
         /**
-         * @memberof Worker
-         * @since SDK 1.30.0
-         * @param eventName (String) the event name, reserved values, see Wix.Events
-         * @param callBackOrId
+         * @memberof Wix.Worker
+         * @since 1.30.0
+         * @see Wix.removeEventListener
          */
         removeEventListener: removeEventListener,
 
         /**
-         * @memberof Worker
+         * @memberof Wix.Worker
          * @since 1.30.0
          * @param onSuccess (Function) a call back function to receive the function completion
          * status. The function signature should be :
@@ -235,70 +226,70 @@ define(['Base', 'PubSub', 'Utils'], function (Base, PubSub, Utils) {
 
         /**
          * This is the description for the PubSub namespace.
-         * @memberof Worker
-         * @namespace Worker.PubSub
+         * @memberof Wix.Worker
+         * @namespace Wix.Worker.PubSub
          */
         PubSub: {
 
             /**
              * @since 1.30.0
-             * @memberof Worker.PubSub
-             * @see PubSub.publish
+             * @memberof Wix.Worker.PubSub
+             * @see Wix.PubSub.publish
              */
             publish:publish,
 
             /**
              * @since 1.30.0
-             * @memberof Worker.PubSub
-             * @see PubSub.subscribe
+             * @memberof Wix.Worker.PubSub
+             * @see Wix.PubSub.subscribe
              */
             subscribe:subscribe,
 
             /**
              * @since 1.30.0
-             * @memberof Worker.PubSub
-             * @see PubSub.unsubscribe
+             * @memberof Wix.Worker.PubSub
+             * @see Wix.PubSub.unsubscribe
              */
             unsubscribe:unsubscribe
         },
 
         /**
-         * @memberof Worker
-         * @namespace Worker.Utils
+         * @memberof Wix.Worker
+         * @namespace Wix.Worker.Utils
          */
         Utils: {
             /**
              * @since 1.30.0
-             * @memberof Worker.Utils
-             * @see Utils.getViewMode
+             * @memberof Wix.Worker.Utils
+             * @see Wix.Utils.getViewMode
              */
             getViewMode:getViewMode,
 
             /**
              * @since 1.30.0
-             * @memberof Worker.Utils
-             * @see Utils.getDeviceType
+             * @memberof Wix.Worker.Utils
+             * @see Wix.Utils.getDeviceType
              */
             getDeviceType:getDeviceType,
 
             /**
              * @since 1.30.0
              * @memberof Worker.Utils
-             * @see Utils.getLocale
+             * @see Wix.Utils.getLocale
              */
             getLocale:getLocale,
 
             /**
              * @since 1.30.0
-             * @memberof Worker.Utils
-             * @see Utils.getInstanceId
+             * @memberof Wix.Worker.Utils
+             * @see Wix.Utils.getInstanceId
              */
             getInstanceId:getInstanceId,
 
             /**
              * @since 1.30.0
-             * @memberof Worker.Utils
-             * @see Utils.getDeviceType
+             * @memberof Wix.Worker.Utils
+             * @see Wix.Utils.getDeviceType
              */
             getIpAndPort:getIpAndPort
         }
@@ -322,11 +313,6 @@ define(['Base', 'PubSub', 'Utils'], function (Base, PubSub, Utils) {
 		</span>
 					<br />
 					
-		<span class="jsdoc-message">
-		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Thu Sep 25th 2014 using the <a
-			href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
-		</span>
 				</footer>
 			</div>
 
@@ -388,7 +374,7 @@ define(['Base', 'PubSub', 'Utils'], function (Base, PubSub, Utils) {
 
 			Sunlight.highlightAll( {
 				lineNumbers : true,
-				showMenu : true,
+				showMenu : false,
 				enableDoclinks : true
 			} );
 		} );

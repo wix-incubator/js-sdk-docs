@@ -28,23 +28,11 @@
 					<ul class="dropdown-menu ">
 						
 						<li>
-							<a href="Error.html">Error</a>
-						</li>
-						
-						<li>
 							<a href="PubSub.html">PubSub</a>
 						</li>
 						
 						<li>
 							<a href="Settings.html">Settings</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html">Utils</a>
-						</li>
-						
-						<li>
-							<a href="Utils.html#Media">Utils.Media</a>
 						</li>
 						
 						<li>
@@ -64,11 +52,23 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Error.html">Wix.Error</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Events.html">Wix.Events</a>
 						</li>
 						
 						<li>
 							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.html">Wix.Utils</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.html#Media">Wix.Utils.Media</a>
 						</li>
 						
 						<li>
@@ -127,7 +127,7 @@
 
 <header>
     <h2>
-        <span class="ancestors"><a href="Utils.html">Utils</a>.</span>
+        <span class="ancestors"><a href="Wix.html">Wix</a><a href="Wix.Utils.html">.Utils</a>.</span>
     
     Media
     </h2>
@@ -284,7 +284,7 @@
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>SDK 1.17.0</li>
+			<li>1.17.0</li>
 		</ul>
 	</dd>
 	
@@ -309,7 +309,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="Media.js.html">Media.js</a>,
-				 <a href="Media.js.html#sunlight-1-line-114">line 114</a>
+				 <a href="Media.js.html#sunlight-1-line-115">line 115</a>
 			</li>
 		</ul>
 	</dd>
@@ -445,7 +445,7 @@
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>SDK 1.17.0</li>
+			<li>1.17.0</li>
 		</ul>
 	</dd>
 	
@@ -470,7 +470,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="Media.js.html">Media.js</a>,
-				 <a href="Media.js.html#sunlight-1-line-127">line 127</a>
+				 <a href="Media.js.html#sunlight-1-line-128">line 128</a>
 			</li>
 		</ul>
 	</dd>
@@ -606,7 +606,7 @@
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>SDK 1.17.0</li>
+			<li>1.17.0</li>
 		</ul>
 	</dd>
 	
@@ -631,7 +631,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="Media.js.html">Media.js</a>,
-				 <a href="Media.js.html#sunlight-1-line-79">line 79</a>
+				 <a href="Media.js.html#sunlight-1-line-80">line 80</a>
 			</li>
 		</ul>
 	</dd>
@@ -1014,7 +1014,7 @@ see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_ma
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>SDK 1.17.0</li>
+			<li>1.17.0</li>
 		</ul>
 	</dd>
 	
@@ -1039,7 +1039,7 @@ see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_ma
 		<ul class="dummy">
 			<li>
 				<a href="Media.js.html">Media.js</a>,
-				 <a href="Media.js.html#sunlight-1-line-101">line 101</a>
+				 <a href="Media.js.html#sunlight-1-line-102">line 102</a>
 			</li>
 		</ul>
 	</dd>
@@ -1175,7 +1175,7 @@ see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_ma
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>SDK 1.17.0</li>
+			<li>1.17.0</li>
 		</ul>
 	</dd>
 	
@@ -1200,7 +1200,7 @@ see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_ma
 		<ul class="dummy">
 			<li>
 				<a href="Media.js.html">Media.js</a>,
-				 <a href="Media.js.html#sunlight-1-line-140">line 140</a>
+				 <a href="Media.js.html#sunlight-1-line-141">line 141</a>
 			</li>
 		</ul>
 	</dd>
