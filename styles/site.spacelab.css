@@ -1717,8 +1717,8 @@ table {
   width: 100%;
   margin-bottom: 21px;
 }
-.table th,
-.table td {
+table th, .table th,
+table td, .table td {
   padding: 8px;
   line-height: 21px;
   text-align: left;
@@ -1735,6 +1735,8 @@ table {
 .table caption + thead tr:first-child td,
 .table colgroup + thead tr:first-child th,
 .table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td,
 .table thead:first-child tr:first-child th,
 .table thead:first-child tr:first-child td {
   border-top: 0;
@@ -5649,7 +5651,7 @@ div.subnav-fixed {
   padding-right: 20px;
 }
 .navbar .dropdown-menu {
-  padding: 20px;
+  padding: 10px 20px 20px;
   max-height: 300px;
   overflow: auto;
   width: 300px;
@@ -5671,7 +5673,8 @@ div.subnav-fixed {
   padding-left: 0;
   padding-right: 5px;
   font-weight: 500;
-  font-size: 115%;
+  font-size: 100%;
+  line-height: 16px;
 }
 #toc {
   position: fixed;
