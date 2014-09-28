@@ -306,7 +306,7 @@ The events that you can currently listen to are:</li>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-522">line 522</a>
+				 <a href="Base.js.html#sunlight-1-line-424">line 424</a>
 			</li>
 		</ul>
 	</dd>
@@ -475,7 +475,7 @@ The events that you can currently listen to are:</li>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-389">line 389</a>
+				 <a href="Base.js.html#sunlight-1-line-291">line 291</a>
 			</li>
 		</ul>
 	</dd>
@@ -505,6 +505,205 @@ The events that you can currently listen to are:</li>
     <pre class="sunlight-highlight-javascript">&#x2F;&#x2F; The following call will close the modal&#x2F;popup window and send a the object message to the opener onClose callback
 var message = {&quot;reason&quot;: &quot;button-clicked&quot;};
 Wix.closeWindow(message);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="currentMember"><span class="type-signature">&lt;static> </span>currentMember<span class="signature">(callback)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <div style="margin:20px 0;background-color:blue;border-radius: 5px;border-style: solid;border-width: 1px;padding:10px;background-color: #E0EFFF;border-color: #9EB6D4;">
+This method is part of Wix Site Members feature. To use it a manual provisioning is required by the Wix team, contact apps@wix.com to enable it for your app.
+</div>
+
+<p>This method is relevant for live sites and not from the App Settings.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A callback function to receive the current member details.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.6.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Base.js.html">Base.js</a>,
+				 <a href="Base.js.html#sunlight-1-line-498">line 498</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>JSON Containing the user's details.</p>
+<p>This method returns the details of the current site visitor that is logged into the Wix site, using the Wix site member options.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>'String'</td>
+<td>The current member's name</td>
+</tr>
+<tr>
+<td>email</td>
+<td>'String'</td>
+<td>The current member's email</td>
+</tr>
+<tr>
+<td>id</td>
+<td>'String'</td>
+<td>The current member's id</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>'Boolean'</td>
+<td>Indicates if the user is the owner of the site</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">Object</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.currentMember(function(memberDetails) {
+  &#x2F;&#x2F; save memberDetails
+}</pre>
 
 
     
@@ -615,7 +814,7 @@ Wix.closeWindow(message);</pre>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-479">line 479</a>
+				 <a href="Base.js.html#sunlight-1-line-381">line 381</a>
 			</li>
 		</ul>
 	</dd>
@@ -645,6 +844,105 @@ Wix.closeWindow(message);</pre>
     <pre class="sunlight-highlight-javascript">Wix.getBoundingRectAndOffsets(function(data){
    &#x2F;&#x2F; use the offsets and rect details
 });</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getCurrentPageId"><span class="type-signature">&lt;static> </span>getCurrentPageId<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The getCurrentPageId method returns the page id of the app hosting page.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.31.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Base.js.html">Base.js</a>,
+				 <a href="Base.js.html#sunlight-1-line-540">line 540</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F; The following call will return the page id of the app hosting page.
+Wix.getCurrentPageId(function(pageId) {
+    &#x2F;&#x2F;store the site pageId
+}</pre>
 
 
     
@@ -750,7 +1048,7 @@ Wix.closeWindow(message);</pre>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-443">line 443</a>
+				 <a href="Base.js.html#sunlight-1-line-345">line 345</a>
 			</li>
 		</ul>
 	</dd>
@@ -959,7 +1257,7 @@ Wix.closeWindow(message);</pre>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-465">line 465</a>
+				 <a href="Base.js.html#sunlight-1-line-367">line 367</a>
 			</li>
 		</ul>
 	</dd>
@@ -1043,6 +1341,356 @@ Wix.closeWindow(message);</pre>
     <pre class="sunlight-highlight-javascript">Wix.getSitePages(function(sitePages) {
    &#x2F;&#x2F; do something with the site pages
 });</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getStyleParams"><span class="type-signature">&lt;static> </span>getStyleParams<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The getStyleParams method is used to retrieve the style parameters from the hosting Wix Platform. The parameters includes colors numbers, booleans.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A callback function to receive the style parameters.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.22.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+	<dt class="important tag-deprecated">Deprecated:</dt>
+	
+	<dd class="yes-def tag-deprecated">
+		<ul class="dummy">
+			<li>Yes</li>
+		</ul>
+	</dd>
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Base.js.html">Base.js</a>,
+				 <a href="Base.js.html#sunlight-1-line-590">line 590</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Wix.Styles.html#getStyleParams">Wix.Styles.getStyleParams</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.getStyleParams( function(styleParams) {
+ &#x2F;&#x2F; do something with the style params
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="navigateToPage"><span class="type-signature">&lt;static> </span>navigateToPage<span class="signature">(pageId)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The navigateToPage method is used to navigate to a specific page inside the editor/preview/site.</p>
+<p>The function accepts a single argument, page id, which is retrieved by using the method Wix.getSitePages().</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>pageId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A string representing the page id target.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.17.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Base.js.html">Base.js</a>,
+				 <a href="Base.js.html#sunlight-1-line-524">line 524</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>JSON Containing the user's details.</p>
+<p>This method returns the details of the current site visitor that is logged into the Wix site, using the Wix site member options.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>'String'</td>
+<td>The current member's name</td>
+</tr>
+<tr>
+<td>email</td>
+<td>'String'</td>
+<td>The current member's email</td>
+</tr>
+<tr>
+<td>id</td>
+<td>'String'</td>
+<td>The current member's id</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>'Boolean'</td>
+<td>Indicates if the user is the owner of the site</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">Object</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.navigateToPage(PAGE_ID);</pre>
 
 
     
@@ -1263,7 +1911,7 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-272">line 272</a>
+				 <a href="Base.js.html#sunlight-1-line-175">line 175</a>
 			</li>
 		</ul>
 	</dd>
@@ -1604,7 +2252,7 @@ i.e., the center of the screen.</p></td>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-361">line 361</a>
+				 <a href="Base.js.html#sunlight-1-line-263">line 263</a>
 			</li>
 		</ul>
 	</dd>
@@ -1640,6 +2288,147 @@ Wix.openPopup(&quot;http:&#x2F;&#x2F;sslstatic.wix.com&#x2F;services&#x2F;js-sdk
 var position =  {origin: Wix.WindowOrigin.ABSOLUTE, placement: Wix.WindowPlacement.BOTTOM_RIGHT, x: 20, y: 100};
 var onClose = function(message) { console.log(&quot;popup closed&quot;, message) };
 Wix.openPopup(&quot;http:&#x2F;&#x2F;sslstatic.wix.com&#x2F;services&#x2F;js-sdk&#x2F;1.16.0&#x2F;html&#x2F;modal.html&quot;, 400, 400, position, onClose);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="pushState"><span class="type-signature">&lt;static> </span>pushState<span class="signature">(state)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method enable AJAX style Page apps to inform the Wix platform about a change in the app internal state. The new state will be reflected in the site/page URL.
+Once you call the pushState method, the browser top window URL will change the 'app-state' path part to the new state you provide with the pushState
+method (similar to the browser history API - <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history">https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history</a>).
+For a full explanation of how deep-linking works with AJAX style apps, see Deep Linking for AJAX Style Apps - <a href="http://dev.wix.com/docs/display/DRAF/Developing+a+Page+App">http://dev.wix.com/docs/display/DRAF/Developing+a+Page+App</a>.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>state</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>New app's state to push into the editor history stack.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.8.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Base.js.html">Base.js</a>,
+				 <a href="Base.js.html#sunlight-1-line-556">line 556</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.pushState(&quot;app-state&quot;);</pre>
 
 
     
@@ -1773,7 +2562,7 @@ Wix.openPopup(&quot;http:&#x2F;&#x2F;sslstatic.wix.com&#x2F;services&#x2F;js-sdk
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-501">line 501</a>
+				 <a href="Base.js.html#sunlight-1-line-403">line 403</a>
 			</li>
 		</ul>
 	</dd>
@@ -1809,6 +2598,514 @@ Wix.addEventListener(Wix.Events.PAGE_NAVIGATION, callback);
 Wix.removeEventListener(Wix.Events.PAGE_NAVIGATION, callback);
 &#x2F;&#x2F; remove listener as an id
 Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="reportHeightChange"><span class="type-signature">&lt;static> </span>reportHeightChange<span class="signature">(height)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method requests the hosting Wix platform to change the iframe height inside the site/editor.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An integer that represents the desired height in pixels.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.8.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+	<dt class="important tag-deprecated">Deprecated:</dt>
+	
+	<dd class="yes-def tag-deprecated">
+		<ul class="dummy">
+			<li>Yes</li>
+		</ul>
+	</dd>
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Base.js.html">Base.js</a>,
+				 <a href="Base.js.html#sunlight-1-line-572">line 572</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Wix.html#setHeight">Wix.setHeight</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.reportHeightChange(height);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="requestLogin"><span class="type-signature">&lt;static> </span>requestLogin<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <div style="margin:20px 0;background-color:blue;border-radius: 5px;border-style: solid;border-width: 1px;padding:10px;background-color: #E0EFFF;border-color: #9EB6D4;">
+This method is part of Wix Site Members feature. To use it a manual provisioning is required by the Wix team, contact apps@wix.com to enable it for your app.
+</div>
+
+<p>This method is relevant for live sites and not from the App Settings. The method requests the current site visitor of the Wix site to log-in or register.</p>
+<p>After a successful log-in, the Wix site will reload including the app iframe and the new signed-instance parameter will contain the details of the logged in user.</p>
+<p>The method has an affect only for a published site. If called in the Wix editor, the method has no affect.          *</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A callback function to receive the current member details.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.6.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Base.js.html">Base.js</a>,
+				 <a href="Base.js.html#sunlight-1-line-465">line 465</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.requestLogin(function (data) {
+   &#x2F;&#x2F;do something with data
+}</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="resizeWindow"><span class="type-signature">&lt;static> </span>resizeWindow<span class="signature">(width, height, <span class="optional">Function</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The resizeWindow method is valid only for fixed position widgets. It re-sizes the widget window.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Window width in pixels.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Window height in pixels.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>Function</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>onComplete On resize complete callback function.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.19.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Base.js.html">Base.js</a>,
+				 <a href="Base.js.html#sunlight-1-line-440">line 440</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F; The following call will resize the widget window
+Wix.resizeWindow(300,300);</pre>
 
 
     
@@ -1942,7 +3239,7 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</pre>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-418">line 418</a>
+				 <a href="Base.js.html#sunlight-1-line-320">line 320</a>
 			</li>
 		</ul>
 	</dd>
@@ -2104,7 +3401,7 @@ Wix.scrollBy(0, 0);</pre>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-403">line 403</a>
+				 <a href="Base.js.html#sunlight-1-line-305">line 305</a>
 			</li>
 		</ul>
 	</dd>
@@ -2242,7 +3539,7 @@ Wix.scrollBy(0, 0);</pre>
 		<ul class="dummy">
 			<li>
 				<a href="Base.js.html">Base.js</a>,
-				 <a href="Base.js.html#sunlight-1-line-374">line 374</a>
+				 <a href="Base.js.html#sunlight-1-line-276">line 276</a>
 			</li>
 		</ul>
 	</dd>
