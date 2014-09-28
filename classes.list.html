@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix JS SDK Source: WixDataCursor.js</title>
+	<title>Wix JS SDK Classes</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -120,171 +120,147 @@
 	<div class="row-fluid">
 
 		
-			<div class="span12">
-				
+		<div class="span8">
+			
 				<div id="main">
 					
 
 
-		<h1 class="page-title">Source: WixDataCursor.js</h1>
-    
+	<h1 class="page-title">Classes</h1>
 <section>
-	<article>
-		<pre
-			class="sunlight-highlight-javascript linenums">/**
- * @class WixDataCursor
- */
-define([], function () {
 
-    var _callService = function (onSuccess, onFailure, cursorId) {
-        var that = this;
-        var onComplete = function onComplete(response) {
-            if (response.error) {
-                onFailure(response);
-            } else {
-                that._nextCursor = response.data.nextCursor;
-                that._previousCursor = response.data.previousCursor;
-                that._data = response.data.results;
-                onSuccess(response.data.results);
-            }
-        };
+<header>
+    <h2>
+    
+    </h2>
+    
+</header>
 
-        var args = {
-            cursorId: cursorId,
-            options: this._options
-        };
+<article>
+    <div class="container-overview">
+    
 
-        this.core.sendMessage(this._serviceMessageType, args, onComplete);
-    };
+    
+        
 
-    function WixDataCursor(core, serviceMessageType, data, total, pageSize) {
-        if (typeof serviceMessageType !== 'string' || typeof core === 'undefined') {
-            throw new Error('Mandatory parameters are missing.');
-        }
+        
+<dl class="details">
+	
 
-        this._serviceMessageType = serviceMessageType;
-        this._data = data || [];
-        this._nextCursor = null;
-        this._previousCursor = null;
-        this._total = total;
-        this._pageSize = pageSize;
-        this._options = {};
-        this.core = core;
-    }
+	
 
-    /**
-     * @memberof WixDataCursor
-     * @returns {boolean} If WixDataCursor has more data.
-     */
-    WixDataCursor.prototype.hasNext = function hasNext() {
-        return !!this._nextCursor;
-    };
+	
 
-    /**
-     * @memberof WixDataCursor
-     * @returns {boolean} If WixDataCursor has previous data.
-     */
-    WixDataCursor.prototype.hasPrevious = function hasPrevious() {
-        return !!this._previousCursor;
-    };
+	
+
+	
+
+	
+
+	
+
+	
+
+	
 
 
-    /**
-     * @memberof WixDataCursor
-     * @param onSuccess
-     * @param onFailure
-     * @returns {boolean} The next WixDataCursor object.
-     */
-    WixDataCursor.prototype.next = function next(onSuccess, onFailure) {
-        if(this.hasNext()){
-            _callService.call(this, onSuccess, onFailure, this._nextCursor);
-        } else {
-            onSuccess([]);
-        }
-    };
 
-    /**
-     * @memberof WixDataCursor
-     * @param onSuccess
-     * @param onFailure
-     * @returns {boolean} The previous WixDataCursor object.
-     */
-    WixDataCursor.prototype.previous = function previous(onSuccess, onFailure) {
-        if(this.hasPrevious()){
-            _callService.call(this, onSuccess, onFailure, this._previousCursor);
-        } else {
-            onSuccess([]);
-        }
-    };
+	
 
-    /**
-     * @memberof WixDataCursor
-     * @private
-     * @param {Object} data
-     */
-    WixDataCursor.prototype.setData = function setData(data) {
-        this._data = data;
-    };
+	
 
-    /**
-     * @memberof WixDataCursor
-     * @private
-     * @returns {WixDataCursor[]}
-     */
-    WixDataCursor.prototype.getData = function getData() {
-        return this._data;
-    };
+	
 
-    /**
-     * @memberof WixDataCursor
-     * @private
-     * @param {WixDataCursor} cursor
-     */
-    WixDataCursor.prototype.setNextCursor = function setNextCursor(cursor) {
-        this._nextCursor = cursor;
-    };
-
-    /**
-     * @memberof WixDataCursor
-     * @private
-     * @param {WixDataCursor} cursor
-     */
-    WixDataCursor.prototype.setPreviousCursor = function setPreviousCursor(cursor) {
-        this._previousCursor = cursor;
-    };
+	
+</dl>
 
 
-    /**
-     * @memberof WixDataCursor
-     * @returns {Number} The total number of Object in the cursor.
-     */
-    WixDataCursor.prototype.getTotal = function getTotal() {
-        return this._total;
-    };
+        
+    
+    </div>
 
-    /**
-     * @memberof WixDataCursor
-     * @returns {Number} The number of the cursor page size.
-     */
-    WixDataCursor.prototype.getPageSize = function getPageSize() {
-        return this._pageSize;
-    };
+    
 
-    /**
-     * @memberof WixDataCursor
-     * @param {Object} options
-     * @private
-     * @returns Sets the cursor options object.
-     */
-    WixDataCursor.prototype.setOptions = function setOptions(options) {
-        this._options = options;
-    };
+    
 
-    return WixDataCursor;
-});</pre>
-	</article>
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="WixDataCursor.html">WixDataCursor</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Namespaces</h3>
+
+        <dl>
+            <dt><a href="namespaces.html#Wix"><a href="Wix.html">Wix</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Activities"><a href="Wix.Activities.html">Activities</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Contacts"><a href="Wix.Contacts.html">Contacts</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Dashboard"><a href="Wix.Dashboard.html">Dashboard</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Error"><a href="Wix.Error.html">Error</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Events"><a href="Wix.Events.html">Events</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.PubSub"><a href="Wix.PubSub.html">PubSub</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Settings"><a href="Wix.Settings.html">Settings</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Styles"><a href="Wix.Styles.html">Styles</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Theme"><a href="Wix.Theme.html">Theme</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Utils"><a href="Wix.Utils.html">Utils</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Utils.Media"><a href="Wix.Utils.Media.html">Media</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.WindowOrigin"><a href="Wix.WindowOrigin.html">WindowOrigin</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.WindowPlacement"><a href="Wix.WindowPlacement.html">WindowPlacement</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Worker"><a href="Wix.Worker.html">Worker</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Worker.PubSub"><a href="Wix.Worker.PubSub.html">PubSub</a></a></dt>
+            <dd></dd>
+        
+            <dt><a href="namespaces.html#Wix.Worker.Utils"><a href="Wix.Worker.Utils.html">Utils</a></a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
 </section>
-
 
 
 
@@ -303,6 +279,10 @@ define([], function () {
 				</footer>
 			</div>
 
+			
+			<div class="span3">
+				<div id="toc"></div>
+			</div>
 			
 			<br clear="both">
 		</div>
