@@ -36,6 +36,10 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Billing.html">Wix.Billing</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Contacts.html">Wix.Contacts</a>
 						</li>
 						
@@ -1184,7 +1188,7 @@ var origCompId = Wix.Utils.getOrigCompId();</pre>
         
             
 <dt>
-    <h4 class="name" id="getSectionUrl"><span class="type-signature">&lt;static> </span>getSectionUrl<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id="getSectionUrl"><span class="type-signature">&lt;private, static> </span>getSectionUrl<span class="signature">(<span class="optional">sectionId</span>, <span class="optional">callback</span>)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
     
 </dt>
@@ -1192,7 +1196,9 @@ var origCompId = Wix.Utils.getOrigCompId();</pre>
     
     
     <div class="description">
-        <p>This method is valid for Page endpoint only. It returns a String which is the section-url query parameter.</p>
+        <p>This method when no sectionId is given is valid for Page endpoint only.</p>
+<p>When a sectionId is not provided this method returns a string which is the section-url query parameter.</p>
+<p>When a sectionId and a callback function are provided this method returns the page app Url for the given sectionId.</p>
 <p>Please note: The parameter &quot;section-url&quot; here refers to the Page app URL.</p>
     </div>
     
@@ -1201,6 +1207,100 @@ var origCompId = Wix.Utils.getOrigCompId();</pre>
     
     
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sectionId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>App pageId defined in dev.wix.com</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A callback function that returns the section's URL - this is mandatory if sectionId was provided.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
     
     
     
@@ -1213,7 +1313,7 @@ var origCompId = Wix.Utils.getOrigCompId();</pre>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.12.0</li>
+			<li>1.36.0</li>
 		</ul>
 	</dd>
 	
@@ -1257,8 +1357,8 @@ var origCompId = Wix.Utils.getOrigCompId();</pre>
     
     
     <h5>Returns:</h5>
-    
-            
+    <ul>
+            <li>
 <div class="param-desc">
     <p>The section-url query parameter, if not exist returns null.</p>
 </div>
@@ -1277,14 +1377,39 @@ var origCompId = Wix.Utils.getOrigCompId();</pre>
 	</dd>
 </dl>
 
-
+</li>
         
+            <li>
+<div class="param-desc">
+    <p>The section url for the given sectionId</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">Object</span>
+
+
+	</dd>
+</dl>
+
+</li>
+        </ul>
     
     
         <h5>Example</h5>
         
     <pre class="sunlight-highlight-javascript">&#x2F;&#x2F;url will get a value of a valid url like &#x27;http:&#x2F;&#x2F;user.wix.com&#x2F;site#!page&#x2F;ch6q&#x27;
-var url = Wix.Utils.getSectionUrl()</pre>
+var url = Wix.Utils.getSectionUrl()
+
+var url = Wix.Utils.getSectionUrl({sectionId: &#x27;mySectionId&#x27;}, function(data) {
+     &#x2F;&#x2F;do something with data.url
+})</pre>
 
 
     

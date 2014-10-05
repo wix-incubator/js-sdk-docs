@@ -36,6 +36,10 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Billing.html">Wix.Billing</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Contacts.html">Wix.Contacts</a>
 						</li>
 						
@@ -1190,6 +1194,255 @@ An object (single selection) or Array of objects (multiple selection). The objec
     <pre class="sunlight-highlight-javascript">var imageUrl = Wix.Settings.openMediaDialog(Wix.Settings.MediaType.IMAGE, false, function(data) {
    &#x2F;&#x2F; save image data
 };</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="openModal"><span class="type-signature">&lt;static> </span>openModal<span class="signature">(url, width, height, <span class="optional">onClose</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The openModal method allows the Settings iframe to open a modal window.</p>
+<p>The modal window is a singleton (every new modal closes the previous one) and contains a lightbox.</p>
+<p>A modal can be dismissed by the user if it touches the lightbox, presses the closing button or by the app itself
+if it calls the Wix.closeWindow from within the modal iframe.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Model iframe url.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The modal window width.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The modal window height.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onClose</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Onclose callback function.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.36.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Settings.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var onClose = function(message) { console.log(&quot;modal closed&quot;, message); }
+Wix.Settings.openModal(&quot;http:&#x2F;&#x2F;sslstatic.wix.com&#x2F;services&#x2F;js-sdk&#x2F;1.16.0&#x2F;html&#x2F;modal.html&quot;, 400, 400, onClose);</pre>
 
 
     

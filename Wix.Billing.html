@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Wix JS SDK Namespace: Contacts</title>
+	<title>Wix JS SDK Namespace: Billing</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -130,14 +130,14 @@
 					
 
 
-	<h1 class="page-title">Namespace: Contacts</h1>
+	<h1 class="page-title">Namespace: Billing</h1>
 <section>
 
 <header>
     <h2>
         <span class="ancestors"><a href="Wix.html">Wix</a>.</span>
     
-    Contacts
+    Billing
     </h2>
     
 </header>
@@ -148,6 +148,8 @@
 
     
         
+            <div class="description"><p>This is the description for the Billing namespace.</p></div>
+        
 
         
 <dl class="details">
@@ -174,7 +176,7 @@
 	
 	<dt class="tag-source">Source:</dt>
 	<dd class="tag-source">
-		Contacts.js
+		Billing.js
 	</dd>
 	
 
@@ -200,6 +202,172 @@
 
     
 
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt class="name" id="Cycle">
+    <h4><span class="type-signature">&lt;static> </span>Cycle<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+    
+<dl class="details">
+	
+
+	<h5 class="subsection-title">Properties:</h5>
+
+	<dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+		<th>Default</th>
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>MONTHLY</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    MONTHLY
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>YEARLY</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    YEARLY
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ONE_TIME</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    ONE_TIME
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.36.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Billing.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
     
 
     
@@ -208,7 +376,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="getContactById"><span class="type-signature">&lt;static> </span>getContactById<span class="signature">(id, onSuccess, onFailure)</span><span class="type-signature"> &rarr; {Contact}</span></h4>
+    <h4 class="name" id="getBillingPackages"><span class="type-signature">&lt;static> </span>getBillingPackages<span class="signature">(callback, onError)</span><span class="type-signature"> &rarr; {Array}</span></h4>
     
     
 </dt>
@@ -216,7 +384,7 @@
     
     
     <div class="description">
-        <p>Gets a specific Contact that has interacted with the current site by its id.</p>
+        <p>Returns a JSON with product pricing info for the product ids requested.</p>
     </div>
     
 
@@ -250,30 +418,7 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The id of the Contact to look up.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onSuccess</code></td>
+                <td class="name"><code>callback</code></td>
             
 
             <td class="type">
@@ -289,14 +434,14 @@
 
             
 
-            <td class="description last"><p>A function that receives data about the Contact.</p></td>
+            <td class="description last"><p>A callback function to receive the product info.</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>onFailure</code></td>
+                <td class="name"><code>onError</code></td>
             
 
             <td class="type">
@@ -312,7 +457,7 @@
 
             
 
-            <td class="description last"><p>A function called when an error occurs that receives a Wix.Error.</p></td>
+            <td class="description last"><p>A callback error function.</p></td>
         </tr>
 
 	
@@ -331,7 +476,7 @@
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.27.0</li>
+			<li>1.36.0</li>
 		</ul>
 	</dd>
 	
@@ -360,183 +505,7 @@
 	
 	<dt class="tag-source">Source:</dt>
 	<dd class="tag-source">
-		Contacts.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type">Contact</span>
-
-
-	</dd>
-</dl>
-
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="getContactLabels"><span class="type-signature">&lt;static> </span>getContactLabels<span class="signature">(onSuccess, onFailure)</span><span class="type-signature"> &rarr; {String[]}</span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Returns all the Contact labels for the given site that have opted in to receiving communications from applications</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>onSuccess</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>A function that receives an array of labels.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onFailure</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>A function called when an error occurs that receives a Wix.Error.</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.32.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>lior.shefer@wix.com</li>
-			</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		Contacts.js
+		Billing.js
 	</dd>
 	
 
@@ -561,212 +530,61 @@
     
             
 <div class="param-desc">
-    <p>An array of labels</p>
-</div>
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type">String[]</span>
-
-
-	</dd>
-</dl>
-
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="getContacts"><span class="type-signature">&lt;static> </span>getContacts<span class="signature">(options, onSuccess, onFailure)</span><span class="type-signature"> &rarr; {<a href="WixDataCursor.html">WixDataCursor</a>}</span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Gets a list of all contacts that have interacted with a given site.</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>object that supports two parameters: 'label' and 'pageSize'.
-'label' can either be a list of strings or a string. if a list, the strings are joined together with a comma
-to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and defaults to 25.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onSuccess</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>An on success callback which gets WixDataCursor as parameter.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onFailure</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>An on failure callback.</p></td>
-        </tr>
-
-	
-	</tbody>
+    <p>Array of Objects containing the product info:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><code>String</code></td>
+<td>The Vendor Product Id</td>
+</tr>
+<tr>
+<td>prices</td>
+<td><code>Array</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>price</td>
+<td><code>Object</code></td>
+<td>Name</td>
+<td>Type</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>value</td>
+<td><code>String</code></td>
+<td>The product price.</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>currencyCode</td>
+<td><code>String</code></td>
+<td>The product payment currency code.</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>currencySymbol</td>
+<td><code>String</code></td>
+<td>The product payment currency symbol.</td>
+</tr>
+<tr>
+<td>cycle</td>
+<td><a href="Wix.Billing.Cycle">Wix.Billing.Cycle</a></td>
+<td>The product payment cycle</td>
+</tr>
+</tbody>
 </table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.31.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>lior.shefer@wix.com</li>
-			</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		Contacts.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>cursor.</p>
 </div>
 
 
@@ -777,7 +595,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 	</dt>
 	<dd>
 		
-<span class="param-type"><a href="WixDataCursor.html">WixDataCursor</a></span>
+<span class="param-type">Array</span>
 
 
 	</dd>
@@ -789,7 +607,231 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">Wix.Contacts.getContacts(function(WixDataCursor), function(errorType));</pre>
+    <pre class="sunlight-highlight-javascript">var onError = function () {
+ &#x2F;&#x2F;handle the error
+};
+Wix.Billing.getBillingPackages(function () {
+     &#x2F;&#x2F;do something with the product info
+}, onError);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="openBillingPageForProduct"><span class="type-signature">&lt;static> </span>openBillingPageForProduct<span class="signature">(vendorProductId, cycle, <span class="optional">onError</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Opens the Wix billing page with information about the product and cycle requested.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>vendorProductId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The vendor product id associated with the initiated purchase.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>cycle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Wix.Billing.html#Cycle">Wix.Billing.Cycle</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>List of product Ids for which to get the product info for.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A callback error function, Error is wrong cycle,
+missing cycle or bad productId.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.36.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Billing.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var productIds = [productId1, productId2];
+
+Wix.Billing.openBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cycle.MONTHLY, function () {
+     &#x2F;&#x2F;handle error
+);</pre>
 
 
     
