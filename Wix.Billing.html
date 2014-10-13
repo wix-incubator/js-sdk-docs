@@ -330,7 +330,7 @@
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.36.0</li>
+			<li>1.37.0</li>
 		</ul>
 	</dd>
 	
@@ -376,7 +376,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="getBillingPackages"><span class="type-signature">&lt;static> </span>getBillingPackages<span class="signature">(callback, onError)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    <h4 class="name" id="getActiveBillingPackage"><span class="type-signature">&lt;static> </span>getActiveBillingPackage<span class="signature">(onSuccess, <span class="optional">onError</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -384,7 +384,7 @@
     
     
     <div class="description">
-        <p>Returns a JSON with product pricing info for the product ids requested.</p>
+        <p>Gets the current billing package information. This includes productId and cycle.</p>
     </div>
     
 
@@ -406,6 +406,8 @@
 		<th>Type</th>
 
 		
+		<th>Argument</th>
+		
 
 		
 
@@ -418,7 +420,7 @@
 
         <tr>
             
-                <td class="name"><code>callback</code></td>
+                <td class="name"><code>onSuccess</code></td>
             
 
             <td class="type">
@@ -430,6 +432,14 @@
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -454,6 +464,16 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -476,7 +496,196 @@
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.36.0</li>
+			<li>1.37.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Billing.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">* var onError = function () {
+ &#x2F;&#x2F;handle the error
+};
+var onSuccess = function () {
+ &#x2F;&#x2F;handle callback
+};
+Wix.Billing.getActiveBillingPackage(onSuccess, onError);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getBillingPackages"><span class="type-signature">&lt;static> </span>getBillingPackages<span class="signature">(onSuccess, <span class="optional">onError</span>)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns a JSON with product pricing info.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A callback function to receive the product info.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A callback error function.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.37.0</li>
 		</ul>
 	</dd>
 	
@@ -540,11 +749,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>id</td>
-<td><code>String</code></td>
-<td>The Vendor Product Id</td>
-</tr>
 <tr>
 <td>prices</td>
 <td><code>Array</code></td>
@@ -610,9 +814,10 @@
     <pre class="sunlight-highlight-javascript">var onError = function () {
  &#x2F;&#x2F;handle the error
 };
-Wix.Billing.getBillingPackages(function () {
-     &#x2F;&#x2F;do something with the product info
-}, onError);</pre>
+var onSuccess = function () {
+ &#x2F;&#x2F;handle callback
+};
+Wix.Billing.getBillingPackages(onSuccess, onError);</pre>
 
 
     
@@ -671,7 +876,7 @@ Wix.Billing.getBillingPackages(function () {
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">String</span>
 
 
             
@@ -773,7 +978,7 @@ missing cycle or bad productId.</p></td>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.36.0</li>
+			<li>1.37.0</li>
 		</ul>
 	</dd>
 	
@@ -827,9 +1032,7 @@ missing cycle or bad productId.</p></td>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">var productIds = [productId1, productId2];
-
-Wix.Billing.openBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cycle.MONTHLY, function () {
+    <pre class="sunlight-highlight-javascript">Wix.Billing.openBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cycle.MONTHLY, function () {
      &#x2F;&#x2F;handle error
 );</pre>
 
