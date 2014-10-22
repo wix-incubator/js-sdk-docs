@@ -376,195 +376,6 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="getActiveBillingPackage"><span class="type-signature">&lt;private, static> </span>getActiveBillingPackage<span class="signature">(onSuccess, <span class="optional">onError</span>)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Gets the current billing package information. This includes productId and cycle.</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-		<th>Argument</th>
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>onSuccess</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A callback function to receive the product info.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onError</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A callback error function.</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.37.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>lior.shefer@wix.com</li>
-			</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		Billing.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">var onError = function () {
- &#x2F;&#x2F;handle the error
-};
-var onSuccess = function () {
- &#x2F;&#x2F;handle callback
-};
-Wix.Billing.getActiveBillingPackage(onSuccess, onError);</pre>
-
-
-    
-</dd>
-
-        
-            
-<dt>
     <h4 class="name" id="getBillingPackages"><span class="type-signature">&lt;static> </span>getBillingPackages<span class="signature">(<span class="optional">vendorProductIds</span>, onSuccess, <span class="optional">onError</span>)</span><span class="type-signature"> &rarr; {Array}</span></h4>
     
     
@@ -1096,9 +907,12 @@ missing cycle or bad productId.</p></td>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">Wix.Billing.openBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cycle.MONTHLY, function () {
-     &#x2F;&#x2F;handle error
-);</pre>
+    <pre class="sunlight-highlight-javascript">var onError = function () {
+ &#x2F;&#x2F;handle the error
+};
+Wix.Billing.getBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cycle.MONTHLY, function () {
+     &#x2F;&#x2F;handle return value i.e., &#x2F;&#x2F;https:&#x2F;&#x2F;premium.wix.com&#x2F;...
+}, onError);</pre>
 
 
     
@@ -1107,7 +921,7 @@ missing cycle or bad productId.</p></td>
         
             
 <dt>
-    <h4 class="name" id="openBillingPageForProduct"><span class="type-signature">&lt;static> </span>openBillingPageForProduct<span class="signature">(vendorProductId, cycle, <span class="optional">onError</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="openBillingPageForProduct"><span class="type-signature">&lt;private, static> </span>openBillingPageForProduct<span class="signature">(vendorProductId, cycle, <span class="optional">onError</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1115,7 +929,7 @@ missing cycle or bad productId.</p></td>
     
     
     <div class="description">
-        <p>Opens the Wix billing page with information about the product and cycle requested.</p>
+        <p>Opens the Wix billing page with information about the product and cycle requested. This API is internally and works w/ the Upgrade component from the [UI-LIb].(<a href="http://wix.github.io/wix-ui-lib/#Upgrade-entry">http://wix.github.io/wix-ui-lib/#Upgrade-entry</a>)</p>
     </div>
     
 
