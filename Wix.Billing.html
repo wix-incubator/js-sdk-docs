@@ -627,6 +627,8 @@
 <td>The product payment currency symbol.</td>
 </tr>
 <tr>
+<td>-</td>
+<td>-</td>
 <td>cycle</td>
 <td><a href="Wix.Billing.html#Cycle">Wix.Billing.Cycle</a></td>
 <td>The product payment cycle</td>
@@ -658,8 +660,20 @@
     <pre class="sunlight-highlight-javascript">var onError = function () {
  &#x2F;&#x2F;handle the error
 };
-var onSuccess = function () {
- &#x2F;&#x2F;handle callback
+var onSuccess = function (data) {
+ &#x2F;&#x2F;handle onSuccess
+ &#x2F;&#x2F;sample data schema:
+ [{
+    id: &lt;vendorProductId&gt;,
+    prices: [
+    {
+      value : &#x27;3.99&#x27;,
+      currencyCode: &#x27;USD&#x27;,
+      currencySymbol: &#x27;&amp;#36;&#x27;,
+      cycle: &#x27;MONTHLY&#x27;
+    }]
+ }]
+
 };
 Wix.Billing.getBillingPackages(onSuccess, onError);</pre>
 
