@@ -148,7 +148,7 @@
 
     
         
-            <div class="description"><p>This is the description for the Billing namespace.</p></div>
+            <div class="description"><p>Functions and objects relating to the purchasing and billing process. To define products for purchase within your app, go to the Features section of the Wix Developer app registration <a href="http://www.dev.wix.com">(dev.wix.com)</a>.</p></div>
         
 
         
@@ -384,7 +384,7 @@
     
     
     <div class="description">
-        <p>Returns an Array of objects containing product and pricing info.</p>
+        <p>Returns an Array of objects containing product and pricing info. As is defined in the Features section of the Wix Developer App Registration <a href="http://www.dev.wix.com">(dev.wix.com)</a></p>
     </div>
     
 
@@ -446,7 +446,7 @@
 
             
 
-            <td class="description last"><p>A list of vendor product ids as defined in dev.wix.com</p></td>
+            <td class="description last"><p>A list of vendor product ids (each representing a billing package), as detailed in the Features section of the Wix Developer App Registration <a href="http://www.dev.wix.com">(dev.wix.com)</a>.</p></td>
         </tr>
 
 	
@@ -692,7 +692,7 @@ Wix.Billing.getBillingPackages(onSuccess, onError);</pre>
     
     
     <div class="description">
-        <p>Gets a link to Wix billing page with information about the product and cycle requested.</p>
+        <p>Returns a link to Wix Billing page with information about the product and cycle requested.</p>
     </div>
     
 
@@ -752,7 +752,7 @@ Wix.Billing.getBillingPackages(onSuccess, onError);</pre>
 
             
 
-            <td class="description last"><p>The vendor product id associated with the initiated purchase.</p></td>
+            <td class="description last"><p>Vendor product id as detailed in the Features section of the Wix Developer App Registration <a href="http://www.dev.wix.com">(dev.wix.com)</a>.</p></td>
         </tr>
 
 	
@@ -783,7 +783,7 @@ Wix.Billing.getBillingPackages(onSuccess, onError);</pre>
 
             
 
-            <td class="description last"><p>List of product Ids for which to get the product info for.</p></td>
+            <td class="description last"><p>The billing cycle.</p></td>
         </tr>
 
 	
@@ -943,7 +943,7 @@ Wix.Billing.getBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cy
     
     
     <div class="description">
-        <p>Opens the Wix billing page with information about the product and cycle requested. This API is internally and works w/ the Upgrade component from the [UI-LIb].(<a href="http://wix.github.io/wix-ui-lib/#Upgrade-entry">http://wix.github.io/wix-ui-lib/#Upgrade-entry</a>)</p>
+        <p>Opens the Wix billing page in a new window with information about the product and cycle requested. This API is internal and works with the Upgrade button component found in the [UI-LIb].(<a href="http://wix.github.io/wix-ui-lib/#Upgrade-entry">http://wix.github.io/wix-ui-lib/#Upgrade-entry</a>)</p>
     </div>
     
 
@@ -1034,7 +1034,7 @@ Wix.Billing.getBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cy
 
             
 
-            <td class="description last"><p>List of product Ids for which to get the product info for.</p></td>
+            <td class="description last"><p>The billing cycle.</p></td>
         </tr>
 
 	
@@ -1067,7 +1067,7 @@ Wix.Billing.getBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cy
 
             
 
-            <td class="description last"><p>A callback error function, Error is wrong cycle,
+            <td class="description last"><p>A callback error function. An error might be a result of a wrong cycle, missing cycle or bad vendor product Id.
 missing cycle or bad productId.</p></td>
         </tr>
 
