@@ -1295,7 +1295,7 @@ An object (single selection) or Array of objects (multiple selection). The objec
         
             
 <dt>
-    <h4 class="name" id="openModal"><span class="type-signature">&lt;static> </span>openModal<span class="signature">(url, width, height, <span class="optional">onClose</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="openModal"><span class="type-signature">&lt;static> </span>openModal<span class="signature">(url, width, height, title, <span class="optional">onClose</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1397,7 +1397,7 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
 
             
 
-            <td class="description last"><p>The modal window width.</p></td>
+            <td class="description last"><p>The modal window width (can be a string for percent, i.e., '90%', or an integer for pixels, i.e., 90).</p></td>
         </tr>
 
 	
@@ -1428,7 +1428,38 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
 
             
 
-            <td class="description last"><p>The modal window height.</p></td>
+            <td class="description last"><p>The modal window height (can be a string for percent, i.e., '90%', or an integer for pixels, i.e., 90).</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Title of the modal.</p></td>
         </tr>
 
 	
@@ -1480,7 +1511,7 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.37.0</li>
+			<li>1.41.0</li>
 		</ul>
 	</dd>
 	
@@ -1535,7 +1566,11 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
         <h5>Example</h5>
         
     <pre class="sunlight-highlight-javascript">var onClose = function(message) { console.log(&quot;modal closed&quot;, message); }
-Wix.Settings.openModal(&quot;http:&#x2F;&#x2F;sslstatic.wix.com&#x2F;services&#x2F;js-sdk&#x2F;1.16.0&#x2F;html&#x2F;modal.html&quot;, 400, 400, onClose);</pre>
+&#x2F;&#x2F;Open a modal when width and height are in pixels.
+Wix.Settings.openModal(&quot;http:&#x2F;&#x2F;sslstatic.wix.com&#x2F;services&#x2F;js-sdk&#x2F;1.41.0&#x2F;html&#x2F;modal.html&quot;, 400, 400, &quot;My modal&#x27;s title&quot;, onClose);
+
+&#x2F;&#x2F;Open a modal when width and height in percentages.
+Wix.Settings.openModal(&quot;http:&#x2F;&#x2F;sslstatic.wix.com&#x2F;services&#x2F;js-sdk&#x2F;1.41.0&#x2F;html&#x2F;modal.html&quot;, &#x27;70%&#x27;, &#x27;90%&#x27;, &quot;My modal&#x27;s title&quot;, onClose);</pre>
 
 
     
