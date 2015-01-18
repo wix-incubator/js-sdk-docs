@@ -1728,7 +1728,7 @@ Wix.getCurrentPageId(function(pageId) {
         
             
 <dt>
-    <h4 class="name" id="openModal"><span class="type-signature">&lt;static> </span>openModal<span class="signature">(url, width, height, <span class="optional">onClose</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="openModal"><span class="type-signature">&lt;static> </span>openModal<span class="signature">(url, width, height, <span class="optional">onClose</span>, <span class="optional">theme</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1900,6 +1900,39 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
         </tr>
 
 	
+
+        <tr>
+            
+                <td class="name"><code>theme</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Wix.Theme.html">Wix.Theme</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The modal window theme, one of Wix.Theme values. Wix.Theme.DEFAULT is used for regular modal look &amp; feel - border, shadow, close button. Wix.Theme.BARE is used for no decorations at all.</p></td>
+        </tr>
+
+	
 	</tbody>
 </table>
 
@@ -1972,7 +2005,7 @@ Wix.openModal(&quot;http:&#x2F;&#x2F;sslstatic.wix.com&#x2F;services&#x2F;js-sdk
         
             
 <dt>
-    <h4 class="name" id="openPopup"><span class="type-signature">&lt;static> </span>openPopup<span class="signature">(url, width, height, position, <span class="optional">onClose</span>, theme)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="openPopup"><span class="type-signature">&lt;static> </span>openPopup<span class="signature">(url, width, height, position, <span class="optional">onClose</span>, <span class="optional">theme</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -2214,6 +2247,8 @@ The position placement is defined under Wix.WindowPlacement and can have the fol
 
             
                 <td class="attributes">
+                
+                    &lt;optional><br>
                 
 
                 
