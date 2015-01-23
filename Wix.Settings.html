@@ -2152,7 +2152,7 @@ Wix.Settings.setWindowPlacement(compId, Wix.WindowPlacement.CENTER, 10, 20);</pr
         
             
 <dt>
-    <h4 class="name" id="triggerSettingsUpdatedEvent"><span class="type-signature">&lt;static> </span>triggerSettingsUpdatedEvent<span class="signature">(message, compId)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="triggerSettingsUpdatedEvent"><span class="type-signature">&lt;static> </span>triggerSettingsUpdatedEvent<span class="signature">(message, <span class="optional">compId</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -2160,7 +2160,7 @@ Wix.Settings.setWindowPlacement(compId, Wix.WindowPlacement.CENTER, 10, 20);</pr
     
     
     <div class="description">
-        <p>The triggerSettingsUpdatedEvent method is used from the Settings iframe to trigger a Wix.Events.SETTINGS_UPDATED event in a WIdget/Page iframe.
+        <p>The triggerSettingsUpdatedEvent method is used from the Settings iframe to trigger a Wix.Events.SETTINGS_UPDATED event in a Widget/Page iframe.
 It should be used in an editing session when a developer wants to reflect editing changes but avoid refresh/reload on the Widget/Page iframe.</p>
     </div>
     
@@ -2182,6 +2182,8 @@ It should be used in an editing session when a developer wants to reflect editin
 
 		<th>Type</th>
 
+		
+		<th>Argument</th>
 		
 
 		
@@ -2208,6 +2210,14 @@ It should be used in an editing session when a developer wants to reflect editin
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -2231,10 +2241,21 @@ It should be used in an editing session when a developer wants to reflect editin
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>A component id we want to trigger the event on, or '*' to trigger the event on all the app components. The most obvious compId is Utils.getOrigCompId().</p></td>
+            <td class="description last"><p>A component id the developer wants to trigger the event on. The most obvious compId is Utils.getOrigCompId(). If no compId is given all components that registered to
+ Wix.Events.SETTINGS_UPDATED will receive the event.</p></td>
         </tr>
 
 	
