@@ -44,6 +44,10 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Counters.html">Wix.Counters</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
 						</li>
 						
@@ -366,6 +370,30 @@
         </tr>
 
 	
+
+        <tr>
+            
+                <td class="name"><code>SECURE_MUSIC</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    secure_music
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
 	</tbody>
 </table>
 </dl>
@@ -378,7 +406,7 @@
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.35.0</li>
+			<li>1.40.0</li>
 		</ul>
 	</dd>
 	
@@ -1075,7 +1103,7 @@ When called it will open the Wix billing system page in a new browser window.</p
         
             
 <dt>
-    <h4 class="name" id="openMediaDialog"><span class="type-signature">&lt;static> </span>openMediaDialog<span class="signature">(mediaType, multiSelect, onSuccess, onCancel)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="openMediaDialog"><span class="type-signature">&lt;static> </span>openMediaDialog<span class="signature">(mediaType, multiSelect, onSuccess, <span class="optional">onCancel</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1109,6 +1137,8 @@ we are requiring that the URL construction will be done using the SDK. Use one o
 		<th>Type</th>
 
 		
+		<th>Argument</th>
+		
 
 		
 
@@ -1127,17 +1157,25 @@ we are requiring that the URL construction will be done using the SDK. Use one o
             <td class="type">
             
                 
-<span class="param-type">Settings.MediaType</span>
+<span class="param-type"><a href="Wix.Settings.html#MediaType">Wix.Settings.MediaType</a></span>
 
 
             
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>Media gallery to choose from - image, background, audio and swf.</p></td>
+            <td class="description last"><p>Media gallery to choose from - image, background, audio, swf and secure music.</p></td>
         </tr>
 
 	
@@ -1156,6 +1194,14 @@ we are requiring that the URL construction will be done using the SDK. Use one o
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -1180,6 +1226,14 @@ we are requiring that the URL construction will be done using the SDK. Use one o
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -1203,6 +1257,16 @@ we are requiring that the URL construction will be done using the SDK. Use one o
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -1225,7 +1289,7 @@ we are requiring that the URL construction will be done using the SDK. Use one o
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.17.0</li>
+			<li>1.40.0</li>
 		</ul>
 	</dd>
 	
@@ -1234,6 +1298,13 @@ we are requiring that the URL construction will be done using the SDK. Use one o
 
 	
 
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
 	
 
 	
@@ -1284,9 +1355,9 @@ An object (single selection) or Array of objects (multiple selection). The objec
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">var imageUrl = Wix.Settings.openMediaDialog(Wix.Settings.MediaType.IMAGE, false, function(data) {
+    <pre class="sunlight-highlight-javascript">Wix.Settings.openMediaDialog(Wix.Settings.MediaType.IMAGE, false, function(data) {
    &#x2F;&#x2F; save image data
-};</pre>
+});</pre>
 
 
     
@@ -1295,7 +1366,7 @@ An object (single selection) or Array of objects (multiple selection). The objec
         
             
 <dt>
-    <h4 class="name" id="openModal"><span class="type-signature">&lt;static> </span>openModal<span class="signature">(url, width, height, title, <span class="optional">onClose</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="openModal"><span class="type-signature">&lt;private, static> </span>openModal<span class="signature">(url, width, height, <span class="optional">title</span>, <span class="optional">onClose</span>, <span class="optional">bareUI</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1450,6 +1521,8 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
             
                 <td class="attributes">
                 
+                    &lt;optional><br>
+                
 
                 
 
@@ -1492,7 +1565,40 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
 
             
 
-            <td class="description last"><p>Onclose callback function.</p></td>
+            <td class="description last"><p>onClose callback function.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>bareUI</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Opens the modal in a bare mode without the modal title, help and close buttons.</p></td>
         </tr>
 
 	
@@ -1511,7 +1617,7 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.41.0</li>
+			<li>1.43.0</li>
 		</ul>
 	</dd>
 	

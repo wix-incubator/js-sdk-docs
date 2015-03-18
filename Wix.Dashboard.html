@@ -44,6 +44,10 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Counters.html">Wix.Counters</a>
+						</li>
+						
+						<li>
 							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
 						</li>
 						
@@ -435,7 +439,7 @@ When called will open the Wix billing system page in a new browser window.</p>
         
             
 <dt>
-    <h4 class="name" id="openMediaDialog"><span class="type-signature">&lt;static> </span>openMediaDialog<span class="signature">(mediaType, multiSelect, onSuccess, onCancel)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="openMediaDialog"><span class="type-signature">&lt;static> </span>openMediaDialog<span class="signature">()</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -458,124 +462,6 @@ The following media type are currently supported - Wix.Settings.MediaType</p>
     
     
     
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>mediaType</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Settings.MediaType</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Media gallery to choose from - image, background, audio and swf.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>multiSelect</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>selection mode, single (false) or multiple (true) item to choose from.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onSuccess</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>callback function, passing the media item/s meta data.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onCancel</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>callback function called when user cancels.</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
     
     
 <dl class="details">
@@ -587,7 +473,7 @@ The following media type are currently supported - Wix.Settings.MediaType</p>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.27.0</li>
+			<li>1.40.0</li>
 		</ul>
 	</dd>
 	
@@ -623,6 +509,13 @@ The following media type are currently supported - Wix.Settings.MediaType</p>
 	
 
 	
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Wix.Settings.html#openMediaDialog">Wix.Settings.openMediaDialog</a></li>
+			</ul>
+	</dd>
+	
 
 	
 </dl>
@@ -637,25 +530,13 @@ The following media type are currently supported - Wix.Settings.MediaType</p>
     
     
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>This is an asynchronous function, the returned value is passed in the onSuccess callback function.
-An object (single selection) or Array of objects (multiple selection). The object describes the meta data of the selected media item.</p>
-</div>
-
-
-
-
-        
     
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">var imageUrl = Wix.Dashboard.openMediaDialog(Wix.Settings.MediaType.IMAGE, false, function(data) {
+    <pre class="sunlight-highlight-javascript">Wix.Dashboard.openMediaDialog(Wix.Settings.MediaType.IMAGE, false, function(data) {
    &#x2F;&#x2F; save image data
-};</pre>
+});</pre>
 
 
     
