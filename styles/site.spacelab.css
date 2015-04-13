@@ -5652,7 +5652,7 @@ div.subnav-fixed {
 }
 .navbar .dropdown-menu {
   padding: 10px 0px 10px 0px;
-  max-height: 435px;
+  max-height: 400px;
   overflow: auto;
   width: 300px;
   background-color: #6c737e;

@@ -876,7 +876,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="getActivities"><span class="type-signature">&lt;static> </span>getActivities<span class="signature">(<span class="optional">query</span>, onSuccess, onFailure)</span><span class="type-signature"> &rarr; {<a href="WixDataCursor.html">WixDataCursor</a>}</span></h4>
+    <h4 class="name" id="getActivities"><span class="type-signature">&lt;static> </span>getActivities<span class="signature">(onSuccess, onFailure, <span class="optional">query</span>)</span><span class="type-signature"> &rarr; {<a href="WixDataCursor.html">WixDataCursor</a>}</span></h4>
     
     
 </dt>
@@ -917,39 +917,6 @@ The results are returned through a callback that delivers a WixDataCursor object
 	</thead>
 
 	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>query</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>An Object containing params to restrict our results.</p></td>
-        </tr>
-
 	
 
         <tr>
@@ -1010,6 +977,39 @@ The results are returned through a callback that delivers a WixDataCursor object
             
 
             <td class="description last"><p>A function that receives an error object in case of invalid input.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>query</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An Object containing params to restrict our results.</p></td>
         </tr>
 
 	
@@ -1101,7 +1101,7 @@ The results are returned through a callback that delivers a WixDataCursor object
      activityTypes: [ &#x27;type1&#x27;, &#x27;type2&#x27;, ...]
 };
 
-Wix.Activities.getActivities(query, onSuccess, onFailure);</pre>
+Wix.Activities.getActivities(onSuccess, onFailure, query);</pre>
 
 
     

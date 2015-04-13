@@ -1018,6 +1018,156 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
         
             
 <dt>
+    <h4 class="name" id="getWindowPlacement"><span class="type-signature">&lt;static> </span>getWindowPlacement<span class="signature">(compId, callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get window placement for a Glued Widget. Error will be thrown for non-Glued widgets.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>(String) component ID of the Glued Widget</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>(Function) a callback function that gets the component placement as an argument
+  callback signature: function(data)</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.19.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Settings.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var compId = Wix.Utils.getOrigCompId();
+Wix.Settings.getWindowPlacement(compId, function (data) {
+ &#x2F;&#x2F; do something with widget placement
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
     <h4 class="name" id="openBillingPage"><span class="type-signature">&lt;static> </span>openBillingPage<span class="signature">()</span><span class="type-signature"></span></h4>
     
     
