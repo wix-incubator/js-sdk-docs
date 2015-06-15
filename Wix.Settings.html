@@ -60,6 +60,14 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Features.html">Wix.Features</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Preview.html">Wix.Preview</a>
+						</li>
+						
+						<li>
 							<a href="Wix.PubSub.html">Wix.PubSub</a>
 						</li>
 						
@@ -175,6 +183,7 @@
 
 	
 
+	
 
 
 	
@@ -423,6 +432,7 @@
 
 	
 
+	
 
 
 	
@@ -450,6 +460,114 @@
         <h3 class="subsection-title">Methods</h3>
 
         <dl>
+            
+<dt>
+    <h4 class="name" id="addComponent"><span class="type-signature">&lt;static> </span>addComponent<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Add a new component to the site.
+Once the component is added, the user would be directed to the page where the component was added.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.45.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+	<dt class="tag-default">Experimental:</dt>
+		<dd class="tag-default">
+			<ul class="dummy">
+				<li>True</li>
+			</ul>
+	</dd>
+	
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Settings.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F; create a new page from a pageId. User is prompted for page name, compId is returned in callback
+Wix.Settings.addComponent({
+     componentType : &#x27;PAGE&#x27;,
+     page : {
+         id : &#x27;product-catalog&#x27;,
+     }
+}, function(compId) {
+     console.log(compId);
+});</pre>
+
+
+    
+</dd>
+
+        
             
 <dt>
     <h4 class="name" id="closeWindow"><span class="type-signature">&lt;static> </span>closeWindow<span class="signature">()</span><span class="type-signature"></span></h4>
@@ -497,6 +615,7 @@
 
 	
 
+	
 
 
 	
@@ -528,7 +647,7 @@
     
     
     
-    
+
     
     
     
@@ -647,6 +766,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
 
 	
 
+	
 
 
 	
@@ -671,7 +791,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
     
     
     
-    
+
     
     
     
@@ -679,6 +799,192 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
         
     <pre class="sunlight-highlight-javascript">Wix.Settings.getDashboardAppUrl(function(url) {
    &#x2F;&#x2F; do something with the URL
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getExternalId"><span class="type-signature">&lt;static> </span>getExternalId<span class="signature">(onSuccess, <span class="optional">onFailure</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Call this method to get the GUID corresponding to the calling component, if one exists. If one does not exist, undefined will be returned.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the GUID value, if one exists. If one does not exist, undefined will be returned.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>onError message</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.45.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Base.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.getExternalId(function (value) {
+  &#x2F;&#x2F; do something w&#x2F; the value
 });</pre>
 
 
@@ -733,6 +1039,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
 
 	
 
+	
 
 
 	
@@ -764,7 +1071,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
     
     
     
-    
+
     
     
     
@@ -826,6 +1133,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
 
 	
 
+	
 
 
 	
@@ -857,7 +1165,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
     
     
     
-    
+
     
     
     
@@ -977,6 +1285,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
 
 	
 
+	
 
 
 	
@@ -1001,7 +1310,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
     
     
     
-    
+
     
     
     
@@ -1126,6 +1435,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
 
 	
 
+	
 
 
 	
@@ -1150,7 +1460,7 @@ The URL is fully qualified and starts with &quot;//&quot; for using HTTPS if sup
     
     
     
-    
+
     
     
     
@@ -1214,6 +1524,7 @@ When called it will open the Wix billing system page in a new browser window.</p
 
 	
 
+	
 
 
 	
@@ -1238,7 +1549,7 @@ When called it will open the Wix billing system page in a new browser window.</p
     
     
     
-    
+
     
     
     
@@ -1463,6 +1774,7 @@ we are requiring that the URL construction will be done using the SDK. Use one o
 
 	
 
+	
 
 
 	
@@ -1487,7 +1799,7 @@ we are requiring that the URL construction will be done using the SDK. Use one o
     
     
     
-    
+
     
     <h5>Returns:</h5>
     
@@ -1791,6 +2103,7 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
 
 	
 
+	
 
 
 	
@@ -1815,7 +2128,7 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
     
     
     
-    
+
     
     
     
@@ -1943,6 +2256,7 @@ The refreshApp method accepts a single optional argument, an object. Where each 
 
 	
 
+	
 
 
 	
@@ -1967,7 +2281,7 @@ The refreshApp method accepts a single optional argument, an object. Where each 
     
     
     
-    
+
     
     
     
@@ -2123,6 +2437,7 @@ Wix.Settings.refreshApp({param1: &quot;value1&quot;, param2: &quot;value2&quot;}
 
 	
 
+	
 
 
 	
@@ -2147,7 +2462,7 @@ Wix.Settings.refreshApp({param1: &quot;value1&quot;, param2: &quot;value2&quot;}
     
     
     
-    
+
     
     
     
@@ -2159,6 +2474,249 @@ the settings iframe that affects only 2 components display, to refresh these 2 c
 Wix.Settings.refreshAppByCompIds([&quot;id1&quot;, &quot;id3&quot;]);
 &#x2F;&#x2F;The App&#x27;s components with ids &quot;id1&quot; and &quot;id3&quot; will be refreshed with custom query parameters as specified in the object argument - [BASE-URL]?[WIX-QUERY-PARAMETERS]&amp;param1=value1&amp;param2=value2
 Wix.Settings.refreshAppByCompIds([&quot;id1&quot;, &quot;id3&quot;], {param1: &quot;value1&quot;, param2: &quot;value2&quot;});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="resizeComponent"><span class="type-signature">&lt;static> </span>resizeComponent<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Sets the width of the given component. Works for both pages and widgets.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.45.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+	<dt class="tag-default">Experimental:</dt>
+		<dd class="tag-default">
+			<ul class="dummy">
+				<li>True</li>
+			</ul>
+	</dd>
+	
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Settings.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Settings.resizeComponent({
+   width: 400,
+   height:600
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="setExternalId"><span class="type-signature">&lt;static> </span>setExternalId<span class="signature">(guid)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Stores the value, which is a GUID. If a value for the given component did not previously exist, it is created. If it already exists, its existing value is overwritten with the new contents of value.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>guid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>GUID value to set</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.45.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Settings.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Settings.setExternalId(&#x27;71e2d60f-421d-4a7f-a63d-d45479b82349&#x27;);</pre>
 
 
     
@@ -2299,7 +2857,7 @@ Wix.Settings.refreshAppByCompIds([&quot;id1&quot;, &quot;id3&quot;], {param1: &q
 
             
 
-            <td class="description last"><p>Vertical offset from the window placement</p></td>
+            <td class="description last"><p>Vertical offset from the window placement. Valid values are between -2 and 2.</p></td>
         </tr>
 
 	
@@ -2332,7 +2890,7 @@ Wix.Settings.refreshAppByCompIds([&quot;id1&quot;, &quot;id3&quot;], {param1: &q
 
             
 
-            <td class="description last"><p>Horizontal offset from the window placement</p></td>
+            <td class="description last"><p>Horizontal offset from the window placement. Valid values are between -2 and 2.</p></td>
         </tr>
 
 	
@@ -2368,6 +2926,7 @@ Wix.Settings.refreshAppByCompIds([&quot;id1&quot;, &quot;id3&quot;], {param1: &q
 
 	
 
+	
 
 
 	
@@ -2392,14 +2951,14 @@ Wix.Settings.refreshAppByCompIds([&quot;id1&quot;, &quot;id3&quot;], {param1: &q
     
     
     
-    
+
     
     
     
         <h5>Example</h5>
         
     <pre class="sunlight-highlight-javascript">var compId = Wix.Utils.getOrigCompId();
-Wix.Settings.setWindowPlacement(compId, Wix.WindowPlacement.CENTER, 10, 20);</pre>
+Wix.Settings.setWindowPlacement(compId, Wix.WindowPlacement.CENTER, 2, 0);</pre>
 
 
     
@@ -2547,6 +3106,7 @@ It should be used in an editing session when a developer wants to reflect editin
 
 	
 
+	
 
 
 	
@@ -2571,7 +3131,7 @@ It should be used in an editing session when a developer wants to reflect editin
     
     
     
-    
+
     
     
     

@@ -60,6 +60,14 @@
 						</li>
 						
 						<li>
+							<a href="Wix.Features.html">Wix.Features</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Preview.html">Wix.Preview</a>
+						</li>
+						
+						<li>
 							<a href="Wix.PubSub.html">Wix.PubSub</a>
 						</li>
 						
@@ -175,6 +183,7 @@
 
 	
 
+	
 
 
 	
@@ -207,6 +216,177 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt class="name" id="AudioType">
+    <h4><span class="type-signature">&lt;static> </span>AudioType<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An enum of audio types that are supported by Wix.Utils.Media.getAudioUrl</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+	
+
+	<h5 class="subsection-title">Properties:</h5>
+
+	<dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+		<th>Default</th>
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>STANDARD</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    AudioType.STANDARD
+                
+                </td>
+            
+
+            <td class="description last"><p>Standard mp3 audio file</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>PREVIEW</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    AudioType.PREVIEW
+                
+                </td>
+            
+
+            <td class="description last"><p>A full preview of a high-quality audio file playable in the browser</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SHORT_PREVIEW</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    AudioType.SHORT_PREVIEW
+                
+                </td>
+            
+
+            <td class="description last"><p>A short preview of a high-quality audio file playable in the browser</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.45.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Media.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -214,7 +394,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="getAudioUrl"><span class="type-signature">&lt;static> </span>getAudioUrl<span class="signature">(relativeUri)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id="getAudioUrl"><span class="type-signature">&lt;static> </span>getAudioUrl<span class="signature">(relativeUri, audioType)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
     
 </dt>
@@ -222,7 +402,7 @@
     
     
     <div class="description">
-        <p>This method constructs a URL for a media item of type audio.</p>
+        <p>Constructs an absolute URL for a relative path to an audio file. By default, returns a URL to a standard audio file.</p>
     </div>
     
 
@@ -272,7 +452,30 @@
 
             
 
-            <td class="description last"><p>audio item uri (relative to Wix media gallery)</p></td>
+            <td class="description last"><p>A relative URL to the target audio file.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>audioType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Wix.Utils.Media.html#AudioType">Wix.Utils.Media.AudioType</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the type of audio URL to build. Default is Wix.Media.AudioType.STANDARD.</p></td>
         </tr>
 
 	
@@ -291,7 +494,7 @@
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.17.0</li>
+			<li>1.45.0</li>
 		</ul>
 	</dd>
 	
@@ -308,6 +511,7 @@
 
 	
 
+	
 
 
 	
@@ -332,13 +536,13 @@
     
     
     
-    
+
     
     <h5>Returns:</h5>
     
             
 <div class="param-desc">
-    <p>A full URL pointing to the Wix static servers of an audio file with the default dimensions.</p>
+    <p>An absolute URL pointing to the audio file hosted on Wix's static.</p>
 </div>
 
 
@@ -361,7 +565,7 @@
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">var audioUrl = Wix.Utils.Media.getAudioUrl(&#x27;relative_url.mp3&#x27;)</pre>
+    <pre class="sunlight-highlight-javascript">var audioUrl = Wix.Utils.Media.getAudioUrl(&#x27;relative_url.mp3&#x27;, Wix.Utils.Media.AudioType.SHORT_PREVIEW)</pre>
 
 
     
@@ -464,6 +668,7 @@
 
 	
 
+	
 
 
 	
@@ -488,7 +693,7 @@
     
     
     
-    
+
     
     <h5>Returns:</h5>
     
@@ -620,6 +825,7 @@
 
 	
 
+	
 
 
 	
@@ -644,7 +850,7 @@
     
     
     
-    
+
     
     <h5>Returns:</h5>
     
@@ -767,7 +973,14 @@
 	
 
 	
-
+	<dt class="important tag-deprecated">Deprecated:</dt>
+	
+	<dd class="yes-def tag-deprecated">
+		<ul class="dummy">
+			<li>Yes</li>
+		</ul>
+	</dd>
+	
 	
 
 	
@@ -776,6 +989,9 @@
 
 	
 
+	
+
+	
 
 
 	
@@ -800,7 +1016,7 @@
     
     
     
-    
+
     
     <h5>Returns:</h5>
     
@@ -829,7 +1045,7 @@
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">var preview = Wix.Utils.Media.getSwfUrl(&#x27;relative_url.swf&#x27;)</pre>
+    <pre class="sunlight-highlight-javascript">var preview = Wix.Utils.Media.getPreviewSecureMusicUrl(&#x27;relative_url.mp3&#x27;)</pre>
 
 
     
@@ -1179,6 +1395,7 @@ see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_ma
 
 	
 
+	
 
 
 	
@@ -1203,7 +1420,7 @@ see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_ma
     
     
     
-    
+
     
     <h5>Returns:</h5>
     
@@ -1335,6 +1552,7 @@ see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_ma
 
 	
 
+	
 
 
 	
@@ -1359,7 +1577,7 @@ see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_ma
     
     
     
-    
+
     
     <h5>Returns:</h5>
     
