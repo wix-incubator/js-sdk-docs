@@ -820,6 +820,230 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
     
 </dd>
 
+        
+            
+<dt>
+    <h4 class="name" id="reconcileContact"><span class="type-signature">&lt;static> </span>reconcileContact<span class="signature">(contactInfo, <span class="optional">Function</span>, <span class="optional">Function</span>)</span><span class="type-signature"> &rarr; {String[]}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Send contact information for reconciliation using contact merging heuristics</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>contactInfo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The contact information that will be passed to the server</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>Function</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>onSuccess A function that receives an array of labels.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>Function</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>onFailure A function called when an error occurs that receives a Wix.Error.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.46.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>benk@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Contacts.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An array of labels</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">String[]</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
         </dl>
     
 

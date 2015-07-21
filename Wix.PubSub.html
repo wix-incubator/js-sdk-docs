@@ -405,7 +405,7 @@ Wix.PubSub.publish(&quot;my_event_name&quot;, {value:&quot;this is my message&qu
         
             
 <dt>
-    <h4 class="name" id="subscribe"><span class="type-signature">&lt;static> </span>subscribe<span class="signature">(eventName, callBack, <span class="optional">receivePastEvents</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="subscribe"><span class="type-signature">&lt;static> </span>subscribe<span class="signature">(eventName, callBack, <span class="optional">receivePastEvents</span>)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
     
 </dt>
@@ -602,6 +602,29 @@ If the flag is set, the widget will be notified immediately of any prior events 
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>subscription id.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">Number</span>
+
+
+	</dd>
+</dl>
+
+
+        
     
     
         <h5>Example</h5>
@@ -625,7 +648,7 @@ Wix.PubSub.subscribe(&quot;my_event_name&quot;, function(event) { }, true);</pre
         
             
 <dt>
-    <h4 class="name" id="unsubscribe"><span class="type-signature">&lt;static> </span>unsubscribe<span class="signature">(eventName, function)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="unsubscribe"><span class="type-signature">&lt;static> </span>unsubscribe<span class="signature">(eventName, subscription)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -690,13 +713,13 @@ Wix.PubSub.subscribe(&quot;my_event_name&quot;, function(event) { }, true);</pre
 
         <tr>
             
-                <td class="name"><code>function</code></td>
+                <td class="name"><code>subscription</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type">Number</span>
 
 
             
@@ -706,7 +729,7 @@ Wix.PubSub.subscribe(&quot;my_event_name&quot;, function(event) { }, true);</pre
 
             
 
-            <td class="description last"><p>that will respond to events sent from other extensions of the broadcasting app. it will be given the event object itself and the source of the event.</p></td>
+            <td class="description last"><p>Id returned by Wix.PubSub.subscribe.</p></td>
         </tr>
 
 	
