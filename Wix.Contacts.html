@@ -181,8 +181,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -368,8 +367,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -393,7 +391,7 @@
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -554,8 +552,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -579,7 +576,7 @@
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -760,8 +757,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -785,7 +781,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -823,7 +819,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
         
             
 <dt>
-    <h4 class="name" id="reconcileContact"><span class="type-signature">&lt;static> </span>reconcileContact<span class="signature">(contactInfo, <span class="optional">Function</span>, <span class="optional">Function</span>)</span><span class="type-signature"> &rarr; {String[]}</span></h4>
+    <h4 class="name" id="reconcileContact"><span class="type-signature">&lt;static> </span>reconcileContact<span class="signature">(contactInfo, <span class="optional">onSuccess</span>, <span class="optional">onFailure</span>)</span><span class="type-signature"> &rarr; {String[]}</span></h4>
     
     
 </dt>
@@ -898,10 +894,15 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
         <tr>
             
-                <td class="name"><code>Function</code></td>
+                <td class="name"><code>onSuccess</code></td>
             
 
             <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
             
             </td>
 
@@ -919,17 +920,22 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
             
 
-            <td class="description last"><p>onSuccess A function that receives an array of labels.</p></td>
+            <td class="description last"><p>A function that receives an array of labels.</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>Function</code></td>
+                <td class="name"><code>onFailure</code></td>
             
 
             <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
             
             </td>
 
@@ -947,7 +953,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
             
 
-            <td class="description last"><p>onFailure A function called when an error occurs that receives a Wix.Error.</p></td>
+            <td class="description last"><p>A function called when an error occurs that receives a Wix.Error.</p></td>
         </tr>
 
 	
@@ -990,8 +996,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1015,7 +1020,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
