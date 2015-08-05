@@ -1562,6 +1562,219 @@ Wix.getCurrentPageId(function(pageId) {
         
             
 <dt>
+    <h4 class="name" id="navigateToComponent"><span class="type-signature">&lt;static> </span>navigateToComponent<span class="signature">(compId, <span class="optional">Options</span>, <span class="optional">onFailure</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The navigateToComponent method will navigate to a component on the current page, or to a component on a page with the pageId provided.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>of the component to navigate to</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>Options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>options may contain pageId to navigate to. When pageId is not provided, the method will navigate to a component with the given id on the current page.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the function will return an object that specifies the error which occurred, it will be invoked in the following scenarios:
+       1. Current page does not contain the given component (and pageId was not provided).
+       2. Provided pageId is not valid.
+       3. PageId is given but the page does not contain a component with the provided component id. Note: The method will first navigate to a page with the provided pageId as an effect of this API call.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.47.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Base.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F; The following call will scroll to a component with id = comp1, on a page with id = page1
+Wix.navigateToComponent(&#x27;comp1&#x27;, {pageId: &#x27;page1&#x27;}, function(error) { console.log(error.error)} );</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
     <h4 class="name" id="navigateToPage"><span class="type-signature">&lt;static> </span>navigateToPage<span class="signature">(pageId)</span><span class="type-signature"> &rarr; {Object}</span></h4>
     
     
