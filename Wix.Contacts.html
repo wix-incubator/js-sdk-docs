@@ -819,7 +819,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
         
             
 <dt>
-    <h4 class="name" id="reconcileContact"><span class="type-signature">&lt;static> </span>reconcileContact<span class="signature">(contactInfo, <span class="optional">onSuccess</span>, <span class="optional">onFailure</span>)</span><span class="type-signature"> &rarr; {String[]}</span></h4>
+    <h4 class="name" id="reconcileContact"><span class="type-signature">&lt;static> </span>reconcileContact<span class="signature">(contactInfo, <span class="optional">onSuccess</span>, <span class="optional">onFailure</span>)</span><span class="type-signature"> &rarr; {ReconcileContactResult}</span></h4>
     
     
 </dt>
@@ -827,7 +827,9 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
     
     
     <div class="description">
-        <p>Send contact information for reconciliation using contact merging heuristics</p>
+        <p>Reconciles Contact information with that of the WixHive's.</p>
+<p>Use this when your app has information about a site visitor that may already be registered as a Contact as part of the WixHive. Your app should provide as much information as possible so that we will find the best match for that Contact and return it with the reconciled information. If no match was found, we will create a new Contact.</p>
+<p>Depending on the type of information, we will either add or dismiss changes. When the information can be added to a list, such as emails or phones, a new item will be added if no similar item exists. When the information cannot be added we dismiss the change, such is the case with name, company and picture. If your wish is to override such data, there are explicit ways to do so using the Contact’s id and our REST API.</p>
     </div>
     
 
@@ -887,7 +889,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
             
 
-            <td class="description last"><p>The contact information that will be passed to the server</p></td>
+            <td class="description last"><p>Contact information that will be passed to the server.</p></td>
         </tr>
 
 	
@@ -920,7 +922,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
             
 
-            <td class="description last"><p>A function that receives an array of labels.</p></td>
+            <td class="description last"><p>A function that receives reconciliation details.</p></td>
         </tr>
 
 	
@@ -953,7 +955,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 
             
 
-            <td class="description last"><p>A function called when an error occurs that receives a Wix.Error.</p></td>
+            <td class="description last"><p>A function called when an error occurs, receives a Wix.Error.</p></td>
         </tr>
 
 	
@@ -1026,7 +1028,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
     
             
 <div class="param-desc">
-    <p>An array of labels</p>
+    <p>Contains the reconciled Contact and details about the operation.</p>
 </div>
 
 
@@ -1037,7 +1039,7 @@ to be sent to the contacts endpoint. 'pageSize' accepts either 25, 50 or 100 and
 	</dt>
 	<dd>
 		
-<span class="param-type">String[]</span>
+<span class="param-type">ReconcileContactResult</span>
 
 
 	</dd>

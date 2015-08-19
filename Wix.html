@@ -3176,6 +3176,231 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
         
             
 <dt>
+    <h4 class="name" id="resizeComponent"><span class="type-signature">&lt;static> </span>resizeComponent<span class="signature">(options, onSuccess, <span class="optional">onFailure</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Sets the width of the given component. Works for both pages and widgets.
+Available in editor view mode only.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>options object w/ width and/or height</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>onSuccess message</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>onError message</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.47.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+    
+    	<dt class="tag-default">Experimental:</dt>
+    		<dd class="tag-default">
+    			<ul class="dummy">
+    				<li>True</li>
+    			</ul>
+    	</dd>
+	
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Base.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Settings.resizeComponent({
+   width: 400,
+   height:600
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
     <h4 class="name" id="resizeWindow"><span class="type-signature">&lt;static> </span>resizeWindow<span class="signature">(width, height, <span class="optional">Function</span>)</span><span class="type-signature"></span></h4>
     
     
@@ -3694,7 +3919,7 @@ Available in preview and site view modes only.</p>
         
             
 <dt>
-    <h4 class="name" id="setHeight"><span class="type-signature">&lt;static> </span>setHeight<span class="signature">(height)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setHeight"><span class="type-signature">&lt;static> </span>setHeight<span class="signature">(height, <span class="optional">Options</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -3724,6 +3949,8 @@ Available in preview and site view modes only.</p>
 		<th>Type</th>
 
 		
+		<th>Argument</th>
+		
 
 		
 
@@ -3749,10 +3976,52 @@ Available in preview and site view modes only.</p>
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
             <td class="description last"><p>An integer that represents the desired height in pixels.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>Options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>options may contain boolean value telling the platform to display and resize this component over other components on the page. By default, other components will be relocated (pushed down) as a result of this operation.
+         e.</p></td>
         </tr>
 
 	
@@ -3771,7 +4040,7 @@ Available in preview and site view modes only.</p>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.22.0</li>
+			<li>1.50.0</li>
 		</ul>
 	</dd>
 	
