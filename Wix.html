@@ -181,8 +181,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -394,8 +393,7 @@ The events that you can currently listen to are:</p></td>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -429,6 +427,8 @@ The events that you can currently listen to are:</p></td>
 			<li><a href="Wix.Events.html#SETTINGS_UPDATED">Wix.Events.SETTINGS_UPDATED</a></li>
 			
 			<li><a href="Wix.Events.html#STATE_CHANGED">Wix.Events.STATE_CHANGED</a></li>
+			
+			<li><a href="Wix.Events.html#THEME_CHANGE">Wix.Events.THEME_CHANGE</a></li>
 			</ul>
 	</dd>
 	
@@ -444,7 +444,7 @@ The events that you can currently listen to are:</p></td>
     
     
     
-
+    
     
     
     
@@ -559,8 +559,7 @@ The events that you can currently listen to are:</p></td>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -584,7 +583,7 @@ The events that you can currently listen to are:</p></td>
     
     
     
-
+    
     
     
     
@@ -699,8 +698,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -724,7 +722,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -890,8 +888,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -915,7 +912,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
     
     
     
-
+    
     
     
     
@@ -984,8 +981,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1009,7 +1005,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
     
     
     
-
+    
     
     
     
@@ -1116,8 +1112,7 @@ Wix.getCurrentPageId(function(pageId) {
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1141,7 +1136,7 @@ Wix.getCurrentPageId(function(pageId) {
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -1185,7 +1180,7 @@ Wix.getCurrentPageId(function(pageId) {
 <tr>
 <td>url</td>
 <td><code>String</code></td>
-<td>The full url taken from the location.href, include internal site state, for example: <a href="http://user.wix.com/site-name#!pageTitle/pageId">http://user.wix.com/site-name#!pageTitle/pageId</a>, <a href="http://www.domain.com#!pageTitle/pageId">http://www.domain.com#!pageTitle/pageId</a></td>
+<td>The full url taken from the location.href, includes internal site state, For example: <a href="http://user.wix.com/site-name#!pageTitle/pageId">http://user.wix.com/site-name#!pageTitle/pageId</a>, <a href="http://www.domain.com#!pageTitle/pageId">http://www.domain.com#!pageTitle/pageId</a>. This field is omitted when running in Editor view mode.</td>
 </tr>
 <tr>
 <td>baseUrl</td>
@@ -1321,8 +1316,7 @@ Wix.getCurrentPageId(function(pageId) {
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1346,7 +1340,7 @@ Wix.getCurrentPageId(function(pageId) {
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -1520,8 +1514,7 @@ Wix.getCurrentPageId(function(pageId) {
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1552,7 +1545,7 @@ Wix.getCurrentPageId(function(pageId) {
     
     
     
-
+    
     
     
     
@@ -1561,6 +1554,219 @@ Wix.getCurrentPageId(function(pageId) {
     <pre class="sunlight-highlight-javascript">Wix.getStyleParams( function(styleParams) {
  &#x2F;&#x2F; do something with the style params
 });</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="navigateToComponent"><span class="type-signature">&lt;static> </span>navigateToComponent<span class="signature">(compId, <span class="optional">Options</span>, <span class="optional">onFailure</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The navigateToComponent method will navigate to a component on the current page, or to a component on a page with the pageId provided.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>of the component to navigate to</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>Options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>options may contain pageId to navigate to. When pageId is not provided, the method will navigate to a component with the given id on the current page.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the function will return an object that specifies the error which occurred, it will be invoked in the following scenarios:
+       1. Current page does not contain the given component (and pageId was not provided).
+       2. Provided pageId is not valid.
+       3. PageId is given but the page does not contain a component with the provided component id. Note: The method will first navigate to a page with the provided pageId as an effect of this API call.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.47.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Base.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F; The following call will scroll to a component with id = comp1, on a page with id = page1
+Wix.navigateToComponent(&#x27;comp1&#x27;, {pageId: &#x27;page1&#x27;}, function(error) { console.log(error.error)} );</pre>
 
 
     
@@ -1664,8 +1870,7 @@ Wix.getCurrentPageId(function(pageId) {
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1689,7 +1894,7 @@ Wix.getCurrentPageId(function(pageId) {
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -1996,8 +2201,7 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -2021,7 +2225,7 @@ if it calls the Wix.closeWindow from within the modal iframe.</p>
     
     
     
-
+    
     
     
     
@@ -2335,8 +2539,7 @@ i.e., the center of the screen.</p></td>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -2360,7 +2563,7 @@ i.e., the center of the screen.</p></td>
     
     
     
-
+    
     
     
     
@@ -2480,8 +2683,7 @@ For a full explanation of how deep-linking works with AJAX style apps, see Deep 
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -2505,7 +2707,7 @@ For a full explanation of how deep-linking works with AJAX style apps, see Deep 
     
     
     
-
+    
     
     
     
@@ -2637,8 +2839,7 @@ For a full explanation of how deep-linking works with AJAX style apps, see Deep 
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -2662,7 +2863,7 @@ For a full explanation of how deep-linking works with AJAX style apps, see Deep 
     
     
     
-
+    
     
     
     
@@ -2788,8 +2989,7 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</pre>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -2820,7 +3020,7 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</pre>
     
     
     
-
+    
     
     
     
@@ -2935,8 +3135,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -2960,7 +3159,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
     
     
     
-
+    
     
     
     
@@ -2969,6 +3168,231 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
     <pre class="sunlight-highlight-javascript">Wix.requestLogin(function (data) {
    &#x2F;&#x2F;do something with data
 }</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="resizeComponent"><span class="type-signature">&lt;static> </span>resizeComponent<span class="signature">(options, onSuccess, <span class="optional">onFailure</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Sets the width of the given component. Works for both pages and widgets.
+Available in editor view mode only.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>options object w/ width and/or height</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>onSuccess message</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>onError message</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.47.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+    
+    	<dt class="tag-default">Experimental:</dt>
+    		<dd class="tag-default">
+    			<ul class="dummy">
+    				<li>True</li>
+    			</ul>
+    	</dd>
+	
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Base.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Settings.resizeComponent({
+   width: 400,
+   height:600
+});</pre>
 
 
     
@@ -3140,8 +3564,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -3165,7 +3588,7 @@ This method is part of Wix Site Members feature. To use it a manual provisioning
     
     
     
-
+    
     
     
     
@@ -3299,8 +3722,7 @@ Available in preview and site view modes only.</p>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -3324,7 +3746,7 @@ Available in preview and site view modes only.</p>
     
     
     
-
+    
     
     
     
@@ -3458,8 +3880,7 @@ Available in preview and site view modes only.</p>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -3483,7 +3904,7 @@ Available in preview and site view modes only.</p>
     
     
     
-
+    
     
     
     
@@ -3498,7 +3919,7 @@ Available in preview and site view modes only.</p>
         
             
 <dt>
-    <h4 class="name" id="setHeight"><span class="type-signature">&lt;static> </span>setHeight<span class="signature">(height)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setHeight"><span class="type-signature">&lt;static> </span>setHeight<span class="signature">(height, <span class="optional">Options</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -3528,6 +3949,8 @@ Available in preview and site view modes only.</p>
 		<th>Type</th>
 
 		
+		<th>Argument</th>
+		
 
 		
 
@@ -3553,10 +3976,52 @@ Available in preview and site view modes only.</p>
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
             <td class="description last"><p>An integer that represents the desired height in pixels.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>Options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>options may contain boolean value telling the platform to display and resize this component over other components on the page. By default, other components will be relocated (pushed down) as a result of this operation.
+         e.</p></td>
         </tr>
 
 	
@@ -3575,7 +4040,7 @@ Available in preview and site view modes only.</p>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.22.0</li>
+			<li>1.50.0</li>
 		</ul>
 	</dd>
 	
@@ -3592,8 +4057,7 @@ Available in preview and site view modes only.</p>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -3617,7 +4081,7 @@ Available in preview and site view modes only.</p>
     
     
     
-
+    
     
     
     

@@ -160,7 +160,7 @@
 
     
         
-            <div class="description"><p>This is the description for the Utils namespace.</p></div>
+            <div class="description"><p>This is the description for the Styles namespace.</p></div>
         
 
         
@@ -183,8 +183,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -317,8 +316,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -342,7 +340,7 @@
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -468,8 +466,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -493,7 +490,7 @@
     
     
     
-
+    
     
     
     
@@ -596,8 +593,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -621,7 +617,7 @@
     
     
     
-
+    
     
     
     
@@ -725,8 +721,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -750,7 +745,7 @@
     
     
     
-
+    
     
     
     
@@ -853,8 +848,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -878,7 +872,7 @@
     
     
     
-
+    
     
     
     
@@ -981,8 +975,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1006,7 +999,7 @@
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -1132,8 +1125,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1157,7 +1149,7 @@
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -1279,8 +1271,7 @@
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1304,7 +1295,7 @@
     
     
     
-
+    
     
     <h5>Returns:</h5>
     
@@ -1427,8 +1418,7 @@ The parameters includes colors numbers, booleans.</p>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1452,7 +1442,7 @@ The parameters includes colors numbers, booleans.</p>
     
     
     
-
+    
     
     
     
@@ -1469,7 +1459,7 @@ The parameters includes colors numbers, booleans.</p>
         
             
 <dt>
-    <h4 class="name" id="setBooleanParam"><span class="type-signature">&lt;private, static> </span>setBooleanParam<span class="signature">(key, value)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setBooleanParam"><span class="type-signature">&lt;private, static> </span>setBooleanParam<span class="signature">(key, value, onSuccess, onFailure)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1541,7 +1531,7 @@ The parameters includes colors numbers, booleans.</p>
             <td class="type">
             
                 
-<span class="param-type">Boolean</span>
+<span class="param-type">Object</span>
 
 
             
@@ -1552,6 +1542,52 @@ The parameters includes colors numbers, booleans.</p>
             
 
             <td class="description last"></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A callback function, returns on object containing styleProperties.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This will be called in case of error.</p></td>
         </tr>
 
 	
@@ -1570,7 +1606,7 @@ The parameters includes colors numbers, booleans.</p>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.22.0</li>
+			<li>1.47.0</li>
 		</ul>
 	</dd>
 	
@@ -1587,8 +1623,7 @@ The parameters includes colors numbers, booleans.</p>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1612,7 +1647,7 @@ The parameters includes colors numbers, booleans.</p>
     
     
     
-
+    
     
     
     
@@ -1621,7 +1656,7 @@ The parameters includes colors numbers, booleans.</p>
         
             
 <dt>
-    <h4 class="name" id="setColorParam"><span class="type-signature">&lt;private, static> </span>setColorParam<span class="signature">(key, value)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setColorParam"><span class="type-signature">&lt;private, static> </span>setColorParam<span class="signature">(key, value, onSuccess, onFailure)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1706,6 +1741,52 @@ The parameters includes colors numbers, booleans.</p>
         </tr>
 
 	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A callback function, returns on object containing styleProperties.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This will be called in case of error.</p></td>
+        </tr>
+
+	
 	</tbody>
 </table>
 
@@ -1721,7 +1802,7 @@ The parameters includes colors numbers, booleans.</p>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.26.0</li>
+			<li>1.47.0</li>
 		</ul>
 	</dd>
 	
@@ -1738,8 +1819,7 @@ The parameters includes colors numbers, booleans.</p>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1763,7 +1843,7 @@ The parameters includes colors numbers, booleans.</p>
     
     
     
-
+    
     
     
     
@@ -1772,7 +1852,7 @@ The parameters includes colors numbers, booleans.</p>
         
             
 <dt>
-    <h4 class="name" id="setFontParam"><span class="type-signature">&lt;private, static> </span>setFontParam<span class="signature">(key, value)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setFontParam"><span class="type-signature">&lt;private, static> </span>setFontParam<span class="signature">(key, value, onSuccess, onFailure)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1843,7 +1923,7 @@ The parameters includes colors numbers, booleans.</p>
             <td class="type">
             
                 
-<span class="param-type">Boolean</span>
+<span class="param-type">Object</span>
 
 
             
@@ -1854,6 +1934,52 @@ The parameters includes colors numbers, booleans.</p>
             
 
             <td class="description last"><p>to store.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A callback function, returns on object containing styleProperties.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This will be called in case of error.</p></td>
         </tr>
 
 	
@@ -1872,7 +1998,7 @@ The parameters includes colors numbers, booleans.</p>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.26.0</li>
+			<li>1.47.0</li>
 		</ul>
 	</dd>
 	
@@ -1889,8 +2015,7 @@ The parameters includes colors numbers, booleans.</p>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -1914,7 +2039,7 @@ The parameters includes colors numbers, booleans.</p>
     
     
     
-
+    
     
     
     
@@ -1923,7 +2048,7 @@ The parameters includes colors numbers, booleans.</p>
         
             
 <dt>
-    <h4 class="name" id="setNumberParam"><span class="type-signature">&lt;private, static> </span>setNumberParam<span class="signature">(key, value)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setNumberParam"><span class="type-signature">&lt;private, static> </span>setNumberParam<span class="signature">(key, value, onSuccess, onFailure)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1995,7 +2120,7 @@ The parameters includes colors numbers, booleans.</p>
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">Object</span>
 
 
             
@@ -2006,6 +2131,52 @@ The parameters includes colors numbers, booleans.</p>
             
 
             <td class="description last"></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A callback function, returns on object containing styleProperties.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This will be called in case of error.</p></td>
         </tr>
 
 	
@@ -2024,7 +2195,7 @@ The parameters includes colors numbers, booleans.</p>
 	<dt class="tag-since">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>1.22.0</li>
+			<li>1.47.0</li>
 		</ul>
 	</dd>
 	
@@ -2041,8 +2212,7 @@ The parameters includes colors numbers, booleans.</p>
 
 	
 
-	
-
+    
 
 	
 	<dt class="tag-source">Source:</dt>
@@ -2066,7 +2236,7 @@ The parameters includes colors numbers, booleans.</p>
     
     
     
-
+    
     
     
     
