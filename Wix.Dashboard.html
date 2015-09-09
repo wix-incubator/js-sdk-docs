@@ -1042,7 +1042,7 @@ Get a newly signed app instance by calling Wix.Dashboard.revalidateSession.</p>
 
             
 
-            <td class="description last"><p>This will be called if the hosting site does not include the section app, or if the caller's application does not include a section.</p></td>
+            <td class="description last"></td>
         </tr>
 
 	
@@ -1108,7 +1108,7 @@ Get a newly signed app instance by calling Wix.Dashboard.revalidateSession.</p>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">Wix.Settings.revalidateSession(function(instanceData){
+    <pre class="sunlight-highlight-javascript">Wix.Dashboard.revalidateSession(function(instanceData){
  &#x2F;&#x2F;handle success use-case
 }, function(error){
    &#x2F;&#x2F;Handle error use-case
