@@ -222,7 +222,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="openSettingsDialog"><span class="type-signature">&lt;static> </span>openSettingsDialog<span class="signature">(<span class="optional">Object</span>, <span class="optional">Function</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="openSettingsDialog"><span class="type-signature">&lt;static> </span>openSettingsDialog<span class="signature">(<span class="optional">options</span>, <span class="optional">failure</span>)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -268,10 +268,15 @@ When called with no options, uses the widget or page that called the function.</
 
         <tr>
             
-                <td class="name"><code>Object</code></td>
+                <td class="name"><code>options</code></td>
             
 
             <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
             
             </td>
 
@@ -289,17 +294,22 @@ When called with no options, uses the widget or page that called the function.</
 
             
 
-            <td class="description last"><p>options</p></td>
+            <td class="description last"><p>options may contain compId to open the settings panel for. If the provided component id is incorrect, the failure callback will be invoked.</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>Function</code></td>
+                <td class="name"><code>failure</code></td>
             
 
             <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
             
             </td>
 
@@ -390,7 +400,12 @@ When called with no options, uses the widget or page that called the function.</
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">Wix.Preview.openSettingsDialog();</pre>
+    <pre class="sunlight-highlight-javascript">Wix.Preview.openSettingsDialog(
+ {compId: &#x27;comp-iey3wfy7&#x27;},
+ function(error){
+     console.log(&#x27;Oh no!&#x27;);
+  }
+ );</pre>
 
 
     
