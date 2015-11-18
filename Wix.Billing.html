@@ -1,1269 +1,429 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<title>Wix JS SDK Namespace: Billing</title>
-
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
-
-	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
-
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wix.Billing - Wix JS SDK</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content=" " />
+	<link type="text/css" rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
+	<link type="text/css" rel="stylesheet" href="//wix.github.io/js-sdk-docs/stylesheets/wixdocs.css" />
+	<link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon" />
 </head>
 
-<body>
-<div class="container-fluid">
-	<div class="navbar navbar-fixed-top navbar-inverse">
-		<div class="navbar-inner">
-			<a class="brand" href="index.html">Wix JS SDK</a>
-			<ul class="nav">
-				
-				<li class="dropdown">
-					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
-						class="caret"></b></a>
+<body data-entity-id="Wix.Billing" data-base-url="//wix.github.io/js-sdk-docs" data-enable-sliding="false">
+	<div class="fixed-header">
+		<div class="container">
+			<div class="docs-logo-container">
+				<a href="http://code.wix.com/docs"><img class="docs-logo" src="//wix.github.io/js-sdk-docs/odin/logo_black.png" /><span class="docs-logo-title">Code</span></a>
+			</div>
+			<div class="search-box-wrapper">
+				<input class="typeahead form-control" type="text" placeholder="Search SDK">
+			</div>
+		</div>
 
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="Wix.html">Wix</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Activities.html">Wix.Activities</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Billing.html">Wix.Billing</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Contacts.html">Wix.Contacts</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Counters.html">Wix.Counters</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Error.html">Wix.Error</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Events.html">Wix.Events</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Features.html">Wix.Features</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Preview.html">Wix.Preview</a>
-						</li>
-						
-						<li>
-							<a href="Wix.PubSub.html">Wix.PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Settings.html">Wix.Settings</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Styles.html">Wix.Styles</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Theme.html">Wix.Theme</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Utils.html">Wix.Utils</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
-						</li>
-						
-						<li>
-							<a href="Wix.WindowOrigin.html">Wix.WindowOrigin</a>
-						</li>
-						
-						<li>
-							<a href="Wix.WindowPlacement.html">Wix.WindowPlacement</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Worker.html">Wix.Worker</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-				<li class="dropdown">
-					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
-						class="caret"></b></a>
-
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="WixDataCursor.html">WixDataCursor</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-			</ul>
+	</div>
+	<div id="jumbo">
+		<div class="jumbo-text">
+			<span class="title">API Reference</span>
+			<span class="subtitle">Information about the Wix JS SDK</span>
 		</div>
 	</div>
-
-	<div class="row-fluid">
-
-		
-		<div class="span8">
-			
-				<div id="main">
-					
-
-
-	<h1 class="page-title">Namespace: Billing</h1>
-<section>
-
-<header>
-    <h2>
-        <span class="ancestors"><a href="Wix.html">Wix</a>.</span>
-    
-    Billing
-    </h2>
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-
-    
-        
-            <div class="description"><p>Functions and objects relating to the purchasing and billing process. To define products for purchase within your app, go to the Features section of the Wix Developer app registration <a href="http://dev.wix.com" target="_blank">dev.wix.com</a>.</p></div>
-        
-
-        
-<dl class="details">
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		Billing.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<dt class="name" id="Cycle">
-    <h4><span class="type-signature">&lt;static> </span>Cycle<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	<h5 class="subsection-title">Properties:</h5>
-
-	<dl>
-
-<table class="props table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-		<th>Default</th>
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>MONTHLY</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    MONTHLY
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>YEARLY</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    YEARLY
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>ONE_TIME</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    ONE_TIME
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-</dl>
-
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.37.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		Billing.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
-            
-<dt>
-    <h4 class="name" id="getBillingPackages"><span class="type-signature">&lt;static> </span>getBillingPackages<span class="signature">(<span class="optional">vendorProductIds</span>, onSuccess, <span class="optional">onError</span>)</span><span class="type-signature"> &rarr; {Array}</span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Returns an Array of objects containing product and pricing info. As is defined in the Features section of the Wix Developer App Registration <a href="http://dev.wix.com" target="_blank">dev.wix.com</a></p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-		<th>Argument</th>
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>vendorProductIds</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A list of vendor product ids (each representing a billing package), as detailed in the Features section of the Wix Developer App Registration <a href="http://dev.wix.com" target="_blank">dev.wix.com</a></p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onSuccess</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A callback function to receive the product info.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onError</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A callback error function.</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.37.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>lior.shefer@wix.com</li>
+	<div class="left-nav">
+		<nav class="left-nav-items">
+			<ul class="nav nav-stacked">
+				<div class="nav-container"><span>Wix JS SDK</span></div>
+				<div class="nav-family nav-open">
+					<li class="item left-nav-item" data-entity-id="Wix">
+						<a href="//wix.github.io/js-sdk-docs/Wix.html" target="_self">Wix </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Activities">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Activities.html" target="_self">Wix.Activities </a>
+					</li>
+					<li class="item left-nav-item current-doc" data-entity-id="Wix.Billing">
+						<a href="#" id="currentNavTarget">Wix.Billing</a>
+						<nav id="onThisPage">
+							<ul class="nav nav-stacked otp-nav nav-open">
+								<li class="item otp-li">
+									<a class="otp" href="#cycle">Cycle</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#getbillingpackages-">getBillingPackages( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#getbillingpageforproduct-">getBillingPageForProduct( )</a>
+								</li>
+							</ul>
+						</nav>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Contacts">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Contacts.html" target="_self">Wix.Contacts </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Error">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Error.html" target="_self">Wix.Error </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Events">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Events.html" target="_self">Wix.Events </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Features">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Features.html" target="_self">Wix.Features </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Preview">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Preview.html" target="_self">Wix.Preview </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.PubSub">
+						<a href="//wix.github.io/js-sdk-docs/Wix.PubSub.html" target="_self">Wix.PubSub </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Settings">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Settings.html" target="_self">Wix.Settings </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Styles">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Styles.html" target="_self">Wix.Styles </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Theme">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Theme.html" target="_self">Wix.Theme </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Utils">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Utils.html" target="_self">Wix.Utils </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Utils.Media">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Utils.Media.html" target="_self">Wix.Utils.Media </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.WindowOrigin">
+						<a href="//wix.github.io/js-sdk-docs/Wix.WindowOrigin.html" target="_self">Wix.WindowOrigin </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.WindowPlacement">
+						<a href="//wix.github.io/js-sdk-docs/Wix.WindowPlacement.html" target="_self">Wix.WindowPlacement </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.html" target="_self">Wix.Worker </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.PubSub">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.PubSub.html" target="_self">Wix.Worker.PubSub </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="WixDataCursor">
+						<a href="//wix.github.io/js-sdk-docs/WixDataCursor.html" target="_self">WixDataCursor </a>
+					</li>
+				</div>
 			</ul>
-	</dd>
-	
+		</nav>
 
-	
+	</div>
+	<main class="main-content">
+		<section>
+			<article class="content-holder">
+				<header class="section-header">
+					<div class="title">Wix.Billing</div>
+					<div class="header-context"></div>
+				</header>
+				<section>
+					<h1 class="wix-billing">Wix.Billing</h1>
+					<p>Functions and objects relating to the purchasing and billing process. To define products for purchase within your app, go to the Features section of the Wix Developer app registration <a href="http://dev.wix.com" target="_blank">dev.wix.com</a>.</p>
+					<h3 class="contents">Contents</h3>
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td><a href="Wix.Billing.html#.Cycle">Cycle</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Billing.html#.getBillingPackages">getBillingPackages( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Billing.html#.getBillingPageForProduct">getBillingPageForProduct( )</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<p><span id=".Cycle" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span><span class="label label-enum">enum</span></p>
+					<hgroup><span class="h_subheading" id="cycle">Cycle</span>
+						<h2>Cycle</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-	
+						<pre><code class="language-javascript">Wix.Billing.Cycle</code></pre>
+					</figure>
+					<h3 class="properties">Properties</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">MONTHLY</code>
+								</td>
+								<td></td>
+								<td>
 
-	
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">YEARLY</code>
+								</td>
+								<td></td>
+								<td>
 
-    
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">ONE_TIME</code>
+								</td>
+								<td></td>
+								<td>
 
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		Billing.js
-	</dd>
-	
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-	
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.37.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getBillingPackages" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getbillingpackages-">getBillingPackages( )</span>
+						<h2>getBillingPackages( )</h2></hgroup>
+					<figure class="code-example">
 
-	
+						<pre><code class="language-javascript">Wix.Billing.getBillingPackages([vendorProductIds], onSuccess, [onError])</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Returns an Array of objects containing product and pricing info. As is defined in the Features section of the Wix Developer App Registration <a href="http://dev.wix.com" target="_blank">dev.wix.com</a></p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">vendorProductIds</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>Array</td>
+								<td>
+									A list of vendor product ids (each representing a billing package), as detailed in the Features section of the Wix Developer App Registration <a href="http://dev.wix.com" target="_blank">dev.wix.com</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									A callback function to receive the product info.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onError</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									A callback error function.
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-	
-</dl>
+					<h3 class="return-value">Return Value</h3>
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td>Array</td>
+								<td>Array of Objects containing the product info:</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>prices</td>
+								<td><code class="inline-code">Array</code></td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>price</td>
+								<td><code class="inline-code">Object</code></td>
+								<td>Name</td>
+								<td>Type</td>
+								<td>Description</td>
+							</tr>
+							<tr>
+								<td>-</td>
+								<td>-</td>
+								<td>value</td>
+								<td><code class="inline-code">String</code></td>
+								<td>The product price.</td>
+							</tr>
+							<tr>
+								<td>-</td>
+								<td>-</td>
+								<td>currencyCode</td>
+								<td><code class="inline-code">String</code></td>
+								<td>The product payment currency code.</td>
+							</tr>
+							<tr>
+								<td>-</td>
+								<td>-</td>
+								<td>currencySymbol</td>
+								<td><code class="inline-code">String</code></td>
+								<td>The product payment currency symbol.</td>
+							</tr>
+							<tr>
+								<td>-</td>
+								<td>-</td>
+								<td>cycle</td>
+								<td><a href="Wix.Billing.html#Cycle">Wix.Billing.Cycle</a></td>
+								<td>The product payment cycle</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
 
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>Array of Objects containing the product info:</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>prices</td>
-<td><code>Array</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>price</td>
-<td><code>Object</code></td>
-<td>Name</td>
-<td>Type</td>
-<td>Description</td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>value</td>
-<td><code>String</code></td>
-<td>The product price.</td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>currencyCode</td>
-<td><code>String</code></td>
-<td>The product payment currency code.</td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>currencySymbol</td>
-<td><code>String</code></td>
-<td>The product payment currency symbol.</td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>cycle</td>
-<td><a href="Wix.Billing.html#Cycle">Wix.Billing.Cycle</a></td>
-<td>The product payment cycle</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type">Array</span>
-
-
-	</dd>
-</dl>
-
-
-        
-    
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">var onError = function () {
- &#x2F;&#x2F;handle the error
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">dmFyIG9uRXJyb3IgPSBmdW5jdGlvbiAoKSB7CiAvL2hhbmRsZSB0aGUgZXJyb3IKfTsKdmFyIG9uU3VjY2VzcyA9IGZ1bmN0aW9uIChkYXRhKSB7CiAvL2hhbmRsZSBvblN1Y2Nlc3MKIC8vc2FtcGxlIGRhdGEgc2NoZW1hOgogW3sKICAgIGlkOiA8dmVuZG9yUHJvZHVjdElkPiwKICAgIHByaWNlczogWwogICAgewogICAgICB2YWx1ZSA6ICczLjk5JywKICAgICAgY3VycmVuY3lDb2RlOiAnVVNEJywKICAgICAgY3VycmVuY3lTeW1ib2w6ICcmIzM2OycsCiAgICAgIGN5Y2xlOiAnTU9OVEhMWScKICAgIH1dCiB9XQoKfTsKV2l4LkJpbGxpbmcuZ2V0QmlsbGluZ1BhY2thZ2VzKG9uU3VjY2Vzcywgb25FcnJvcik7</pre>
+						</div>
+						<pre><code class="language-javascript">var onError = function () {
+ //handle the error
 };
 var onSuccess = function (data) {
- &#x2F;&#x2F;handle onSuccess
- &#x2F;&#x2F;sample data schema:
+ //handle onSuccess
+ //sample data schema:
  [{
-    id: &lt;vendorProductId&gt;,
+    id: <vendorProductId>,
     prices: [
     {
-      value : &#x27;3.99&#x27;,
-      currencyCode: &#x27;USD&#x27;,
-      currencySymbol: &#x27;&amp;#36;&#x27;,
-      cycle: &#x27;MONTHLY&#x27;
+      value : '3.99',
+      currencyCode: 'USD',
+      currencySymbol: '&#36;',
+      cycle: 'MONTHLY'
     }]
  }]
 
 };
-Wix.Billing.getBillingPackages(onSuccess, onError);</pre>
-
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="getBillingPageForProduct"><span class="type-signature">&lt;static> </span>getBillingPageForProduct<span class="signature">(vendorProductId, cycle, onSuccess, <span class="optional">onError</span>)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Returns a link to Wix Billing page with information about the product and cycle requested.</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-		<th>Argument</th>
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>vendorProductId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Vendor product id as detailed in the Features section of the Wix Developer App Registration <a href="http://dev.wix.com" target="_blank">dev.wix.com</a></p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>cycle</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Wix.Billing.html#Cycle">Wix.Billing.Cycle</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The billing cycle.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onSuccess</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A callback function, returns a link the Wix billing page with information about the product and cycle requested.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onError</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A callback error function, Error is wrong cycle,
-missing cycle or bad productId.</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.37.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>lior.shefer@wix.com</li>
-			</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		Billing.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">var onError = function () {
- &#x2F;&#x2F;handle the error
+Wix.Billing.getBillingPackages(onSuccess, onError);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.37.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getBillingPageForProduct" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getbillingpageforproduct-">getBillingPageForProduct( )</span>
+						<h2>getBillingPageForProduct( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Billing.getBillingPageForProduct(vendorProductId, cycle, onSuccess, [onError])</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Returns a link to Wix Billing page with information about the product and cycle requested.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">vendorProductId</code>
+								</td>
+								<td>String</td>
+								<td>
+									Vendor product id as detailed in the Features section of the Wix Developer App Registration <a href="http://dev.wix.com" target="_blank">dev.wix.com</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">cycle</code>
+								</td>
+								<td><a href="Wix.Billing.html#.Cycle">Cycle</a></td>
+								<td>
+									The billing cycle.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									A callback function, returns a link the Wix billing page with information about the product and cycle requested.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onError</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									A callback error function, Error is wrong cycle, missing cycle or bad productId.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">dmFyIG9uRXJyb3IgPSBmdW5jdGlvbiAoKSB7CiAvL2hhbmRsZSB0aGUgZXJyb3IKfTsKV2l4LkJpbGxpbmcuZ2V0QmlsbGluZ1BhZ2VGb3JQcm9kdWN0KCd2ZW5kb3JQcm9kdWN0SWQnLCBXaXguQmlsbGluZy5DeWNsZS5NT05USExZLCBmdW5jdGlvbiAoKSB7CiAgICAgLy9oYW5kbGUgcmV0dXJuIHZhbHVlIGkuZS4sIC8vaHR0cHM6Ly9wcmVtaXVtLndpeC5jb20vLi4uCn0sIG9uRXJyb3IpOw==</pre>
+						</div>
+						<pre><code class="language-javascript">var onError = function () {
+ //handle the error
 };
-Wix.Billing.getBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cycle.MONTHLY, function () {
-     &#x2F;&#x2F;handle return value i.e., &#x2F;&#x2F;https:&#x2F;&#x2F;premium.wix.com&#x2F;...
-}, onError);</pre>
-
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="openBillingPageForProduct"><span class="type-signature">&lt;private, static> </span>openBillingPageForProduct<span class="signature">(vendorProductId, cycle, <span class="optional">onError</span>)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Opens the Wix billing page in a new window with information about the product and cycle requested. This API is internal and works with the Upgrade button component found in the <a href="http://wix.github.io/wix-ui-lib/#Upgrade-entry" target="_blank">UI Lib.</a></p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-		<th>Argument</th>
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>vendorProductId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The vendor product id associated with the initiated purchase.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>cycle</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Wix.Billing.html#Cycle">Wix.Billing.Cycle</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The billing cycle.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>onError</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A callback error function. An error might be a result of a wrong cycle, missing cycle or bad vendor product Id.
-missing cycle or bad productId.</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.37.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>lior.shefer@wix.com</li>
-			</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		Billing.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">Wix.Billing.openBillingPageForProduct(&#x27;vendorProductId&#x27;, Wix.Billing.Cycle.MONTHLY, function () {
-     &#x2F;&#x2F;handle error
-});</pre>
-
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-				</div>
-
-				<div class="clearfix"></div>
-				<footer>
-					
-					
-		<span class="copyright">
-		Wix.com Copyright © 2014.
-		</span>
-					<br />
-					
-				</footer>
-			</div>
-
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
-			
-			<br clear="both">
-		</div>
-
-	</div>
-	<!--<script src="scripts/sunlight.js"></script>-->
-	<script src="scripts/docstrap.lib.js"></script>
-	<script src="scripts/bootstrap-dropdown.js"></script>
-	<script src="scripts/toc.js"></script>
-
-	<script>
-		$( function () {
-			$( "[id*='$']" ).each( function () {
-				var $this = $( this );
-
-				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
-			} );
-
-			$( "#toc" ).toc( {
-				anchorName  : function ( i, heading, prefix ) {
-					return $( heading ).attr( "id" ) || ( prefix + i );
-				},
-				selectors   : "h1,h2,h3,h4",
-				showAndHide : false,
-				scrollTo    : "100px"
-			} );
-
-			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
-			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
-			$( '.dropdown-toggle' ).dropdown();
-//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
-
-			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
-				var $this = $( this );
-
-				var example = $this.find( "code" );
-				exampleText = example.html();
-				var lang = /{@lang (.*?)}/.exec( exampleText );
-				if ( lang && lang[1] ) {
-					exampleText = exampleText.replace( lang[0], "" );
-					example.html( exampleText );
-					lang = lang[1];
-				} else {
-					lang = "javascript";
-				}
-
-				if ( lang ) {
-
-					$this
-						.addClass( "sunlight-highlight-" + lang )
-						.addClass( "linenums" )
-						.html( example.html() );
-
-				}
-			} );
-
-			Sunlight.highlightAll( {
-				lineNumbers : true,
-				showMenu : false,
-				enableDoclinks : true
-			} );
-		} );
-	 </script>
-
-
-
-	<!--Navigation and Symbol Display-->
-	
-
-
-	<!--Google Analytics-->
-	
+Wix.Billing.getBillingPageForProduct('vendorProductId', Wix.Billing.Cycle.MONTHLY, function () {
+     //handle return value i.e., //https://premium.wix.com/...
+}, onError);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.37.0 and later.</p>
+				</section>
+				<nav id="prev-next-nav">
+				</nav>
+			</article>
+		</section>
+	</main>
+
+	<script src="//wix.github.io/js-sdk-docs/scripts/wixdocs-app.js"></script>
 
 </body>
+
 </html>

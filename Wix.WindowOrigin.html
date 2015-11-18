@@ -1,594 +1,229 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<title>Wix JS SDK Namespace: WindowOrigin</title>
-
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
-
-	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
-
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wix.WindowOrigin - Wix JS SDK</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content=" " />
+	<link type="text/css" rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
+	<link type="text/css" rel="stylesheet" href="//wix.github.io/js-sdk-docs/stylesheets/wixdocs.css" />
+	<link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon" />
 </head>
 
-<body>
-<div class="container-fluid">
-	<div class="navbar navbar-fixed-top navbar-inverse">
-		<div class="navbar-inner">
-			<a class="brand" href="index.html">Wix JS SDK</a>
-			<ul class="nav">
-				
-				<li class="dropdown">
-					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
-						class="caret"></b></a>
+<body data-entity-id="Wix.WindowOrigin" data-base-url="//wix.github.io/js-sdk-docs" data-enable-sliding="false">
+	<div class="fixed-header">
+		<div class="container">
+			<div class="docs-logo-container">
+				<a href="http://code.wix.com/docs"><img class="docs-logo" src="//wix.github.io/js-sdk-docs/odin/logo_black.png" /><span class="docs-logo-title">Code</span></a>
+			</div>
+			<div class="search-box-wrapper">
+				<input class="typeahead form-control" type="text" placeholder="Search SDK">
+			</div>
+		</div>
 
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="Wix.html">Wix</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Activities.html">Wix.Activities</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Billing.html">Wix.Billing</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Contacts.html">Wix.Contacts</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Counters.html">Wix.Counters</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Error.html">Wix.Error</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Events.html">Wix.Events</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Features.html">Wix.Features</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Preview.html">Wix.Preview</a>
-						</li>
-						
-						<li>
-							<a href="Wix.PubSub.html">Wix.PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Settings.html">Wix.Settings</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Styles.html">Wix.Styles</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Theme.html">Wix.Theme</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Utils.html">Wix.Utils</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
-						</li>
-						
-						<li>
-							<a href="Wix.WindowOrigin.html">Wix.WindowOrigin</a>
-						</li>
-						
-						<li>
-							<a href="Wix.WindowPlacement.html">Wix.WindowPlacement</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Worker.html">Wix.Worker</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-				<li class="dropdown">
-					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
-						class="caret"></b></a>
-
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="WixDataCursor.html">WixDataCursor</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-			</ul>
+	</div>
+	<div id="jumbo">
+		<div class="jumbo-text">
+			<span class="title">API Reference</span>
+			<span class="subtitle">Information about the Wix JS SDK</span>
 		</div>
 	</div>
-
-	<div class="row-fluid">
-
-		
-		<div class="span8">
-			
-				<div id="main">
-					
-
-
-	<h1 class="page-title">Namespace: WindowOrigin</h1>
-<section>
-
-<header>
-    <h2>
-        <span class="ancestors"><a href="Wix.html">Wix</a>.</span>
-    
-    WindowOrigin
-    </h2>
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-
-    
-        
-            <div class="description"><p>Represents a Wix popup window origin. A window can be positioned where it is origin is the view port (0,0) or
-where the origin is another widget (x,y).</p></div>
-        
-
-        
-<dl class="details">
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowOrigin.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<dt class="name" id="ABSOLUTE">
-    <h4><span class="type-signature">&lt;static> </span>ABSOLUTE<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Absolute position. The popup will be placed relative to a given x,y coordinates that their origin is the top-left corner of the widget.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.28.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li>mayah@wix.com</li>
-			</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowOrigin.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="DEFAULT">
-    <h4><span class="type-signature">&lt;static> </span>DEFAULT<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Default position. The popup will be placed inside the browser viewport.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowOrigin.js
-	</dd>
-	
-
-	
-
-	
-	<dt class="tag-see">See:</dt>
-	<dd class="tag-see">
-		<ul>
-			<li>WindowOrigin.FIXED</li>
-			</ul>
-	</dd>
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="FIXED">
-    <h4><span class="type-signature">&lt;static> </span>FIXED<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Fixed position. The popup will be placed inside the browser viewport.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowOrigin.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="RELATIVE">
-    <h4><span class="type-signature">&lt;static> </span>RELATIVE<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Relative position. The popup will be placed relative to the opening widget (Not supported for Page).</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowOrigin.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
+	<div class="left-nav">
+		<nav class="left-nav-items">
+			<ul class="nav nav-stacked">
+				<div class="nav-container"><span>Wix JS SDK</span></div>
+				<div class="nav-family nav-open">
+					<li class="item left-nav-item" data-entity-id="Wix">
+						<a href="//wix.github.io/js-sdk-docs/Wix.html" target="_self">Wix </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Activities">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Activities.html" target="_self">Wix.Activities </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Billing">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Billing.html" target="_self">Wix.Billing </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Contacts">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Contacts.html" target="_self">Wix.Contacts </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Error">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Error.html" target="_self">Wix.Error </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Events">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Events.html" target="_self">Wix.Events </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Features">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Features.html" target="_self">Wix.Features </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Preview">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Preview.html" target="_self">Wix.Preview </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.PubSub">
+						<a href="//wix.github.io/js-sdk-docs/Wix.PubSub.html" target="_self">Wix.PubSub </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Settings">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Settings.html" target="_self">Wix.Settings </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Styles">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Styles.html" target="_self">Wix.Styles </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Theme">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Theme.html" target="_self">Wix.Theme </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Utils">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Utils.html" target="_self">Wix.Utils </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Utils.Media">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Utils.Media.html" target="_self">Wix.Utils.Media </a>
+					</li>
+					<li class="item left-nav-item current-doc" data-entity-id="Wix.WindowOrigin">
+						<a href="#" id="currentNavTarget">Wix.WindowOrigin</a>
+						<nav id="onThisPage">
+							<ul class="nav nav-stacked otp-nav nav-open">
+								<li class="item otp-li">
+									<a class="otp" href="#absolute">ABSOLUTE</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#default">DEFAULT</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#fixed">FIXED</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#relative">RELATIVE</a>
+								</li>
+							</ul>
+						</nav>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.WindowPlacement">
+						<a href="//wix.github.io/js-sdk-docs/Wix.WindowPlacement.html" target="_self">Wix.WindowPlacement </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.html" target="_self">Wix.Worker </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.PubSub">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.PubSub.html" target="_self">Wix.Worker.PubSub </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="WixDataCursor">
+						<a href="//wix.github.io/js-sdk-docs/WixDataCursor.html" target="_self">WixDataCursor </a>
+					</li>
 				</div>
-
-				<div class="clearfix"></div>
-				<footer>
-					
-					
-		<span class="copyright">
-		Wix.com Copyright © 2014.
-		</span>
-					<br />
-					
-				</footer>
-			</div>
-
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
-			
-			<br clear="both">
-		</div>
+			</ul>
+		</nav>
 
 	</div>
-	<!--<script src="scripts/sunlight.js"></script>-->
-	<script src="scripts/docstrap.lib.js"></script>
-	<script src="scripts/bootstrap-dropdown.js"></script>
-	<script src="scripts/toc.js"></script>
+	<main class="main-content">
+		<section>
+			<article class="content-holder">
+				<header class="section-header">
+					<div class="title">Wix.WindowOrigin</div>
+					<div class="header-context"></div>
+				</header>
+				<section>
+					<h1 class="wix-windoworigin">Wix.WindowOrigin</h1>
+					<p>Represents a Wix popup window origin. A window can be positioned where it is origin is the view port (0,0) or where the origin is another widget (x,y).</p>
+					<h3 class="contents">Contents</h3>
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td><a href="Wix.WindowOrigin.html#.ABSOLUTE">ABSOLUTE</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowOrigin.html#.DEFAULT">DEFAULT</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowOrigin.html#.FIXED">FIXED</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowOrigin.html#.RELATIVE">RELATIVE</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<p><span id=".ABSOLUTE" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="absolute">ABSOLUTE</span>
+						<h2>ABSOLUTE</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-	<script>
-		$( function () {
-			$( "[id*='$']" ).each( function () {
-				var $this = $( this );
+						<pre><code class="language-javascript">Wix.WindowOrigin.ABSOLUTE</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Absolute position. The popup will be placed relative to a given x,y coordinates that their origin is the top-left corner of the widget.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.28.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".DEFAULT" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="default">DEFAULT</span>
+						<h2>DEFAULT</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
-			} );
+						<pre><code class="language-javascript">Wix.WindowOrigin.DEFAULT</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Default position. The popup will be placed inside the browser viewport.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+					<h3 class="see">See</h3>
+					<p>WindowOrigin.FIXED</p>
+				</section>
+				<section>
+					<p><span id=".FIXED" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="fixed">FIXED</span>
+						<h2>FIXED</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-			$( "#toc" ).toc( {
-				anchorName  : function ( i, heading, prefix ) {
-					return $( heading ).attr( "id" ) || ( prefix + i );
-				},
-				selectors   : "h1,h2,h3,h4",
-				showAndHide : false,
-				scrollTo    : "100px"
-			} );
+						<pre><code class="language-javascript">Wix.WindowOrigin.FIXED</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Fixed position. The popup will be placed inside the browser viewport.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".RELATIVE" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="relative">RELATIVE</span>
+						<h2>RELATIVE</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
-			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
-			$( '.dropdown-toggle' ).dropdown();
-//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
+						<pre><code class="language-javascript">Wix.WindowOrigin.RELATIVE</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Relative position. The popup will be placed relative to the opening widget (Not supported for Page).</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<nav id="prev-next-nav">
+				</nav>
+			</article>
+		</section>
+	</main>
 
-			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
-				var $this = $( this );
-
-				var example = $this.find( "code" );
-				exampleText = example.html();
-				var lang = /{@lang (.*?)}/.exec( exampleText );
-				if ( lang && lang[1] ) {
-					exampleText = exampleText.replace( lang[0], "" );
-					example.html( exampleText );
-					lang = lang[1];
-				} else {
-					lang = "javascript";
-				}
-
-				if ( lang ) {
-
-					$this
-						.addClass( "sunlight-highlight-" + lang )
-						.addClass( "linenums" )
-						.html( example.html() );
-
-				}
-			} );
-
-			Sunlight.highlightAll( {
-				lineNumbers : true,
-				showMenu : false,
-				enableDoclinks : true
-			} );
-		} );
-	 </script>
-
-
-
-	<!--Navigation and Symbol Display-->
-	
-
-
-	<!--Google Analytics-->
-	
+	<script src="//wix.github.io/js-sdk-docs/scripts/wixdocs-app.js"></script>
 
 </body>
+
 </html>
