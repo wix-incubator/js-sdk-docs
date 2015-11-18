@@ -1,904 +1,340 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<title>Wix JS SDK Namespace: WindowPlacement</title>
-
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
-
-	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
-
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wix.WindowPlacement - Wix JS SDK</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content=" " />
+	<link type="text/css" rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
+	<link type="text/css" rel="stylesheet" href="http://localhost:3000/stylesheets/wixdocs.css" />
+	<link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon" />
 </head>
 
-<body>
-<div class="container-fluid">
-	<div class="navbar navbar-fixed-top navbar-inverse">
-		<div class="navbar-inner">
-			<a class="brand" href="index.html">Wix JS SDK</a>
-			<ul class="nav">
-				
-				<li class="dropdown">
-					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
-						class="caret"></b></a>
+<body data-entity-id="Wix.WindowPlacement" data-base-url="http://localhost:3000" data-enable-sliding="false">
+	<div class="fixed-header">
+		<div class="container">
+			<div class="docs-logo-container">
+				<a href="http://code.wix.com/docs"><img class="docs-logo" src="http://localhost:3000/odin/logo_black.png" /><span class="docs-logo-title">Code</span></a>
+			</div>
+			<div class="search-box-wrapper">
+				<input class="typeahead form-control" type="text" placeholder="Search SDK">
+			</div>
+		</div>
 
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="Wix.html">Wix</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Activities.html">Wix.Activities</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Billing.html">Wix.Billing</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Contacts.html">Wix.Contacts</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Counters.html">Wix.Counters</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Error.html">Wix.Error</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Events.html">Wix.Events</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Features.html">Wix.Features</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Preview.html">Wix.Preview</a>
-						</li>
-						
-						<li>
-							<a href="Wix.PubSub.html">Wix.PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Settings.html">Wix.Settings</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Styles.html">Wix.Styles</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Theme.html">Wix.Theme</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Utils.html">Wix.Utils</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
-						</li>
-						
-						<li>
-							<a href="Wix.WindowOrigin.html">Wix.WindowOrigin</a>
-						</li>
-						
-						<li>
-							<a href="Wix.WindowPlacement.html">Wix.WindowPlacement</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Worker.html">Wix.Worker</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
-						</li>
-						
-						<li>
-							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-				<li class="dropdown">
-					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
-						class="caret"></b></a>
-
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="WixDataCursor.html">WixDataCursor</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-			</ul>
+	</div>
+	<div id="jumbo">
+		<div class="jumbo-text">
+			<span class="title">API Reference</span>
+			<span class="subtitle">Information about the Wix JS SDK</span>
 		</div>
 	</div>
-
-	<div class="row-fluid">
-
-		
-		<div class="span8">
-			
-				<div id="main">
-					
-
-
-	<h1 class="page-title">Namespace: WindowPlacement</h1>
-<section>
-
-<header>
-    <h2>
-        <span class="ancestors"><a href="Wix.html">Wix</a>.</span>
-    
-    WindowPlacement
-    </h2>
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-
-    
-        
-            <div class="description"><p>Represents a predefined values to position a Wix popup windows without the hassle of figuring out the position yourself.
-Can be used to position the window relatively (to the calling widget) or absolutely (to the view port).</p></div>
-        
-
-        
-<dl class="details">
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<dt class="name" id="BOTTOM_CENTER">
-    <h4><span class="type-signature">&lt;static> </span>BOTTOM_CENTER<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Bottom center placement.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="BOTTOM_LEFT">
-    <h4><span class="type-signature">&lt;static> </span>BOTTOM_LEFT<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Bottom left placement.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="BOTTOM_RIGHT">
-    <h4><span class="type-signature">&lt;static> </span>BOTTOM_RIGHT<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Bottom right placement.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="CENTER">
-    <h4><span class="type-signature">&lt;static> </span>CENTER<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>(FIXED origin only) center of the screen.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-	<dt class="important tag-deprecated">Deprecated:</dt>
-	
-	<dd class="yes-def tag-deprecated">
-		<ul class="dummy">
-			<li>Yes</li>
-		</ul>
-	</dd>
-	
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="CENTER_LEFT">
-    <h4><span class="type-signature">&lt;static> </span>CENTER_LEFT<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Center left placement.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="CENTER_RIGHT">
-    <h4><span class="type-signature">&lt;static> </span>CENTER_RIGHT<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Center right placement.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="TOP_CENTER">
-    <h4><span class="type-signature">&lt;static> </span>TOP_CENTER<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Top center placement.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="TOP_LEFT">
-    <h4><span class="type-signature">&lt;static> </span>TOP_LEFT<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Top left placement.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<dt class="name" id="TOP_RIGHT">
-    <h4><span class="type-signature">&lt;static> </span>TOP_RIGHT<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Top right placement.</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-	<dt class="tag-since">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>1.17.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-    
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		WindowPlacement.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
+	<div class="left-nav">
+		<nav class="left-nav-items">
+			<ul class="nav nav-stacked">
+				<div class="nav-container"><span>Wix JS SDK</span></div>
+				<div class="nav-family nav-open">
+					<li class="item left-nav-item" data-entity-id="Wix">
+						<a href="http://localhost:3000/Wix.html" target="_self">Wix </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Activities">
+						<a href="http://localhost:3000/Wix.Activities.html" target="_self">Wix.Activities </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Billing">
+						<a href="http://localhost:3000/Wix.Billing.html" target="_self">Wix.Billing </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Contacts">
+						<a href="http://localhost:3000/Wix.Contacts.html" target="_self">Wix.Contacts </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
+						<a href="http://localhost:3000/Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
+						<a href="http://localhost:3000/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Error">
+						<a href="http://localhost:3000/Wix.Error.html" target="_self">Wix.Error </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Events">
+						<a href="http://localhost:3000/Wix.Events.html" target="_self">Wix.Events </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Features">
+						<a href="http://localhost:3000/Wix.Features.html" target="_self">Wix.Features </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Preview">
+						<a href="http://localhost:3000/Wix.Preview.html" target="_self">Wix.Preview </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.PubSub">
+						<a href="http://localhost:3000/Wix.PubSub.html" target="_self">Wix.PubSub </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Settings">
+						<a href="http://localhost:3000/Wix.Settings.html" target="_self">Wix.Settings </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Styles">
+						<a href="http://localhost:3000/Wix.Styles.html" target="_self">Wix.Styles </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Theme">
+						<a href="http://localhost:3000/Wix.Theme.html" target="_self">Wix.Theme </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Utils">
+						<a href="http://localhost:3000/Wix.Utils.html" target="_self">Wix.Utils </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Utils.Media">
+						<a href="http://localhost:3000/Wix.Utils.Media.html" target="_self">Wix.Utils.Media </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.WindowOrigin">
+						<a href="http://localhost:3000/Wix.WindowOrigin.html" target="_self">Wix.WindowOrigin </a>
+					</li>
+					<li class="item left-nav-item current-doc" data-entity-id="Wix.WindowPlacement">
+						<a href="#" id="currentNavTarget">Wix.WindowPlacement</a>
+						<nav id="onThisPage">
+							<ul class="nav nav-stacked otp-nav nav-open">
+								<li class="item otp-li">
+									<a class="otp" href="#bottom_center">BOTTOM_CENTER</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#bottom_left">BOTTOM_LEFT</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#bottom_right">BOTTOM_RIGHT</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#center">CENTER</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#center_left">CENTER_LEFT</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#center_right">CENTER_RIGHT</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#top_center">TOP_CENTER</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#top_left">TOP_LEFT</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#top_right">TOP_RIGHT</a>
+								</li>
+							</ul>
+						</nav>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker">
+						<a href="http://localhost:3000/Wix.Worker.html" target="_self">Wix.Worker </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.PubSub">
+						<a href="http://localhost:3000/Wix.Worker.PubSub.html" target="_self">Wix.Worker.PubSub </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
+						<a href="http://localhost:3000/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="WixDataCursor">
+						<a href="http://localhost:3000/WixDataCursor.html" target="_self">WixDataCursor </a>
+					</li>
 				</div>
-
-				<div class="clearfix"></div>
-				<footer>
-					
-					
-		<span class="copyright">
-		Wix.com Copyright © 2014.
-		</span>
-					<br />
-					
-				</footer>
-			</div>
-
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
-			
-			<br clear="both">
-		</div>
+			</ul>
+		</nav>
 
 	</div>
-	<!--<script src="scripts/sunlight.js"></script>-->
-	<script src="scripts/docstrap.lib.js"></script>
-	<script src="scripts/bootstrap-dropdown.js"></script>
-	<script src="scripts/toc.js"></script>
+	<main class="main-content">
+		<section>
+			<article class="content-holder">
+				<header class="section-header">
+					<div class="title">Wix.WindowPlacement</div>
+					<div class="header-context"></div>
+				</header>
+				<section>
+					<h1 class="wix-windowplacement">Wix.WindowPlacement</h1>
+					<p>Represents a predefined values to position a Wix popup windows without the hassle of figuring out the position yourself. Can be used to position the window relatively (to the calling widget) or absolutely (to the view
+						port).</p>
+					<h3 class="contents">Contents</h3>
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td><a href="Wix.WindowPlacement.html#.BOTTOM_CENTER">BOTTOM_CENTER</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowPlacement.html#.BOTTOM_LEFT">BOTTOM_LEFT</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowPlacement.html#.BOTTOM_RIGHT">BOTTOM_RIGHT</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowPlacement.html#.CENTER">CENTER</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowPlacement.html#.CENTER_LEFT">CENTER_LEFT</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowPlacement.html#.CENTER_RIGHT">CENTER_RIGHT</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowPlacement.html#.TOP_CENTER">TOP_CENTER</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowPlacement.html#.TOP_LEFT">TOP_LEFT</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.WindowPlacement.html#.TOP_RIGHT">TOP_RIGHT</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<p><span id=".BOTTOM_CENTER" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="bottom_center">BOTTOM_CENTER</span>
+						<h2>BOTTOM_CENTER</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-	<script>
-		$( function () {
-			$( "[id*='$']" ).each( function () {
-				var $this = $( this );
+						<pre><code class="language-javascript">Wix.WindowPlacement.BOTTOM_CENTER</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Bottom center placement.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".BOTTOM_LEFT" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="bottom_left">BOTTOM_LEFT</span>
+						<h2>BOTTOM_LEFT</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
-			} );
+						<pre><code class="language-javascript">Wix.WindowPlacement.BOTTOM_LEFT</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Bottom left placement.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".BOTTOM_RIGHT" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="bottom_right">BOTTOM_RIGHT</span>
+						<h2>BOTTOM_RIGHT</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-			$( "#toc" ).toc( {
-				anchorName  : function ( i, heading, prefix ) {
-					return $( heading ).attr( "id" ) || ( prefix + i );
-				},
-				selectors   : "h1,h2,h3,h4",
-				showAndHide : false,
-				scrollTo    : "100px"
-			} );
+						<pre><code class="language-javascript">Wix.WindowPlacement.BOTTOM_RIGHT</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Bottom right placement.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".CENTER" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span><span class="label label-deprecated">Deprecated</span></p>
+					<hgroup><span class="h_subheading" id="center">CENTER</span>
+						<h2>CENTER</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
-			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
-			$( '.dropdown-toggle' ).dropdown();
-//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
+						<pre><code class="language-javascript">Wix.WindowPlacement.CENTER</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>(FIXED origin only) center of the screen.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+					<h3 class="deprecated">Deprecated</h3>
+					<p>Yes</p>
+				</section>
+				<section>
+					<p><span id=".CENTER_LEFT" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="center_left">CENTER_LEFT</span>
+						<h2>CENTER_LEFT</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
-				var $this = $( this );
+						<pre><code class="language-javascript">Wix.WindowPlacement.CENTER_LEFT</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Center left placement.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".CENTER_RIGHT" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="center_right">CENTER_RIGHT</span>
+						<h2>CENTER_RIGHT</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-				var example = $this.find( "code" );
-				exampleText = example.html();
-				var lang = /{@lang (.*?)}/.exec( exampleText );
-				if ( lang && lang[1] ) {
-					exampleText = exampleText.replace( lang[0], "" );
-					example.html( exampleText );
-					lang = lang[1];
-				} else {
-					lang = "javascript";
-				}
+						<pre><code class="language-javascript">Wix.WindowPlacement.CENTER_RIGHT</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Center right placement.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".TOP_CENTER" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="top_center">TOP_CENTER</span>
+						<h2>TOP_CENTER</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-				if ( lang ) {
+						<pre><code class="language-javascript">Wix.WindowPlacement.TOP_CENTER</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Top center placement.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".TOP_LEFT" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="top_left">TOP_LEFT</span>
+						<h2>TOP_LEFT</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-					$this
-						.addClass( "sunlight-highlight-" + lang )
-						.addClass( "linenums" )
-						.html( example.html() );
+						<pre><code class="language-javascript">Wix.WindowPlacement.TOP_LEFT</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Top left placement.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".TOP_RIGHT" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="top_right">TOP_RIGHT</span>
+						<h2>TOP_RIGHT</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
 
-				}
-			} );
+						<pre><code class="language-javascript">Wix.WindowPlacement.TOP_RIGHT</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Top right placement.</p>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.17.0 and later.</p>
+				</section>
+				<nav id="prev-next-nav">
+				</nav>
+			</article>
+		</section>
+	</main>
 
-			Sunlight.highlightAll( {
-				lineNumbers : true,
-				showMenu : false,
-				enableDoclinks : true
-			} );
-		} );
-	 </script>
-
-
-
-	<!--Navigation and Symbol Display-->
-	
-
-
-	<!--Google Analytics-->
-	
+	<script src="http://localhost:3000/scripts/wixdocs-app.js"></script>
 
 </body>
+
 </html>
