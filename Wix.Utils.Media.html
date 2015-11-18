@@ -1,638 +1,1712 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Wix.Utils.Media - Wix JS SDK</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content=" " />
-	<link type="text/css" rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
-	<link type="text/css" rel="stylesheet" href="//stylesheets/wixdocs.css" />
-	<link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon" />
+	<title>Wix JS SDK Namespace: Media</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
 </head>
 
-<body data-entity-id="Wix.Utils.Media" data-base-url="/" data-enable-sliding="false">
-	<div class="fixed-header">
-		<div class="container">
-			<div class="docs-logo-container">
-				<a href="http://code.wix.com/docs"><img class="docs-logo" src="//odin/logo_black.png" /><span class="docs-logo-title">Code</span></a>
-			</div>
-			<div class="search-box-wrapper">
-				<input class="typeahead form-control" type="text" placeholder="Search SDK">
-			</div>
-		</div>
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html">Wix JS SDK</a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+						class="caret"></b></a>
 
-	</div>
-	<div id="jumbo">
-		<div class="jumbo-text">
-			<span class="title">API Reference</span>
-			<span class="subtitle">Information about the Wix JS SDK</span>
-		</div>
-	</div>
-	<div class="left-nav">
-		<nav class="left-nav-items">
-			<ul class="nav nav-stacked">
-				<div class="nav-container"><span>Wix JS SDK</span></div>
-				<div class="nav-family nav-open">
-					<li class="item left-nav-item" data-entity-id="Wix">
-						<a href="//Wix.html" target="_self">Wix </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Activities">
-						<a href="//Wix.Activities.html" target="_self">Wix.Activities </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Billing">
-						<a href="//Wix.Billing.html" target="_self">Wix.Billing </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Contacts">
-						<a href="//Wix.Contacts.html" target="_self">Wix.Contacts </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
-						<a href="//Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
-						<a href="//Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Error">
-						<a href="//Wix.Error.html" target="_self">Wix.Error </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Events">
-						<a href="//Wix.Events.html" target="_self">Wix.Events </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Features">
-						<a href="//Wix.Features.html" target="_self">Wix.Features </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Preview">
-						<a href="//Wix.Preview.html" target="_self">Wix.Preview </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.PubSub">
-						<a href="//Wix.PubSub.html" target="_self">Wix.PubSub </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Settings">
-						<a href="//Wix.Settings.html" target="_self">Wix.Settings </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Styles">
-						<a href="//Wix.Styles.html" target="_self">Wix.Styles </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Theme">
-						<a href="//Wix.Theme.html" target="_self">Wix.Theme </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Utils">
-						<a href="//Wix.Utils.html" target="_self">Wix.Utils </a>
-					</li>
-					<li class="item left-nav-item current-doc" data-entity-id="Wix.Utils.Media">
-						<a href="#" id="currentNavTarget">Wix.Utils.Media</a>
-						<nav id="onThisPage">
-							<ul class="nav nav-stacked otp-nav nav-open">
-								<li class="item otp-li">
-									<a class="otp" href="#audiotype">AudioType</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getaudiourl-">getAudioUrl( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getdocumenturl-">getDocumentUrl( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getimageurl-">getImageUrl( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getpreviewsecuremusicurl-">getPreviewSecureMusicUrl( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getresizedimageurl-">getResizedImageUrl( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getswfurl-">getSwfUrl( )</a>
-								</li>
-							</ul>
-						</nav>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.WindowOrigin">
-						<a href="//Wix.WindowOrigin.html" target="_self">Wix.WindowOrigin </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.WindowPlacement">
-						<a href="//Wix.WindowPlacement.html" target="_self">Wix.WindowPlacement </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker">
-						<a href="//Wix.Worker.html" target="_self">Wix.Worker </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker.PubSub">
-						<a href="//Wix.Worker.PubSub.html" target="_self">Wix.Worker.PubSub </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
-						<a href="//Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="WixDataCursor">
-						<a href="//WixDataCursor.html" target="_self">WixDataCursor </a>
-					</li>
-				</div>
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="Wix.html">Wix</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Activities.html">Wix.Activities</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Billing.html">Wix.Billing</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Contacts.html">Wix.Contacts</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Counters.html">Wix.Counters</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Error.html">Wix.Error</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Events.html">Wix.Events</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Features.html">Wix.Features</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Preview.html">Wix.Preview</a>
+						</li>
+						
+						<li>
+							<a href="Wix.PubSub.html">Wix.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Settings.html">Wix.Settings</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Styles.html">Wix.Styles</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.html">Wix.Utils</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowOrigin.html">Wix.WindowOrigin</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowPlacement.html">Wix.WindowPlacement</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Worker.html">Wix.Worker</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
+				<li class="dropdown">
+					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="WixDataCursor.html">WixDataCursor</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
 			</ul>
-		</nav>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+
+		
+		<div class="span8">
+			
+				<div id="main">
+					
+
+
+	<h1 class="page-title">Namespace: Media</h1>
+<section>
+
+<header>
+    <h2>
+        <span class="ancestors"><a href="Wix.html">Wix</a><a href="Wix.Utils.html">.Utils</a>.</span>
+    
+    Media
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+            <div class="description"><p>This is the description for the Media namespace.</p></div>
+        
+
+        
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Media.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt class="name" id="AudioType">
+    <h4><span class="type-signature">&lt;static> </span>AudioType<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An enum of audio types that are supported by Wix.Utils.Media.getAudioUrl</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+	
+
+	<h5 class="subsection-title">Properties:</h5>
+
+	<dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+		<th>Default</th>
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>STANDARD</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    AudioType.STANDARD
+                
+                </td>
+            
+
+            <td class="description last"><p>Standard mp3 audio file</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>PREVIEW</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    AudioType.PREVIEW
+                
+                </td>
+            
+
+            <td class="description last"><p>A full preview of a high-quality audio file playable in the browser</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SHORT_PREVIEW</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    AudioType.SHORT_PREVIEW
+                
+                </td>
+            
+
+            <td class="description last"><p>A short preview of a high-quality audio file playable in the browser</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.45.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Media.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="getAudioUrl"><span class="type-signature">&lt;static> </span>getAudioUrl<span class="signature">(relativeUri, audioType)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Constructs an absolute URL for a relative path to an audio file. By default, returns a URL to a standard audio file.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>relativeUri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A relative URL to the target audio file.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>audioType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Wix.Utils.Media.html#AudioType">Wix.Utils.Media.AudioType</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the type of audio URL to build. Default is Wix.Media.AudioType.STANDARD.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.45.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Media.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An absolute URL pointing to the audio file hosted on Wix's static.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">String</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var audioUrl = Wix.Utils.Media.getAudioUrl(&#x27;relative_url.mp3&#x27;, Wix.Utils.Media.AudioType.SHORT_PREVIEW)</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getDocumentUrl"><span class="type-signature">&lt;static> </span>getDocumentUrl<span class="signature">(relativeUri)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method constructs a URL for a media item of type document.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>relativeUri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Document item uri (relative to Wix media gallery).</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.17.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Media.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A full URL pointing to the Wix static servers of a document media file with the default dimensions.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">String</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var documentUrl = Wix.Utils.Media.getDocumentUrl(&#x27;relative_url.pdf&#x27;)</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getImageUrl"><span class="type-signature">&lt;static> </span>getImageUrl<span class="signature">(Image)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method constructs a URL for a media item of type image.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>Image</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>item uri (relative to Wix media gallery).</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.17.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Media.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A full URL pointing to the Wix static servers of an image with the default dimensions - width and height.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">String</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var imageUrl = Wix.Utils.Media.getImageUrl(&#x27;relative_url.jpg&#x27;)</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getPreviewSecureMusicUrl"><span class="type-signature">&lt;static> </span>getPreviewSecureMusicUrl<span class="signature">(relativeUri)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method constructs a URL for a media item of type secure music.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>relativeUri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>secure music item uri (relative to Wix media gallery).</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.41.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+	<dt class="important tag-deprecated">Deprecated:</dt>
+	
+	<dd class="yes-def tag-deprecated">
+		<ul class="dummy">
+			<li>Yes</li>
+		</ul>
+	</dd>
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Media.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A full URL pointing to the Wix static servers of a secure media file.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">String</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var preview = Wix.Utils.Media.getPreviewSecureMusicUrl(&#x27;relative_url.mp3&#x27;)</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getResizedImageUrl"><span class="type-signature">&lt;static> </span>getResizedImageUrl<span class="signature">(relativeUrl, width, height, <span class="optional">sharpParams</span>)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method constructs a URL for a media item of type image and let the developer change the image dimensions as well as it's sharpening properties (optional),
+see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_masking">http://en.wikipedia.org/wiki/Unsharp_masking</a>.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>relativeUrl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Static image url provided by the media dialog.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Desired image width.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Desired image height.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>sharpParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>quality</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>JPEG quality, leave as is (75) unless image size is important for your app.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>resizaFilter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Resize filter.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>usm_r</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Unsharp mask radius.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>usm_a</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Unsharp mask amount (percentage).</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>usm_t</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Unsharp mask threshold.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.17.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Media.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A full URL pointing to the Wix static servers of an image with the custom dimension parameters.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">String</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var resizedImageUrl = Wix.Utils.Media.getResizedImageUrl(&#x27;relative_url.jpg&#x27;, 500, 500)</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getSwfUrl"><span class="type-signature">&lt;static> </span>getSwfUrl<span class="signature">(relativeUri)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method constructs a URL for a media item of type swf.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>relativeUri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Swf item uri (relative to Wix media gallery).</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.17.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Media.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A full URL pointing to the Wix static servers of a swf media file  with the default dimensions.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">String</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var swfUrl = Wix.Utils.Media.getSwfUrl(&#x27;relative_url.swf&#x27;)</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					
+		<span class="copyright">
+		Wix.com Copyright © 2014.
+		</span>
+					<br />
+					
+				</footer>
+			</div>
+
+			
+			<div class="span3">
+				<div id="toc"></div>
+			</div>
+			
+			<br clear="both">
+		</div>
 
 	</div>
-	<main class="main-content">
-		<section>
-			<article class="content-holder">
-				<header class="section-header">
-					<div class="title">Wix.Utils.Media</div>
-					<div class="header-context"></div>
-				</header>
-				<section>
-					<h1 class="wix-utils-media">Wix.Utils.Media</h1>
-					<p>This is the description for the Media namespace.</p>
-					<h3 class="contents">Contents</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td><a href="Wix.Utils.Media.html#.AudioType">AudioType</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Utils.Media.html#.getAudioUrl">getAudioUrl( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Utils.Media.html#.getDocumentUrl">getDocumentUrl( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Utils.Media.html#.getImageUrl">getImageUrl( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Utils.Media.html#.getPreviewSecureMusicUrl">getPreviewSecureMusicUrl( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Utils.Media.html#.getResizedImageUrl">getResizedImageUrl( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Utils.Media.html#.getSwfUrl">getSwfUrl( )</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-				<section>
-					<p><span id=".AudioType" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span><span class="label label-enum">enum</span></p>
-					<hgroup><span class="h_subheading" id="audiotype">AudioType</span>
-						<h2>AudioType</h2></hgroup>
-					<h3 class="syntax">Syntax</h3>
-					<figure class="code-example">
+	<!--<script src="scripts/sunlight.js"></script>-->
+	<script src="scripts/docstrap.lib.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
 
-						<pre><code class="language-javascript">Wix.Utils.Media.AudioType</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>An enum of audio types that are supported by Wix.Utils.Media.getAudioUrl</p>
-					<h3 class="properties">Properties</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">STANDARD</code>
-								</td>
-								<td></td>
-								<td>
-									Standard mp3 audio file
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">PREVIEW</code>
-								</td>
-								<td></td>
-								<td>
-									A full preview of a high-quality audio file playable in the browser
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SHORT_PREVIEW</code>
-								</td>
-								<td></td>
-								<td>
-									A short preview of a high-quality audio file playable in the browser
-								</td>
-							</tr>
-						</tbody>
-					</table>
+	<script>
+		$( function () {
+			$( "[id*='$']" ).each( function () {
+				var $this = $( this );
 
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.45.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getAudioUrl" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getaudiourl-">getAudioUrl( )</span>
-						<h2>getAudioUrl( )</h2></hgroup>
-					<figure class="code-example">
+				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+			} );
 
-						<pre><code class="language-javascript">Wix.Utils.Media.getAudioUrl(relativeUri, audioType)</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>Constructs an absolute URL for a relative path to an audio file. By default, returns a URL to a standard audio file.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">relativeUri</code>
-								</td>
-								<td>String</td>
-								<td>
-									A relative URL to the target audio file.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">audioType</code>
-								</td>
-								<td><a href="Wix.Utils.Media.html#.AudioType">AudioType</a></td>
-								<td>
-									the type of audio URL to build. Default is Wix.Media.AudioType.STANDARD.
-								</td>
-							</tr>
-						</tbody>
-					</table>
+			$( "#toc" ).toc( {
+				anchorName  : function ( i, heading, prefix ) {
+					return $( heading ).attr( "id" ) || ( prefix + i );
+				},
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : "100px"
+			} );
 
-					<h3 class="return-value">Return Value</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td>String</td>
-								<td>An absolute URL pointing to the audio file hosted on Wix&#39;s static.</td>
-							</tr>
-						</tbody>
-					</table>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+			$( '.dropdown-toggle' ).dropdown();
+//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">dmFyIGF1ZGlvVXJsID0gV2l4LlV0aWxzLk1lZGlhLmdldEF1ZGlvVXJsKCdyZWxhdGl2ZV91cmwubXAzJywgV2l4LlV0aWxzLk1lZGlhLkF1ZGlvVHlwZS5TSE9SVF9QUkVWSUVXKQ==</pre>
-						</div>
-						<pre><code class="language-javascript">var audioUrl = Wix.Utils.Media.getAudioUrl('relative_url.mp3', Wix.Utils.Media.AudioType.SHORT_PREVIEW)</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.45.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getDocumentUrl" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getdocumenturl-">getDocumentUrl( )</span>
-						<h2>getDocumentUrl( )</h2></hgroup>
-					<figure class="code-example">
+			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+				var $this = $( this );
 
-						<pre><code class="language-javascript">Wix.Utils.Media.getDocumentUrl(relativeUri)</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>This method constructs a URL for a media item of type document.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">relativeUri</code>
-								</td>
-								<td>String</td>
-								<td>
-									Document item uri (relative to Wix media gallery).
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				var example = $this.find( "code" );
+				exampleText = example.html();
+				var lang = /{@lang (.*?)}/.exec( exampleText );
+				if ( lang && lang[1] ) {
+					exampleText = exampleText.replace( lang[0], "" );
+					example.html( exampleText );
+					lang = lang[1];
+				} else {
+					lang = "javascript";
+				}
 
-					<h3 class="return-value">Return Value</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td>String</td>
-								<td>A full URL pointing to the Wix static servers of a document media file with the default dimensions.</td>
-							</tr>
-						</tbody>
-					</table>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+				if ( lang ) {
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">dmFyIGRvY3VtZW50VXJsID0gV2l4LlV0aWxzLk1lZGlhLmdldERvY3VtZW50VXJsKCdyZWxhdGl2ZV91cmwucGRmJyk=</pre>
-						</div>
-						<pre><code class="language-javascript">var documentUrl = Wix.Utils.Media.getDocumentUrl('relative_url.pdf')</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.17.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getImageUrl" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getimageurl-">getImageUrl( )</span>
-						<h2>getImageUrl( )</h2></hgroup>
-					<figure class="code-example">
+					$this
+						.addClass( "sunlight-highlight-" + lang )
+						.addClass( "linenums" )
+						.html( example.html() );
 
-						<pre><code class="language-javascript">Wix.Utils.Media.getImageUrl(Image)</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>This method constructs a URL for a media item of type image.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">Image</code>
-								</td>
-								<td>String</td>
-								<td>
-									item uri (relative to Wix media gallery).
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				}
+			} );
 
-					<h3 class="return-value">Return Value</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td>String</td>
-								<td>A full URL pointing to the Wix static servers of an image with the default dimensions - width and height.</td>
-							</tr>
-						</tbody>
-					</table>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+			Sunlight.highlightAll( {
+				lineNumbers : true,
+				showMenu : false,
+				enableDoclinks : true
+			} );
+		} );
+	 </script>
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">dmFyIGltYWdlVXJsID0gV2l4LlV0aWxzLk1lZGlhLmdldEltYWdlVXJsKCdyZWxhdGl2ZV91cmwuanBnJyk=</pre>
-						</div>
-						<pre><code class="language-javascript">var imageUrl = Wix.Utils.Media.getImageUrl('relative_url.jpg')</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.17.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getPreviewSecureMusicUrl" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span><span class="label label-deprecated">Deprecated</span></p>
-					<hgroup><span class="h_subheading" id="getpreviewsecuremusicurl-">getPreviewSecureMusicUrl( )</span>
-						<h2>getPreviewSecureMusicUrl( )</h2></hgroup>
-					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Utils.Media.getPreviewSecureMusicUrl(relativeUri)</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>This method constructs a URL for a media item of type secure music.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">relativeUri</code>
-								</td>
-								<td>String</td>
-								<td>
-									secure music item uri (relative to Wix media gallery).
-								</td>
-							</tr>
-						</tbody>
-					</table>
 
-					<h3 class="return-value">Return Value</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td>String</td>
-								<td>A full URL pointing to the Wix static servers of a secure media file.</td>
-							</tr>
-						</tbody>
-					</table>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+	<!--Navigation and Symbol Display-->
+	
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">dmFyIHByZXZpZXcgPSBXaXguVXRpbHMuTWVkaWEuZ2V0UHJldmlld1NlY3VyZU11c2ljVXJsKCdyZWxhdGl2ZV91cmwubXAzJyk=</pre>
-						</div>
-						<pre><code class="language-javascript">var preview = Wix.Utils.Media.getPreviewSecureMusicUrl('relative_url.mp3')</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.41.0 and later.</p>
-					<h3 class="deprecated">Deprecated</h3>
-					<p>Yes</p>
-				</section>
-				<section>
-					<p><span id=".getResizedImageUrl" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getresizedimageurl-">getResizedImageUrl( )</span>
-						<h2>getResizedImageUrl( )</h2></hgroup>
-					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Utils.Media.getResizedImageUrl(relativeUrl, width, height, [sharpParams])</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>This method constructs a URL for a media item of type image and let the developer change the image dimensions as well as it&#39;s sharpening properties (optional), see sharpening explained here - <a href="http://en.wikipedia.org/wiki/Unsharp_masking">http://en.wikipedia.org/wiki/Unsharp_masking</a>.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">relativeUrl</code>
-								</td>
-								<td>String</td>
-								<td>
-									Static image url provided by the media dialog.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">width</code>
-								</td>
-								<td>Number</td>
-								<td>
-									Desired image width.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">height</code>
-								</td>
-								<td>Number</td>
-								<td>
-									Desired image height.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">sharpParams</code>
-									<span class="param-properties">(optional)</span>
-								</td>
-								<td>Object</td>
-								<td>
-
-									<tr>
-										<td class="indent">
-											<code class="inline-code">quality</code>
-										</td>
-										<td>Number</td>
-										<td>
-											JPEG quality, leave as is (75) unless image size is important for your app.
-										</td>
-									</tr>
-									<tr>
-										<td class="indent">
-											<code class="inline-code">resizaFilter</code>
-										</td>
-										<td>Number</td>
-										<td>
-											Resize filter.
-										</td>
-									</tr>
-									<tr>
-										<td class="indent">
-											<code class="inline-code">usm_r</code>
-										</td>
-										<td>Number</td>
-										<td>
-											Unsharp mask radius.
-										</td>
-									</tr>
-									<tr>
-										<td class="indent">
-											<code class="inline-code">usm_a</code>
-										</td>
-										<td>Number</td>
-										<td>
-											Unsharp mask amount (percentage).
-										</td>
-									</tr>
-									<tr>
-										<td class="indent">
-											<code class="inline-code">usm_t</code>
-										</td>
-										<td>Number</td>
-										<td>
-											Unsharp mask threshold.
-										</td>
-									</tr>
-
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<h3 class="return-value">Return Value</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td>String</td>
-								<td>A full URL pointing to the Wix static servers of an image with the custom dimension parameters.</td>
-							</tr>
-						</tbody>
-					</table>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
-
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">dmFyIHJlc2l6ZWRJbWFnZVVybCA9IFdpeC5VdGlscy5NZWRpYS5nZXRSZXNpemVkSW1hZ2VVcmwoJ3JlbGF0aXZlX3VybC5qcGcnLCA1MDAsIDUwMCk=</pre>
-						</div>
-						<pre><code class="language-javascript">var resizedImageUrl = Wix.Utils.Media.getResizedImageUrl('relative_url.jpg', 500, 500)</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.17.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getSwfUrl" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getswfurl-">getSwfUrl( )</span>
-						<h2>getSwfUrl( )</h2></hgroup>
-					<figure class="code-example">
-
-						<pre><code class="language-javascript">Wix.Utils.Media.getSwfUrl(relativeUri)</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>This method constructs a URL for a media item of type swf.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">relativeUri</code>
-								</td>
-								<td>String</td>
-								<td>
-									Swf item uri (relative to Wix media gallery).
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<h3 class="return-value">Return Value</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td>String</td>
-								<td>A full URL pointing to the Wix static servers of a swf media file with the default dimensions.</td>
-							</tr>
-						</tbody>
-					</table>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
-
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">dmFyIHN3ZlVybCA9IFdpeC5VdGlscy5NZWRpYS5nZXRTd2ZVcmwoJ3JlbGF0aXZlX3VybC5zd2YnKQ==</pre>
-						</div>
-						<pre><code class="language-javascript">var swfUrl = Wix.Utils.Media.getSwfUrl('relative_url.swf')</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.17.0 and later.</p>
-				</section>
-				<nav id="prev-next-nav">
-				</nav>
-			</article>
-		</section>
-	</main>
-
-	<script src="//scripts/wixdocs-app.js"></script>
+	<!--Google Analytics-->
+	
 
 </body>
-
 </html>

@@ -1,826 +1,2146 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Wix.Activities - Wix JS SDK</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content=" " />
-	<link type="text/css" rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
-	<link type="text/css" rel="stylesheet" href="//stylesheets/wixdocs.css" />
-	<link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon" />
+	<title>Wix JS SDK Namespace: Activities</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
 </head>
 
-<body data-entity-id="Wix.Activities" data-base-url="/" data-enable-sliding="false">
-	<div class="fixed-header">
-		<div class="container">
-			<div class="docs-logo-container">
-				<a href="http://code.wix.com/docs"><img class="docs-logo" src="//odin/logo_black.png" /><span class="docs-logo-title">Code</span></a>
-			</div>
-			<div class="search-box-wrapper">
-				<input class="typeahead form-control" type="text" placeholder="Search SDK">
-			</div>
-		</div>
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html">Wix JS SDK</a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+						class="caret"></b></a>
 
-	</div>
-	<div id="jumbo">
-		<div class="jumbo-text">
-			<span class="title">API Reference</span>
-			<span class="subtitle">Information about the Wix JS SDK</span>
-		</div>
-	</div>
-	<div class="left-nav">
-		<nav class="left-nav-items">
-			<ul class="nav nav-stacked">
-				<div class="nav-container"><span>Wix JS SDK</span></div>
-				<div class="nav-family nav-open">
-					<li class="item left-nav-item" data-entity-id="Wix">
-						<a href="//Wix.html" target="_self">Wix </a>
-					</li>
-					<li class="item left-nav-item current-doc" data-entity-id="Wix.Activities">
-						<a href="#" id="currentNavTarget">Wix.Activities</a>
-						<nav id="onThisPage">
-							<ul class="nav nav-stacked otp-nav nav-open">
-								<li class="item otp-li">
-									<a class="otp" href="#error">Error</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#type">Type</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getactivities-">getActivities( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getactivitybyid-">getActivityById( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getusersessiontoken-">getUserSessionToken( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#postactivity-">postActivity( )</a>
-								</li>
-							</ul>
-						</nav>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Billing">
-						<a href="//Wix.Billing.html" target="_self">Wix.Billing </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Contacts">
-						<a href="//Wix.Contacts.html" target="_self">Wix.Contacts </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
-						<a href="//Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
-						<a href="//Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Error">
-						<a href="//Wix.Error.html" target="_self">Wix.Error </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Events">
-						<a href="//Wix.Events.html" target="_self">Wix.Events </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Features">
-						<a href="//Wix.Features.html" target="_self">Wix.Features </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Preview">
-						<a href="//Wix.Preview.html" target="_self">Wix.Preview </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.PubSub">
-						<a href="//Wix.PubSub.html" target="_self">Wix.PubSub </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Settings">
-						<a href="//Wix.Settings.html" target="_self">Wix.Settings </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Styles">
-						<a href="//Wix.Styles.html" target="_self">Wix.Styles </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Theme">
-						<a href="//Wix.Theme.html" target="_self">Wix.Theme </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Utils">
-						<a href="//Wix.Utils.html" target="_self">Wix.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Utils.Media">
-						<a href="//Wix.Utils.Media.html" target="_self">Wix.Utils.Media </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.WindowOrigin">
-						<a href="//Wix.WindowOrigin.html" target="_self">Wix.WindowOrigin </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.WindowPlacement">
-						<a href="//Wix.WindowPlacement.html" target="_self">Wix.WindowPlacement </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker">
-						<a href="//Wix.Worker.html" target="_self">Wix.Worker </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker.PubSub">
-						<a href="//Wix.Worker.PubSub.html" target="_self">Wix.Worker.PubSub </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
-						<a href="//Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="WixDataCursor">
-						<a href="//WixDataCursor.html" target="_self">WixDataCursor </a>
-					</li>
-				</div>
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="Wix.html">Wix</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Activities.html">Wix.Activities</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Billing.html">Wix.Billing</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Contacts.html">Wix.Contacts</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Counters.html">Wix.Counters</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Error.html">Wix.Error</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Events.html">Wix.Events</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Features.html">Wix.Features</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Preview.html">Wix.Preview</a>
+						</li>
+						
+						<li>
+							<a href="Wix.PubSub.html">Wix.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Settings.html">Wix.Settings</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Styles.html">Wix.Styles</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.html">Wix.Utils</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowOrigin.html">Wix.WindowOrigin</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowPlacement.html">Wix.WindowPlacement</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Worker.html">Wix.Worker</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
+				<li class="dropdown">
+					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="WixDataCursor.html">WixDataCursor</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
 			</ul>
-		</nav>
-
+		</div>
 	</div>
-	<main class="main-content">
-		<section>
-			<article class="content-holder">
-				<header class="section-header">
-					<div class="title">Wix.Activities</div>
-					<div class="header-context"></div>
-				</header>
-				<section>
-					<h1 class="wix-activities">Wix.Activities</h1>
-					<h3 class="contents">Contents</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td><a href="Wix.Activities.html#.Error">Error</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Activities.html#.Type">Type</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Activities.html#.getActivities">getActivities( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Activities.html#.getActivityById">getActivityById( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Activities.html#.getUserSessionToken">getUserSessionToken( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Activities.html#.postActivity">postActivity( )</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-				<section>
-					<p><span id=".Error" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span><span class="label label-enum">enum</span></p>
-					<hgroup><span class="h_subheading" id="error">Error</span>
-						<h2>Error</h2></hgroup>
-					<h3 class="syntax">Syntax</h3>
-					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Activities.Error</code></pre>
-					</figure>
-					<h3 class="properties">Properties</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">BAD_DATES</code>
-								</td>
-								<td></td>
-								<td>
+	<div class="row-fluid">
 
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">ACTIVITY_NOT_FOUND</code>
-								</td>
-								<td></td>
-								<td>
+		
+		<div class="span8">
+			
+				<div id="main">
+					
 
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">WRONG_PERMISSIONS</code>
-								</td>
-								<td></td>
-								<td>
 
-								</td>
-							</tr>
-						</tbody>
-					</table>
+	<h1 class="page-title">Namespace: Activities</h1>
+<section>
 
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.25.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".Type" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span><span class="label label-readonly">readonly</span><span class="label label-enum">enum</span></p>
-					<hgroup><span class="h_subheading" id="type">Type</span>
-						<h2>Type</h2></hgroup>
-					<h3 class="syntax">Syntax</h3>
-					<figure class="code-example">
+<header>
+    <h2>
+        <span class="ancestors"><a href="Wix.html">Wix</a>.</span>
+    
+    Activities
+    </h2>
+    
+</header>
 
-						<pre><code class="language-javascript">Wix.Activities.Type</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>A collection of ActivityType objects</p>
-					<h3 class="properties">Properties</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">CONTACT_CONTACT_FORM</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a contact form was filled out.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SUBSCRIPTION_FORM</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a subscription form was filled
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">CONTACT_CREATE</code>
-								</td>
-								<td></td>
-								<td>
-									A schema for creating a contact
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">CONVERSION_COMPLETE</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a conversion with a contact was completed.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">DOWNLOADS_DOWNLOADED</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a download from the site
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">EVENTS_EVENT_UPDATE</code>
-								</td>
-								<td></td>
-								<td>
-									indicates an event has been created, updated
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">ECOMMERCE_CART_ADD</code>
-								</td>
-								<td></td>
-								<td>
-									indicates an item was added to a cart through ecommerce
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">ECOMMERCE_CART_REMOVE</code>
-								</td>
-								<td></td>
-								<td>
-									indicates an item was removed from the cart through ecommerce
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">ECOMMERCE_CART_CHECKOUT</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a cart was checked out through ecommerce
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">ECOMMERCE_CART_ABANDON</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a cart has been abandoned through ecommerce
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">ECOMMERCE_PURCHASE</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a purchase was made through ecommerce.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SEND_MESSAGE</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a message was sent to a contact.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">ALBUM_FAN</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a contact liked an album of music.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">ALBUM_SHARE</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a contact shared an album of music.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">ALBUM_PLAYED</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a contact played an album to completion.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">TRACK_LYRICS</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a contact viewed the lyrics of a song.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">TRACK_PLAY</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a contact begun to play a track.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">TRACK_PLAYED</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a contact played a track to completion.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">TRACK_SHARE</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a contact shared a track.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">TRACK_SKIP</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a contact skipped a track.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">HOTELS_RESERVATION</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a hotel reservation has been made (but not yet confirmed)
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">HOTELS_CANCEL</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a hotel reservation has been cancelled.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">HOTELS_CONFIRMATION</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a hotel reservation has been confirmed.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">HOTELS_PURCHASE</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a hotel purchase has been made.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">HOTELS_PURCHASE_FAILED</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates a hotel purchase has failed.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SCHEDULER_CONFIRMATION</code>
-								</td>
-								<td></td>
-								<td>
-									indicates an appointment has been confirmed
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SCHEDULER_CANCEL</code>
-								</td>
-								<td></td>
-								<td>
-									indicates an appointment has been cancelled
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SCHEDULER_APPOINTMENT</code>
-								</td>
-								<td></td>
-								<td>
-									Indicates an appointment has been scheduled.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SHIPPING_SHIPPED</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a shipment was made
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SHIPPING_DELIVERED</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a shipment was delivered
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SHIPPING_STATUS_CHANGE</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a shipment status update
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SOCIAL_COMMENT</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a comment was written on the site
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SOCIAL_SHARE_URL</code>
-								</td>
-								<td></td>
-								<td>
-									indicates an item was shared from the site
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">SOCIAL_TRACK</code>
-								</td>
-								<td></td>
-								<td>
-									indicates a user is tracking activity on the site (Like, Follow, Subscribe, etc)
-								</td>
-							</tr>
-						</tbody>
-					</table>
+<article>
+    <div class="container-overview">
+    
 
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.25.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getActivities" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getactivities-">getActivities( )</span>
-						<h2>getActivities( )</h2></hgroup>
-					<figure class="code-example">
+    
+        
 
-						<pre><code class="language-javascript">Wix.Activities.getActivities(onSuccess, onFailure, [query])</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>Gets a list of all activities that have been performed by users on the current site, optionally bound by date ranges, activity types and scope (app/site). The results are returned through a callback that delivers a WixDataCursor
-						object, with the results being in descending order by date.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">onSuccess</code>
-								</td>
-								<td>function</td>
-								<td>
-									A function that receives a WixDataCursor object.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">onFailure</code>
-								</td>
-								<td>function</td>
-								<td>
-									A function that receives an error object in case of invalid input.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">query</code>
-									<span class="param-properties">(optional)</span>
-								</td>
-								<td>Object</td>
-								<td>
-									An Object containing params to restrict our results.
-								</td>
-							</tr>
-						</tbody>
-					</table>
+        
+<dl class="details">
+	
 
-					<h3 class="return-value">Return Value</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td><a href="WixDataCursor.html">WixDataCursor</a></td>
-							</tr>
-						</tbody>
-					</table>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+	
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">dmFyIHF1ZXJ5ID0gewogICAgIGZyb206IDwgSVNPIDg2MDEgdGltZXN0YW1wPiwKICAgICB1bnRpbDogPCBJU08gODYwMSB0aW1lc3RhbXA+LAogICAgIHNjb3BlOiA8J2FwcCcgJ3Njb3BlJz4sCiAgICAgYWN0aXZpdHlUeXBlczogWyAndHlwZTEnLCAndHlwZTInLCAuLi5dCn07CgpXaXguQWN0aXZpdGllcy5nZXRBY3Rpdml0aWVzKG9uU3VjY2Vzcywgb25GYWlsdXJlLCBxdWVyeSk7</pre>
-						</div>
-						<pre><code class="language-javascript">var query = {
-     from: < ISO 8601 timestamp>,
-     until: < ISO 8601 timestamp>,
-     scope: <'app' 'scope'>,
-     activityTypes: [ 'type1', 'type2', ...]
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Activities.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt class="name" id="Error">
+    <h4><span class="type-signature">&lt;static> </span>Error<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+    
+<dl class="details">
+	
+
+	<h5 class="subsection-title">Properties:</h5>
+
+	<dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+		<th>Default</th>
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>BAD_DATES</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    BAD_DATES
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ACTIVITY_NOT_FOUND</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    ACTIVITY_NOT_FOUND
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>WRONG_PERMISSIONS</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    WRONG_PERMISSIONS
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.25.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Activities.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt class="name" id="Type">
+    <h4><span class="type-signature">&lt;static, readonly> </span>Type<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A collection of ActivityType objects</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+	
+
+	<h5 class="subsection-title">Properties:</h5>
+
+	<dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+		<th>Default</th>
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>CONTACT_CONTACT_FORM</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    contact/contact-form
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a contact form was filled out.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SUBSCRIPTION_FORM</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    contact/subscription-form
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates a subscription form was filled</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>CONTACT_CREATE</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    contacts/create
+                
+                </td>
+            
+
+            <td class="description last"><p>A schema for creating a contact</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>CONVERSION_COMPLETE</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    conversion/complete
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a conversion with a contact was completed.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>DOWNLOADS_DOWNLOADED</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    downloads/downloaded
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates a download from the site</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ECOMMERCE_CART_ADD</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    e_commerce/cart-add
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates an item was added to a cart through ecommerce</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ECOMMERCE_CART_REMOVE</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    e_commerce/cart-remove
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates an item was removed from the cart through ecommerce</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ECOMMERCE_CART_CHECKOUT</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    e_commerce/cart-checkout
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates a cart was checked out through ecommerce</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ECOMMERCE_CART_ABANDON</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    e_commerce/cart-abandon
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates a cart has been abandoned through ecommerce</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ECOMMERCE_PURCHASE</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    e_commerce/purchase
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a purchase was made through ecommerce.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SEND_MESSAGE</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    messaging/send
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a message was sent to a contact.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ALBUM_FAN</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    music/album-fan
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a contact liked an album of music.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ALBUM_SHARE</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    music/album-share
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a contact shared an album of music.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>ALBUM_PLAYED</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    music/album-played
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates a contact played an album to completion.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>TRACK_LYRICS</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    music/track-lyrics
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a contact viewed the lyrics of a song.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>TRACK_PLAY</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    music/track-play
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a contact begun to play a track.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>TRACK_PLAYED</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    music/track-played
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a contact played a track to completion.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>TRACK_SHARE</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    music/track-share
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a contact shared a track.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>TRACK_SKIP</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    music/track-skip
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a contact skipped a track.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>HOTELS_RESERVATION</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    hotels/reservation
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates a hotel reservation has been made (but not yet confirmed)</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>HOTELS_CANCEL</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    hotels/cancel
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a hotel reservation has been cancelled.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>HOTELS_CONFIRMATION</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    hotels/confirmation
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a hotel reservation has been confirmed.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>HOTELS_PURCHASE</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    hotels/purchase
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a hotel purchase has been made.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>HOTELS_PURCHASE_FAILED</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    hotels/purchase-failed
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates a hotel purchase has failed.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SCHEDULER_CONFIRMATION</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    scheduler/confirmation
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates an appointment has been confirmed</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SCHEDULER_CANCEL</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    scheduler/cancel
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates an appointment has been cancelled</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SCHEDULER_APPOINTMENT</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    scheduler/appointment
+                
+                </td>
+            
+
+            <td class="description last"><p>Indicates an appointment has been scheduled.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SHIPPING_SHIPPED</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    shipping/shipped
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates a shipment was made</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SHIPPING_DELIVERED</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    shipping/delivered
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates a shipment was delivered</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>SHIPPING_STATUS_CHANGE</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    shipping/status-change
+                
+                </td>
+            
+
+            <td class="description last"><p>indicates a shipment status update</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.25.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Activities.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="getActivities"><span class="type-signature">&lt;static> </span>getActivities<span class="signature">(onSuccess, onFailure, <span class="optional">query</span>)</span><span class="type-signature"> &rarr; {<a href="WixDataCursor.html">WixDataCursor</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Gets a list of all activities that have been performed by users on the current site, optionally bound by date ranges, activity types and scope (app/site).
+The results are returned through a callback that delivers a WixDataCursor object, with the results being in descending order by date.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A function that receives a WixDataCursor object.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A function that receives an error object in case of invalid input.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>query</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An Object containing params to restrict our results.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.28.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Activities.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="WixDataCursor.html">WixDataCursor</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var query = {
+     from: &lt; ISO 8601 timestamp&gt;,
+     until: &lt; ISO 8601 timestamp&gt;,
+     scope: &lt;&#x27;app&#x27; &#x27;scope&#x27;&gt;,
+     activityTypes: [ &#x27;type1&#x27;, &#x27;type2&#x27;, ...]
 };
 
-Wix.Activities.getActivities(onSuccess, onFailure, query);</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.28.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getActivityById" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getactivitybyid-">getActivityById( )</span>
-						<h2>getActivityById( )</h2></hgroup>
-					<figure class="code-example">
+Wix.Activities.getActivities(onSuccess, onFailure, query);</pre>
 
-						<pre><code class="language-javascript">Wix.Activities.getActivityById(id, onSuccess, onFailure)</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>Gets a specific Activity that occurred on the current site.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">id</code>
-								</td>
-								<td>String</td>
-								<td>
-									The id of the Activity to look up.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">onSuccess</code>
-								</td>
-								<td>function</td>
-								<td>
-									Callback triggered when data about the Activity is returned from Wix.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">onFailure</code>
-								</td>
-								<td>function</td>
-								<td>
-									Callback triggered if the data could not be returned successfully.
-								</td>
-							</tr>
-						</tbody>
-					</table>
 
-					<h3 class="return-value">Return Value</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td>Activity</td>
-							</tr>
-						</tbody>
-					</table>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+    
+</dd>
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">V2l4LkFjdGl2aXRpZXMuZ2V0QWN0aXZpdHlCeUlkKGlkLCBvblN1Y2Nlc3MsIG9uRmFpbHVyZSk=</pre>
-						</div>
-						<pre><code class="language-javascript">Wix.Activities.getActivityById(id, onSuccess, onFailure)</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.28.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getUserSessionToken" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getusersessiontoken-">getUserSessionToken( )</span>
-						<h2>getUserSessionToken( )</h2></hgroup>
-					<figure class="code-example">
+        
+            
+<dt>
+    <h4 class="name" id="getActivityById"><span class="type-signature">&lt;static> </span>getActivityById<span class="signature">(id, onSuccess, onFailure)</span><span class="type-signature"> &rarr; {Activity}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Gets a specific Activity that occurred on the current site.</p>
+    </div>
+    
 
-						<pre><code class="language-javascript">Wix.Activities.getUserSessionToken(callback)</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>Returns a session token which can be used to make AJAX calls to Wix RESTful API.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">callback</code>
-								</td>
-								<td>function</td>
-								<td>
-									a callback function to receive the token.
-								</td>
-							</tr>
-						</tbody>
-					</table>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
 
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">V2l4LkFjdGl2aXRpZXMuZ2V0VXNlclNlc3Npb25Ub2tlbihjYWxsYmFjayk7</pre>
-						</div>
-						<pre><code class="language-javascript">Wix.Activities.getUserSessionToken(callback);</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.25.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".postActivity" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="postactivity-">postActivity( )</span>
-						<h2>postActivity( )</h2></hgroup>
-					<figure class="code-example">
+		<th>Type</th>
 
-						<pre><code class="language-javascript">Wix.Activities.postActivity(activity, [onSuccess], [onFailure])</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>This method posts an Activity to the current site. An Activity is an action performed by a site viewer on the installed site. By reporting Activities, your application better integrates with the Wix ecosystem. Each Activity
-						conforms to a specific schema predefined by Wix. When the Activity is successfully created, the id of the activity will be returned. If schema validation fails, or other errors occur, an error will be returned.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">activity</code>
-								</td>
-								<td>Object</td>
-								<td>
-									An activity descriptor, must follow specific type/schema pattern: Name | Type | Description ||| --------------|-----------|------------ type | <code class="inline-code">String</code> | The Activity Type. <a href="Wix.Activities.html#toc4">Wix.Activities.ActivityType</a>									||| info | <code class="inline-code">Object</code> | The Activity information, specified by the Activity type. ||| details | <code class="inline-code">Object</code> | Name | Type | Description - | - | additionalInfoUrl
-									|<code class="inline-code">String</code> | URL for additional information about this Activity. - | - | summary |<code class="inline-code">String</code> | Additional information about this Activity. contactUpdate
-									| <code class="inline-code">Object</code> | Additional Contact information relevant to this Activity. |||
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">onSuccess</code>
-									<span class="param-properties">(optional)</span>
-								</td>
-								<td>function</td>
-								<td>
-									Success callback function.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">onFailure</code>
-									<span class="param-properties">(optional)</span>
-								</td>
-								<td>function</td>
-								<td>
-									Failure callback function.
-								</td>
-							</tr>
-						</tbody>
-					</table>
+		
 
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+		
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">dmFyIGFjdGl2aXR5ID0gewogICAgIHR5cGU6V2l4LkFjdGl2aXRpZXMuVHlwZS5DT05UQUNUX0NPTlRBQ1RfRk9STSwKICAgICBpbmZvOnsiZmllbGRzIjpbeyJuYW1lIjoiZW1haWwiLCJ2YWx1ZSI6ImVtYWlsQGVtYWlsLmNvbSJ9LHsibmFtZSI6Im1lc3NhZ2UiLCJ2YWx1ZSI6Im1lc3NhZ2VWYWx1ZSJ9XX0sCiAgICAgZGV0YWlsczp7YWRkaXRpb25hbEluZm9Vcmw6bnVsbCwgc3VtbWFyeToidGVzdGluZyB0cGEgY29udGFjdCBmb3JtIn0sCiAgICAgY29udGFjdFVwZGF0ZTp7fQp9OwoKV2l4LkFjdGl2aXRpZXMucG9zdEFjdGl2aXR5KGFjdGl2aXR5LCBvblN1Y2Nlc3MsIG9uRmFpbHVyZSk7</pre>
-						</div>
-						<pre><code class="language-javascript">var activity = {
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of the Activity to look up.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Callback triggered when data about the Activity is returned from Wix.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Callback triggered if the data could not be returned successfully.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.28.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Activities.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">Activity</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Activities.getActivityById(id, onSuccess, onFailure)</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getUserSessionToken"><span class="type-signature">&lt;static> </span>getUserSessionToken<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns a session token which can be used to make AJAX calls to Wix RESTful API.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a callback function to receive the token.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.25.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Activities.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Activities.getUserSessionToken(callback);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="postActivity"><span class="type-signature">&lt;static> </span>postActivity<span class="signature">(activity, <span class="optional">onSuccess</span>, <span class="optional">onFailure</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method posts an Activity to the current site.  An Activity is an action performed by a site viewer on the installed site.
+By reporting Activities, your application better integrates with the Wix ecosystem. Each Activity conforms to a specific schema predefined by Wix.
+When the Activity is successfully created, the id of the activity will be returned. If schema validation fails, or other errors occur, an error will be returned.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>activity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An activity descriptor, must follow specific type/schema pattern:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><code>String</code></td>
+<td>The Activity Type. <a href="Wix.Activities.html#toc4">Wix.Activities.ActivityType</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>info</td>
+<td><code>Object</code></td>
+<td>The Activity information, specified by the Activity type.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>details</td>
+<td><code>Object</code></td>
+<td>Name</td>
+<td>Type</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>additionalInfoUrl</td>
+<td><code>String</code></td>
+<td>URL for additional information about this Activity.</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>summary</td>
+<td><code>String</code></td>
+<td>Additional information about this Activity.</td>
+</tr>
+<tr>
+<td>contactUpdate</td>
+<td><code>Object</code></td>
+<td>Additional Contact information relevant to this Activity.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Success callback function.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Failure callback function.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.25.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Activities.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var activity = {
      type:Wix.Activities.Type.CONTACT_CONTACT_FORM,
-     info:{"fields":[{"name":"email","value":"email@email.com"},{"name":"message","value":"messageValue"}]},
-     details:{additionalInfoUrl:null, summary:"testing tpa contact form"},
+     info:{&quot;fields&quot;:[{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email@email.com&quot;},{&quot;name&quot;:&quot;message&quot;,&quot;value&quot;:&quot;messageValue&quot;}]},
+     details:{additionalInfoUrl:null, summary:&quot;testing tpa contact form&quot;},
      contactUpdate:{}
 };
 
-Wix.Activities.postActivity(activity, onSuccess, onFailure);</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.25.0 and later.</p>
-				</section>
-				<nav id="prev-next-nav">
-				</nav>
-			</article>
-		</section>
-	</main>
+Wix.Activities.postActivity(activity, onSuccess, onFailure);</pre>
 
-	<script src="//scripts/wixdocs-app.js"></script>
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					
+		<span class="copyright">
+		Wix.com Copyright © 2014.
+		</span>
+					<br />
+					
+				</footer>
+			</div>
+
+			
+			<div class="span3">
+				<div id="toc"></div>
+			</div>
+			
+			<br clear="both">
+		</div>
+
+	</div>
+	<!--<script src="scripts/sunlight.js"></script>-->
+	<script src="scripts/docstrap.lib.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
+
+	<script>
+		$( function () {
+			$( "[id*='$']" ).each( function () {
+				var $this = $( this );
+
+				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+			} );
+
+			$( "#toc" ).toc( {
+				anchorName  : function ( i, heading, prefix ) {
+					return $( heading ).attr( "id" ) || ( prefix + i );
+				},
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : "100px"
+			} );
+
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+			$( '.dropdown-toggle' ).dropdown();
+//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
+
+			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+				var $this = $( this );
+
+				var example = $this.find( "code" );
+				exampleText = example.html();
+				var lang = /{@lang (.*?)}/.exec( exampleText );
+				if ( lang && lang[1] ) {
+					exampleText = exampleText.replace( lang[0], "" );
+					example.html( exampleText );
+					lang = lang[1];
+				} else {
+					lang = "javascript";
+				}
+
+				if ( lang ) {
+
+					$this
+						.addClass( "sunlight-highlight-" + lang )
+						.addClass( "linenums" )
+						.html( example.html() );
+
+				}
+			} );
+
+			Sunlight.highlightAll( {
+				lineNumbers : true,
+				showMenu : false,
+				enableDoclinks : true
+			} );
+		} );
+	 </script>
+
+
+
+	<!--Navigation and Symbol Display-->
+	
+
+
+	<!--Google Analytics-->
+	
 
 </body>
-
 </html>

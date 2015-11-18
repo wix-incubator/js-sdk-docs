@@ -1,495 +1,1333 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Wix.Dashboard - Wix JS SDK</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content=" " />
-	<link type="text/css" rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
-	<link type="text/css" rel="stylesheet" href="//stylesheets/wixdocs.css" />
-	<link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon" />
+	<title>Wix JS SDK Namespace: Dashboard</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
 </head>
 
-<body data-entity-id="Wix.Dashboard" data-base-url="/" data-enable-sliding="false">
-	<div class="fixed-header">
-		<div class="container">
-			<div class="docs-logo-container">
-				<a href="http://code.wix.com/docs"><img class="docs-logo" src="//odin/logo_black.png" /><span class="docs-logo-title">Code</span></a>
-			</div>
-			<div class="search-box-wrapper">
-				<input class="typeahead form-control" type="text" placeholder="Search SDK">
-			</div>
-		</div>
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html">Wix JS SDK</a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+						class="caret"></b></a>
 
-	</div>
-	<div id="jumbo">
-		<div class="jumbo-text">
-			<span class="title">API Reference</span>
-			<span class="subtitle">Information about the Wix JS SDK</span>
-		</div>
-	</div>
-	<div class="left-nav">
-		<nav class="left-nav-items">
-			<ul class="nav nav-stacked">
-				<div class="nav-container"><span>Wix JS SDK</span></div>
-				<div class="nav-family nav-open">
-					<li class="item left-nav-item" data-entity-id="Wix">
-						<a href="//Wix.html" target="_self">Wix </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Activities">
-						<a href="//Wix.Activities.html" target="_self">Wix.Activities </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Billing">
-						<a href="//Wix.Billing.html" target="_self">Wix.Billing </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Contacts">
-						<a href="//Wix.Contacts.html" target="_self">Wix.Contacts </a>
-					</li>
-					<li class="item left-nav-item current-doc" data-entity-id="Wix.Dashboard">
-						<a href="#" id="currentNavTarget">Wix.Dashboard</a>
-						<nav id="onThisPage">
-							<ul class="nav nav-stacked otp-nav nav-open">
-								<li class="item otp-li">
-									<a class="otp" href="#geteditorurl-">getEditorUrl( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#openbillingpage-">openBillingPage( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#openmediadialog-">openMediaDialog( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#openmodal-">openModal( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#pushstate-">pushState( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#resizewindow-">resizeWindow( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#revalidatesession-">revalidateSession( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#setheight-">setHeight( )</a>
-								</li>
-							</ul>
-						</nav>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
-						<a href="//Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Error">
-						<a href="//Wix.Error.html" target="_self">Wix.Error </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Events">
-						<a href="//Wix.Events.html" target="_self">Wix.Events </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Features">
-						<a href="//Wix.Features.html" target="_self">Wix.Features </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Preview">
-						<a href="//Wix.Preview.html" target="_self">Wix.Preview </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.PubSub">
-						<a href="//Wix.PubSub.html" target="_self">Wix.PubSub </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Settings">
-						<a href="//Wix.Settings.html" target="_self">Wix.Settings </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Styles">
-						<a href="//Wix.Styles.html" target="_self">Wix.Styles </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Theme">
-						<a href="//Wix.Theme.html" target="_self">Wix.Theme </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Utils">
-						<a href="//Wix.Utils.html" target="_self">Wix.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Utils.Media">
-						<a href="//Wix.Utils.Media.html" target="_self">Wix.Utils.Media </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.WindowOrigin">
-						<a href="//Wix.WindowOrigin.html" target="_self">Wix.WindowOrigin </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.WindowPlacement">
-						<a href="//Wix.WindowPlacement.html" target="_self">Wix.WindowPlacement </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker">
-						<a href="//Wix.Worker.html" target="_self">Wix.Worker </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker.PubSub">
-						<a href="//Wix.Worker.PubSub.html" target="_self">Wix.Worker.PubSub </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
-						<a href="//Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="WixDataCursor">
-						<a href="//WixDataCursor.html" target="_self">WixDataCursor </a>
-					</li>
-				</div>
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="Wix.html">Wix</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Activities.html">Wix.Activities</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Billing.html">Wix.Billing</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Contacts.html">Wix.Contacts</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Counters.html">Wix.Counters</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Dashboard.html">Wix.Dashboard</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Error.html">Wix.Error</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Events.html">Wix.Events</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Features.html">Wix.Features</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Preview.html">Wix.Preview</a>
+						</li>
+						
+						<li>
+							<a href="Wix.PubSub.html">Wix.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Settings.html">Wix.Settings</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Styles.html">Wix.Styles</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Theme.html">Wix.Theme</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.html">Wix.Utils</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Utils.Media.html">Wix.Utils.Media</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowOrigin.html">Wix.WindowOrigin</a>
+						</li>
+						
+						<li>
+							<a href="Wix.WindowPlacement.html">Wix.WindowPlacement</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Worker.html">Wix.Worker</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Worker.PubSub.html">Wix.Worker.PubSub</a>
+						</li>
+						
+						<li>
+							<a href="Wix.Worker.Utils.html">Wix.Worker.Utils</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
+				<li class="dropdown">
+					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="WixDataCursor.html">WixDataCursor</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
 			</ul>
-		</nav>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+
+		
+		<div class="span8">
+			
+				<div id="main">
+					
+
+
+	<h1 class="page-title">Namespace: Dashboard</h1>
+<section>
+
+<header>
+    <h2>
+        <span class="ancestors"><a href="Wix.html">Wix</a>.</span>
+    
+    Dashboard
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+        
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Dashboard.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="getEditorUrl"><span class="type-signature">&lt;static> </span>getEditorUrl<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns a url for the app in the Editor. Once directed to the Editor, the app will be shown to your user. If your app has components on more than one page, the first page that contains your app will be opened.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A callback which gets editor url as parameter.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.33.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Dashboard.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Dashboard.getEditorUrl(function(url) {
+   &#x2F;&#x2F;editor url as a callback parameter
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="openBillingPage"><span class="type-signature">&lt;static> </span>openBillingPage<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The Dashboard.openBillingPage method allows the app to offer a premium package from within the app.
+When called will open the Wix billing system page in a new browser window.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.31.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Dashboard.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Dashboard.openBillingPage();</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="openMediaDialog"><span class="type-signature">&lt;static> </span>openMediaDialog<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method opens Wix media dialog inside WIx Dashboard, and let's the site owner choose a an existing file from the Wix media galleries,
+or upload a new file instead. When completed a callback function returns the meta data of the selected item/s.
+This method returns a meta data descriptor for a selected media item.
+To access the media item from your code you will need to construct a full URL using that descriptor.
+Since the media items URLs format is set by Wix and might changed in the future, we are requiring that the URL construction will be done using the SDK.
+Use one of the Wix.Utils.Media.get* methods to get the desired media item URL.
+The following media type are currently supported - Wix.Settings.MediaType</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.40.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Dashboard.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Wix.Settings.html#openMediaDialog">Wix.Settings.openMediaDialog</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Dashboard.openMediaDialog(Wix.Settings.MediaType.IMAGE, false, function(data) {
+   &#x2F;&#x2F; save image data
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="openModal"><span class="type-signature">&lt;static> </span>openModal<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The openModal method allows an app to open a modal window within the dashboard. A modal is a runtime Widget that is not part of the dashboard structure.
+The modal window is a singleton (every new modal closes the previous one) and contains a lightbox.
+A modal can be dismissed by the user if it touches the lightbox, presses the closing button or by the app itself
+if it calls the Wix.Dashboard.closeWindow() from within the modal iframe. The onClose argument can be used to detect modal close.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.27.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Dashboard.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Wix.html#openModal">Wix.openModal</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var onClose = function(message) { console.log(&quot;modal closed&quot;, message); }
+Wix.Dashboard.openModal(&quot;http:&#x2F;&#x2F;sslstatic.wix.com&#x2F;services&#x2F;js-sdk&#x2F;1.16.0&#x2F;html&#x2F;modal.html&quot;, 400, 400, onClose);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="pushState"><span class="type-signature">&lt;static> </span>pushState<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method enable AJAX style Page apps to inform the Wix platform about a change in the app internal state. The new state will be reflected in the site/page URL.
+Once you call the pushState method, the browser top window URL will change the 'app-state' path part to the new state you provide with the pushState
+method (similar to the browser history API - <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history">https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history</a>).
+For a full explanation of how deep-linking works with AJAX style apps, see Deep Linking for AJAX Style Apps - <a href="http://dev.wix.com/docs/display/DRAF/Developing+a+Page+App">http://dev.wix.com/docs/display/DRAF/Developing+a+Page+App</a>.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.35.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Dashboard.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Wix.html#pushState">Wix.pushState</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Dashboard.pushState(&quot;app-state&quot;);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="resizeWindow"><span class="type-signature">&lt;static> </span>resizeWindow<span class="signature">(width, height, <span class="optional">Function</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Applicable only for modal component. Re-sizes the modal window.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Window width in pixels.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Window height in pixels.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>Function</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>onComplete On resize complete callback function.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.40.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>tomergab@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Dashboard.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Wix.html#resizeWindow">Wix.resizeWindow</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F; The following call will resize the widget window
+Wix.Dashboard.resizeWindow(300, 300);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="revalidateSession"><span class="type-signature">&lt;static> </span>revalidateSession<span class="signature">(onSuccess, onFailure)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Before showing sensitive information or making an action which requires a secure session,
+an app should verify that a secure session exists.
+Get a newly signed app instance by calling Wix.Dashboard.revalidateSession.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Receives a newly signed and encoded app instance.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFailure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.52.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Dashboard.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Dashboard.revalidateSession(function(instanceData){
+ &#x2F;&#x2F;handle success use-case
+}, function(error){
+   &#x2F;&#x2F;Handle error use-case
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="setHeight"><span class="type-signature">&lt;static> </span>setHeight<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method requests the hosting Wix platform to change the iframe height inside the side dashboard (under the My Account tab in Wix.com). Works on the app or modal iframes.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+	<dt class="tag-since">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>1.24.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+	<dt class="important tag-deprecated">Deprecated:</dt>
+	
+	<dd class="yes-def tag-deprecated">
+		<ul class="dummy">
+			<li>Yes</li>
+		</ul>
+	</dd>
+	
+	
+
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>lior.shefer@wix.com</li>
+			</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source">
+		Dashboard.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Wix.html#setHeight">Wix.setHeight</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Wix.Dashboard.setHeight(height);</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					
+		<span class="copyright">
+		Wix.com Copyright © 2014.
+		</span>
+					<br />
+					
+				</footer>
+			</div>
+
+			
+			<div class="span3">
+				<div id="toc"></div>
+			</div>
+			
+			<br clear="both">
+		</div>
 
 	</div>
-	<main class="main-content">
-		<section>
-			<article class="content-holder">
-				<header class="section-header">
-					<div class="title">Wix.Dashboard</div>
-					<div class="header-context"></div>
-				</header>
-				<section>
-					<h1 class="wix-dashboard">Wix.Dashboard</h1>
-					<h3 class="contents">Contents</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td><a href="Wix.Dashboard.html#.getEditorUrl">getEditorUrl( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Dashboard.html#.openBillingPage">openBillingPage( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Dashboard.html#.openMediaDialog">openMediaDialog( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Dashboard.html#.openModal">openModal( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Dashboard.html#.pushState">pushState( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Dashboard.html#.resizeWindow">resizeWindow( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Dashboard.html#.revalidateSession">revalidateSession( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Dashboard.html#.setHeight">setHeight( )</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-				<section>
-					<p><span id=".getEditorUrl" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="geteditorurl-">getEditorUrl( )</span>
-						<h2>getEditorUrl( )</h2></hgroup>
-					<figure class="code-example">
+	<!--<script src="scripts/sunlight.js"></script>-->
+	<script src="scripts/docstrap.lib.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
 
-						<pre><code class="language-javascript">Wix.Dashboard.getEditorUrl(callback)</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>Returns a url for the app in the Editor. Once directed to the Editor, the app will be shown to your user. If your app has components on more than one page, the first page that contains your app will be opened.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">callback</code>
-								</td>
-								<td>function</td>
-								<td>
-									A callback which gets editor url as parameter.
-								</td>
-							</tr>
-						</tbody>
-					</table>
+	<script>
+		$( function () {
+			$( "[id*='$']" ).each( function () {
+				var $this = $( this );
 
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+			} );
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5nZXRFZGl0b3JVcmwoZnVuY3Rpb24odXJsKSB7CiAgIC8vZWRpdG9yIHVybCBhcyBhIGNhbGxiYWNrIHBhcmFtZXRlcgp9KTs=</pre>
-						</div>
-						<pre><code class="language-javascript">Wix.Dashboard.getEditorUrl(function(url) {
-   //editor url as a callback parameter
-});</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.33.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".openBillingPage" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="openbillingpage-">openBillingPage( )</span>
-						<h2>openBillingPage( )</h2></hgroup>
-					<figure class="code-example">
+			$( "#toc" ).toc( {
+				anchorName  : function ( i, heading, prefix ) {
+					return $( heading ).attr( "id" ) || ( prefix + i );
+				},
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : "100px"
+			} );
 
-						<pre><code class="language-javascript">Wix.Dashboard.openBillingPage()</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>The Dashboard.openBillingPage method allows the app to offer a premium package from within the app. When called will open the Wix billing system page in a new browser window.</p>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+			$( '.dropdown-toggle' ).dropdown();
+//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5vcGVuQmlsbGluZ1BhZ2UoKTs=</pre>
-						</div>
-						<pre><code class="language-javascript">Wix.Dashboard.openBillingPage();</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.31.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".openMediaDialog" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="openmediadialog-">openMediaDialog( )</span>
-						<h2>openMediaDialog( )</h2></hgroup>
-					<figure class="code-example">
+			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+				var $this = $( this );
 
-						<pre><code class="language-javascript">Wix.Dashboard.openMediaDialog()</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>This method opens Wix media dialog inside WIx Dashboard, and let&#39;s the site owner choose a an existing file from the Wix media galleries, or upload a new file instead. When completed a callback function returns the
-						meta data of the selected item/s. This method returns a meta data descriptor for a selected media item. To access the media item from your code you will need to construct a full URL using that descriptor. Since the
-						media items URLs format is set by Wix and might changed in the future, we are requiring that the URL construction will be done using the SDK. Use one of the Wix.Utils.Media.get* methods to get the desired media item
-						URL. The following media type are currently supported - Wix.Settings.MediaType</p>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+				var example = $this.find( "code" );
+				exampleText = example.html();
+				var lang = /{@lang (.*?)}/.exec( exampleText );
+				if ( lang && lang[1] ) {
+					exampleText = exampleText.replace( lang[0], "" );
+					example.html( exampleText );
+					lang = lang[1];
+				} else {
+					lang = "javascript";
+				}
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5vcGVuTWVkaWFEaWFsb2coV2l4LlNldHRpbmdzLk1lZGlhVHlwZS5JTUFHRSwgZmFsc2UsIGZ1bmN0aW9uKGRhdGEpIHsKICAgLy8gc2F2ZSBpbWFnZSBkYXRhCn0pOw==</pre>
-						</div>
-						<pre><code class="language-javascript">Wix.Dashboard.openMediaDialog(Wix.Settings.MediaType.IMAGE, false, function(data) {
-   // save image data
-});</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.40.0 and later.</p>
-					<h3 class="see">See</h3>
-					<p><a href="Wix.Settings.html#.openMediaDialog">Wix.Settings.openMediaDialog</a></p>
-				</section>
-				<section>
-					<p><span id=".openModal" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="openmodal-">openModal( )</span>
-						<h2>openModal( )</h2></hgroup>
-					<figure class="code-example">
+				if ( lang ) {
 
-						<pre><code class="language-javascript">Wix.Dashboard.openModal()</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>The openModal method allows an app to open a modal window within the dashboard. A modal is a runtime Widget that is not part of the dashboard structure. The modal window is a singleton (every new modal closes the previous
-						one) and contains a lightbox. A modal can be dismissed by the user if it touches the lightbox, presses the closing button or by the app itself if it calls the Wix.Dashboard.closeWindow() from within the modal iframe.
-						The onClose argument can be used to detect modal close.</p>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+					$this
+						.addClass( "sunlight-highlight-" + lang )
+						.addClass( "linenums" )
+						.html( example.html() );
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">dmFyIG9uQ2xvc2UgPSBmdW5jdGlvbihtZXNzYWdlKSB7IGNvbnNvbGUubG9nKCJtb2RhbCBjbG9zZWQiLCBtZXNzYWdlKTsgfQpXaXguRGFzaGJvYXJkLm9wZW5Nb2RhbCgiaHR0cDovL3NzbHN0YXRpYy53aXguY29tL3NlcnZpY2VzL2pzLXNkay8xLjE2LjAvaHRtbC9tb2RhbC5odG1sIiwgNDAwLCA0MDAsIG9uQ2xvc2UpOw==</pre>
-						</div>
-						<pre><code class="language-javascript">var onClose = function(message) { console.log("modal closed", message); }
-Wix.Dashboard.openModal("http://sslstatic.wix.com/services/js-sdk/1.16.0/html/modal.html", 400, 400, onClose);</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.27.0 and later.</p>
-					<h3 class="see">See</h3>
-					<p><a href="Wix.html#.openModal">Wix.openModal</a></p>
-				</section>
-				<section>
-					<p><span id=".pushState" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="pushstate-">pushState( )</span>
-						<h2>pushState( )</h2></hgroup>
-					<figure class="code-example">
+				}
+			} );
 
-						<pre><code class="language-javascript">Wix.Dashboard.pushState()</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>This method enable AJAX style Page apps to inform the Wix platform about a change in the app internal state. The new state will be reflected in the site/page URL. Once you call the pushState method, the browser top window
-						URL will change the &#39;app-state&#39; path part to the new state you provide with the pushState method (similar to the browser history API - <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history">https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history</a>).
-						For a full explanation of how deep-linking works with AJAX style apps, see Deep Linking for AJAX Style Apps - <a href="http://dev.wix.com/docs/display/DRAF/Developing+a+Page+App">http://dev.wix.com/docs/display/DRAF/Developing+a+Page+App</a>.</p>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+			Sunlight.highlightAll( {
+				lineNumbers : true,
+				showMenu : false,
+				enableDoclinks : true
+			} );
+		} );
+	 </script>
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5wdXNoU3RhdGUoImFwcC1zdGF0ZSIpOw==</pre>
-						</div>
-						<pre><code class="language-javascript">Wix.Dashboard.pushState("app-state");</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.35.0 and later.</p>
-					<h3 class="see">See</h3>
-					<p><a href="Wix.html#.pushState">Wix.pushState</a></p>
-				</section>
-				<section>
-					<p><span id=".resizeWindow" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="resizewindow-">resizeWindow( )</span>
-						<h2>resizeWindow( )</h2></hgroup>
-					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Dashboard.resizeWindow(width, height, [Function])</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>Applicable only for modal component. Re-sizes the modal window.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">width</code>
-								</td>
-								<td>Number</td>
-								<td>
-									Window width in pixels.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">height</code>
-								</td>
-								<td>Number</td>
-								<td>
-									Window height in pixels.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">Function</code>
-									<span class="param-properties">(optional)</span>
-								</td>
-								<td></td>
-								<td>
-									onComplete On resize complete callback function.
-								</td>
-							</tr>
-						</tbody>
-					</table>
 
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
+	<!--Navigation and Symbol Display-->
+	
 
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">Ly8gVGhlIGZvbGxvd2luZyBjYWxsIHdpbGwgcmVzaXplIHRoZSB3aWRnZXQgd2luZG93CldpeC5EYXNoYm9hcmQucmVzaXplV2luZG93KDMwMCwgMzAwKTs=</pre>
-						</div>
-						<pre><code class="language-javascript">// The following call will resize the widget window
-Wix.Dashboard.resizeWindow(300, 300);</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.40.0 and later.</p>
-					<h3 class="see">See</h3>
-					<p><a href="Wix.html#.resizeWindow">Wix.resizeWindow</a></p>
-				</section>
-				<section>
-					<p><span id=".revalidateSession" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="revalidatesession-">revalidateSession( )</span>
-						<h2>revalidateSession( )</h2></hgroup>
-					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Dashboard.revalidateSession(onSuccess, onFailure)</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>Before showing sensitive information or making an action which requires a secure session, an app should verify that a secure session exists. Get a newly signed app instance by calling Wix.Dashboard.revalidateSession.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">onSuccess</code>
-								</td>
-								<td>function</td>
-								<td>
-									Receives a newly signed and encoded app instance.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">onFailure</code>
-								</td>
-								<td>function</td>
-								<td>
-
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
-
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5yZXZhbGlkYXRlU2Vzc2lvbihmdW5jdGlvbihpbnN0YW5jZURhdGEpewogLy9oYW5kbGUgc3VjY2VzcyB1c2UtY2FzZQp9LCBmdW5jdGlvbihlcnJvcil7CiAgIC8vSGFuZGxlIGVycm9yIHVzZS1jYXNlCn0pOw==</pre>
-						</div>
-						<pre><code class="language-javascript">Wix.Dashboard.revalidateSession(function(instanceData){
- //handle success use-case
-}, function(error){
-   //Handle error use-case
-});</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.52.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".setHeight" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span><span class="label label-deprecated">Deprecated</span></p>
-					<hgroup><span class="h_subheading" id="setheight-">setHeight( )</span>
-						<h2>setHeight( )</h2></hgroup>
-					<figure class="code-example">
-
-						<pre><code class="language-javascript">Wix.Dashboard.setHeight()</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>This method requests the hosting Wix platform to change the iframe height inside the side dashboard (under the My Account tab in Wix.com). Works on the app or modal iframes.</p>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
-
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//images/copy.png" />
-							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5zZXRIZWlnaHQoaGVpZ2h0KTs=</pre>
-						</div>
-						<pre><code class="language-javascript">Wix.Dashboard.setHeight(height);</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.24.0 and later.</p>
-					<h3 class="deprecated">Deprecated</h3>
-					<p>Yes</p>
-					<h3 class="see">See</h3>
-					<p><a href="Wix.html#.setHeight">Wix.setHeight</a></p>
-				</section>
-				<nav id="prev-next-nav">
-				</nav>
-			</article>
-		</section>
-	</main>
-
-	<script src="//scripts/wixdocs-app.js"></script>
+	<!--Google Analytics-->
+	
 
 </body>
-
 </html>
