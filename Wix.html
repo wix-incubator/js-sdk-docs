@@ -53,7 +53,13 @@
 									<a class="otp" href="#getboundingrectandoffsets-">getBoundingRectAndOffsets( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#getcurrentpageanchors-">getCurrentPageAnchors( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#getcurrentpageid-">getCurrentPageId( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#getexternalid-">getExternalId( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#getsiteinfo-">getSiteInfo( )</a>
@@ -63,6 +69,9 @@
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#getstyleparams-">getStyleParams( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#navigatetoanchor-">navigateToAnchor( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#navigatetocomponent-">navigateToComponent( )</a>
@@ -268,7 +277,15 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.html#.getCurrentPageAnchors">getCurrentPageAnchors( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.html#.getCurrentPageId">getCurrentPageId( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.getExternalId">getExternalId( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -281,6 +298,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.html#.getStyleParams">getStyleParams( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.navigateToAnchor">navigateToAnchor( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -575,6 +596,51 @@ Wix.closeWindow(message);</code></pre>
 					<p>Since 1.26.0 and later.</p>
 				</section>
 				<section>
+					<p><span id=".getCurrentPageAnchors" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getcurrentpageanchors-">getCurrentPageAnchors( )</span>
+						<h2>getCurrentPageAnchors( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.getCurrentPageAnchors(callback)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The getCurrentPageAnchors method is used to retrieve the anchors found on the current page in the editor/preview/site view modes. By default the method will return the top page anchor on the current page.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">callback</code>
+								</td>
+								<td>function</td>
+								<td>
+									a callback function which receives an array of anchors.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LmdldEN1cnJlbnRQYWdlQW5jaG9ycyhmdW5jdGlvbihhbmNob3JzKSB7CiAgICAgLy8gZG8gc29tZXRoaW5nIHdpdGggYW5jaG9ycwp9KTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.getCurrentPageAnchors(function(anchors) {
+     // do something with anchors
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.62.0 and later.</p>
+				</section>
+				<section>
 					<p><span id=".getCurrentPageId" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span></p>
 					<hgroup><span class="h_subheading" id="getcurrentpageid-">getCurrentPageId( )</span>
@@ -599,6 +665,61 @@ Wix.getCurrentPageId(function(pageId) {
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.31.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getExternalId" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getexternalid-">getExternalId( )</span>
+						<h2>getExternalId( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.getExternalId(onSuccess, [onFailure])</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Call this method to get the GUID corresponding to the calling component, if one exists. If one does not exist, undefined will be returned.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									the GUID value, if one exists. If one does not exist, undefined will be returned.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onFailure</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									onError message
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LmdldEV4dGVybmFsSWQoZnVuY3Rpb24gKHZhbHVlKSB7CiAgLy8gZG8gc29tZXRoaW5nIHcvIHRoZSB2YWx1ZQp9KTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.getExternalId(function (value) {
+  // do something w/ the value
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.45.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".getSiteInfo" class="nav-target"></span></p>
@@ -838,6 +959,60 @@ Wix.getCurrentPageId(function(pageId) {
 					<p><a href="Wix.Styles.html#.getStyleParams">Wix.Styles.getStyleParams</a></p>
 				</section>
 				<section>
+					<p><span id=".navigateToAnchor" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="navigatetoanchor-">navigateToAnchor( )</span>
+						<h2>navigateToAnchor( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.navigateToAnchor(anchorId, [onFailure])</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The navigateToAnchor method will navigate to an anchor on the current page. Available in preview and site view modes only.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">anchorId</code>
+								</td>
+								<td>String</td>
+								<td>
+									of the anchor to navigate to
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onFailure</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									the function will return an object that specifies the error which occurred, it will be invoked when the current page does not contain the given anchor.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">Ly8gVGhlIGZvbGxvd2luZyBjYWxsIHdpbGwgbmF2aWdhdGUgdG8gYW5jaG9yIHdpdGggaWQgPSBhbmNob3IxCldpeC5uYXZpZ2F0ZVRvQW5jaG9yKCdhbmNob3IxJywgZnVuY3Rpb24oZXJyb3IpIHsgY29uc29sZS5sb2coZXJyb3IuZXJyb3IpfSApOw==</pre>
+						</div>
+						<pre><code class="language-javascript">// The following call will navigate to anchor with id = anchor1
+Wix.navigateToAnchor('anchor1', function(error) { console.log(error.error)} );</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.62.0 and later.</p>
+				</section>
+				<section>
 					<p><span id=".navigateToComponent" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span></p>
 					<hgroup><span class="h_subheading" id="navigatetocomponent-">navigateToComponent( )</span>
@@ -847,7 +1022,7 @@ Wix.getCurrentPageId(function(pageId) {
 						<pre><code class="language-javascript">Wix.navigateToComponent(compId, [Options], [onFailure])</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
-					<p>The navigateToComponent method will navigate to a component on the current page, or to a component on a page with the pageId provided.</p>
+					<p>The navigateToComponent method will navigate to a component on the current page, or to a component on a page with the pageId provided. Available in preview and site view modes only.</p>
 					<h3 class="parameters">Parameters</h3>
 					<table class="table table-condensed">
 						<colgroup>

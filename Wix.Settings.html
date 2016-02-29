@@ -83,10 +83,10 @@
 									<a class="otp" href="#closewindow-">closeWindow( )</a>
 								</li>
 								<li class="item otp-li">
-									<a class="otp" href="#getdashboardappurl-">getDashboardAppUrl( )</a>
+									<a class="otp" href="#getcurrentpageanchors-">getCurrentPageAnchors( )</a>
 								</li>
 								<li class="item otp-li">
-									<a class="otp" href="#getexternalid-">getExternalId( )</a>
+									<a class="otp" href="#getdashboardappurl-">getDashboardAppUrl( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#getsiteinfo-">getSiteInfo( )</a>
@@ -191,11 +191,11 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td><a href="Wix.Settings.html#.getDashboardAppUrl">getDashboardAppUrl( )</a></td>
+								<td><a href="Wix.Settings.html#.getCurrentPageAnchors">getCurrentPageAnchors( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
-								<td><a href="Wix.Settings.html#.getExternalId">getExternalId( )</a></td>
+								<td><a href="Wix.Settings.html#.getDashboardAppUrl">getDashboardAppUrl( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -391,6 +391,51 @@ Wix.Settings.closeWindow(message);</code></pre>
 					<p><a href="Wix.html#.closeWindow">Wix.closeWindow</a></p>
 				</section>
 				<section>
+					<p><span id=".getCurrentPageAnchors" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getcurrentpageanchors-">getCurrentPageAnchors( )</span>
+						<h2>getCurrentPageAnchors( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.getCurrentPageAnchors(callback)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The getAnchors method is used to retrieve the anchors found on the current page. The method will return an empty array if there are no anchors on the current page.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">callback</code>
+								</td>
+								<td>function</td>
+								<td>
+									a callback function which receives an array of anchors.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLmdldEN1cnJlbnRQYWdlQW5jaG9ycyhmdW5jdGlvbihhbmNob3JzKSB7CiAgICAgLy8gZG8gc29tZXRoaW5nIHdpdGggYW5jaG9ycwp9KTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.getCurrentPageAnchors(function(anchors) {
+     // do something with anchors
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.62.0 and later.</p>
+				</section>
+				<section>
 					<p><span id=".getDashboardAppUrl" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span></p>
 					<hgroup><span class="h_subheading" id="getdashboardappurl-">getDashboardAppUrl( )</span>
@@ -435,61 +480,6 @@ Wix.Settings.closeWindow(message);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.32.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getExternalId" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getexternalid-">getExternalId( )</span>
-						<h2>getExternalId( )</h2></hgroup>
-					<figure class="code-example">
-
-						<pre><code class="language-javascript">Wix.Settings.getExternalId(onSuccess, [onFailure])</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>Call this method to get the GUID corresponding to the calling component, if one exists. If one does not exist, undefined will be returned.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">onSuccess</code>
-								</td>
-								<td>function</td>
-								<td>
-									the GUID value, if one exists. If one does not exist, undefined will be returned.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">onFailure</code>
-									<span class="param-properties">(optional)</span>
-								</td>
-								<td>function</td>
-								<td>
-									onError message
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
-
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LmdldEV4dGVybmFsSWQoZnVuY3Rpb24gKHZhbHVlKSB7CiAgLy8gZG8gc29tZXRoaW5nIHcvIHRoZSB2YWx1ZQp9KTs=</pre>
-						</div>
-						<pre><code class="language-javascript">Wix.getExternalId(function (value) {
-  // do something w/ the value
-});</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.45.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".getSiteInfo" class="nav-target"></span></p>

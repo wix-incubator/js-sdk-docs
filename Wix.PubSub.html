@@ -154,7 +154,7 @@
 						<h2>publish( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.PubSub.publish(eventName, data, isPersistent)</code></pre>
+						<pre><code class="language-javascript">Wix.PubSub.publish(eventName, data, [isPersistent])</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>Broadcasts an event to other extensions of a multi-widget TPA. If the app extensions (Widget, Fixed Positioned Widget, Page) span multiple pages, they will be notified when they are rendered.</p>
@@ -187,6 +187,7 @@
 							<tr>
 								<td>
 									<code class="inline-code">isPersistent</code>
+									<span class="param-properties">(optional)</span>
 								</td>
 								<td>Boolean</td>
 								<td>
@@ -201,10 +202,10 @@
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">Ly8gVGhlIGZvbGxvd2luZyBjYWxsIHdpbGwgcHVibGlzaCBhbiBhcHAgZXZlbnQgdGhhdCBjYW4gYmUgY29uc3VtZWQgYnkgYWxsIHRoZSBhcHAgcGFydHMgYW5kIHBlcnNpc3QgPT4gZXZlbiBvZiB0aG9zZSBwYXJ0cyBhcmUgbm90IHJlbmRlcmVkIHlldC4KV2l4LlB1YlN1Yi5wdWJsaXNoKCJteV9ldmVudF9uYW1lIiwge3ZhbHVlOiJ0aGlzIGlzIG15IG1lc3NhZ2UifSwgdHJ1ZSk7</pre>
+							<pre class="hidden-code">Ly8gVGhlIGZvbGxvd2luZyBjYWxsIHdpbGwgcHVibGlzaCBhbiBhcHAgZXZlbnQgdGhhdCBjYW4gYmUgY29uc3VtZWQgYnkgYWxsIGFwcCBwYXJ0cy4KV2l4LlB1YlN1Yi5wdWJsaXNoKCJteV9ldmVudF9uYW1lIiwge3ZhbHVlOiJ0aGlzIGlzIG15IG1lc3NhZ2UifSk7</pre>
 						</div>
-						<pre><code class="language-javascript">// The following call will publish an app event that can be consumed by all the app parts and persist => even of those parts are not rendered yet.
-Wix.PubSub.publish("my_event_name", {value:"this is my message"}, true);</code></pre>
+						<pre><code class="language-javascript">// The following call will publish an app event that can be consumed by all app parts.
+Wix.PubSub.publish("my_event_name", {value:"this is my message"});</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.25.0 and later.</p>
