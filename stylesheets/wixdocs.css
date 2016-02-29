@@ -6797,7 +6797,7 @@ blockquote p {
   margin-bottom: 5px;
 }
 .left-nav .nav .external-link {
-  background-image: url("http://localhost:3000/odin/link.png");
+  background-image: url("http://wix.github.io/js-sdk-docs/odin/link.png");
   display: inline-block;
   width: 13px;
   height: 13px;
@@ -6882,7 +6882,7 @@ blockquote p {
   float: left;
 }
 .main-content .next-button {
-  background-image: url("http://localhost:3000/odin/next.png");
+  background-image: url("http://wix.github.io/js-sdk-docs/odin/next.png");
   display: inline-block;
   width: 17px;
   height: 18px;
@@ -6891,7 +6891,7 @@ blockquote p {
   float: right;
 }
 .main-content .previous-button {
-  background-image: url("http://localhost:3000/odin/prev.png");
+  background-image: url("http://wix.github.io/js-sdk-docs/odin/prev.png");
   display: inline-block;
   width: 17px;
   height: 18px;
@@ -7211,7 +7211,7 @@ blockquote p {
 }
 .typeahead {
   border-radius: 6px;
-  background-image: url("http://localhost:3000/odin/searchIcon.png");
+  background-image: url("http://wix.github.io/js-sdk-docs/odin/searchIcon.png");
   background-repeat: no-repeat;
   background-position: right 10px center;
 }
@@ -7405,7 +7405,7 @@ textarea:focus {
   z-index: 30;
   height: 300px;
   width: 100%;
-  background-image: url("http://localhost:3000/odin/header.jpg");
+  background-image: url("http://wix.github.io/js-sdk-docs/odin/header.jpg");
   background-position: center;
 }
 #jumbo .jumbo-text {
@@ -7832,5 +7832,5 @@ body {
   font-size: 28px;
 }
 #jumbo {
-  background-image: url("http://localhost:3000/images/code_image.jpg");
+  background-image: url("http://wix.github.io/js-sdk-docs/images/code_image.jpg");
 }
