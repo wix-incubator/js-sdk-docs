@@ -53,6 +53,9 @@
 									<a class="otp" href="#getboundingrectandoffsets-">getBoundingRectAndOffsets( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#getcomponentinfo-">getComponentInfo( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#getcurrentpageanchors-">getCurrentPageAnchors( )</a>
 								</li>
 								<li class="item otp-li">
@@ -274,6 +277,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.html#.getBoundingRectAndOffsets">getBoundingRectAndOffsets( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.getComponentInfo">getComponentInfo( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -594,6 +601,118 @@ Wix.closeWindow(message);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.26.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getComponentInfo" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getcomponentinfo-">getComponentInfo( )</span>
+						<h2>getComponentInfo( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.getComponentInfo(A)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Retrieves information about the current component. For example, you’ll be able to know if a widget is shown on all pages.</p>
+					<p>Available from Editor, Preview and Viewer, only in components and settings (not is modal, popups and etc..)</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">A</code>
+								</td>
+								<td>function</td>
+								<td>
+									callback function to get information about the component.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="return-value">Return Value</h3>
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td>Object</td>
+								<td>A JSON object containing the component info:</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>compId</td>
+								<td><code class="inline-code">String</code></td>
+								<td>The unique ID of this component in the Wix site</td>
+							</tr>
+							<tr>
+								<td>pageId</td>
+								<td><code class="inline-code">String</code></td>
+								<td>ID of the page that contains the component.</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>Returns null if the component is a widget that’s set to show on all pages.</td>
+							</tr>
+							<tr>
+								<td>showOnAllPages</td>
+								<td><code class="inline-code">Boolean</code></td>
+								<td>True if the user set the widget to show on all pages.</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>False if the component is a page, or if the widget is not set to show on all pages.</td>
+							</tr>
+							<tr>
+								<td>tpaWidgetId</td>
+								<td><code class="inline-code">String</code></td>
+								<td>ID of the widget component, as specified in the Dev Center.</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>Returns null if the component is a page, or if you’re using this method in the live site.</td>
+							</tr>
+							<tr>
+								<td>appPageId</td>
+								<td><code class="inline-code">String</code></td>
+								<td>ID of the page component, as specified in the Dev Center.</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>Returns null if the component is a widget, or if you’re using this method in the live site.</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LmdldENvbXBvbmVudEluZm8oIGZ1bmN0aW9uKGNvbXBvbmVudEluZm8pIHsKICAgICAvLyBkbyBzb21ldGhpbmcgd2l0aCB0aGUgY29tcG9uZW50SW5mbwp9KTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.getComponentInfo( function(componentInfo) {
+     // do something with the componentInfo
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.63.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".getCurrentPageAnchors" class="nav-target"></span></p>
