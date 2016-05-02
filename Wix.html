@@ -609,7 +609,7 @@ Wix.closeWindow(message);</code></pre>
 						<h2>getComponentInfo( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.getComponentInfo(A)</code></pre>
+						<pre><code class="language-javascript">Wix.getComponentInfo([callback])</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>Retrieves information about the current component. For example, you’ll be able to know if a widget is shown on all pages.</p>
@@ -624,11 +624,12 @@ Wix.closeWindow(message);</code></pre>
 						<tbody>
 							<tr>
 								<td>
-									<code class="inline-code">A</code>
+									<code class="inline-code">callback</code>
+									<span class="param-properties">(optional)</span>
 								</td>
 								<td>function</td>
 								<td>
-									callback function to get information about the component.
+									the function will return an object w/ information about the component.
 								</td>
 							</tr>
 						</tbody>
@@ -705,9 +706,9 @@ Wix.closeWindow(message);</code></pre>
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LmdldENvbXBvbmVudEluZm8oIGZ1bmN0aW9uKGNvbXBvbmVudEluZm8pIHsKICAgICAvLyBkbyBzb21ldGhpbmcgd2l0aCB0aGUgY29tcG9uZW50SW5mbwp9KTs=</pre>
+							<pre class="hidden-code">V2l4LmdldENvbXBvbmVudEluZm8oZnVuY3Rpb24oY29tcG9uZW50SW5mbykgewogICAgIC8vIGRvIHNvbWV0aGluZyB3aXRoIHRoZSBjb21wb25lbnRJbmZvCn0pOw==</pre>
 						</div>
-						<pre><code class="language-javascript">Wix.getComponentInfo( function(componentInfo) {
+						<pre><code class="language-javascript">Wix.getComponentInfo(function(componentInfo) {
      // do something with the componentInfo
 });</code></pre>
 					</figure>
