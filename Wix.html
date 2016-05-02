@@ -609,7 +609,7 @@ Wix.closeWindow(message);</code></pre>
 						<h2>getComponentInfo( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.getComponentInfo([callback])</code></pre>
+						<pre><code class="language-javascript">Wix.getComponentInfo(callback)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>Retrieves information about the current component. For example, you’ll be able to know if a widget is shown on all pages.</p>
@@ -625,11 +625,10 @@ Wix.closeWindow(message);</code></pre>
 							<tr>
 								<td>
 									<code class="inline-code">callback</code>
-									<span class="param-properties">(optional)</span>
 								</td>
 								<td>function</td>
 								<td>
-									the function will return an object w/ information about the component.
+									a callback function which returns an object w/ information about the component.
 								</td>
 							</tr>
 						</tbody>
