@@ -95,6 +95,9 @@
 									<a class="otp" href="#removeeventlistener-">removeEventListener( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#replacesectionstate-">replaceSectionState( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#reportheightchange-">reportHeightChange( )</a>
 								</li>
 								<li class="item otp-li">
@@ -333,6 +336,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.html#.removeEventListener">removeEventListener( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.replaceSectionState">replaceSectionState( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -1166,7 +1173,8 @@ Wix.navigateToAnchor('anchor1', function(error) { console.log(error.error)} );</
 								</td>
 								<td>Object</td>
 								<td>
-									options may contain pageId to navigate to. When pageId is not provided, the method will navigate to a component with the given id on the current page.
+									options may contain pageId to navigate to. When pageId is not provided, the method will navigate to a component with the given id on the current page. if pageId is provided, options may contain noPageTransition for removing
+									the transition to the page
 								</td>
 							</tr>
 							<tr>
@@ -1188,13 +1196,13 @@ Wix.navigateToAnchor('anchor1', function(error) { console.log(error.error)} );</
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">Ly8gVGhlIGZvbGxvd2luZyBjYWxsIHdpbGwgc2Nyb2xsIHRvIGEgY29tcG9uZW50IHdpdGggaWQgPSBjb21wMSwgb24gYSBwYWdlIHdpdGggaWQgPSBwYWdlMQpXaXgubmF2aWdhdGVUb0NvbXBvbmVudCgnY29tcDEnLCB7cGFnZUlkOiAncGFnZTEnfSwgZnVuY3Rpb24oZXJyb3IpIHsgY29uc29sZS5sb2coZXJyb3IuZXJyb3IpfSApOw==</pre>
+							<pre class="hidden-code">Ly8gVGhlIGZvbGxvd2luZyBjYWxsIHdpbGwgc2Nyb2xsIHRvIGEgY29tcG9uZW50IHdpdGggaWQgPSBjb21wMSwgb24gYSBwYWdlIHdpdGggaWQgPSBwYWdlMQpXaXgubmF2aWdhdGVUb0NvbXBvbmVudCgnY29tcDEnLCB7cGFnZUlkOiAncGFnZTEnLCBub1BhZ2VUcmFuc2l0aW9uOiB0cnVlfSwgZnVuY3Rpb24oZXJyb3IpIHsgY29uc29sZS5sb2coZXJyb3IuZXJyb3IpfSApOw==</pre>
 						</div>
 						<pre><code class="language-javascript">// The following call will scroll to a component with id = comp1, on a page with id = page1
-Wix.navigateToComponent('comp1', {pageId: 'page1'}, function(error) { console.log(error.error)} );</code></pre>
+Wix.navigateToComponent('comp1', {pageId: 'page1', noPageTransition: true}, function(error) { console.log(error.error)} );</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.47.0 and later.</p>
+					<p>Since 1.65.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".navigateToPage" class="nav-target"></span></p>
@@ -1206,8 +1214,7 @@ Wix.navigateToComponent('comp1', {pageId: 'page1'}, function(error) { console.lo
 						<pre><code class="language-javascript">Wix.navigateToPage(pageId)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
-					<p>The navigateToPage method is used to navigate to a specific page inside the editor/preview/site.</p>
-					<p>The function accepts a single argument, page id, which is retrieved by using the method Wix.getSitePages().</p>
+					<p>Navigate to a specific page inside the editor/preview/site. The function accepts a single argument, page id, which is retrieved by using the method Wix.getSitePages().</p>
 					<h3 class="parameters">Parameters</h3>
 					<table class="table table-condensed">
 						<colgroup>
@@ -1228,48 +1235,6 @@ Wix.navigateToComponent('comp1', {pageId: 'page1'}, function(error) { console.lo
 						</tbody>
 					</table>
 
-					<h3 class="return-value">Return Value</h3>
-					<table class="table table-condensed">
-						<tbody>
-							<tr>
-								<td>Object</td>
-								<td>JSON Containing the user&#39;s details.</td>
-							</tr>
-						</tbody>
-					</table>
-					<p>This method returns the details of the current site visitor that is logged into the Wix site, using the Wix site member options.</p>
-					<table class="table table-condensed">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Value</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>name</td>
-								<td>&#39;String&#39;</td>
-								<td>The current member&#39;s name</td>
-							</tr>
-							<tr>
-								<td>email</td>
-								<td>&#39;String&#39;</td>
-								<td>The current member&#39;s email</td>
-							</tr>
-							<tr>
-								<td>id</td>
-								<td>&#39;String&#39;</td>
-								<td>The current member&#39;s id</td>
-							</tr>
-							<tr>
-								<td>owner</td>
-								<td>&#39;Boolean&#39;</td>
-								<td>Indicates if the user is the owner of the site</td>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
 					<h3 class="examples">Examples</h3>
 					<figure class="code-example">
 
@@ -1601,6 +1566,49 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.25.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".replaceSectionState" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="replacesectionstate-">replaceSectionState( )</span>
+						<h2>replaceSectionState( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.replaceSectionState(state)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>This method is like pushState method except that this method will not push the new url to the browser&#39;s history, but replace it instead.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">state</code>
+								</td>
+								<td>String</td>
+								<td>
+									New app&#39;s state to push url.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LnJlcGxhY2VTZWN0aW9uU3RhdGUoImFwcC1zdGF0ZSIpOw==</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.replaceSectionState("app-state");</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.65.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".reportHeightChange" class="nav-target"></span></p>

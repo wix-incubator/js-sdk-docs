@@ -77,7 +77,13 @@
 						<nav id="onThisPage">
 							<ul class="nav nav-stacked otp-nav nav-open">
 								<li class="item otp-li">
+									<a class="otp" href="#getstyleid">getStyleId</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#getstyleparams-">getStyleParams( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#getstyleparamsbystyleid-">getStyleParamsByStyleId( )</a>
 								</li>
 							</ul>
 						</nav>
@@ -128,10 +134,44 @@
 					<table class="table table-condensed">
 						<tbody>
 							<tr>
+								<td><a href="Wix.Styles.html#.getStyleId">getStyleId</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Styles.html#.getStyleParams">getStyleParams( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Styles.html#.getStyleParamsByStyleId">getStyleParamsByStyleId( )</a></td>
 							</tr>
 						</tbody>
 					</table>
+				</section>
+				<section>
+					<p><span id=".getStyleId" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getstyleid">getStyleId</span>
+						<h2>getStyleId</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Styles.getStyleId</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Function getStyleId Returns the styleId of the component</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlN0eWxlcy5nZXRTdHlsZUlkKGZ1bmN0aW9uKHN0eWxlSWQpewogICAgIC8vZG8gc29tZXRoaW5nIHdpdGggdGhlIHN0eWxlSWQKfSk7</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Styles.getStyleId(function(styleId){
+     //do something with the styleId
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.65.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".getStyleParams" class="nav-target"></span></p>
@@ -177,6 +217,71 @@
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.26.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getStyleParamsByStyleId" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getstyleparamsbystyleid-">getStyleParamsByStyleId( )</span>
+						<h2>getStyleParamsByStyleId( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Styles.getStyleParamsByStyleId(styleId, onSuccess, onFailure)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>retrieves the style parameters of the given styleId from the hosting Wix Platform. The style parameters includes colors numbers, booleans.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">styleId</code>
+								</td>
+								<td>String</td>
+								<td>
+									The styleId
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									Callback function to retrieve the style values.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onFailure</code>
+								</td>
+								<td>function</td>
+								<td>
+									Callback function to handle the case that the styleId wasn&#39;t found.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlN0eWxlcy5nZXRTdHlsZVBhcmFtc0J5U3R5bGVJZCgnZGprMzInLCBmdW5jdGlvbihzdHlsZVBhcmFtcykgewogICAgICAvL2RvIHNvbWV0aGluZyB3aXRoIHRoZSBzdHlsZVBhcmFtcwogICAgfSwgZnVuY3Rpb24oKXsKICAgICAgLy90aHJvdyBlcnJvcgp9KTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Styles.getStyleParamsByStyleId('djk32', function(styleParams) {
+      //do something with the styleParams
+    }, function(){
+      //throw error
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.65.0 and later.</p>
 				</section>
 				<nav id="prev-next-nav">
 				</nav>

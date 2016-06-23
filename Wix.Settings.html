@@ -101,10 +101,16 @@
 									<a class="otp" href="#getwindowplacement-">getWindowPlacement( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#isfullwidth-">isFullWidth( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#openbillingpage-">openBillingPage( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#openmediadialog-">openMediaDialog( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#openreviewinfo-">openReviewInfo( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#refreshapp-">refreshApp( )</a>
@@ -120,6 +126,9 @@
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#setexternalid-">setExternalId( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#setfullwidth-">setFullWidth( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#setwindowplacement-">setWindowPlacement( )</a>
@@ -215,11 +224,19 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.Settings.html#.isFullWidth">isFullWidth( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Settings.html#.openBillingPage">openBillingPage( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td><a href="Wix.Settings.html#.openMediaDialog">openMediaDialog( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Settings.html#.openReviewInfo">openReviewInfo( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -240,6 +257,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Settings.html#.setExternalId">setExternalId( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Settings.html#.setFullWidth">setFullWidth( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -638,6 +659,49 @@ Wix.Settings.getWindowPlacement(compId, function (data) {
 					<p>Since 1.19.0 and later.</p>
 				</section>
 				<section>
+					<p><span id=".isFullWidth" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="isfullwidth-">isFullWidth( )</span>
+						<h2>isFullWidth( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.isFullWidth(callback)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Return true if the app is set to full width and false if not.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">callback</code>
+								</td>
+								<td>function</td>
+								<td>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLmlzRnVsbFdpZHRoKGZ1bmN0aW9uKCkgey4uLn0pOw==</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.isFullWidth(function() {...});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.65.0 and later.</p>
+				</section>
+				<section>
 					<p><span id=".openBillingPage" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span></p>
 					<hgroup><span class="h_subheading" id="openbillingpage-">openBillingPage( )</span>
@@ -745,6 +809,29 @@ Wix.Settings.getWindowPlacement(compId, function (data) {
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.40.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".openReviewInfo" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="openreviewinfo-">openReviewInfo( )</span>
+						<h2>openReviewInfo( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.openReviewInfo()</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Open the reviews tab of the application&#39;s info modal</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLm9wZW5SZXZpZXdJbmZvKCk7</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.openReviewInfo();</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.65.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".refreshApp" class="nav-target"></span></p>
@@ -980,6 +1067,76 @@ Wix.Settings.refreshAppByCompIds(["id1", "id3"], {param1: "value1", param2: "val
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.45.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".setFullWidth" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="setfullwidth-">setFullWidth( )</span>
+						<h2>setFullWidth( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.setFullWidth(fullWidth, options, onSuccess, onFailure)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Sets the widget/page components to full width/exit full width (true/false)</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">fullWidth</code>
+								</td>
+								<td>Boolean</td>
+								<td>
+									Set true/false if to set the app as full width or not
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">options</code>
+								</td>
+								<td>Object</td>
+								<td>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onFailure</code>
+								</td>
+								<td>function</td>
+								<td>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLnNldEZ1bGxXaWR0aCh0cnVlLCB7fSwgZnVuY3Rpb24oKSB7Li59LCBmdW5jdGlvbigpIHsuLi59KTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.setFullWidth(true, {}, function() {..}, function() {...});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.65.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".setWindowPlacement" class="nav-target"></span></p>

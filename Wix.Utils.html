@@ -808,7 +808,7 @@ var width = Wix.Utils.getWidth();</code></pre>
 								</td>
 								<td>Object</td>
 								<td>
-									App page id defined in dev.wix.com {sectionId : &#39;sectionId&#39;}.
+									App page id defined in dev.wix.com {sectionId : &#39;sectionId&#39;} can contain noTransition, boolean indicating cancel transition to page.
 								</td>
 							</tr>
 							<tr>
@@ -838,14 +838,14 @@ var width = Wix.Utils.getWidth();</code></pre>
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LlV0aWxzLm5hdmlnYXRlVG9TZWN0aW9uKHsgc2VjdGlvbklkIDogJ3NlY3Rpb25JZCcgfSwgJ215U3RhdGUnLCBmdW5jdGlvbihlcnJvcil7CiAgIC8vSGFuZGxlIGVycm9yIHVzZS1jYXNlCn0pOw==</pre>
+							<pre class="hidden-code">V2l4LlV0aWxzLm5hdmlnYXRlVG9TZWN0aW9uKHsgc2VjdGlvbklkIDogJ3NlY3Rpb25JZCcsIG5vVHJhbnNpdGlvbjogdHJ1ZSB9LCAnbXlTdGF0ZScsIGZ1bmN0aW9uKGVycm9yKXsKICAgLy9IYW5kbGUgZXJyb3IgdXNlLWNhc2UKfSk7</pre>
 						</div>
-						<pre><code class="language-javascript">Wix.Utils.navigateToSection({ sectionId : 'sectionId' }, 'myState', function(error){
+						<pre><code class="language-javascript">Wix.Utils.navigateToSection({ sectionId : 'sectionId', noTransition: true }, 'myState', function(error){
    //Handle error use-case
 });</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.33.0 and later.</p>
+					<p>Since 1.65.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".toWixDate" class="nav-target"></span></p>
