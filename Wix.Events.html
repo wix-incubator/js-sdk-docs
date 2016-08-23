@@ -86,6 +86,9 @@
 									<a class="otp" href="#scroll">SCROLL</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#session_changed">SESSION_CHANGED</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#settings_updated">SETTINGS_UPDATED</a>
 								</li>
 								<li class="item otp-li">
@@ -198,6 +201,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Events.html#.SCROLL">SCROLL</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Events.html#.SESSION_CHANGED">SESSION_CHANGED</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -517,6 +524,32 @@
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.25.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".SESSION_CHANGED" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="session_changed">SESSION_CHANGED</span>
+						<h2>SESSION_CHANGED</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Events.SESSION_CHANGED</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Issued when the user of user session changed.</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">ewogIHVzZXJTZXNzaW9uOiAnZmNjNDFlOWNmZDg2YzY0MzFkYTRhYWE3NTBmMDliNDA1NzkwZmYyMTVmY2I5NjAwNGM2ZjBhZTEzNWYzNycKfQ==</pre>
+						</div>
+						<pre><code class="language-javascript">{
+  userSession: 'fcc41e9cfd86c6431da4aaa750f09b405790ff215fcb96004c6f0ae135f37'
+}</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.66.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".SETTINGS_UPDATED" class="nav-target"></span></p>

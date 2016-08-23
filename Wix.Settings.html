@@ -358,29 +358,68 @@
 						<h2>addComponent( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Settings.addComponent()</code></pre>
+						<pre><code class="language-javascript">Wix.Settings.addComponent(options, onSuccess, onError)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
-					<p>Add a new component to the site. Once the component is added, the user would be directed to the page where the component was added.</p>
+					<p>Add a new component to the site. Component will be added with it&#39;s default style unless the &#39;copyStyle&#39; property is true and then the style would be copied from the current component. if the styleId property
+						is also passed, the style will be according to it. Once the component is added, the user would be directed to the page where the component was added.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">options</code>
+								</td>
+								<td>Object</td>
+								<td>
+									Options for this function: componentType (required), copyStyle (boolean), styleId (string), widget (object), page (object)
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									Receives the component compId
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onError</code>
+								</td>
+								<td>function</td>
+								<td>
+									Receives the error if the operation failed
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
 					<h3 class="examples">Examples</h3>
 					<figure class="code-example">
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">Ly8gY3JlYXRlIGEgbmV3IHBhZ2UgZnJvbSBhIHBhZ2VJZC4gVXNlciBpcyBwcm9tcHRlZCBmb3IgcGFnZSBuYW1lLCBjb21wSWQgaXMgcmV0dXJuZWQgaW4gY2FsbGJhY2sKV2l4LlNldHRpbmdzLmFkZENvbXBvbmVudCh7CiAgICAgY29tcG9uZW50VHlwZSA6ICdQQUdFJywKICAgICBwYWdlIDogewogICAgICAgICBpZCA6ICdwcm9kdWN0LWNhdGFsb2cnLAogICAgIH0KfSwgZnVuY3Rpb24oY29tcElkKSB7CiAgICAgY29uc29sZS5sb2coY29tcElkKTsKfSk7</pre>
+							<pre class="hidden-code">Ly8gY3JlYXRlIGEgbmV3IHBhZ2UgZnJvbSBhIHBhZ2VJZC4gVXNlciBpcyBwcm9tcHRlZCBmb3IgcGFnZSBuYW1lLCBjb21wSWQgaXMgcmV0dXJuZWQgaW4gY2FsbGJhY2sKV2l4LlNldHRpbmdzLmFkZENvbXBvbmVudCh7CiAgICAgY29tcG9uZW50VHlwZSA6ICdQQUdFJywKICAgICBwYWdlIDogewogICAgICAgICBwYWdlSWQgOiAncHJvZHVjdC1jYXRhbG9nJywKICAgICB9Cn0sIGZ1bmN0aW9uKGNvbXBJZCkgewogICAgIGNvbnNvbGUubG9nKGNvbXBJZCk7Cn0pOw==</pre>
 						</div>
 						<pre><code class="language-javascript">// create a new page from a pageId. User is prompted for page name, compId is returned in callback
 Wix.Settings.addComponent({
      componentType : 'PAGE',
      page : {
-         id : 'product-catalog',
+         pageId : 'product-catalog',
      }
 }, function(compId) {
      console.log(compId);
 });</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.45.0 and later.</p>
+					<p>Since 1.66.0 and later.</p>
 					<h3 class="warning">Warning</h3>
 					<p>This feature is experimental and it&#39;s behavior is not guaranteed. Not for use in production code.</p>
 				</section>

@@ -1211,7 +1211,7 @@ Wix.navigateToComponent('comp1', {pageId: 'page1', noPageTransition: true}, func
 						<h2>navigateToPage( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.navigateToPage(pageId)</code></pre>
+						<pre><code class="language-javascript">Wix.navigateToPage(pageId, [Options])</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>Navigate to a specific page inside the editor/preview/site. The function accepts a single argument, page id, which is retrieved by using the method Wix.getSitePages().</p>
@@ -1232,6 +1232,16 @@ Wix.navigateToComponent('comp1', {pageId: 'page1', noPageTransition: true}, func
 									A string representing the page id target.
 								</td>
 							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">Options</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>Object</td>
+								<td>
+									options may contain noTransition for removing the transition when navigate to the page
+								</td>
+							</tr>
 						</tbody>
 					</table>
 
@@ -1240,12 +1250,12 @@ Wix.navigateToComponent('comp1', {pageId: 'page1', noPageTransition: true}, func
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4Lm5hdmlnYXRlVG9QYWdlKFBBR0VfSUQpOw==</pre>
+							<pre class="hidden-code">V2l4Lm5hdmlnYXRlVG9QYWdlKFBBR0VfSUQsIHtub1RyYW5zaXRpb246IHRydWV9KTs=</pre>
 						</div>
-						<pre><code class="language-javascript">Wix.navigateToPage(PAGE_ID);</code></pre>
+						<pre><code class="language-javascript">Wix.navigateToPage(PAGE_ID, {noTransition: true});</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.17.0 and later.</p>
+					<p>Since 1.66.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".openModal" class="nav-target"></span></p>
