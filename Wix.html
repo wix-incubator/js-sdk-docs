@@ -1105,7 +1105,7 @@ Wix.getCurrentPageId(function(pageId) {
 						<h2>logOutCurrentMember( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.logOutCurrentMember(options, onError)</code></pre>
+						<pre><code class="language-javascript">Wix.logOutCurrentMember([options], [onError])</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>This method is part of Wix Site Members feature. It allows the current site visitor to log out in case he was logged in. After a successful log out, iframe will refresh.</p>
@@ -1120,6 +1120,7 @@ Wix.getCurrentPageId(function(pageId) {
 							<tr>
 								<td>
 									<code class="inline-code">options</code>
+									<span class="param-properties">(optional)</span>
 								</td>
 								<td>Object</td>
 								<td>
@@ -1129,6 +1130,7 @@ Wix.getCurrentPageId(function(pageId) {
 							<tr>
 								<td>
 									<code class="inline-code">onError</code>
+									<span class="param-properties">(optional)</span>
 								</td>
 								<td>function</td>
 								<td>
