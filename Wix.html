@@ -74,6 +74,9 @@
 									<a class="otp" href="#getstyleparams-">getStyleParams( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#logoutcurrentmember-">logOutCurrentMember( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#navigatetoanchor-">navigateToAnchor( )</a>
 								</li>
 								<li class="item otp-li">
@@ -117,6 +120,9 @@
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#setheight-">setHeight( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#setpagemetadata-">setPageMetadata( )</a>
 								</li>
 							</ul>
 						</nav>
@@ -311,6 +317,10 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.html#.logOutCurrentMember">logOutCurrentMember( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.html#.navigateToAnchor">navigateToAnchor( )</a></td>
 								<td></td>
 							</tr>
@@ -368,6 +378,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.html#.setHeight">setHeight( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.setPageMetadata">setPageMetadata( )</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -1083,6 +1097,60 @@ Wix.getCurrentPageId(function(pageId) {
 					<p>Yes</p>
 					<h3 class="see">See</h3>
 					<p><a href="Wix.Styles.html#.getStyleParams">Wix.Styles.getStyleParams</a></p>
+				</section>
+				<section>
+					<p><span id=".logOutCurrentMember" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="logoutcurrentmember-">logOutCurrentMember( )</span>
+						<h2>logOutCurrentMember( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.logOutCurrentMember(options, onError)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>This method is part of Wix Site Members feature. It allows the current site visitor to log out in case he was logged in. After a successful log out, iframe will refresh.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">options</code>
+								</td>
+								<td>Object</td>
+								<td>
+									may contain a &#39;language&#39; property
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onError</code>
+								</td>
+								<td>function</td>
+								<td>
+									A callback function to with error details.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LmxvZ091dEN1cnJlbnRNZW1iZXIoe30sIGZ1bmN0aW9uIChlcnJvcikgewogICAvL2RvIHNvbWV0aGluZyB3aXRoIGVycm9yCn0=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.logOutCurrentMember({}, function (error) {
+   //do something with error
+}</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.67.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".navigateToAnchor" class="nav-target"></span></p>
@@ -2004,6 +2072,52 @@ Wix.scrollBy(0, 0);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.50.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".setPageMetadata" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="setpagemetadata-">setPageMetadata( )</span>
+						<h2>setPageMetadata( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.setPageMetadata(options)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The setPageMetadata method is used to set the title and/or description of the page within the site.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">options</code>
+								</td>
+								<td>Object</td>
+								<td>
+									object which contains the title and/or description properties to be set
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LnNldFBhZ2VNZXRhZGF0YSh7CiAgICAgdGl0bGU6ICduZXcgdGl0bGUnLAogICAgIGRlc2NyaXB0aW9uOiAnbmV3IGRlc2NyaXB0aW9uJwp9KTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.setPageMetadata({
+     title: 'new title',
+     description: 'new description'
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.67.0 and later.</p>
 				</section>
 				<nav id="prev-next-nav">
 				</nav>
