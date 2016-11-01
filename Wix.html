@@ -970,7 +970,7 @@ Wix.getCurrentPageId(function(pageId) {
 						<h2>getSitePages( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.getSitePages(callback)</code></pre>
+						<pre><code class="language-javascript">Wix.getSitePages([options], callback)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>The getSitePages method is used to retrieve the site structure from the hosting Wix Platform. The site structure includes visible and hidden pages as well as sub pages.</p>
@@ -982,6 +982,16 @@ Wix.getCurrentPageId(function(pageId) {
 									<col class="col-xs-8">
 						</colgroup>
 						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">options</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td></td>
+								<td>
+									may contain a &#39;includePagesUrl&#39; property that indicates if to add to the single page description object the property url
+								</td>
+							</tr>
 							<tr>
 								<td>
 									<code class="inline-code">callback</code>
@@ -1031,6 +1041,11 @@ Wix.getCurrentPageId(function(pageId) {
 								<td>subPages(optional)</td>
 								<td><code class="inline-code">Array</code></td>
 								<td>An ordered set of sub pages.</td>
+							</tr>
+							<tr>
+								<td>url</td>
+								<td>&#39;String&#39;</td>
+								<td>Url of the page (will be added only if includePagesUrl is given and it&#39;s true)</td>
 								<td></td>
 							</tr>
 						</tbody>
@@ -1040,14 +1055,18 @@ Wix.getCurrentPageId(function(pageId) {
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LmdldFNpdGVQYWdlcyhmdW5jdGlvbihzaXRlUGFnZXMpIHsKICAgLy8gZG8gc29tZXRoaW5nIHdpdGggdGhlIHNpdGUgcGFnZXMKfSk7</pre>
+							<pre class="hidden-code">V2l4LmdldFNpdGVQYWdlcyhmdW5jdGlvbihzaXRlUGFnZXMpIHsKICAgLy8gZG8gc29tZXRoaW5nIHdpdGggdGhlIHNpdGUgcGFnZXMKfSk7CgpXaXguZ2V0U2l0ZVBhZ2VzKHsgaW5jbHVkZVBhZ2VzVXJsOiB0cnVlIH0sIGZ1bmN0aW9uKHNpdGVQYWdlcykgewogICAvLyBkbyBzb21ldGhpbmcgd2l0aCB0aGUgc2l0ZSBwYWdlcwp9KTs=</pre>
 						</div>
 						<pre><code class="language-javascript">Wix.getSitePages(function(sitePages) {
+   // do something with the site pages
+});
+
+Wix.getSitePages({ includePagesUrl: true }, function(sitePages) {
    // do something with the site pages
 });</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.17.0 and later.</p>
+					<p>Since 1.68.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".getStyleParams" class="nav-target"></span></p>
@@ -1281,7 +1300,7 @@ Wix.navigateToComponent('comp1', {pageId: 'page1', noPageTransition: true}, func
 						<h2>navigateToPage( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.navigateToPage(pageId, [Options])</code></pre>
+						<pre><code class="language-javascript">Wix.navigateToPage(pageId, [Options], [onFailure])</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>Navigate to a specific page inside the editor/preview/site. The function accepts a single argument, page id, which is retrieved by using the method Wix.getSitePages().</p>
@@ -1309,7 +1328,17 @@ Wix.navigateToComponent('comp1', {pageId: 'page1', noPageTransition: true}, func
 								</td>
 								<td>Object</td>
 								<td>
-									options may contain noTransition for removing the transition when navigate to the page
+									options may contain: noTransition for removing the transition when navigate to the page anchorId of the anchor to navigate to in the page
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onFailure</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									onFailure message when options is provided but the anchorId is not valid
 								</td>
 							</tr>
 						</tbody>
@@ -1325,7 +1354,7 @@ Wix.navigateToComponent('comp1', {pageId: 'page1', noPageTransition: true}, func
 						<pre><code class="language-javascript">Wix.navigateToPage(PAGE_ID, {noTransition: true});</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.66.0 and later.</p>
+					<p>Since 1.68.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".openModal" class="nav-target"></span></p>
@@ -1744,7 +1773,7 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</code></pre>
 						<h2>requestLogin( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.requestLogin(callback)</code></pre>
+						<pre><code class="language-javascript">Wix.requestLogin(options, callback)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<div style="margin:20px 0;background-color:blue;border-radius: 5px;border-style: solid;border-width: 1px;padding:10px;background-color: #E0EFFF;border-color: #9EB6D4;">
@@ -1764,6 +1793,15 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</code></pre>
 						<tbody>
 							<tr>
 								<td>
+									<code class="inline-code">options</code>
+								</td>
+								<td>Object</td>
+								<td>
+									An Object that may contain a &#39;mode&#39; property with possible values: &#39;login&#39; or &#39;signup&#39;
+								</td>
+							</tr>
+							<tr>
+								<td>
 									<code class="inline-code">callback</code>
 								</td>
 								<td>function</td>
@@ -1779,14 +1817,14 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</code></pre>
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LnJlcXVlc3RMb2dpbihmdW5jdGlvbiAoZGF0YSkgewogICAvL2RvIHNvbWV0aGluZyB3aXRoIGRhdGEKfQ==</pre>
+							<pre class="hidden-code">V2l4LnJlcXVlc3RMb2dpbih7bW9kZTogJ2xvZ2luJ30sIGZ1bmN0aW9uIChkYXRhKSB7CiAgIC8vZG8gc29tZXRoaW5nIHdpdGggZGF0YQp9</pre>
 						</div>
-						<pre><code class="language-javascript">Wix.requestLogin(function (data) {
+						<pre><code class="language-javascript">Wix.requestLogin({mode: 'login'}, function (data) {
    //do something with data
 }</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.6.0 and later.</p>
+					<p>Since 1.68.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".resizeComponent" class="nav-target"></span></p>
