@@ -95,6 +95,9 @@
 									<a class="otp" href="#getsitepages-">getSitePages( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#getstateurl-">getStateUrl( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#getstyleparams-">getStyleParams( )</a>
 								</li>
 								<li class="item otp-li">
@@ -213,6 +216,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Settings.html#.getSitePages">getSitePages( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Settings.html#.getStateUrl">getStateUrl( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -594,6 +601,70 @@ Wix.Settings.closeWindow(message);</code></pre>
 					<p>Since 1.68.0 and later.</p>
 					<h3 class="see">See</h3>
 					<p><a href="Wix.html#.getSitePages">Wix.getSitePages</a></p>
+				</section>
+				<section>
+					<p><span id=".getStateUrl" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getstateurl-">getStateUrl( )</span>
+						<h2>getStateUrl( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.getStateUrl(sectionId, state)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Gets a URL for a given deep-linked state in a given sectionIdentifier. In the editor, gets the public URL for the address.</p>
+					<p>Available from Editor, Preview and Viewer</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">sectionId</code>
+								</td>
+								<td>String</td>
+								<td>
+									the sectionId of the page to deep-link
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">state</code>
+								</td>
+								<td>String</td>
+								<td>
+									the deep-linked state
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="return-value">Return Value</h3>
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td>Object</td>
+								<td>The section url for the given sectionId</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLmdldFN0YXRlVXJsKCJjZDFtcCIsICJpbnRlcm5hbC9hcHAvc3RhdGUiLCBmdW5jdGlvbiAodXJsKSB7CiAgICAgLy8gZG8gc29tZXRoaW5nIHdpdGggdGhlIFVSTCBmb3IgdGhlIHN0YXRlCn0pOw==</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.getStateUrl("cd1mp", "internal/app/state", function (url) {
+     // do something with the URL for the state
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.69.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".getStyleParams" class="nav-target"></span></p>

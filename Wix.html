@@ -71,6 +71,9 @@
 									<a class="otp" href="#getsitepages-">getSitePages( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#getstateurl-">getStateUrl( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#getstyleparams-">getStyleParams( )</a>
 								</li>
 								<li class="item otp-li">
@@ -310,6 +313,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.html#.getSitePages">getSitePages( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.getStateUrl">getStateUrl( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -1069,6 +1076,70 @@ Wix.getSitePages({ includePagesUrl: true }, function(sitePages) {
 					<p>Since 1.68.0 and later.</p>
 				</section>
 				<section>
+					<p><span id=".getStateUrl" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getstateurl-">getStateUrl( )</span>
+						<h2>getStateUrl( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.getStateUrl(sectionId, state)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Gets a URL for a given deep-linked state in a given sectionIdentifier. In the editor, gets the public URL for the address.</p>
+					<p>Available from Editor, Preview and Viewer</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">sectionId</code>
+								</td>
+								<td>String</td>
+								<td>
+									the sectionId of the page to deep-link
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">state</code>
+								</td>
+								<td>String</td>
+								<td>
+									the deep-linked state
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="return-value">Return Value</h3>
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td>Object</td>
+								<td>The section url for the given sectionId</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LmdldFN0YXRlVXJsKCJjZDFtcCIsICJpbnRlcm5hbC9hcHAvc3RhdGUiLCBmdW5jdGlvbiAodXJsKSB7CiAgICAgLy8gZG8gc29tZXRoaW5nIHdpdGggdGhlIFVSTCBmb3IgdGhlIHN0YXRlCn0pOw==</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.getStateUrl("cd1mp", "internal/app/state", function (url) {
+     // do something with the URL for the state
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.69.0 and later.</p>
+				</section>
+				<section>
 					<p><span id=".getStyleParams" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span><span class="label label-deprecated">Deprecated</span></p>
 					<hgroup><span class="h_subheading" id="getstyleparams-">getStyleParams( )</span>
@@ -1773,7 +1844,7 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</code></pre>
 						<h2>requestLogin( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.requestLogin(options, callback)</code></pre>
+						<pre><code class="language-javascript">Wix.requestLogin([options], [callback], [onCancel])</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<div style="margin:20px 0;background-color:blue;border-radius: 5px;border-style: solid;border-width: 1px;padding:10px;background-color: #E0EFFF;border-color: #9EB6D4;">
@@ -1794,15 +1865,27 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</code></pre>
 							<tr>
 								<td>
 									<code class="inline-code">options</code>
+									<span class="param-properties">(optional)</span>
 								</td>
 								<td>Object</td>
 								<td>
-									An Object that may contain a &#39;mode&#39; property with possible values: &#39;login&#39; or &#39;signup&#39;
+									may contain: a &#39;mode&#39; property with possible values: &#39;login&#39; or &#39;signup&#39; language property that define in which language the panel will be displayed in
 								</td>
 							</tr>
 							<tr>
 								<td>
 									<code class="inline-code">callback</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									A callback function to receive the current member details.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onCancel</code>
+									<span class="param-properties">(optional)</span>
 								</td>
 								<td>function</td>
 								<td>
@@ -1817,14 +1900,16 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</code></pre>
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LnJlcXVlc3RMb2dpbih7bW9kZTogJ2xvZ2luJ30sIGZ1bmN0aW9uIChkYXRhKSB7CiAgIC8vZG8gc29tZXRoaW5nIHdpdGggZGF0YQp9</pre>
+							<pre class="hidden-code">V2l4LnJlcXVlc3RMb2dpbih7bW9kZTogJ2xvZ2luJywgbGFuZ3VhZ2U6ICdlcyd9LCBmdW5jdGlvbiAoZGF0YSkgewogICAvL2RvIHNvbWV0aGluZyB3aXRoIGRhdGEKfSwgZnVuY3Rpb24gKCkgewogICAvL2RvIHNvbWV0aGluZwp9KQ==</pre>
 						</div>
-						<pre><code class="language-javascript">Wix.requestLogin({mode: 'login'}, function (data) {
+						<pre><code class="language-javascript">Wix.requestLogin({mode: 'login', language: 'es'}, function (data) {
    //do something with data
-}</code></pre>
+}, function () {
+   //do something
+})</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.68.0 and later.</p>
+					<p>Since 1.69.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".resizeComponent" class="nav-target"></span></p>

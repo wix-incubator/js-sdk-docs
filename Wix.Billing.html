@@ -55,6 +55,9 @@
 								<li class="item otp-li">
 									<a class="otp" href="#getbillingpageforproduct-">getBillingPageForProduct( )</a>
 								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#getproducts-">getProducts( )</a>
+								</li>
 							</ul>
 						</nav>
 					</li>
@@ -143,6 +146,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Billing.html#.getBillingPageForProduct">getBillingPageForProduct( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Billing.html#.getProducts">getProducts( )</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -412,6 +419,65 @@ Wix.Billing.getBillingPackages(onSuccess, onError);</code></pre>
 Wix.Billing.getBillingPageForProduct('vendorProductId', Wix.Billing.Cycle.MONTHLY, function () {
      //handle return value i.e., //https://premium.wix.com/...
 }, onError);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.37.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getProducts" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getproducts-">getProducts( )</span>
+						<h2>getProducts( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Billing.getProducts(onSuccess, [onError])</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Gets the current billing package information. This includes productId and cycle.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									A callback function to receive the product info.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onError</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									A callback error function.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">dmFyIG9uRXJyb3IgPSBmdW5jdGlvbiAoKSB7CiAvL2hhbmRsZSB0aGUgZXJyb3IKfTsKdmFyIG9uU3VjY2VzcyA9IGZ1bmN0aW9uICgpIHsKIC8vaGFuZGxlIGNhbGxiYWNrCn07CldpeC5CaWxsaW5nLmdldEFjdGl2ZUJpbGxpbmdQYWNrYWdlKG9uU3VjY2Vzcywgb25FcnJvcik7</pre>
+						</div>
+						<pre><code class="language-javascript">var onError = function () {
+ //handle the error
+};
+var onSuccess = function () {
+ //handle callback
+};
+Wix.Billing.getActiveBillingPackage(onSuccess, onError);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.37.0 and later.</p>
