@@ -439,10 +439,10 @@ Wix.Billing.getBillingPageForProduct('vendorProductId', Wix.Billing.Cycle.MONTHL
 						<h2>getProducts( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Billing.getProducts(onSuccess, [onError])</code></pre>
+						<pre><code class="language-javascript">Wix.Billing.getProducts(onSuccess, onError)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
-					<p>Gets the current billing package information. This includes productId and cycle.</p>
+					<p>Returns an Array of objects containing product and pricing info.</p>
 					<h3 class="parameters">Parameters</h3>
 					<table class="table table-condensed">
 						<colgroup>
@@ -457,13 +457,12 @@ Wix.Billing.getBillingPageForProduct('vendorProductId', Wix.Billing.Cycle.MONTHL
 								</td>
 								<td>function</td>
 								<td>
-									A callback function to receive the product info.
+									A callback function to receive the products.
 								</td>
 							</tr>
 							<tr>
 								<td>
 									<code class="inline-code">onError</code>
-									<span class="param-properties">(optional)</span>
 								</td>
 								<td>function</td>
 								<td>
@@ -478,18 +477,44 @@ Wix.Billing.getBillingPageForProduct('vendorProductId', Wix.Billing.Cycle.MONTHL
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">dmFyIG9uRXJyb3IgPSBmdW5jdGlvbiAoKSB7CiAvL2hhbmRsZSB0aGUgZXJyb3IKfTsKdmFyIG9uU3VjY2VzcyA9IGZ1bmN0aW9uICgpIHsKIC8vaGFuZGxlIGNhbGxiYWNrCn07CldpeC5CaWxsaW5nLmdldEFjdGl2ZUJpbGxpbmdQYWNrYWdlKG9uU3VjY2Vzcywgb25FcnJvcik7</pre>
+							<pre class="hidden-code">dmFyIG9uRXJyb3IgPSBmdW5jdGlvbiAoKSB7CiAvL2hhbmRsZSB0aGUgZXJyb3IKfTsKdmFyIG9uU3VjY2VzcyA9IGZ1bmN0aW9uIChkYXRhKSB7CiAvL2hhbmRsZSBvblN1Y2Nlc3MKIC8vc2FtcGxlIGRhdGEgc2NoZW1hOgogW3sKICAgICJpZCI6IDx2ZW5kb3JQcm9kdWN0SWQ+LAogICAgIm5hbWUiOiAiQXBwIFByZW1pdW0gUGFja2FnZSIsCiAgICAicHJpY2UiOiAiNC45NSIsCiAgICAiaXNfYWN0aXZlIjogdHJ1ZSwKICAgICJmcmVlTW9udGgiOiB0cnVlLAogICAgImN1cnJlbmN5Q29kZSI6ICJVU0QiLAogICAgImN1cnJlbmN5U3ltYm9sIjogIlVTJCIKICAgICJtb250aGx5IjogewogICAgICAgICAicHJpY2UiOiAiNC45NSIsCiAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9wcmVtaXVtLndpeC5jb20vd2l4L2FwaS90cGFQcmljZVF1b3RlP2FwcEluc3RhbmNlSWQ9YWFhLWJiYiZhcHBEZWZpbml0aW9uSWQ9YWEtYmImcGF5bWVudEN5Y2xlPU1PTlRITFkmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgInllYXJseTo6IHsKICAgICAgICAgInByaWNlIjogIjMuOTciLAogICAgICAgICAidXJsIjogImh0dHBzOi8vcHJlbWl1bS53aXguY29tL3dpeC9hcGkvdHBhUHJpY2VRdW90ZT9hcHBJbnN0YW5jZUlkPWFhYS1iYmImYXBwRGVmaW5pdGlvbklkPWFhLWJiJnBheW1lbnRDeWNsZT1ZRUFSTFkmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgIm9uZVRpbWUiOiB7CiAgICAgICAgICJwcmljZSI6ICI1Ljk5IiwKICAgICAgICAgInVybCI6ICJodHRwczovL3ByZW1pdW0ud2l4LmNvbS93aXgvYXBpL3RwYVByaWNlUXVvdGU/YXBwSW5zdGFuY2VJZD1hYWEtYmJiJmFwcERlZmluaXRpb25JZD1hYS1iYiZwYXltZW50Q3ljbGU9T05FX1RJTUUmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgImJlc3RTZWxsaW5nRmVhdHVyZSI6ICIiLAogICAgICJkaXNjb3VudFBlcmNlbnQiOiAyMAogICAgXQogfV0KCn07CldpeC5CaWxsaW5nLmdldFByb2R1Y3RzKG9uU3VjY2Vzcywgb25FcnJvcik7</pre>
 						</div>
 						<pre><code class="language-javascript">var onError = function () {
  //handle the error
 };
-var onSuccess = function () {
- //handle callback
+var onSuccess = function (data) {
+ //handle onSuccess
+ //sample data schema:
+ [{
+    "id": <vendorProductId>,
+    "name": "App Premium Package",
+    "price": "4.95",
+    "is_active": true,
+    "freeMonth": true,
+    "currencyCode": "USD",
+    "currencySymbol": "US$"
+    "monthly": {
+         "price": "4.95",
+         "url": "https://premium.wix.com/wix/api/tpaPriceQuote?appInstanceId=aaa-bbb&appDefinitionId=aa-bb&paymentCycle=MONTHLY&vendorProductId=1234"
+    },
+    "yearly:: {
+         "price": "3.97",
+         "url": "https://premium.wix.com/wix/api/tpaPriceQuote?appInstanceId=aaa-bbb&appDefinitionId=aa-bb&paymentCycle=YEARLY&vendorProductId=1234"
+    },
+    "oneTime": {
+         "price": "5.99",
+         "url": "https://premium.wix.com/wix/api/tpaPriceQuote?appInstanceId=aaa-bbb&appDefinitionId=aa-bb&paymentCycle=ONE_TIME&vendorProductId=1234"
+    },
+    "bestSellingFeature": "",
+     "discountPercent": 20
+    ]
+ }]
+
 };
-Wix.Billing.getActiveBillingPackage(onSuccess, onError);</code></pre>
+Wix.Billing.getProducts(onSuccess, onError);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.37.0 and later.</p>
+					<p>Since 1.69.0 and later.</p>
 				</section>
 				<nav id="prev-next-nav">
 				</nav>
