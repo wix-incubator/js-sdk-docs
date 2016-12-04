@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Wix.Performance - Wix JS SDK</title>
+	<title>Wix.Worker.Performance - Wix JS SDK</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content=" " />
 	<link type="text/css" rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
@@ -13,7 +13,7 @@
 	<link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon" />
 </head>
 
-<body data-entity-id="Wix.Performance" data-base-url="//wix.github.io/js-sdk-docs" data-enable-sliding="false">
+<body data-entity-id="Wix.Worker.Performance" data-base-url="//wix.github.io/js-sdk-docs" data-enable-sliding="false">
 	<div class="fixed-header">
 		<div class="container">
 			<div class="docs-logo-container">
@@ -63,18 +63,8 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Features">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Features.html" target="_self">Wix.Features </a>
 					</li>
-					<li class="item left-nav-item current-doc" data-entity-id="Wix.Performance">
-						<a href="#" id="currentNavTarget">Wix.Performance</a>
-						<nav id="onThisPage">
-							<ul class="nav nav-stacked otp-nav nav-open">
-								<li class="item otp-li">
-									<a class="otp" href="#applicationloaded-">applicationLoaded( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#applicationloadingstep-">applicationLoadingStep( )</a>
-								</li>
-							</ul>
-						</nav>
+					<li class="item left-nav-item" data-entity-id="Wix.Performance">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Performance.html" target="_self">Wix.Performance </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Preview">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Preview.html" target="_self">Wix.Preview </a>
@@ -109,8 +99,18 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.html" target="_self">Wix.Worker.Data </a>
 					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Worker.Performance">
-						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Performance.html" target="_self">Wix.Worker.Performance </a>
+					<li class="item left-nav-item current-doc" data-entity-id="Wix.Worker.Performance">
+						<a href="#" id="currentNavTarget">Wix.Worker.Performance</a>
+						<nav id="onThisPage">
+							<ul class="nav nav-stacked otp-nav nav-open">
+								<li class="item otp-li">
+									<a class="otp" href="#applicationloaded-">applicationLoaded( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#applicationloadingstep-">applicationLoadingStep( )</a>
+								</li>
+							</ul>
+						</nav>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.PubSub">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.PubSub.html" target="_self">Wix.Worker.PubSub </a>
@@ -130,21 +130,20 @@
 		<section>
 			<article class="content-holder">
 				<header class="section-header">
-					<div class="title">Wix.Performance</div>
+					<div class="title">Wix.Worker.Performance</div>
 					<div class="header-context"></div>
 				</header>
 				<section>
-					<h1 class="wix-performance">Wix.Performance</h1>
-					<p>Functions to measure success rate and load time.</p>
+					<h1 class="wix-worker-performance">Wix.Worker.Performance</h1>
 					<h3 class="contents">Contents</h3>
 					<table class="table table-condensed">
 						<tbody>
 							<tr>
-								<td><a href="Wix.Performance.html#.applicationLoaded">applicationLoaded( )</a></td>
+								<td><a href="Wix.Worker.Performance.html#.applicationLoaded">applicationLoaded( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
-								<td><a href="Wix.Performance.html#.applicationLoadingStep">applicationLoadingStep( )</a></td>
+								<td><a href="Wix.Worker.Performance.html#.applicationLoadingStep">applicationLoadingStep( )</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -156,7 +155,7 @@
 						<h2>applicationLoaded( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Performance.applicationLoaded()</code></pre>
+						<pre><code class="language-javascript">Wix.Worker.Performance.applicationLoaded()</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>Allows a component app to report that it has been loaded.</p>
@@ -179,7 +178,7 @@
 						<h2>applicationLoadingStep( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Performance.applicationLoadingStep(stageNumber, [stageDescription])</code></pre>
+						<pre><code class="language-javascript">Wix.Worker.Performance.applicationLoadingStep(stageNumber, [stageDescription])</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>Allows a component app to report on a loading step</p>
