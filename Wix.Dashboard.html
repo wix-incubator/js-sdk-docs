@@ -56,6 +56,9 @@
 									<a class="otp" href="#geteditorurl-">getEditorUrl( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#getproducts-">getProducts( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#openbillingpage-">openBillingPage( )</a>
 								</li>
 								<li class="item otp-li">
@@ -161,6 +164,10 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.Dashboard.html#.getProducts">getProducts( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Dashboard.html#.openBillingPage">openBillingPage( )</a></td>
 								<td></td>
 							</tr>
@@ -234,6 +241,90 @@
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.33.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getProducts" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getproducts-">getProducts( )</span>
+						<h2>getProducts( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Dashboard.getProducts(onSuccess, onError)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Returns an Array of objects containing product and pricing info.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									A callback function to receive the products.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onError</code>
+								</td>
+								<td>function</td>
+								<td>
+									A callback error function.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">dmFyIG9uRXJyb3IgPSBmdW5jdGlvbiAoKSB7CiAvL2hhbmRsZSB0aGUgZXJyb3IKfTsKdmFyIG9uU3VjY2VzcyA9IGZ1bmN0aW9uIChkYXRhKSB7CiAvL2hhbmRsZSBvblN1Y2Nlc3MKIC8vc2FtcGxlIGRhdGEgc2NoZW1hOgogW3sKICAgICJpZCI6IDx2ZW5kb3JQcm9kdWN0SWQ+LAogICAgIm5hbWUiOiAiQXBwIFByZW1pdW0gUGFja2FnZSIsCiAgICAicHJpY2UiOiAiNC45NSIsCiAgICAiaXNfYWN0aXZlIjogdHJ1ZSwKICAgICJmcmVlTW9udGgiOiB0cnVlLAogICAgImN1cnJlbmN5Q29kZSI6ICJVU0QiLAogICAgImN1cnJlbmN5U3ltYm9sIjogIlVTJCIKICAgICJtb250aGx5IjogewogICAgICAgICAicHJpY2UiOiAiNC45NSIsCiAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9wcmVtaXVtLndpeC5jb20vd2l4L2FwaS90cGFQcmljZVF1b3RlP2FwcEluc3RhbmNlSWQ9YWFhLWJiYiZhcHBEZWZpbml0aW9uSWQ9YWEtYmImcGF5bWVudEN5Y2xlPU1PTlRITFkmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgInllYXJseTo6IHsKICAgICAgICAgInByaWNlIjogIjMuOTciLAogICAgICAgICAidXJsIjogImh0dHBzOi8vcHJlbWl1bS53aXguY29tL3dpeC9hcGkvdHBhUHJpY2VRdW90ZT9hcHBJbnN0YW5jZUlkPWFhYS1iYmImYXBwRGVmaW5pdGlvbklkPWFhLWJiJnBheW1lbnRDeWNsZT1ZRUFSTFkmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgIm9uZVRpbWUiOiB7CiAgICAgICAgICJwcmljZSI6ICI1Ljk5IiwKICAgICAgICAgInVybCI6ICJodHRwczovL3ByZW1pdW0ud2l4LmNvbS93aXgvYXBpL3RwYVByaWNlUXVvdGU/YXBwSW5zdGFuY2VJZD1hYWEtYmJiJmFwcERlZmluaXRpb25JZD1hYS1iYiZwYXltZW50Q3ljbGU9T05FX1RJTUUmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgImJlc3RTZWxsaW5nRmVhdHVyZSI6ICIiLAogICAgICJkaXNjb3VudFBlcmNlbnQiOiAyMAogICAgXQogfV0KCn07CldpeC5EYXNoYm9hcmQuZ2V0UHJvZHVjdHMob25TdWNjZXNzLCBvbkVycm9yKTs=</pre>
+						</div>
+						<pre><code class="language-javascript">var onError = function () {
+ //handle the error
+};
+var onSuccess = function (data) {
+ //handle onSuccess
+ //sample data schema:
+ [{
+    "id": <vendorProductId>,
+    "name": "App Premium Package",
+    "price": "4.95",
+    "is_active": true,
+    "freeMonth": true,
+    "currencyCode": "USD",
+    "currencySymbol": "US$"
+    "monthly": {
+         "price": "4.95",
+         "url": "https://premium.wix.com/wix/api/tpaPriceQuote?appInstanceId=aaa-bbb&appDefinitionId=aa-bb&paymentCycle=MONTHLY&vendorProductId=1234"
+    },
+    "yearly:: {
+         "price": "3.97",
+         "url": "https://premium.wix.com/wix/api/tpaPriceQuote?appInstanceId=aaa-bbb&appDefinitionId=aa-bb&paymentCycle=YEARLY&vendorProductId=1234"
+    },
+    "oneTime": {
+         "price": "5.99",
+         "url": "https://premium.wix.com/wix/api/tpaPriceQuote?appInstanceId=aaa-bbb&appDefinitionId=aa-bb&paymentCycle=ONE_TIME&vendorProductId=1234"
+    },
+    "bestSellingFeature": "",
+     "discountPercent": 20
+    ]
+ }]
+
+};
+Wix.Dashboard.getProducts(onSuccess, onError);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.71.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".openBillingPage" class="nav-target"></span></p>
