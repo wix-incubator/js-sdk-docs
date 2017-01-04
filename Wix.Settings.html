@@ -814,7 +814,7 @@ Wix.Settings.getWindowPlacement(compId, function (data) {
 						<h2>isComponentInstalled( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Settings.isComponentInstalled(componentId, a)</code></pre>
+						<pre><code class="language-javascript">Wix.Settings.isComponentInstalled(componentId, callback)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>For multi-component apps that would like to know if one if it&#39;s components is installed on the site</p>
@@ -837,11 +837,11 @@ Wix.Settings.getWindowPlacement(compId, function (data) {
 							</tr>
 							<tr>
 								<td>
-									<code class="inline-code">a</code>
+									<code class="inline-code">callback</code>
 								</td>
 								<td>function</td>
 								<td>
-									callback function that gets the component status (boolean) as an argument callback signature: function(isInstalled) {}
+									that gets the component status (boolean) as an argument callback signature: function(isInstalled) {}
 								</td>
 							</tr>
 						</tbody>
