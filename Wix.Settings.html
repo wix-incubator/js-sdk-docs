@@ -42,6 +42,9 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Activities">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Activities.html" target="_self">Wix.Activities </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Analytics.html" target="_self">Wix.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Billing">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Billing.html" target="_self">Wix.Billing </a>
 					</li>
@@ -50,6 +53,9 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Data">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Data.html" target="_self">Wix.Data </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
@@ -107,6 +113,9 @@
 									<a class="otp" href="#getwindowplacement-">getWindowPlacement( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#iscomponentinstalled-">isComponentInstalled( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#isfullwidth-">isFullWidth( )</a>
 								</li>
 								<li class="item otp-li">
@@ -116,7 +125,13 @@
 									<a class="otp" href="#openmediadialog-">openMediaDialog( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#openmodal-">openModal( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#openreviewinfo-">openReviewInfo( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#opensitememberssettingsdialog-">openSiteMembersSettingsDialog( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#refreshapp-">refreshApp( )</a>
@@ -166,8 +181,14 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Worker">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.html" target="_self">Wix.Worker </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Analytics.html" target="_self">Wix.Worker.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.html" target="_self">Wix.Worker.Data </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data.Public">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.Public.html" target="_self">Wix.Worker.Data.Public </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Performance">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Performance.html" target="_self">Wix.Worker.Performance </a>
@@ -177,9 +198,6 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="WixDataCursor">
-						<a href="//wix.github.io/js-sdk-docs/WixDataCursor.html" target="_self">WixDataCursor </a>
 					</li>
 				</div>
 			</ul>
@@ -240,6 +258,10 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.Settings.html#.isComponentInstalled">isComponentInstalled( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Settings.html#.isFullWidth">isFullWidth( )</a></td>
 								<td></td>
 							</tr>
@@ -252,7 +274,15 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.Settings.html#.openModal">openModal( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Settings.html#.openReviewInfo">openReviewInfo( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Settings.html#.openSiteMembersSettingsDialog">openSiteMembersSettingsDialog( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -778,6 +808,58 @@ Wix.Settings.getWindowPlacement(compId, function (data) {
 					<p>Since 1.19.0 and later.</p>
 				</section>
 				<section>
+					<p><span id=".isComponentInstalled" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="iscomponentinstalled-">isComponentInstalled( )</span>
+						<h2>isComponentInstalled( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.isComponentInstalled(componentId, a)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>For multi-component apps that would like to know if one if it&#39;s components is installed on the site</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">componentId</code>
+								</td>
+								<td>String</td>
+								<td>
+									the id of the component taken from the dev center
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">a</code>
+								</td>
+								<td>function</td>
+								<td>
+									callback function that gets the component status (boolean) as an argument callback signature: function(isInstalled) {}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLmlzQ29tcG9uZW50SW5zdGFsbGVkKCJjb21wSWQiKTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.isComponentInstalled("compId");</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.74.0 and later.</p>
+				</section>
+				<section>
 					<p><span id=".isFullWidth" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span></p>
 					<hgroup><span class="h_subheading" id="isfullwidth-">isFullWidth( )</span>
@@ -930,6 +1012,94 @@ Wix.Settings.getWindowPlacement(compId, function (data) {
 					<p>Since 1.40.0 and later.</p>
 				</section>
 				<section>
+					<p><span id=".openModal" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="openmodal-">openModal( )</span>
+						<h2>openModal( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.openModal(url, width, height, [title], [onClose])</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The openModal method allows the Settings iframe to open a modal window.</p>
+					<p>The modal window is a singleton (every new modal closes the previous one) and contains a lightbox.</p>
+					<p>A modal can be dismissed by the user if it touches the lightbox, presses the closing button or by the app itself if it calls the Wix.closeWindow from within the modal iframe.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">url</code>
+								</td>
+								<td>String</td>
+								<td>
+									Model iframe url.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">width</code>
+								</td>
+								<td>Number</td>
+								<td>
+									The modal window width (can be a string for percent, i.e., &#39;90%&#39;, or an integer for pixels, i.e., 90).
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">height</code>
+								</td>
+								<td>Number</td>
+								<td>
+									The modal window height (can be a string for percent, i.e., &#39;90%&#39;, or an integer for pixels, i.e., 90).
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">title</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>String</td>
+								<td>
+									Title of the modal.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onClose</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									onClose callback function.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">dmFyIG9uQ2xvc2UgPSBmdW5jdGlvbihtZXNzYWdlKSB7IGNvbnNvbGUubG9nKCJtb2RhbCBjbG9zZWQiLCBtZXNzYWdlKTsgfQovL09wZW4gYSBtb2RhbCB3aGVuIHdpZHRoIGFuZCBoZWlnaHQgYXJlIGluIHBpeGVscy4KV2l4LlNldHRpbmdzLm9wZW5Nb2RhbCgiaHR0cDovL3NzbHN0YXRpYy53aXguY29tL3NlcnZpY2VzL2pzLXNkay8xLjQxLjAvaHRtbC9tb2RhbC5odG1sIiwgNDAwLCA0MDAsICJNeSBtb2RhbCdzIHRpdGxlIiwgb25DbG9zZSk7CgovL09wZW4gYSBtb2RhbCB3aGVuIHdpZHRoIGFuZCBoZWlnaHQgaW4gcGVyY2VudGFnZXMuCldpeC5TZXR0aW5ncy5vcGVuTW9kYWwoImh0dHA6Ly9zc2xzdGF0aWMud2l4LmNvbS9zZXJ2aWNlcy9qcy1zZGsvMS40MS4wL2h0bWwvbW9kYWwuaHRtbCIsICc3MCUnLCAnOTAlJywgIk15IG1vZGFsJ3MgdGl0bGUiLCBvbkNsb3NlKTs=</pre>
+						</div>
+						<pre><code class="language-javascript">var onClose = function(message) { console.log("modal closed", message); }
+//Open a modal when width and height are in pixels.
+Wix.Settings.openModal("http://sslstatic.wix.com/services/js-sdk/1.41.0/html/modal.html", 400, 400, "My modal's title", onClose);
+
+//Open a modal when width and height in percentages.
+Wix.Settings.openModal("http://sslstatic.wix.com/services/js-sdk/1.41.0/html/modal.html", '70%', '90%', "My modal's title", onClose);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.43.0 and later.</p>
+				</section>
+				<section>
 					<p><span id=".openReviewInfo" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span></p>
 					<hgroup><span class="h_subheading" id="openreviewinfo-">openReviewInfo( )</span>
@@ -951,6 +1121,30 @@ Wix.Settings.getWindowPlacement(compId, function (data) {
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.65.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".openSiteMembersSettingsDialog" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="opensitememberssettingsdialog-">openSiteMembersSettingsDialog( )</span>
+						<h2>openSiteMembersSettingsDialog( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.openSiteMembersSettingsDialog()</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>This method opens the site members settings dialog in which the user can configure who can be a site member, which site members dialog to show first etc. The function will first close all other open dialogs or panels
+						in the editor.</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLm9wZW5TaXRlTWVtYmVyc1NldHRpbmdzRGlhbG9nKCk7</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.openSiteMembersSettingsDialog();</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.74.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".refreshApp" class="nav-target"></span></p>

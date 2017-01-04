@@ -42,6 +42,9 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Activities">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Activities.html" target="_self">Wix.Activities </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Analytics.html" target="_self">Wix.Analytics </a>
+					</li>
 					<li class="item left-nav-item current-doc" data-entity-id="Wix.Billing">
 						<a href="#" id="currentNavTarget">Wix.Billing</a>
 						<nav id="onThisPage">
@@ -51,9 +54,6 @@
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#getbillingpackages-">getBillingPackages( )</a>
-								</li>
-								<li class="item otp-li">
-									<a class="otp" href="#getbillingpageforproduct-">getBillingPageForProduct( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#getproducts-">getProducts( )</a>
@@ -66,6 +66,9 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Data">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Data.html" target="_self">Wix.Data </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
@@ -112,8 +115,14 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Worker">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.html" target="_self">Wix.Worker </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Analytics.html" target="_self">Wix.Worker.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.html" target="_self">Wix.Worker.Data </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data.Public">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.Public.html" target="_self">Wix.Worker.Data.Public </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Performance">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Performance.html" target="_self">Wix.Worker.Performance </a>
@@ -123,9 +132,6 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="WixDataCursor">
-						<a href="//wix.github.io/js-sdk-docs/WixDataCursor.html" target="_self">WixDataCursor </a>
 					</li>
 				</div>
 			</ul>
@@ -151,10 +157,6 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Billing.html#.getBillingPackages">getBillingPackages( )</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Billing.html#.getBillingPageForProduct">getBillingPageForProduct( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -352,82 +354,6 @@ var onSuccess = function (data) {
 
 };
 Wix.Billing.getBillingPackages(onSuccess, onError);</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.37.0 and later.</p>
-				</section>
-				<section>
-					<p><span id=".getBillingPageForProduct" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="getbillingpageforproduct-">getBillingPageForProduct( )</span>
-						<h2>getBillingPageForProduct( )</h2></hgroup>
-					<figure class="code-example">
-
-						<pre><code class="language-javascript">Wix.Billing.getBillingPageForProduct(vendorProductId, cycle, onSuccess, [onError])</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>Returns a link to Wix Billing page with information about the product and cycle requested.</p>
-					<h3 class="parameters">Parameters</h3>
-					<table class="table table-condensed">
-						<colgroup>
-							<col class="col-xs-2">
-								<col class="col-xs-2">
-									<col class="col-xs-8">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>
-									<code class="inline-code">vendorProductId</code>
-								</td>
-								<td>String</td>
-								<td>
-									Vendor product id as detailed in the Features section of the Wix Developer App Registration <a href="http://dev.wix.com" target="_blank">dev.wix.com</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">cycle</code>
-								</td>
-								<td><a href="Wix.Billing.html#.Cycle">Cycle</a></td>
-								<td>
-									The billing cycle.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">onSuccess</code>
-								</td>
-								<td>function</td>
-								<td>
-									A callback function, returns a link the Wix billing page with information about the product and cycle requested.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<code class="inline-code">onError</code>
-									<span class="param-properties">(optional)</span>
-								</td>
-								<td>function</td>
-								<td>
-									A callback error function, Error is wrong cycle, missing cycle or bad productId.
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
-
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">dmFyIG9uRXJyb3IgPSBmdW5jdGlvbiAoKSB7CiAvL2hhbmRsZSB0aGUgZXJyb3IKfTsKV2l4LkJpbGxpbmcuZ2V0QmlsbGluZ1BhZ2VGb3JQcm9kdWN0KCd2ZW5kb3JQcm9kdWN0SWQnLCBXaXguQmlsbGluZy5DeWNsZS5NT05USExZLCBmdW5jdGlvbiAoKSB7CiAgICAgLy9oYW5kbGUgcmV0dXJuIHZhbHVlIGkuZS4sIC8vaHR0cHM6Ly9wcmVtaXVtLndpeC5jb20vLi4uCn0sIG9uRXJyb3IpOw==</pre>
-						</div>
-						<pre><code class="language-javascript">var onError = function () {
- //handle the error
-};
-Wix.Billing.getBillingPageForProduct('vendorProductId', Wix.Billing.Cycle.MONTHLY, function () {
-     //handle return value i.e., //https://premium.wix.com/...
-}, onError);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.37.0 and later.</p>

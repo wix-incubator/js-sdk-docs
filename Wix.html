@@ -133,6 +133,9 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Activities">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Activities.html" target="_self">Wix.Activities </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Analytics.html" target="_self">Wix.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Billing">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Billing.html" target="_self">Wix.Billing </a>
 					</li>
@@ -141,6 +144,9 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Data">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Data.html" target="_self">Wix.Data </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
@@ -187,8 +193,14 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Worker">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.html" target="_self">Wix.Worker </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Analytics.html" target="_self">Wix.Worker.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.html" target="_self">Wix.Worker.Data </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data.Public">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.Public.html" target="_self">Wix.Worker.Data.Public </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Performance">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Performance.html" target="_self">Wix.Worker.Performance </a>
@@ -198,9 +210,6 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="WixDataCursor">
-						<a href="//wix.github.io/js-sdk-docs/WixDataCursor.html" target="_self">WixDataCursor </a>
 					</li>
 				</div>
 			</ul>
@@ -225,6 +234,10 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.Analytics.html">Analytics</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Billing.html">Billing</a></td>
 								<td></td>
 							</tr>
@@ -234,6 +247,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Dashboard.html">Dashboard</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Data.html">Data</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -1979,9 +1996,9 @@ Wix.removeEventListener(Wix.Events.EDIT_MODE_CHANGE, id);</code></pre>
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LlNldHRpbmdzLnJlc2l6ZUNvbXBvbmVudCh7CiAgIHdpZHRoOiA0MDAsCiAgIGhlaWdodDo2MDAKfSk7</pre>
+							<pre class="hidden-code">V2l4LnJlc2l6ZUNvbXBvbmVudCh7CiAgIHdpZHRoOiA0MDAsCiAgIGhlaWdodDo2MDAKfSk7</pre>
 						</div>
-						<pre><code class="language-javascript">Wix.Settings.resizeComponent({
+						<pre><code class="language-javascript">Wix.resizeComponent({
    width: 400,
    height:600
 });</code></pre>
@@ -2221,7 +2238,7 @@ Wix.scrollBy(0, 0);</code></pre>
 						<pre><code class="language-javascript">Wix.setPageMetadata(options)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
-					<p>The setPageMetadata method is used to set the title and/or description of the page within the site.</p>
+					<p>Sets metadata for the page component’s internal pages. Search engines display this metadata – the page’s title and/or description – in search results.</p>
 					<h3 class="parameters">Parameters</h3>
 					<table class="table table-condensed">
 						<colgroup>
@@ -2236,7 +2253,7 @@ Wix.scrollBy(0, 0);</code></pre>
 								</td>
 								<td>Object</td>
 								<td>
-									object which contains the title and/or description properties to be set
+									object which contains the title and/or description properties to be set, options can also contain overrideTitle which indicates to set the full title
 								</td>
 							</tr>
 						</tbody>
@@ -2247,15 +2264,16 @@ Wix.scrollBy(0, 0);</code></pre>
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LnNldFBhZ2VNZXRhZGF0YSh7CiAgICAgdGl0bGU6ICduZXcgdGl0bGUnLAogICAgIGRlc2NyaXB0aW9uOiAnbmV3IGRlc2NyaXB0aW9uJwp9KTs=</pre>
+							<pre class="hidden-code">V2l4LnNldFBhZ2VNZXRhZGF0YSh7CiAgICAgdGl0bGU6ICduZXcgdGl0bGUnLAogICAgIGRlc2NyaXB0aW9uOiAnbmV3IGRlc2NyaXB0aW9uJywKICAgICBvdmVycmlkZVRpdGxlOiB0cnVlCn0pOw==</pre>
 						</div>
 						<pre><code class="language-javascript">Wix.setPageMetadata({
      title: 'new title',
-     description: 'new description'
+     description: 'new description',
+     overrideTitle: true
 });</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.67.0 and later.</p>
+					<p>Since 1.74.0 and later.</p>
 				</section>
 				<nav id="prev-next-nav">
 				</nav>

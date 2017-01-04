@@ -42,6 +42,9 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Activities">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Activities.html" target="_self">Wix.Activities </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Analytics.html" target="_self">Wix.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Billing">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Billing.html" target="_self">Wix.Billing </a>
 					</li>
@@ -50,6 +53,9 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Data">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Data.html" target="_self">Wix.Data </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
@@ -116,6 +122,9 @@
 									<a class="otp" href="#getpermissions-">getPermissions( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#getsectionurl-">getSectionUrl( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#getsigndate-">getSignDate( )</a>
 								</li>
 								<li class="item otp-li">
@@ -154,8 +163,14 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Worker">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.html" target="_self">Wix.Worker </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Analytics.html" target="_self">Wix.Worker.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.html" target="_self">Wix.Worker.Data </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data.Public">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.Public.html" target="_self">Wix.Worker.Data.Public </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Performance">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Performance.html" target="_self">Wix.Worker.Performance </a>
@@ -165,9 +180,6 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="WixDataCursor">
-						<a href="//wix.github.io/js-sdk-docs/WixDataCursor.html" target="_self">WixDataCursor </a>
 					</li>
 				</div>
 			</ul>
@@ -229,6 +241,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Utils.html#.getPermissions">getPermissions( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Utils.html#.getSectionUrl">getSectionUrl( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -594,6 +610,77 @@ var origCompId = Wix.Utils.getOrigCompId();</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.12.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getSectionUrl" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getsectionurl-">getSectionUrl( )</span>
+						<h2>getSectionUrl( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Utils.getSectionUrl([sectionId], [callback])</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>This method when no sectionId is given is valid for Page endpoint only.</p>
+					<p>When a sectionId is not provided this method returns a string which is the section-url query parameter.</p>
+					<p>When a sectionId and a callback function are provided this method returns the page app Url for the given sectionId.</p>
+					<p>Please note: The parameter &quot;section-url&quot; here refers to the Page app URL.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">sectionId</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>Object</td>
+								<td>
+									App pageId defined in dev.wix.com
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">callback</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									A callback function that returns the section&#39;s URL - this is mandatory if sectionId was provided.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="return-value">Return Value</h3>
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td>String</td>
+								<td>The section-url query parameter, if not exist returns null.</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">Ly91cmwgd2lsbCBnZXQgYSB2YWx1ZSBvZiBhIHZhbGlkIHVybCBsaWtlICdodHRwOi8vdXNlci53aXguY29tL3NpdGUjIXBhZ2UvY2g2cScKdmFyIHVybCA9IFdpeC5VdGlscy5nZXRTZWN0aW9uVXJsKCkKCnZhciB1cmwgPSBXaXguVXRpbHMuZ2V0U2VjdGlvblVybCh7c2VjdGlvbklkOiAnbXlTZWN0aW9uSWQnfSwgZnVuY3Rpb24oZGF0YSkgewogICAgIC8vZG8gc29tZXRoaW5nIHdpdGggZGF0YS51cmwKfSk=</pre>
+						</div>
+						<pre><code class="language-javascript">//url will get a value of a valid url like 'http://user.wix.com/site#!page/ch6q'
+var url = Wix.Utils.getSectionUrl()
+
+var url = Wix.Utils.getSectionUrl({sectionId: 'mySectionId'}, function(data) {
+     //do something with data.url
+})</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.37.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".getSignDate" class="nav-target"></span></p>

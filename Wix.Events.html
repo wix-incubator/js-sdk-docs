@@ -42,6 +42,9 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Activities">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Activities.html" target="_self">Wix.Activities </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Analytics.html" target="_self">Wix.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Billing">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Billing.html" target="_self">Wix.Billing </a>
 					</li>
@@ -50,6 +53,9 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Data">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Data.html" target="_self">Wix.Data </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
@@ -81,6 +87,9 @@
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#page_navigation_out">PAGE_NAVIGATION_OUT</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#public_data_changed">PUBLIC_DATA_CHANGED</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#scroll">SCROLL</a>
@@ -148,8 +157,14 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Worker">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.html" target="_self">Wix.Worker </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Analytics.html" target="_self">Wix.Worker.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.html" target="_self">Wix.Worker.Data </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data.Public">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.Public.html" target="_self">Wix.Worker.Data.Public </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Performance">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Performance.html" target="_self">Wix.Worker.Performance </a>
@@ -159,9 +174,6 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="WixDataCursor">
-						<a href="//wix.github.io/js-sdk-docs/WixDataCursor.html" target="_self">WixDataCursor </a>
 					</li>
 				</div>
 			</ul>
@@ -206,6 +218,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Events.html#.PAGE_NAVIGATION_OUT">PAGE_NAVIGATION_OUT</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Events.html#.PUBLIC_DATA_CHANGED">PUBLIC_DATA_CHANGED</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -424,6 +440,32 @@
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.25.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".PUBLIC_DATA_CHANGED" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="public_data_changed">PUBLIC_DATA_CHANGED</span>
+						<h2>PUBLIC_DATA_CHANGED</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Events.PUBLIC_DATA_CHANGED</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Issued when the public data changed in component scope or app scope If app data changes, all the registered components will get the event</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">ewogIGtleTE6IHZhbHVlMQp9</pre>
+						</div>
+						<pre><code class="language-javascript">{
+  key1: value1
+}</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.74.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".SCROLL" class="nav-target"></span></p>

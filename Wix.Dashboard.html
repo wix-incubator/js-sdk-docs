@@ -42,6 +42,9 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Activities">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Activities.html" target="_self">Wix.Activities </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Analytics.html" target="_self">Wix.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Billing">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Billing.html" target="_self">Wix.Billing </a>
 					</li>
@@ -53,10 +56,16 @@
 						<nav id="onThisPage">
 							<ul class="nav nav-stacked otp-nav nav-open">
 								<li class="item otp-li">
+									<a class="otp" href="#closewindow-">closeWindow( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#geteditorurl-">getEditorUrl( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#getproducts-">getProducts( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#getsiteviewurl-">getSiteViewUrl( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#openbillingpage-">openBillingPage( )</a>
@@ -77,10 +86,16 @@
 									<a class="otp" href="#revalidatesession-">revalidateSession( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#scrollto-">scrollTo( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#setheight-">setHeight( )</a>
 								</li>
 							</ul>
 						</nav>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Data">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Data.html" target="_self">Wix.Data </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
@@ -127,8 +142,14 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Worker">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.html" target="_self">Wix.Worker </a>
 					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Analytics">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Analytics.html" target="_self">Wix.Worker.Analytics </a>
+					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.html" target="_self">Wix.Worker.Data </a>
+					</li>
+					<li class="item left-nav-item" data-entity-id="Wix.Worker.Data.Public">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Data.Public.html" target="_self">Wix.Worker.Data.Public </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Performance">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Performance.html" target="_self">Wix.Worker.Performance </a>
@@ -138,9 +159,6 @@
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
-					</li>
-					<li class="item left-nav-item" data-entity-id="WixDataCursor">
-						<a href="//wix.github.io/js-sdk-docs/WixDataCursor.html" target="_self">WixDataCursor </a>
 					</li>
 				</div>
 			</ul>
@@ -160,11 +178,19 @@
 					<table class="table table-condensed">
 						<tbody>
 							<tr>
+								<td><a href="Wix.Dashboard.html#.closeWindow">closeWindow( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Dashboard.html#.getEditorUrl">getEditorUrl( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td><a href="Wix.Dashboard.html#.getProducts">getProducts( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Dashboard.html#.getSiteViewUrl">getSiteViewUrl( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -192,10 +218,41 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.Dashboard.html#.scrollTo">scrollTo( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Dashboard.html#.setHeight">setHeight( )</a></td>
 							</tr>
 						</tbody>
 					</table>
+				</section>
+				<section>
+					<p><span id=".closeWindow" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="closewindow-">closeWindow( )</span>
+						<h2>closeWindow( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Dashboard.closeWindow()</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The closeWindow method is available only under a modal endpoint (will not have any effect for other endpoints). It allows the modal to close itself programmatically.</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">Ly8gVGhlIGZvbGxvd2luZyBjYWxsIHdpbGwgY2xvc2UgdGhlIG1vZGFsL3BvcHVwIHdpbmRvdyBhbmQgc2VuZCBhIHRoZSBvYmplY3QgbWVzc2FnZSB0byB0aGUgb3BlbmVyIG9uQ2xvc2UgY2FsbGJhY2sKdmFyIG1lc3NhZ2UgPSB7InJlYXNvbiI6ICJidXR0b24tY2xpY2tlZCJ9OwpXaXguRGFzaGJvYXJkLmNsb3NlV2luZG93KG1lc3NhZ2UpOw==</pre>
+						</div>
+						<pre><code class="language-javascript">// The following call will close the modal/popup window and send a the object message to the opener onClose callback
+var message = {"reason": "button-clicked"};
+Wix.Dashboard.closeWindow(message);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.27.0 and later.</p>
+					<h3 class="see">See</h3>
+					<p><a href="Wix.html#.closeWindow">Wix.closeWindow</a></p>
 				</section>
 				<section>
 					<p><span id=".getEditorUrl" class="nav-target"></span></p>
@@ -325,6 +382,61 @@ Wix.Dashboard.getProducts(onSuccess, onError);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.71.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getSiteViewUrl" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getsiteviewurl-">getSiteViewUrl( )</span>
+						<h2>getSiteViewUrl( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Dashboard.getSiteViewUrl(options[, onSuccess)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Returns URL object that contains the site&#39;s base URL under &#39;base&#39;.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">options[</code>
+								</td>
+								<td>Object</td>
+								<td>
+									An object contains optional parameters
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									A callback function to receive the base url object.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">dmFyIG9uU3VjY2VzcyA9IGZ1bmN0aW9uIChkYXRhKSB7CiAgLy8gZG8gc29tZXRoaW5nIHdpdGggYmFzZSB1cmwKfTsKV2l4LkRhc2hib2FyZC5nZXRTaXRlVmlld1VybChvblN1Y2Nlc3MpOw==</pre>
+						</div>
+						<pre><code class="language-javascript">var onSuccess = function (data) {
+  // do something with base url
+};
+Wix.Dashboard.getSiteViewUrl(onSuccess);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.74.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".openBillingPage" class="nav-target"></span></p>
@@ -554,6 +666,31 @@ Wix.Dashboard.resizeWindow(300, 300);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.52.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".scrollTo" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="scrollto-">scrollTo( )</span>
+						<h2>scrollTo( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Dashboard.scrollTo()</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The Dashboard.scrollTo method allows the app to scroll to an absolute offset - vertical &amp; horizontal.</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5zY3JvbGxUbygwLCAwKTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Dashboard.scrollTo(0, 0);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.31.0 and later.</p>
+					<h3 class="see">See</h3>
+					<p><a href="Wix.html#.scrollTo">Wix.scrollTo</a></p>
 				</section>
 				<section>
 					<p><span id=".setHeight" class="nav-target"></span></p>
