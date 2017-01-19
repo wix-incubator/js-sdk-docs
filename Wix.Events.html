@@ -101,6 +101,9 @@
 									<a class="otp" href="#settings_updated">SETTINGS_UPDATED</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#site_metadata_changed">SITE_METADATA_CHANGED</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#site_published">SITE_PUBLISHED</a>
 								</li>
 								<li class="item otp-li">
@@ -234,6 +237,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Events.html#.SETTINGS_UPDATED">SETTINGS_UPDATED</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Events.html#.SITE_METADATA_CHANGED">SITE_METADATA_CHANGED</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -625,6 +632,33 @@
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.17.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".SITE_METADATA_CHANGED" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="site_metadata_changed">SITE_METADATA_CHANGED</span>
+						<h2>SITE_METADATA_CHANGED</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Events.SITE_METADATA_CHANGED</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Issued when the page metadata (title, description) changes.</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">ewogIHRpdGxlOiAnZXhhbXBsZSB0aXRsZScsCiAgZGVzY3JpcHRpb246ICdleGFtcGxlIGRlc2NyaXB0aW9uJwp9</pre>
+						</div>
+						<pre><code class="language-javascript">{
+  title: 'example title',
+  description: 'example description'
+}</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.75.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".SITE_PUBLISHED" class="nav-target"></span></p>

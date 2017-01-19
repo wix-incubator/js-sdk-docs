@@ -116,6 +116,9 @@
 									<a class="otp" href="#resizewindow-">resizeWindow( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#revalidatesession-">revalidateSession( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#scrollby-">scrollBy( )</a>
 								</li>
 								<li class="item otp-li">
@@ -403,6 +406,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.html#.resizeWindow">resizeWindow( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.revalidateSession">revalidateSession( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -2069,6 +2076,62 @@ Wix.resizeWindow(300,300);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.19.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".revalidateSession" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="revalidatesession-">revalidateSession( )</span>
+						<h2>revalidateSession( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.revalidateSession(onSuccess, onFailure)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Before showing sensitive information or making an action which requires a secure session, an app should verify that a secure session exists. Get a newly signed app instance by calling Wix.revalidateSession.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									Receives a newly signed and encoded app instance.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onFailure</code>
+								</td>
+								<td>function</td>
+								<td>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LnJldmFsaWRhdGVTZXNzaW9uKGZ1bmN0aW9uKGluc3RhbmNlRGF0YSl7CiAvL2hhbmRsZSBzdWNjZXNzIHVzZS1jYXNlCn0sIGZ1bmN0aW9uKGVycm9yKXsKICAgLy9IYW5kbGUgZXJyb3IgdXNlLWNhc2UKfSk7</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.revalidateSession(function(instanceData){
+ //handle success use-case
+}, function(error){
+   //Handle error use-case
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.75.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".scrollBy" class="nav-target"></span></p>
