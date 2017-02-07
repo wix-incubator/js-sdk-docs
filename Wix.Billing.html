@@ -365,7 +365,7 @@ Wix.Billing.getBillingPackages(onSuccess, onError);</code></pre>
 						<h2>getProducts( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Billing.getProducts(onSuccess, onError)</code></pre>
+						<pre><code class="language-javascript">Wix.Billing.getProducts([options], onSuccess, [onError])</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>Returns an Array of objects containing product and pricing info.</p>
@@ -379,6 +379,16 @@ Wix.Billing.getBillingPackages(onSuccess, onError);</code></pre>
 						<tbody>
 							<tr>
 								<td>
+									<code class="inline-code">options</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>Object</td>
+								<td>
+									An object that can contain a &#39;currency&#39; parameter which defines the currency of the returned products
+								</td>
+							</tr>
+							<tr>
+								<td>
 									<code class="inline-code">onSuccess</code>
 								</td>
 								<td>function</td>
@@ -389,6 +399,7 @@ Wix.Billing.getBillingPackages(onSuccess, onError);</code></pre>
 							<tr>
 								<td>
 									<code class="inline-code">onError</code>
+									<span class="param-properties">(optional)</span>
 								</td>
 								<td>function</td>
 								<td>
@@ -403,7 +414,7 @@ Wix.Billing.getBillingPackages(onSuccess, onError);</code></pre>
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">dmFyIG9uRXJyb3IgPSBmdW5jdGlvbiAoKSB7CiAvL2hhbmRsZSB0aGUgZXJyb3IKfTsKdmFyIG9uU3VjY2VzcyA9IGZ1bmN0aW9uIChkYXRhKSB7CiAvL2hhbmRsZSBvblN1Y2Nlc3MKIC8vc2FtcGxlIGRhdGEgc2NoZW1hOgogW3sKICAgICJpZCI6IDx2ZW5kb3JQcm9kdWN0SWQ+LAogICAgIm5hbWUiOiAiQXBwIFByZW1pdW0gUGFja2FnZSIsCiAgICAicHJpY2UiOiAiNC45NSIsCiAgICAiaXNfYWN0aXZlIjogdHJ1ZSwKICAgICJmcmVlTW9udGgiOiB0cnVlLAogICAgImN1cnJlbmN5Q29kZSI6ICJVU0QiLAogICAgImN1cnJlbmN5U3ltYm9sIjogIlVTJCIKICAgICJtb250aGx5IjogewogICAgICAgICAicHJpY2UiOiAiNC45NSIsCiAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9wcmVtaXVtLndpeC5jb20vd2l4L2FwaS90cGFQcmljZVF1b3RlP2FwcEluc3RhbmNlSWQ9YWFhLWJiYiZhcHBEZWZpbml0aW9uSWQ9YWEtYmImcGF5bWVudEN5Y2xlPU1PTlRITFkmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgInllYXJseTo6IHsKICAgICAgICAgInByaWNlIjogIjMuOTciLAogICAgICAgICAidXJsIjogImh0dHBzOi8vcHJlbWl1bS53aXguY29tL3dpeC9hcGkvdHBhUHJpY2VRdW90ZT9hcHBJbnN0YW5jZUlkPWFhYS1iYmImYXBwRGVmaW5pdGlvbklkPWFhLWJiJnBheW1lbnRDeWNsZT1ZRUFSTFkmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgIm9uZVRpbWUiOiB7CiAgICAgICAgICJwcmljZSI6ICI1Ljk5IiwKICAgICAgICAgInVybCI6ICJodHRwczovL3ByZW1pdW0ud2l4LmNvbS93aXgvYXBpL3RwYVByaWNlUXVvdGU/YXBwSW5zdGFuY2VJZD1hYWEtYmJiJmFwcERlZmluaXRpb25JZD1hYS1iYiZwYXltZW50Q3ljbGU9T05FX1RJTUUmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgImJlc3RTZWxsaW5nRmVhdHVyZSI6ICIiLAogICAgICJkaXNjb3VudFBlcmNlbnQiOiAyMAogICAgXQogfV0KCn07CldpeC5CaWxsaW5nLmdldFByb2R1Y3RzKG9uU3VjY2Vzcywgb25FcnJvcik7</pre>
+							<pre class="hidden-code">dmFyIG9uRXJyb3IgPSBmdW5jdGlvbiAoKSB7CiAvL2hhbmRsZSB0aGUgZXJyb3IKfTsKdmFyIG9uU3VjY2VzcyA9IGZ1bmN0aW9uIChkYXRhKSB7CiAvL2hhbmRsZSBvblN1Y2Nlc3MKIC8vc2FtcGxlIGRhdGEgc2NoZW1hOgogW3sKICAgICJpZCI6IDx2ZW5kb3JQcm9kdWN0SWQ+LAogICAgIm5hbWUiOiAiQXBwIFByZW1pdW0gUGFja2FnZSIsCiAgICAicHJpY2UiOiAiNC45NSIsCiAgICAiaXNfYWN0aXZlIjogdHJ1ZSwKICAgICJmcmVlTW9udGgiOiB0cnVlLAogICAgImN1cnJlbmN5Q29kZSI6ICJVU0QiLAogICAgImN1cnJlbmN5U3ltYm9sIjogIlVTJCIKICAgICJtb250aGx5IjogewogICAgICAgICAicHJpY2UiOiAiNC45NSIsCiAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9wcmVtaXVtLndpeC5jb20vd2l4L2FwaS90cGFQcmljZVF1b3RlP2FwcEluc3RhbmNlSWQ9YWFhLWJiYiZhcHBEZWZpbml0aW9uSWQ9YWEtYmImcGF5bWVudEN5Y2xlPU1PTlRITFkmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgInllYXJseTo6IHsKICAgICAgICAgInByaWNlIjogIjMuOTciLAogICAgICAgICAidXJsIjogImh0dHBzOi8vcHJlbWl1bS53aXguY29tL3dpeC9hcGkvdHBhUHJpY2VRdW90ZT9hcHBJbnN0YW5jZUlkPWFhYS1iYmImYXBwRGVmaW5pdGlvbklkPWFhLWJiJnBheW1lbnRDeWNsZT1ZRUFSTFkmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgIm9uZVRpbWUiOiB7CiAgICAgICAgICJwcmljZSI6ICI1Ljk5IiwKICAgICAgICAgInVybCI6ICJodHRwczovL3ByZW1pdW0ud2l4LmNvbS93aXgvYXBpL3RwYVByaWNlUXVvdGU/YXBwSW5zdGFuY2VJZD1hYWEtYmJiJmFwcERlZmluaXRpb25JZD1hYS1iYiZwYXltZW50Q3ljbGU9T05FX1RJTUUmdmVuZG9yUHJvZHVjdElkPTEyMzQiCiAgICB9LAogICAgImJlc3RTZWxsaW5nRmVhdHVyZSI6ICIiLAogICAgICJkaXNjb3VudFBlcmNlbnQiOiAyMAogICAgXQogfV0KCn07CldpeC5CaWxsaW5nLmdldFByb2R1Y3RzKHtjdXJyZW5jeTogJ1VTRCd9LCBvblN1Y2Nlc3MsIG9uRXJyb3IpOw==</pre>
 						</div>
 						<pre><code class="language-javascript">var onError = function () {
  //handle the error
@@ -437,10 +448,10 @@ var onSuccess = function (data) {
  }]
 
 };
-Wix.Billing.getProducts(onSuccess, onError);</code></pre>
+Wix.Billing.getProducts({currency: 'USD'}, onSuccess, onError);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.69.0 and later.</p>
+					<p>Since 1.76.0 and later.</p>
 				</section>
 				<nav id="prev-next-nav">
 				</nav>
