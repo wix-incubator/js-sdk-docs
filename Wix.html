@@ -50,6 +50,9 @@
 									<a class="otp" href="#currentmember-">currentMember( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#getadsonpage-">getAdsOnPage( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#getboundingrectandoffsets-">getBoundingRectAndOffsets( )</a>
 								</li>
 								<li class="item otp-li">
@@ -318,6 +321,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.html#.currentMember">currentMember( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.getAdsOnPage">getAdsOnPage( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -621,6 +628,62 @@ Wix.closeWindow(message);</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.6.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getAdsOnPage" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getadsonpage-">getAdsOnPage( )</span>
+						<h2>getAdsOnPage( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.getAdsOnPage(onSuccess)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The getAdsOnPage method will call the onSuccess callback with the width &amp; height of the visible ads on the page.</p>
+					<p>Available in viewer and preview view modes.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									callback to be called with an object containing ads width &amp; height
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LmdldEFkc09uUGFnZShvblN1Y2Nlc3MpOwoKaW4gY2FzZSBhZGRzIGV4aXN0LCB0aGUgb25TdWNjZXNzIGNhbGxiYWNrIHdpbGwgYmUgY2FsbGVkIHdpdGggYW4gb2JqZWN0IGxpa2U6CnsKICAgICB0b3A6IHsKICAgICAgICAgaGVpZ2h0OiAyNiwKICAgICAgICAgd2lkdGg6IDE1NQogICAgIH0sCiAgICAgYm90dG9tOiB7CiAgICAgICAgIGhlaWdodDogNDAsCiAgICAgICAgIHdpZHRoOiA2ODQKICAgICB9Cn0=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.getAdsOnPage(onSuccess);
+
+in case adds exist, the onSuccess callback will be called with an object like:
+{
+     top: {
+         height: 26,
+         width: 155
+     },
+     bottom: {
+         height: 40,
+         width: 684
+     }
+}</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.77.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".getBoundingRectAndOffsets" class="nav-target"></span></p>
