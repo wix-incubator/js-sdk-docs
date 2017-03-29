@@ -86,7 +86,13 @@
 									<a class="otp" href="#mediatype">MediaType</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#premiumintent">PremiumIntent</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#addcomponent-">addComponent( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#appengaged-">appEngaged( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#closewindow-">closeWindow( )</a>
@@ -222,7 +228,15 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.Settings.html#.PremiumIntent">PremiumIntent</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Settings.html#.addComponent">addComponent( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Settings.html#.appEngaged">appEngaged( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -398,6 +412,57 @@
 					<p>Since 1.40.0 and later.</p>
 				</section>
 				<section>
+					<p><span id=".PremiumIntent" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span><span class="label label-enum">enum</span></p>
+					<hgroup><span class="h_subheading" id="premiumintent">PremiumIntent</span>
+						<h2>PremiumIntent</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.PremiumIntent</code></pre>
+					</figure>
+					<h3 class="properties">Properties</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">NEUTRAL</code>
+								</td>
+								<td></td>
+								<td>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">FREE</code>
+								</td>
+								<td></td>
+								<td>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">PAID</code>
+								</td>
+								<td></td>
+								<td>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.78.0 and later.</p>
+				</section>
+				<section>
 					<p><span id=".addComponent" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span><span class="label label-experimental">Experimental</span></p>
 					<hgroup><span class="h_subheading" id="addcomponent-">addComponent( )</span>
@@ -468,6 +533,49 @@ Wix.Settings.addComponent({
 					<p>Since 1.66.0 and later.</p>
 					<h3 class="warning">Warning</h3>
 					<p>This feature is experimental and it&#39;s behavior is not guaranteed. Not for use in production code.</p>
+				</section>
+				<section>
+					<p><span id=".appEngaged" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="appengaged-">appEngaged( )</span>
+						<h2>appEngaged( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.appEngaged(premiumIntent)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The Wix.Setting.appEngaged method allows to indicate if an app is &quot;engaged&quot; or &quot;highly engaged&quot; to give a better indication to BA funnel / package picker</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">premiumIntent</code>
+								</td>
+								<td><a href="Wix.Settings.html#.PremiumIntent">PremiumIntent</a></td>
+								<td>
+									the app&#39;s premium intent
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLmFwcEVuZ2FnZWQoV2l4LlNldHRpbmdzLlByZW1pdW1JbnRlbnQuRlJFRSk7</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.appEngaged(Wix.Settings.PremiumIntent.FREE);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.79.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".closeWindow" class="nav-target"></span></p>
@@ -909,21 +1017,41 @@ Wix.Settings.getWindowPlacement(compId, function (data) {
 						<h2>openBillingPage( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Settings.openBillingPage()</code></pre>
+						<pre><code class="language-javascript">Wix.Settings.openBillingPage(options)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
 					<p>The Setting.openBillingPage method allows the app to offer a premium package from within the app settings. When called it will open the Wix billing system page in a modal window.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">options</code>
+								</td>
+								<td>Object</td>
+								<td>
+									may contain: a &#39;premiumIntent&#39; property with possible values: Wix.Settings.PremiumIntent to be sent to the billing page window
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
 					<h3 class="examples">Examples</h3>
 					<figure class="code-example">
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LlNldHRpbmdzLm9wZW5CaWxsaW5nUGFnZSgpOw==</pre>
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLm9wZW5CaWxsaW5nUGFnZSh7cHJlbWl1bUludGVudDogV2l4LlNldHRpbmdzLlByZW1pdW1JbnRlbnQuRlJFRX0pOw==</pre>
 						</div>
-						<pre><code class="language-javascript">Wix.Settings.openBillingPage();</code></pre>
+						<pre><code class="language-javascript">Wix.Settings.openBillingPage({premiumIntent: Wix.Settings.PremiumIntent.FREE});</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.16.0 and later.</p>
+					<p>Since 1.79.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".openMediaDialog" class="nav-target"></span></p>

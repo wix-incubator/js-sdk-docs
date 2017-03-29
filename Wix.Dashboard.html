@@ -56,6 +56,12 @@
 						<nav id="onThisPage">
 							<ul class="nav nav-stacked otp-nav nav-open">
 								<li class="item otp-li">
+									<a class="otp" href="#premiumintent">PremiumIntent</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#appengaged-">appEngaged( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#closewindow-">closeWindow( )</a>
 								</li>
 								<li class="item otp-li">
@@ -178,6 +184,14 @@
 					<table class="table table-condensed">
 						<tbody>
 							<tr>
+								<td><a href="Wix.Dashboard.html#.PremiumIntent">PremiumIntent</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Dashboard.html#.appEngaged">appEngaged( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Dashboard.html#.closeWindow">closeWindow( )</a></td>
 								<td></td>
 							</tr>
@@ -226,6 +240,44 @@
 							</tr>
 						</tbody>
 					</table>
+				</section>
+				<section>
+					<p><span id=".PremiumIntent" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span><span class="label label-enum">enum</span></p>
+					<hgroup><span class="h_subheading" id="premiumintent">PremiumIntent</span>
+						<h2>PremiumIntent</h2></hgroup>
+					<h3 class="syntax">Syntax</h3>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Dashboard.PremiumIntent</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.78.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".appEngaged" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="appengaged-">appEngaged( )</span>
+						<h2>appEngaged( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Dashboard.appEngaged()</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The Wix.Dashboard.appEngaged method allows to indicate if an app is &quot;engaged&quot; or &quot;highly engaged&quot; to give a better indication to BA funnel / package picker</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5hcHBFbmdhZ2VkKFdpeC5EYXNoYm9hcmQuUHJlbWl1bUludGVudC5GUkVFKTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Dashboard.appEngaged(Wix.Dashboard.PremiumIntent.FREE);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.79.0 and later.</p>
+					<h3 class="see">See</h3>
+					<p><a href="Wix.Settings.html#.appEngaged">Wix.Settings.appEngaged</a></p>
 				</section>
 				<section>
 					<p><span id=".closeWindow" class="nav-target"></span></p>
@@ -454,12 +506,14 @@ Wix.Dashboard.getSiteViewUrl(onSuccess);</code></pre>
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5vcGVuQmlsbGluZ1BhZ2UoKTs=</pre>
+							<pre class="hidden-code">V2l4LkRhc2hib2FyZC5vcGVuQmlsbGluZ1BhZ2Uoe3ByZW1pdW1JbnRlbnQ6IFdpeC5TZXR0aW5ncy5QcmVtaXVtSW50ZW50LkZSRUV9KTs=</pre>
 						</div>
-						<pre><code class="language-javascript">Wix.Dashboard.openBillingPage();</code></pre>
+						<pre><code class="language-javascript">Wix.Dashboard.openBillingPage({premiumIntent: Wix.Settings.PremiumIntent.FREE});</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.31.0 and later.</p>
+					<p>Since 1.79.0 and later.</p>
+					<h3 class="see">See</h3>
+					<p><a href="Wix.Settings.html#.openBillingPage">Wix.Settings.openBillingPage</a></p>
 				</section>
 				<section>
 					<p><span id=".openMediaDialog" class="nav-target"></span></p>
