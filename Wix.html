@@ -71,6 +71,9 @@
 									<a class="otp" href="#getsiteinfo-">getSiteInfo( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#getsitemap-">getSiteMap( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#getsitepages-">getSitePages( )</a>
 								</li>
 								<li class="item otp-li">
@@ -81,6 +84,9 @@
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#logoutcurrentmember-">logOutCurrentMember( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#navigateto-">navigateTo( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#navigatetoanchor-">navigateToAnchor( )</a>
@@ -352,6 +358,10 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.html#.getSiteMap">getSiteMap( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.html#.getSitePages">getSitePages( )</a></td>
 								<td></td>
 							</tr>
@@ -365,6 +375,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.html#.logOutCurrentMember">logOutCurrentMember( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.navigateTo">navigateTo( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -1071,6 +1085,61 @@ Wix.getCurrentPageId(function(pageId) {
 					<p>Since 1.3.0 and later.</p>
 				</section>
 				<section>
+					<p><span id=".getSiteMap" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getsitemap-">getSiteMap( )</span>
+						<h2>getSiteMap( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.getSiteMap(callback)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The getSiteMap method is used to retrieve the site structure from the hosting Wix Platform. The site structure includes visible and hidden pages, sub pages, links and menu headers. This method will eventually replace
+						the getSitepages.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">callback</code>
+								</td>
+								<td>function</td>
+								<td>
+									A callback function to receive the site pages.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="return-value">Return Value</h3>
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td>Array</td>
+								<td>Array containing an ordered set of the site pages.</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LmdldFNpdGVNYXAoZnVuY3Rpb24oc2l0ZU1hcCkgewogICAvLyBkbyBzb21ldGhpbmcgd2l0aCB0aGUgc2l0ZSBwYWdlcwp9KTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.getSiteMap(function(siteMap) {
+   // do something with the site pages
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.81.0 and later.</p>
+				</section>
+				<section>
 					<p><span id=".getSitePages" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span></p>
 					<hgroup><span class="h_subheading" id="getsitepages-">getSitePages( )</span>
@@ -1343,6 +1412,62 @@ Wix.getSitePages({ includePagesUrl: true }, function(sitePages) {
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.67.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".navigateTo" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="navigateto-">navigateTo( )</span>
+						<h2>navigateTo( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.navigateTo(linkData, [onFailure])</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Navigate to link objects returned from Setting.openLinkPanel or Wix.getSiteMap sdk functions.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">linkData</code>
+								</td>
+								<td>object</td>
+								<td>
+									An object returned from &#39;openLinkPanel&#39; containing link data relevant for navigating.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onFailure</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									onFailure message when an error in navigation occurs
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4Lm5hdmlnYXRlVG8oewogInR5cGUiOiAiUGFnZUxpbmsiLAogICAgICAgICAgICAicGFnZUlkIjogIiNjMWRtcCIKICAgICAgICAgICAgfSwgZnVuY3Rpb24oKSB7Li4ufSk7</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.navigateTo({
+ "type": "PageLink",
+            "pageId": "#c1dmp"
+            }, function() {...});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.81.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".navigateToAnchor" class="nav-target"></span></p>

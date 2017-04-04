@@ -107,6 +107,9 @@
 									<a class="otp" href="#getsiteinfo-">getSiteInfo( )</a>
 								</li>
 								<li class="item otp-li">
+									<a class="otp" href="#getsitemap-">getSiteMap( )</a>
+								</li>
+								<li class="item otp-li">
 									<a class="otp" href="#getsitepages-">getSitePages( )</a>
 								</li>
 								<li class="item otp-li">
@@ -126,6 +129,9 @@
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#openbillingpage-">openBillingPage( )</a>
+								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#openlinkpanel-">openLinkPanel( )</a>
 								</li>
 								<li class="item otp-li">
 									<a class="otp" href="#openmediadialog-">openMediaDialog( )</a>
@@ -256,6 +262,10 @@
 								<td></td>
 							</tr>
 							<tr>
+								<td><a href="Wix.Settings.html#.getSiteMap">getSiteMap( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td><a href="Wix.Settings.html#.getSitePages">getSitePages( )</a></td>
 								<td></td>
 							</tr>
@@ -281,6 +291,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Settings.html#.openBillingPage">openBillingPage( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Settings.html#.openLinkPanel">openLinkPanel( )</a></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -723,6 +737,34 @@ Wix.Settings.closeWindow(message);</code></pre>
 					<p><a href="Wix.html#.getSiteInfo">Wix.getSiteInfo</a></p>
 				</section>
 				<section>
+					<p><span id=".getSiteMap" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getsitemap-">getSiteMap( )</span>
+						<h2>getSiteMap( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.getSiteMap()</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The getSiteMap method is used to retrieve the site structure from the hosting Wix Platform. The site structure includes visible and hidden pages, sub pages, links and menu headers. This method will eventually replace
+						the getSitepages.</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLmdldFNpdGVNYXAoZnVuY3Rpb24oc2l0ZU1hcCkgewogICAvLyBkbyBzb21ldGhpbmcgd2l0aCB0aGUgc2l0ZSBwYWdlcwp9KTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.getSiteMap(function(siteMap) {
+   // do something with the site pages
+});</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.81.0 and later.</p>
+					<h3 class="see">See</h3>
+					<p><a href="Wix.html#.getSiteMap">Wix.getSiteMap</a></p>
+				</section>
+				<section>
 					<p><span id=".getSitePages" class="nav-target"></span></p>
 					<p><span class="label label-static">static</span></p>
 					<hgroup><span class="h_subheading" id="getsitepages-">getSitePages( )</span>
@@ -1052,6 +1094,75 @@ Wix.Settings.getWindowPlacement(compId, function (data) {
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.79.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".openLinkPanel" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="openlinkpanel-">openLinkPanel( )</span>
+						<h2>openLinkPanel( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.openLinkPanel([options], onSuccess, [onCancel])</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Opens the editor link selector panel</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">options</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>object</td>
+								<td>
+									to open the panel with a previous selected link, a &#39;link&#39; property with the returned object can be passed
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onSuccess</code>
+								</td>
+								<td>function</td>
+								<td>
+									called when the user clicks on the Done button, with an object containing the selected link data callback signature: function(linkData) {}
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">onCancel</code>
+									<span class="param-properties">(optional)</span>
+								</td>
+								<td>function</td>
+								<td>
+									called when the user clicked on the Cancel button
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLm9wZW5MaW5rUGFuZWwoewogbGluazogewogICAgICAgICAgICAgICAgICAidHlwZSI6ICJFbWFpbExpbmsiLAogICAgICAgICAgICAgICAgICAicmVjaXBpZW50IjogImV4YW1wbGVAZ21haWwuY29tIiwKICAgICAgICAgICAgICAgICAgInN1YmplY3QiOiAidGl0bGUiCiAgICAgICAgICAgICAgICB9Cn0sIGZ1bmN0aW9uKGxpbmtEYXRhKSB7Y29uc29sZS5sb2cobGlua0RhdGEpLCBmdW5jdGlvbihlcnJvcil7Y29uc29sZS5sb2coZXJyb3IpKTs=</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Settings.openLinkPanel({
+ link: {
+                  "type": "EmailLink",
+                  "recipient": "example@gmail.com",
+                  "subject": "title"
+                }
+}, function(linkData) {console.log(linkData), function(error){console.log(error));</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.81.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".openMediaDialog" class="nav-target"></span></p>
@@ -1543,7 +1654,7 @@ Wix.Settings.refreshAppByCompIds(["id1", "id3"], {param1: "value1", param2: "val
 								</td>
 								<td>Object</td>
 								<td>
-
+									can contain margins, margins need to contain values for left and right. The values can be defined with px, % (from screen width ) or nothing (default px)
 								</td>
 							</tr>
 							<tr>
@@ -1572,12 +1683,14 @@ Wix.Settings.refreshAppByCompIds(["id1", "id3"], {param1: "value1", param2: "val
 
 						<div class="code-block">
 							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">V2l4LlNldHRpbmdzLnNldEZ1bGxXaWR0aCh0cnVlLCB7fSwgZnVuY3Rpb24oKSB7Li59LCBmdW5jdGlvbigpIHsuLi59KTs=</pre>
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLnNldEZ1bGxXaWR0aCh0cnVlLCB7bWFyZ2luczoge2xlZnQ6JzEwMHB4JyxyaWdodDonMjAwJ319LCBmdW5jdGlvbigpIHsuLn0sIGZ1bmN0aW9uKCkgey4uLn0pOwpXaXguU2V0dGluZ3Muc2V0RnVsbFdpZHRoKHRydWUsIHttYXJnaW5zOiB7bGVmdDoxMDAscmlnaHQ6JzIwMCd9fSwgZnVuY3Rpb24oKSB7Li59LCBmdW5jdGlvbigpIHsuLi59KTsKV2l4LlNldHRpbmdzLnNldEZ1bGxXaWR0aCh0cnVlLCB7bWFyZ2luczoge2xlZnQ6JzIwJScscmlnaHQ6JzIwMHB4J319LCBmdW5jdGlvbigpIHsuLn0sIGZ1bmN0aW9uKCkgey4uLn0pOw==</pre>
 						</div>
-						<pre><code class="language-javascript">Wix.Settings.setFullWidth(true, {}, function() {..}, function() {...});</code></pre>
+						<pre><code class="language-javascript">Wix.Settings.setFullWidth(true, {margins: {left:'100px',right:'200'}}, function() {..}, function() {...});
+Wix.Settings.setFullWidth(true, {margins: {left:100,right:'200'}}, function() {..}, function() {...});
+Wix.Settings.setFullWidth(true, {margins: {left:'20%',right:'200px'}}, function() {..}, function() {...});</code></pre>
 					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.65.0 and later.</p>
+					<p>Since 1.81.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".setWindowPlacement" class="nav-target"></span></p>
