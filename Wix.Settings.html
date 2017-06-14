@@ -592,31 +592,49 @@ Wix.Settings.addComponent({
 					<p>Since 1.79.0 and later.</p>
 				</section>
 				<section>
-					<p><span id=".closeWindow" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span></p>
-					<hgroup><span class="h_subheading" id="closewindow-">closeWindow( )</span>
-						<h2>closeWindow( )</h2></hgroup>
-					<figure class="code-example">
-
-						<pre><code class="language-javascript">Wix.Settings.closeWindow()</code></pre>
-					</figure>
-					<h3 class="description">Description</h3>
-					<p>The closeWindow method is available only under a modal endpoint (will not have any effect for other endpoints). It allows the modal to close itself programmatically.</p>
-					<h3 class="examples">Examples</h3>
-					<figure class="code-example">
-
-						<div class="code-block">
-							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
-							<pre class="hidden-code">Ly8gVGhlIGZvbGxvd2luZyBjYWxsIHdpbGwgY2xvc2UgdGhlIG1vZGFsL3BvcHVwIHdpbmRvdyBhbmQgc2VuZCBhIHRoZSBvYmplY3QgbWVzc2FnZSB0byB0aGUgb3BlbmVyIG9uQ2xvc2UgY2FsbGJhY2sKdmFyIG1lc3NhZ2UgPSB7InJlYXNvbiI6ICJidXR0b24tY2xpY2tlZCJ9OwpXaXguU2V0dGluZ3MuY2xvc2VXaW5kb3cobWVzc2FnZSk7</pre>
-						</div>
-						<pre><code class="language-javascript">// The following call will close the modal/popup window and send a the object message to the opener onClose callback
-var message = {"reason": "button-clicked"};
-Wix.Settings.closeWindow(message);</code></pre>
-					</figure>
-					<h3 class="availability">Availability</h3>
-					<p>Since 1.37.0 and later.</p>
-					<h3 class="see">See</h3>
-					<p><a href="Wix.html#.closeWindow">Wix.closeWindow</a></p>
+					<hgroup><span class="h_heading" id="closeWindow">closeWindow( )</span>
+                        <h2>closeWindow( )</h2></hgroup>
+                    <p><span class="label label-static full"></span></p>
+                    <figure class="code-example">
+ 
+                        <pre><code class="language-javascript">Wix.Settings.closeWindow(options)</code></pre>
+                    </figure>
+                    <h3 class="Description">Description</h3>
+                    <p>The closeWindow method is available only under a modal/settings endpoint. It allows to close the modal or settings.</p>
+                    <h3 class="Parameters">Parameters</h3>
+                    <table class="table table-condensed">
+                        <colgroup>
+                            <col class="col-xs-2">
+                                <col class="col-xs-2">
+                                    <col class="col-xs-8">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code class="inline-code">options</code>
+                                </td>
+                                <td>Object</td>
+                                <td>
+                                    object to pass the opener&#39;s onClose callback function. options can contains target, that can be SETTINGS/MODAL/ALL, the default target is MODAL. when passing SETTINGS, only the settings panel would be closed, MODAL will
+                                    close the modal/popup window and ALL will close both.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+ 
+                    <h3 class="Examples">Examples</h3>
+                    <figure class="code-example">
+ 
+                        <div class="code-block">
+                            <img class="copy-button" data-toggle="tooltip" data-title="Copied" src="images/copy.png" />
+                            <pre class="hidden-code">dmFyIG9wdGlvbnMgPSB7InJlYXNvbiI6ICJidXR0b24tY2xpY2tlZCIsIHRhcmdldDogIk1PREFMIn07CldpeC5TZXR0aW5ncy5jbG9zZVdpbmRvdyhvcHRpb25zKTs=</pre>
+                        </div>
+                        <pre><code class="language-javascript">var options = {"reason": "button-clicked", target: "MODAL"};
+ 
+Wix.Settings.closeWindow(options);</code></pre>
+                    </figure>
+                    <h3 class="Availability">Availability</h3>
+                    <p>Since 1.83.0 and later.</p>
 				</section>
 				<section>
 					<p><span id=".getCurrentPageAnchors" class="nav-target"></span></p>
