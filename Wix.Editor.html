@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Wix.Data - Wix JS SDK</title>
+	<title>Wix.Editor - Wix JS SDK</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content=" " />
 	<link type="text/css" rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
@@ -13,7 +13,7 @@
 	<link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon" />
 </head>
 
-<body data-entity-id="Wix.Data" data-base-url="//wix.github.io/js-sdk-docs" data-enable-sliding="false">
+<body data-entity-id="Wix.Editor" data-base-url="//wix.github.io/js-sdk-docs" data-enable-sliding="false">
 	<div class="fixed-header">
 		<div class="container">
 			<div class="docs-logo-container">
@@ -54,15 +54,8 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Dashboard">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Dashboard.html" target="_self">Wix.Dashboard </a>
 					</li>
-					<li class="item left-nav-item current-doc" data-entity-id="Wix.Data">
-						<a href="#" id="currentNavTarget">Wix.Data</a>
-						<nav id="onThisPage">
-							<ul class="nav nav-stacked otp-nav nav-open">
-								<li class="item otp-li">
-									<a class="otp" href="#scope">SCOPE</a>
-								</li>
-							</ul>
-						</nav>
+					<li class="item left-nav-item" data-entity-id="Wix.Data">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Data.html" target="_self">Wix.Data </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Data.Public">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Data.Public.html" target="_self">Wix.Data.Public </a>
@@ -85,8 +78,8 @@
 					<li class="item left-nav-item" data-entity-id="Wix.PubSub">
 						<a href="//wix.github.io/js-sdk-docs/Wix.PubSub.html" target="_self">Wix.PubSub </a>
 					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Settings">
-						<a href="//wix.github.io/js-sdk-docs/Wix.Settings.html" target="_self">Wix.Settings </a>
+					<li class="item left-nav-item" data-entity-id="Wix.Editor">
+						<a href="//wix.github.io/js-sdk-docs/Wix.Editor.html" target="_self">Wix.Editor </a>
 					</li>
 					<li class="item left-nav-item" data-entity-id="Wix.Styles">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Styles.html" target="_self">Wix.Styles </a>
@@ -127,8 +120,15 @@
 					<li class="item left-nav-item" data-entity-id="Wix.Worker.Utils">
 						<a href="//wix.github.io/js-sdk-docs/Wix.Worker.Utils.html" target="_self">Wix.Worker.Utils </a>
 					</li>
-					<li class="item left-nav-item" data-entity-id="Wix.Editor">
-						<a href="//wix.github.io/js-sdk-docs/Wix.Editor.html" target="_self">Wix.Editor </a>
+					<li class="item left-nav-item current-doc" data-entity-id="Wix.Editor">
+						<a href="#" id="currentNavTarget">Wix.Editor</a>
+						<nav id="onThisPage">
+							<ul class="nav nav-stacked otp-nav nav-open">
+								<li class="item otp-li">
+									<a class="otp" href="#isApplicationInstalled-">isApplicationInstalled( )</a>
+								</li>
+							</ul>
+						</nav>
 					</li>
 				</div>
 			</ul>
@@ -139,38 +139,75 @@
 		<section>
 			<article class="content-holder">
 				<header class="section-header">
-					<div class="title">Wix.Data</div>
+					<div class="title">Wix.Editor</div>
 					<div class="header-context"></div>
 				</header>
 				<section>
-					<h1 class="wix-data">Wix.Data</h1>
+					<h1 class="wix-settings">Wix.Editor</h1>
+					<p>This is the description for the Editor namespace.</p>
 					<h3 class="contents">Contents</h3>
 					<table class="table table-condensed">
 						<tbody>
 							<tr>
-								<td><a href="Wix.Data.Public.html">Public</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="Wix.Data.html#.SCOPE">SCOPE</a></td>
+								<td><a href="Wix.Editor.html#.isApplicationInstalled">isApplicationInstalled( )</a></td>
 							</tr>
 						</tbody>
 					</table>
 				</section>
 				<section>
-					<p><span id=".SCOPE" class="nav-target"></span></p>
-					<p><span class="label label-static">static</span><span class="label label-enum">enum</span></p>
-					<hgroup><span class="h_subheading" id="scope">SCOPE</span>
-						<h2>SCOPE</h2></hgroup>
-					<h3 class="syntax">Syntax</h3>
+					<p><span id=".isApplicationInstalled" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="isApplicationInstalled-">isApplicationInstalled( )</span>
+						<h2>isApplicationInstalled( )</h2></hgroup>
 					<figure class="code-example">
 
-						<pre><code class="language-javascript">Wix.Data.SCOPE</code></pre>
+						<pre><code class="language-javascript">Wix.Editor.isApplicationInstalled(appDefinitionId, callback)</code></pre>
 					</figure>
 					<h3 class="description">Description</h3>
-					<p>An enum of scope types indicates if data is accessible from a specific component or all components of an app</p>
+					<p>Checks if at least one of the application components was added to the site.</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">appDefinitionId</code>
+								</td>
+								<td>string</td>
+								<td>
+									the id of the app
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code class="inline-code">callback</code>
+								</td>
+								<td>function</td>
+								<td>
+									called with the boolean result callback signature: function(isInstalled) {}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="Examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLmlzQXBwbGljYXRpb25JbnN0YWxsZWQoCiAgICAgICAgICcxMzgwYjcwMy1jZTgxLWZmMDUtZjExNS0zOTU3MWQ5NGRmY2QnLAogICAgICAgICBmdW5jdGlvbihpc0luc3RhbGxlZCl7Y29uc29sZS5sb2coaXNJbnN0YWxsZWQpfQopOw==</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.Editor.isApplicationInstalled(
+         '1380b703-ce81-ff05-f115-39571d94dfcd',
+         function(isInstalled){console.log(isInstalled)}
+);</code></pre>
+					</figure>
 					<h3 class="availability">Availability</h3>
-					<p>Since 1.61.0 and later.</p>
+					<p>Since 1.83.0 and later.</p>
 				</section>
 				<nav id="prev-next-nav">
 				</nav>
