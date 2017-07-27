@@ -172,6 +172,9 @@
 								<li class="item otp-li">
 									<a class="otp" href="#isApplicationInstalled-">isApplicationInstalled( )</a>
 								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#getcurrentpageid-">getCurrentPageId( )</a>
+								</li>
 							</ul>
 						</nav>
 					</li>
@@ -349,9 +352,15 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.Settings.html#.triggerSettingsUpdatedEvent">triggerSettingsUpdatedEvent( )</a></td>
+								<td></td>
 							</tr>
 							<tr>
 								<td><a href="Wix.Settings.html#.isApplicationInstalled">isApplicationInstalled( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.Settings.html#.getCurrentPageId">getCurrentPageId( )</a></td>
+								<td></td>
 							</tr>
 						</tbody>
 					</table>
@@ -1902,6 +1911,32 @@ Wix.Settings.setWindowPlacement(compId, Wix.WindowPlacement.CENTER, 2, 0);</code
 					</figure>
 					<h3 class="availability">Availability</h3>
 					<p>Since 1.83.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".getCurrentPageId" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="getcurrentpageid-">getCurrentPageId( )</span>
+						<h2>getCurrentPageId( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.Settings.getCurrentPageId()</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>The getCurrentPageId method returns the page id of the app hosting page.</p>
+					<h3 class="examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="//wix.github.io/js-sdk-docs/images/copy.png" />
+							<pre class="hidden-code">Ly8gVGhlIGZvbGxvd2luZyBjYWxsIHdpbGwgcmV0dXJuIHRoZSBwYWdlIGlkIG9mIHRoZSBhcHAgaG9zdGluZyBwYWdlLgpXaXguZ2V0Q3VycmVudFBhZ2VJZChmdW5jdGlvbihwYWdlSWQpIHsKICAgIC8vc3RvcmUgdGhlIHNpdGUgcGFnZUlkCn0=</pre>
+						</div>
+						<pre><code class="language-javascript">// The following call will return the page id of the app hosting page.
+Wix.Settings.getCurrentPageId(function(pageId) {
+    //store the site pageId
+}</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.86.0 and later.</p>
 				</section>
 				<nav id="prev-next-nav">
 				</nav>
