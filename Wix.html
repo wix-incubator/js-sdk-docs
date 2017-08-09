@@ -142,6 +142,9 @@
 								<li class="item otp-li">
 									<a class="otp" href="#isApplicationInstalled-">isApplicationInstalled( )</a>
 								</li>
+								<li class="item otp-li">
+									<a class="otp" href="#isVisualFocusEnabled-">isVisualFocusEnabled( )</a>
+								</li>
 							</ul>
 						</nav>
 					</li>
@@ -457,6 +460,10 @@
 							</tr>
 							<tr>
 								<td><a href="Wix.html#.isApplicationInstalled">isApplicationInstalled( )</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="Wix.html#.isVisualFocusEnabled">isVisualFocusEnabled( )</a></td>
 								<td></td>
 							</tr>
 						</tbody>
@@ -2586,6 +2593,51 @@ Wix.scrollBy(0, 0);</code></pre>
 						</div>
 						<pre><code class="language-javascript">Wix.isApplicationInstalled(
          '1380b703-ce81-ff05-f115-39571d94dfcd',
+         function(isInstalled){console.log(isInstalled)}
+);</code></pre>
+					</figure>
+					<h3 class="availability">Availability</h3>
+					<p>Since 1.86.0 and later.</p>
+				</section>
+				<section>
+					<p><span id=".isVisualFocusEnabled" class="nav-target"></span></p>
+					<p><span class="label label-static">static</span></p>
+					<hgroup><span class="h_subheading" id="isVisualFocusEnabled-">isVisualFocusEnabled( )</span>
+						<h2>isVisualFocusEnabled( )</h2></hgroup>
+					<figure class="code-example">
+
+						<pre><code class="language-javascript">Wix.isVisualFocusEnabled(callback)</code></pre>
+					</figure>
+					<h3 class="description">Description</h3>
+					<p>Checks if visualFocus turned on. Available in site view mode only</p>
+					<h3 class="parameters">Parameters</h3>
+					<table class="table table-condensed">
+						<colgroup>
+							<col class="col-xs-2">
+								<col class="col-xs-2">
+									<col class="col-xs-8">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<code class="inline-code">callback</code>
+								</td>
+								<td>function</td>
+								<td>
+									called with the boolean result callback signature: function(isEnabled) {}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="Examples">Examples</h3>
+					<figure class="code-example">
+
+						<div class="code-block">
+							<img class="copy-button" data-toggle="tooltip" data-title="Copied" src="images/copy.png" />
+							<pre class="hidden-code">V2l4LlNldHRpbmdzLmlzQXBwbGljYXRpb25JbnN0YWxsZWQoCiAgICAgICAgICcxMzgwYjcwMy1jZTgxLWZmMDUtZjExNS0zOTU3MWQ5NGRmY2QnLAogICAgICAgICBmdW5jdGlvbihpc0luc3RhbGxlZCl7Y29uc29sZS5sb2coaXNJbnN0YWxsZWQpfQopOw==</pre>
+						</div>
+						<pre><code class="language-javascript">Wix.isVisualFocusEnabled(
          function(isInstalled){console.log(isInstalled)}
 );</code></pre>
 					</figure>
